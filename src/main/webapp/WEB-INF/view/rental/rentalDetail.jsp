@@ -253,7 +253,7 @@
 
             </div>
 
-                <div id="rental_quick_list"><a href="#">목록보기</a></div>
+                <div id="rental_quick_list"><a href="rental">목록보기</a></div>
         </div>
 
     </div>
