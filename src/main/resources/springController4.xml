@@ -6,5 +6,20 @@
 
 <!-- 권도완 공간 -->
 <!-- <bean class = "controller.HelloController" /> -->
+<!-- member 공간 -->
+<bean class="controller.member.RbLoginController" />
+<bean class="controller.member.IdSelectcontroller" />
 
+<!-- Freeboard 공간 -->
+<bean class="controller.freeboard.FreeBoardListController" />
+
+<!-- mypage 공간 -->
+<bean class="controller.mypage.ShoppingBasketController" />
+
+<!-- trade 공간 -->
+<bean class="controller.trade.TradeListController" />
+<bean class="controller.trade.TradeDetailController" />
+
+<!-- payment 공간 -->
+<bean class="controller.payment.TransactionDetailController" />
 </beans>
