@@ -5,8 +5,7 @@
 #contents {
     width: 1080px;
     min-height: 1000px;
-    float: left;
-
+  
 
 }
 
@@ -26,13 +25,7 @@
 
 }
 
-#rental_category {
-    width: 180px;
-    height: 676px;
-    font-family: 'Do Hyeon', sans-serif;
 
-
-}
 
 /* #rental_best_seller{
 
@@ -109,6 +102,8 @@ height: 300px;
 
 #rental_list_info {
     font-size: 12px;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 #rental_list_grade {
@@ -146,20 +141,4 @@ height: 300px;
 
 #page_count {
     text-align: center;
-}
-
-.rental_category_li {
-    padding: 27px 10px;
-    border-bottom: 1px dashed black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-
-}
-
-.rental_category_li>a {
-    color: black;
-}
-
-.rental_category_li>a:hover {
-    color: darkorchid;
 }

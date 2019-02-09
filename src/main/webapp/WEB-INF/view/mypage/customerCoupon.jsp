@@ -35,6 +35,8 @@
 <link href="../css/header.css" rel="stylesheet" type="text/css">
 <link href="../css/footer.css" rel="stylesheet" type="text/css">
 
+
+
 <!-- js 설정(기본값) -->
 <script src = "../js/header.js"></script>
 
@@ -42,6 +44,7 @@
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
 <!-- <link href="css/sample.css" rel="stylesheet" type="text/css"> -->
+<link href="../css/customerCoupon_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 

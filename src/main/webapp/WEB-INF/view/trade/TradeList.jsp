@@ -41,9 +41,10 @@
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
- <link href="css/TradeList_content.css" rel="stylesheet" type="text/css">
+ <link href="css/Trade_content.css" rel="stylesheet" type="text/css">
+ <link href="css/category.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<!-- <script src = "js/sample.js"></script> -->
+<script src = "js/category.js"></script> 
 
 </head>
 <body>
@@ -53,20 +54,7 @@
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
 <div id="sidebar">
-			<div id="buycategory">
-					<ul id="categoryul">
-							<li><div class="buycategory_li"><a href="#">문학/역사</a></div></li>
-							<li><div class="buycategory_li"><a href="#">유아/어린이/청소년</a></div></li>
-							<li><div class="buycategory_li"><a href="#">참고서/자격증</a></div></li>
-							<li><div class="buycategory_li"><a href="#">자연과학/IT</a></div></li>
-							<li><div class="buycategory_li"><a href="#">예술/인물</a></div></li>
-							<li><div class="buycategory_li"><a href="#">여행/잡지/취미</a></div></li>
-							<li><div class="buycategory_li"><a href="#">사회/정치/경제/경영</a></div></li>
-							<li><div class="buycategory_li"><a href="#">만화/라이트노벨</a></div></li>
-							<li><div class="buycategory_li"><a href="#">기타</a></div></li>
-						 </ul>
-			 
-			</div>
+			<jsp:include page="../category.jsp" />
 
 		</div>
 		<div id="mainContent">

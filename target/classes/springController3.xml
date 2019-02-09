@@ -7,4 +7,9 @@
 <!-- 유승재 공간 -->
 <!-- <bean class = "controller.HelloController" /> -->
 	<bean class = "controller.rental.RentalMainOpenController" />
+	<bean class = "controller.rental.RentalDetailOpenController" />
+	<bean class = "controller.trade.TradeBoardWriteController" />
+	<bean class = "controller.payment.PaymentController" />
+	<bean class = "controller.mypage.CustomerCouponController" />
+	<bean class = "controller.event.EventController" />
 </beans>

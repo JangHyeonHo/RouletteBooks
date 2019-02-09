@@ -38,7 +38,7 @@
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-	<link href="css/comLogin_content.css" rel="stylesheet" type="text/css">
+	<link href="../css/comLogin_content.css" rel="stylesheet" type="text/css">
 
 	<!--contents js설정(페이지에 따라 바뀌는 값)-->
 	<!-- <script src="../js/comSignIn.js"></script> -->
@@ -56,7 +56,7 @@
 			<div id = "loginIdBox"><div class = "TextBox">사원번호</div><input type = "text" name = "comId"></div>
 			<div id = "loginPwBox"><div class = "TextBox">사원 비밀번호</div><input type = "password" name = "comPw"></div>
 			<div id = "loginBtnBox"><input type = "submit" value="로그인">
-			<input type = "button" value="사원등록"></div>
+			<input type = "button" value="사원등록" onclick="location.href='signup'"></div>
 			</form>
 		</div>
 	</div>

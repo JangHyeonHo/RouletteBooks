@@ -25,12 +25,12 @@
 	 crossorigin="anonymous"></script>
 
 	<!--css 설정(기본값)-->
-	<link href="css/body.css" rel="stylesheet" type="text/css">
-	<link href="css/com_header.css" rel="stylesheet" type="text/css">
-	<link href="css/com_footer.css" rel="stylesheet" type="text/css">
+	<link href="../css/body.css" rel="stylesheet" type="text/css">
+	<link href="../css/com_header.css" rel="stylesheet" type="text/css">
+	<link href="../css/com_footer.css" rel="stylesheet" type="text/css">
 
 	<!--contents css설정(페이지에 따라 바뀌는 값)-->
-	<link href="css/comMain_content.css" rel="stylesheet" type="text/css">
+	<link href="../css/comMain_content.css" rel="stylesheet" type="text/css">
 	<!--contents js설정(페이지에 따라 바뀌는 값)-->
 	<!-- <script src="js/페이지명.js"></script> -->
 
@@ -51,8 +51,8 @@
 		<form>
 			<div id="HumanResourceDepartMent" class="DptBox">
 				<div class="DptName">인사팀</div>
-				<div class="DptUrl"><a href="#">일반회원 리스트 관리</a></div>
-				<div class="DptUrl"><a href="#">관리자회원 리스트 관리</a></div>
+				<div class="DptUrl"><a href="hr/memberlist">일반회원 리스트 관리</a></div>
+				<div class="DptUrl"><a href="hr/managerlist">관리자회원 리스트 관리</a></div>
 				<div class="DptNotice">인사팀 공지사항 <span style="display:none;"><a href="#">[수정]</a></span></div>
 				<div class="DptNoticeContent">인사팀 담당자 x입니다.
 					인사팀 공지사항 수정은 어떻게 합니까?
@@ -80,7 +80,7 @@
 			<!-- 영업팀 박스 -->
 			<div id="SalesDepartMent" class="DptBox">
 				<div class="DptName">영업팀</div>
-				<div class="DptUrl"><a href="#">계약 출판사 등록 관리</a></div>
+				<div class="DptUrl"><a href="sales/publisher/list">계약 출판사 등록 관리</a></div>
 				<div class="DptUrl"><a href="#">출판사 도서 등록 관리</a></div>
 				<div class="DptNotice">영업팀 공지사항 <span style="display:none;"><a href="#">[수정]</a></span></div>
 				<div class="DptNoticeContent">공지내용</div>

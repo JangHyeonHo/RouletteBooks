@@ -47,6 +47,7 @@
 			width: 770px;
 			float: left;
 			border-top: 1px solid;
+			margin: 25px 0px;
 		}
 		.basket_main_check{
 			width: 40px;
@@ -94,6 +95,7 @@
 			border-top: 1px solid darkgray;
 			border-bottom: 1px solid darkgray;
 			background-color: rgb(250, 242, 242);
+			margin: 25px 0px;
 		}
 		.total_box{
 			width: 110px;
@@ -111,7 +113,7 @@
 			width: 300px;
 			float: right;
 			border: 3px solid gainsboro;
-			margin: -1px 0px;
+			margin: 25px 0px;
 		}
 		.coin_info{
 			width: 300px;
