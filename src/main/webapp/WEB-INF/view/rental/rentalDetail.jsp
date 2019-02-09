@@ -58,7 +58,7 @@
         <div id="rental_detail_header">
             <!--책 이미지 사이즈 250x370-->
             <div id="rental_book_image">
-                <img src="img/sample2.jpg">
+                <img src="../img/sample2.jpg">
                 <div id="rental_book_preview">
                     <button id="rental_book_preview_btn">E-Book미리보기</button>
                 </div>
