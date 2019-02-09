@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+#rental_category {
+    width: 180px;
+    height: 676px;
+    font-family: 'Do Hyeon', sans-serif;
+
+
+}
+
+.rental_category_li {
+    padding: 27px 10px;
+
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+
+}
+
+.rental_category_li>a {
+    color: black;
+}
+
+.rental_category_li>a:hover {
+    color: darkorchid;
+}

@@ -43,10 +43,10 @@
    <!-- HeaderBottom -->
    <div id="headerBottom">
       <ul id="headerNav">
-         <li><a href="#">도서 대여<span style="font-size: 12px;">(Ebook)</span></a></li>
+         <li><a href="rental">도서 대여<span style="font-size: 12px;">(Ebook)</span></a></li>
          <li><a href="#">중고 도서 거래</a></li>
          <li><a href="#">랭킹</a></li>
-         <li><a href="#">이벤트</a></li>
+         <li><a href="event">이벤트</a></li>
          <li><a href="#">고객센터</a></li>
          <li><a href="#">자유 게시판</a></li>
       </ul>
