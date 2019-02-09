@@ -7,4 +7,15 @@
 <!-- 이원학 공간 -->
 <!-- <bean class = "controller.HelloController" /> -->
 
+<bean class = "controller.customerservice.CusMyInquiryController" />
+<bean class = "controller.customerservice.CustomerServiceController" />
+<bean class = "controller.member.JoinMembershipController" />
+<bean class = "controller.mypage.MemberInfoController" />
+<bean class = "controller.mypage.MemberInfoConfirmController" />
+<bean class = "controller.mypage.MemberModifyController" />
+<bean class = "controller.mypage.MyPageMainController" />
+<bean class = "controller.rental.rantalListController" />
+<bean class = "controller.ranking.RankingMainController" />
+
+
 </beans>

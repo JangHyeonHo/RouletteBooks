@@ -1,3 +1,8 @@
+#contents {
+    width: 1080px;
+    min-height: 1000px;
+    margin: 0 auto;
+}
 body {
 	margin: 20px 0 0 0;
 }
@@ -115,7 +120,7 @@ span{
 /* 마이페이지 메인 */
 #MyPageMain{
 	width: 840px;
-	height: 1000px;
+	min-height: 1000px;
 	float: left;
 }
 /* 더보기 */
@@ -228,7 +233,7 @@ span{
 /* 대여목록 */
 #MyPageThird{
 	width: 840px;
-	height: 250px;
+	min-height: 250px;
 	float: left;
 }
 #MainPageTitle1{
@@ -242,9 +247,11 @@ span{
 }
 #rantalList{
 	width: 840px;
-	height: 190px;
+	min-height: 190px;
+	margin:0 0 40px 0;
 	float: left;
 }
+
 .ranList li {
 	width: 210px;
 	height: 190px;

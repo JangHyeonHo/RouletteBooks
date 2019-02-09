@@ -51,7 +51,7 @@
 <jsp:include page="../Header.jsp" />
 <!-- Header 끝 -->
 <!-- Content 시작(내용 첨가) -->
-	<div id="contents">
+<div id="contents">
         <!-- 마이페이지 왼쪽사이드 -->
         <div id="MyPageSide">
 				<!-- 등급 -->
@@ -60,7 +60,7 @@
 						회원등급
 					</div>
 					<div id="rating">
-						<img src="img/등급-골드.PNG">
+						<img src="../img/등급-골드.PNG">
 					</div>
 					<div id="rating1">
 						골드
@@ -113,7 +113,7 @@
                    <div id = "DetailTop">
 							<div id = "TopSubj">
 								<div id = "MyheadLogo">
-									<img src="img/마이페이지로고.PNG">
+									<img src="../img/마이페이지로고.PNG">
 								</div>
 							</div>
 							<div id = "cash">
@@ -122,7 +122,7 @@
 									캐쉬 ▶
 								</div>
 								<div class = "ccLogo">
-									<img src="img/캐시로고.PNG">
+									<img src="../img/캐시로고.PNG">
 								</div>
 								<div class = "ccLow">
 									<span>2000000</span>원
@@ -136,7 +136,7 @@
 									쿠폰 ▶
 								</div>
 								<div class = "ccLogo">
-									<img src="img/쿠폰로고.PNG">
+									<img src="../img/쿠폰로고.PNG">
 								</div>
 								<div class = "ccLow">
 									<span>12</span>장

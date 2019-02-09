@@ -31,17 +31,17 @@
 	crossorigin="anonymous"></script>
 
 <!--css 설정(기본값)-->
-<link href="css/body.css" rel="stylesheet" type="text/css">
-<link href="css/header.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
+<link href="../css/body.css" rel="stylesheet" type="text/css">
+<link href="../css/header.css" rel="stylesheet" type="text/css">
+<link href="../css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
-<script src = "js/header.js"></script>
+<script src = "../js/header.js"></script>
 
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="css/CusMyInquiry_content.css" rel="stylesheet" type="text/css">
+<link href="../css/CusMyInquiry_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
@@ -127,7 +127,7 @@
                     <td>배송</td>
                     <td id="Subj"><a href="#">배송이 안와요.</a><em>[대기중]</em></td>
                     <td>2019.02.02</td>
-                    <td><button><img src="img/문의삭제로고.PNG"></button></td>
+                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
             </tbody>
         </table>

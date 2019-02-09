@@ -31,19 +31,19 @@
 	crossorigin="anonymous"></script>
 
 <!--css 설정(기본값)-->
-<link href="css/body.css" rel="stylesheet" type="text/css">
-<link href="css/header.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
+<link href="../css/body.css" rel="stylesheet" type="text/css">
+<link href="../css/header.css" rel="stylesheet" type="text/css">
+<link href="../css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
-<script src = "js/header.js"></script>
+<script src = "../js/header.js"></script>
 
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="css/MemberModify_content.css" rel="stylesheet" type="text/css">
+<link href="../css/MemberModify_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<script src = "js/MemberModify.js"></script>
+<script src = "../js/MemberModify.js"></script>
 
 </head>
 <body>
@@ -61,7 +61,7 @@
                     회원등급
                 </div>
                 <div id="rating">
-                    <img src="img/등급-골드.PNG">
+                    <img src="../img/등급-골드.PNG">
                 </div>
                 <div id="rating1">
                     골드
@@ -114,7 +114,7 @@
             <div id="DetailTop">
                 <div id="TopSubj">
                     <div id="MyheadLogo">
-                        <img src="img/마이페이지로고.PNG">
+                        <img src="../img/마이페이지로고.PNG">
                     </div>
                 </div>
                 <div id="cash">
@@ -123,7 +123,7 @@
                             캐쉬 ▶
                         </div>
                         <div class="ccLogo">
-                            <img src="img/캐시로고.PNG">
+                            <img src="../img/캐시로고.PNG">
                         </div>
                         <div class="ccLow">
                             <span>2000000</span>원
@@ -137,7 +137,7 @@
                             쿠폰 ▶
                         </div>
                         <div class="ccLogo">
-                            <img src="img/쿠폰로고.PNG">
+                            <img src="../img/쿠폰로고.PNG">
                         </div>
                         <div class="ccLow">
                             <span>12</span>장
@@ -160,8 +160,8 @@
         <div class = "inputBox"><span>생년월일 :</span> 1993.12.10 </div>
         <div class = "inputBox"><span>성별 :</span> 여자 </div>
         <div class = "inputBox"><span>주소 :</span> <input type="button" value="주소찾기"></div>
-        <input type="text" id="address" name="address" value = "사랑시 고백구 행복동">
-        <input type="text" id="address1" name="address1" value="지하 하호호">
+        <input type="text" class ="tex" id="address" name="address" value = "사랑시 고백구 행복동">
+        <input type="text" class ="tex" id="address1" name="address1" value="지하 하호호">
         <div class="inputBox"><span>핸드폰번호 :</span></div>
 				<div id="phoneBox">
 					<select name="phoneFirst" id="phoneFirst">
@@ -171,9 +171,9 @@
 						<option value="018">018</option>
 						<option value="019">019</option>
                     </select>
-                <input type="text" class = "phoneNum" name="phone2" maxlength="4" value = "1234" >
-				-<input type="text" class = "phoneNum" name="phone3" maxlength="4" value = "1234" >
-				<input type="button" value="인증번호 받기"></div>
+                <input type="text" class = "tex" name="phone2" maxlength="4" value = "1234" >
+				-<input type="text" class = "tex" name="phone3" maxlength="4" value = "1234" >
+				<input type="button" class ="btn" value="인증번호 받기"></div>
         <div class = "inputBox"><span>계좌은행 :</span> <select name="bankName" id = "bank">
                 <option>은행선택</option>
                 <option>우리은행</option>
@@ -182,8 +182,8 @@
             <input type="text" id="accountNum" name="accountNum" value = "100210021002" placeholder="-빼고 작성하세요."></div>
         <div class = "inputBox"><span>가입일 :</span> 2018.08.08 </div>
 
-        <input type="submit" onclick="" value="수정하기">
-        <input type="reset" onclick="" value="다시쓰기">
+        <input type="submit" class ="btn" onclick="" value="수정하기">
+        <input type="reset" class ="btn" onclick="" value="다시쓰기">
         </div>
         </div>
         </form>

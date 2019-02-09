@@ -228,7 +228,7 @@
         .inputBox input{
             margin: 0 auto;
         }
-        input{
+        .btn{
             width: 120px;
             padding: 4px;
             margin: 10px 0 10px 10px;
@@ -238,7 +238,7 @@
             padding: 4px;
             margin: 0 0 0 20px;
         }
-        .phoneNum{
+        .tex{
             width: 40px;
         }
         #address1{
