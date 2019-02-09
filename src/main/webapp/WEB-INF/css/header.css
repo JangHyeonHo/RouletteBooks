@@ -1,0 +1,120 @@
+header{
+	width : 1080px;
+	height: 200px;
+}
+#headerTop{
+	width : 1080px;
+	height: 49px;
+	border-bottom: 1px solid black;
+}
+#headerMyForm{
+	list-style: none;
+	float:right;
+	height : 22px;
+	padding : 14px 0;
+	font-size:14px;
+	position: relative;
+	right: 20px;
+	z-index: 30;
+}
+#headerMyForm > li a{
+	color : black;
+	text-decoration: none;
+}
+#headerMyForm > li a:hover{
+	color : rgb(77, 77, 77);
+}
+.greetLogin{
+	display : inline-block;
+}
+.formBtn{
+	display: inline;
+	margin-left : 10px;
+}
+#myPageBtn{
+	display: inline-block;
+}
+#myPageList{
+	margin-top : 5px;
+}
+#myPageForm{
+	float: right;
+}
+#myPageForm > li{
+	text-align: right;
+	width : 150px;
+	padding : 10px 0;
+	margin-top : 5px;
+	border : 1px dashed black;
+	background-color : white;
+	font-size : 13px;
+}
+
+#headerMid{
+	width : 1080px;
+	height: 99px;
+	border-bottom: 1px solid black;
+}
+#logoIcon{
+	width : 150px;
+	height : 100px;
+	float: left;
+	margin-left: 50px;
+}
+#searchBox{
+	float: left;
+	border : 3px solid greenyellow;
+	position: relative;
+	left : 100px;
+	top : 28px;
+}
+
+#search{
+	width : 100px;
+	height : 38px;
+	float: left;
+	border: 0px;
+}
+#query{
+	width : 280px;
+	height : 36px;
+	float: left;
+	border: 0px;
+	padding-left : 10px;
+}
+#query::placeholder{
+	color: rgb(159, 184, 121);
+	font-weight: bold;
+}
+#searchBtn{
+	width : 50px;
+	height : 38px;
+	float: left;
+	border: 0px;
+}
+#headerBottom{
+	width : 1080px;
+	height: 49px;
+	border-bottom: 1px solid black;
+}
+#headerNav{
+	position: relative;
+	float: left;
+	left : 40px;
+}
+#headerNav > li{
+	margin-top:1px;
+	display: inline-block;
+	font-size:14px;
+	width : 118.5px;
+	text-align: center;
+	padding : 15px 10px;
+	background:-webkit-linear-gradient(rgb(226, 226, 226),black);
+}
+#headerNav > li > a{
+	color : white;
+	text-decoration: none;
+}
+#headerNav > li > a:hover{
+	color : rgb(185, 185, 185);
+}

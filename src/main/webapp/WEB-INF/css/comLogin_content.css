@@ -1,0 +1,51 @@
+#contents {
+	width: 1080px;
+	margin: 0 auto;
+}
+#loginBox {
+	width : 500px;
+	height : 500px;
+	position: absolute;
+	top : 50vh;
+	left : 50vw;
+	background-color:white;
+	transform: translate(-50%,-50%);
+	border:6px rgb(65, 65, 65) double;
+}
+#loginHeaderBox{
+	padding : 20px 0;
+	text-align:center;
+	font-size : 25px;
+	margin-top : 15%;
+}
+#loginIdBox{
+	padding : 10px 0;
+}
+#loginPwBox{
+	padding : 10px 0;
+}
+.TextBox{
+	width : 140px;
+	padding : 7px 0;
+	float: left;
+	text-align: right;
+}
+form > div{
+	float: left;
+	width : 500px;
+	
+}
+.TextBox ~ input{
+	width : 280px;
+	padding : 8px;
+	margin-left: 5px;
+}
+#loginBtnBox{
+	padding : 10px 0;
+}
+#loginBtnBox > input{
+	width : 100px;
+	height: 30px;
+	position: relative;
+	left : 240px;
+}

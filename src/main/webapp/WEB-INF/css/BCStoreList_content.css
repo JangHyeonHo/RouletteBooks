@@ -1,0 +1,72 @@
+#contents {
+	width: 1080px;
+	height: 1000px;
+	margin: 0 auto;
+}
+#title{
+padding : 10px 0;
+text-align: center;
+}
+table{
+margin: 0 auto;
+}
+th{
+font-family: 'Noto Sans KR', sans-serif; 
+font-size: 13px;
+}
+td{
+font-family: 'Noto Sans KR', sans-serif; 
+font-size: 13px;
+text-align: center;
+}
+td > select{
+height: 35px;
+}
+.seventyfive{
+width : 75px;
+}
+.ninetyfive{
+width : 95px;
+}
+
+#searchBox{
+width : 400px;
+height : 36px;
+border: 1px solid black;
+margin: 10px auto;
+clear: both;
+}
+#searchBox > *{
+float: left;
+}
+#searchBox > select{
+width : 160px;
+border : 0px;
+height: 36px;
+}
+input[type=text]{
+width : 160px;
+border : 0px;
+height: 34px;
+padding-left: 10px;
+}
+input[type=submit]{
+width : 70px;
+border : 0px;
+height: 36px;
+}
+#btnBox{
+float: left;
+margin : 10px 25px;
+}
+#btnBox > button{
+float:left;
+width : 206px;
+height : 40px;
+border: 2px solid slategray;
+background-color:#ccc;
+}
+
+#btnBox > button:hover{
+background-color:#eee;
+}

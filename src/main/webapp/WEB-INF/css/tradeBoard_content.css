@@ -1,0 +1,68 @@
+#contents {
+    width: 1080px;
+    min-height: 1000px;
+    margin: 0 auto;
+    border: 3px solid #888;
+}
+#trade_board_header{
+    width: 1080px;
+    min-height: 100px;
+
+
+}
+#trade_board_contents{
+    width: 1080px;
+    min-height: 200px;
+    
+
+}
+.trade_board_class{
+    margin: 10px 10px;
+}
+#trade_nick_name{
+    float: left;
+}
+#trade_password{
+    float: left;
+}
+#trade_subject_head{
+    clear: both;
+    float: left;
+}
+#trade_subject{
+    float: left;
+}
+#tarde_delivery_kind{
+    clear: both;
+    float: left;
+}
+#trade_book_genre{
+    float: left;
+}
+#trade_book_name{
+    float: left;
+}
+#trade_book_price{
+    float: left;
+}
+#trade_book_status{
+    clear: both;
+    float: left;
+}
+#trade_book_image{
+    clear: both;
+    float: left;
+}
+#image_announce{
+    color: #888;
+}
+#trade_board_footer{
+
+    width: 1080px;
+    height: 500px;
+    
+}
+#trade_board_btn{
+    margin: 20px 0;
+    text-align: center;
+}

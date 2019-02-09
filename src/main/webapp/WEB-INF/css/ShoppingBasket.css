@@ -1,0 +1,140 @@
+	a{ 
+			text-decoration:none 
+		}
+		* {
+			text-decoration: none;
+		}
+		
+		*:focus {
+			outline: none;
+		}
+		#contents {
+			width: 1080px;
+			height: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		.basket_box{
+			width: 1078px;
+			float: left;
+			border-top: 1px solid blue;
+			background-color: white;
+			margin: 30px 0px;
+		}
+		.basket_box h3{
+			font-size: 38px;
+			font-weight: bold;
+		}
+		.basket_box h1{
+			float: right;
+			font-size: 20px;
+			font-weight: bold;
+			padding: 20px 30px;
+		}
+		.select_box{
+			width: 1078px;
+			float: left;
+			margin: 5px 0px;
+			border-top: 1px solid darkgrey;
+			padding: 30px 0px;
+		}
+		.basket_main_box{
+			width: 770px;
+			float: left;
+		}
+		.basket_main_box1{
+			width: 770px;
+			float: left;
+			border-top: 1px solid;
+		}
+		.basket_main_check{
+			width: 40px;
+			float: left;
+		}
+		.basket_main_check input{
+			width: 30px;
+			height: 50px;
+			margin: 60px 9px;
+		}
+		.basket_main_img{
+			width: 240px;
+			float: left;
+		}
+		.basket_main_img > img{
+			max-width: 80%;
+    		margin: 20px 15px;
+		}
+		.basket_main_subject{
+			width: 300px;
+			float: left;
+			padding: 20px 0px;
+		}
+		.basket_main_count{
+			width: 50px;
+			float: left;
+		}
+		.basket_main_count input{
+			width: 46px;
+			margin: 65px 0px;
+			font-size: 30px;
+			text-align: center;
+		}
+		.basket_main_money{
+			width: 140px;
+			float: left;
+			font-size: 30px;
+			margin: 65px 0px;
+			text-align: right;
+		}
+
+		.basket_main_box2{
+			width: 770px;
+			float: left;
+			border-top: 1px solid darkgray;
+			border-bottom: 1px solid darkgray;
+			background-color: rgb(250, 242, 242);
+		}
+		.total_box{
+			width: 110px;
+			float: left;
+			text-align: center;
+		}
+		.money_info{
+			width: 110px;
+			float: left;
+			margin: 10px 10px;
+			
+		}
+
+		.coin_box{
+			width: 300px;
+			float: right;
+			border: 3px solid gainsboro;
+			margin: -1px 0px;
+		}
+		.coin_info{
+			width: 300px;
+			float: left;
+			margin: 10px 0px;
+			padding: 10px 0px;
+		}
+		.coin_info > button{
+			width: 300px;
+			height: 60px;
+			background-color: blue;
+    		color: white;
+			font-size: 25px;
+			border-radius: 10px 10px;
+		}
+		.coin_info > ul li{
+			padding: 8px 0px;
+		}
+		.coin_info > ul li span{
+			float: right;
+			padding: 0px 20px;
+		}
+		.total_coin_money{
+			width: 85px;
+			float: right;
+		}

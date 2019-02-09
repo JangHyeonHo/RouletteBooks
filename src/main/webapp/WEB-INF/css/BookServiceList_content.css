@@ -1,0 +1,71 @@
+#contents {
+	width: 1080px;
+	margin: 0 auto;
+	padding : 5px 0;
+}
+#title{
+	padding : 10px 0;
+	text-align: center;
+}
+table{
+	margin: 0 auto;
+}
+th{
+	font-family: 'Noto Sans KR', sans-serif; 
+	font-size: 13px;
+}
+td{
+	font-family: 'Noto Sans KR', sans-serif; 
+	font-size: 13px;
+	text-align: center;
+}
+.twohundred{
+	width: 200px;
+}
+.seventy{
+	width : 70px;
+}
+.eighty{
+	width : 80px;
+}
+.ninety{
+	width : 90px;
+}
+.hundred{
+	width : 100px;
+}
+.hundthirty{
+	width : 130px;
+}
+#searchBox{
+	width : 400px;
+	height : 36px;
+	border: 1px solid black;
+	margin: 10px auto;
+	clear: both;
+}
+#searchBox > *{
+	float: left;
+}
+#searchBox > select{
+	width : 160px;
+	border : 0px;
+	height: 36px;
+}
+input[type=text]{
+	width : 160px;
+	border : 0px;
+	height: 34px;
+	padding-left: 10px;
+}
+input[type=submit]{
+	width : 70px;
+	border : 0px;
+	height: 36px;
+}
+.alertBox{
+	float: right;
+	color : red;
+	font-size : 13px;
+	margin-bottom : 10px;
+}

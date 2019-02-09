@@ -1,0 +1,35 @@
+footer{
+	width : 1080px;
+	height: 100px;
+	background-color : blue;
+	clear:both;
+}
+#footerLogo{
+	width : 75px;
+	height : 50px;
+	position: relative;
+	float: left;
+	background-color: orange;
+	top : 25px;
+	left : 50px;
+}
+#companyInfo{
+	width : 400px;
+	height : 80px;
+	position: relative;
+	float: left;
+	background-color: olive;
+	top : 10px;
+	left : 100px;
+	font-size: 14px;
+}
+#companytelNum{
+	width : 350px;
+	height : 80px;
+	position: relative;
+	float: right;
+	background-color: firebrick;
+	top : 10px;
+	right : 100px;
+	font-size : 14px;
+}

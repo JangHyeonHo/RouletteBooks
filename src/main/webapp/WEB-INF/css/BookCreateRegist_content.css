@@ -1,0 +1,57 @@
+#contents {
+    width: 1080px;
+    margin: 0 auto;
+}
+#formWriting{
+    width: 500px;
+    position: absolute;
+    top : 20px;
+    left: 50vw;
+    background-color: white;
+    transform: translateX(-50%);
+    border: 6px rgb(65, 65, 65) solid;
+    margin-bottom: 20px;
+}
+#title{
+    text-align: center;
+    padding : 20px 0;
+    border-bottom: 6px double #bbb;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.textBox{
+    margin: 10px 0;
+    font-family : 'Do Hyeon', sans-serif;
+    padding : 0px 10px;
+    font-size : 20px;
+}
+.formBox{
+    padding : 0px 10px;
+
+}
+.formBox > input[type=text]{
+    width : 30px;
+    height : 30px;
+    padding: 0 8px;
+}
+.textBox + input[type=text]{
+    width : 161.6px;
+    height : 30px;
+    margin : 0px 10px;
+    padding: 0 10px;
+}
+#regi_days{
+    font-size:20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.formBox > select{
+    height : 34px;
+    width : 50px;
+}
+#btnBox{
+    margin: 30px 0;
+    text-align: center;
+}
+#btnBox > input{
+    width : 160px;
+    height : 35px;
+}

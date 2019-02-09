@@ -1,0 +1,31 @@
+header {
+	width: 1080px;
+	height: 60px;
+	margin: 0 auto;
+	background-color: gray;
+}
+
+a {
+	text-decoration: none;
+}
+
+#comName {
+	font-size: 30px;
+	font-family: 'Noto Sans KR', sans-serif;
+	float: left;
+	padding: 7px;
+	margin-left: 10px;
+}
+
+#logoutWindow li {
+	display: inline-block;
+	font-family: 'Noto Sans KR', sans-serif;
+	padding: 0 10px;
+}
+
+#logoutWindow {
+	float: right;
+	position: relative;
+	top: 30px;
+	margin-right: 20px;
+}

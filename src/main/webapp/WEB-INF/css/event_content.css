@@ -1,0 +1,124 @@
+*:focus {
+    outline: none;
+}
+
+#contents {
+    width: 1080px;
+    min-height: 1000px;
+
+    float: left;
+}
+
+#event_roulette {
+    float: left;
+    width: 1080px;
+    min-height: 500px;
+
+}
+
+#event_discount {
+    float: left;
+    width: 1080px;
+    min-height: 500px;
+
+}
+
+#envet_roulette_header {
+    width: 1080px;
+    height: 50px;
+
+
+}
+
+#event_roulette_contents {
+    float: left;
+    margin: 30px;
+    width: 1020px;
+    min-height: 400px;
+
+}
+
+#roulette_chance_announce {
+    margin: 10px 0;
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+#event_discount_contents {
+    float: left;
+    margin: 50px;
+    width: 980px;
+    min-height: 400px;
+    border: 1px solid black;
+
+}
+
+#roulette_image {
+    text-align: center;
+    width: 1000px;
+    border-radius: 15px;
+    border: solid 2px rgb(228, 252, 8);
+
+}
+
+#roulette_btn {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#event_discount_contents_header {
+    width: 980px;
+    height: 50px;
+
+}
+
+#event_discount_contents_content {
+    width: 980px;
+    min-height: 300px;
+
+}
+
+#event_discount_contents_footer {
+    margin: 20px 0;
+    float: left;
+    width: 980px;
+    height: 20px;
+    color: #888;
+    text-align: center;
+
+}
+
+#event_discount_contents_content>ul>li>div {
+    margin: 40px 24px;
+    float: left;
+    width: auto;
+    height: auto;
+    max-width: 196px;
+    max-height: 270px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#roulette_btn_style {
+    width: 200px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 18px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+#event_footer {
+    text-align: center;
+    
+}
+
+.event_books_info {
+    color: red;
+    white-space: pre-line;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+
+}

@@ -1,0 +1,215 @@
+*:focus{
+    outline: none;
+}
+#contents {
+    width: 1080px;
+    min-height: 1000px;
+    
+    float: left;
+}
+#payment_header{
+    width: 1080px;
+    height: 183px;
+    
+}
+#payment_contents{
+    width: 1080px;
+    height: 300px;
+    
+
+}
+#payment_footer{
+    width: 1080px;
+    height: 317px;
+
+}
+#payment_basic_info_bar{
+    width: 1080px;
+    height: 30px;
+    background-color: rgba(121, 121, 252, 0.575);
+    border-top: solid 2px blue;
+    border-bottom: solid 1px rgb(146, 146, 255);
+}
+#payment_basic_info_name{
+    width: 500px;
+    text-align:center;
+    float: left;
+}
+#payment_basic_info_paper{
+    width: 200px;
+    text-align:center;
+    float: left;
+}
+#payment_basic_info_rental_day{
+    width: 190px;
+    text-align:center;
+    float: left;
+}
+#payment_basic_info_rental_price{
+    width: 190px;
+    text-align:center;
+    float: left;
+}
+#payment_detail{
+    width: 1080px;
+    height: 150px;
+    
+}
+#payment_detail_image{
+    width: auto; height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    float: left;
+}
+#payment_detail_name{
+    margin: 10px 30px;
+    float: left;
+    width: 340px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#payment_detail_paper{
+    position: relative;
+    top: 60px;
+    float: left;
+    width: 200px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#payment_detail_rental_day{
+    position: relative;
+    top: 60px;
+    float: left;
+    width: 190px;
+
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#payment_detail_rental_price{
+    position: relative;
+    top: 60px;
+    float: left;
+    width: 190px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+#payment_sum_price1{
+    float: left;
+    width: 715px;
+    height: 305px;
+    
+}
+#payment_sum_price2{
+    float: left;
+    width: 365px;
+    height: 305px;
+    
+}
+#payment_sum_price_main{
+    float: left;
+    width: 355px;
+    height: 150px;
+    background-color: rgba(156, 156, 245, 0.603);
+    text-align: center;
+       border: solid 1px rgb(163, 163, 255);
+}                                                                                                
+.price_info{
+    position: relative;
+    top : 40px;
+}
+
+.payment_name{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#price_info_last{
+    position: relative;
+    top : 130px;
+}
+#payment_minus_price{
+    float: left;
+    width: 355px;
+    height: 150px;
+    background-color: rgba(156, 156, 245, 0.603);
+    border: solid 1px rgb(163, 163, 255);
+    text-align: center;
+}
+ #payment_last_price{
+    float: right;
+    width: 364px;
+    height: 299px;
+    background-color: rgba(156, 156, 245, 0.603);
+    border: solid 1px rgb(163, 163, 255);
+    text-align: center;
+} 
+#payment_bigo{
+    white-space: pre-line;
+    font-family: 'Noto Sans KR', sans-serif;
+    float: left;
+    width: 355px;
+    height: 147px;
+    background-color: rgba(156, 156, 245, 0.603);
+    border: solid 1px rgb(163, 163, 255);
+    text-align: center;
+    clear: both;
+}
+#payment_coo{
+    font-family: 'Noto Sans KR', sans-serif;
+    float: left;
+    width: 355px;
+    height: 147px;
+    background-color: rgba(156, 156, 245, 0.603);
+    border: solid 1px rgb(163, 163, 255);
+    text-align: center;
+}
+#payment_pay_select{
+    width: 1080px;
+
+
+}
+#pay_select{
+    float: left;
+    width: 715px;
+
+}
+#pay_select_commit{
+    float: left;
+    width: 365px;
+    height: 292px;
+
+}
+.pay_left_box{
+    width : 180px;
+    padding: 10px;
+    float: left;
+}
+.pay_right_box{
+    width: 495px;
+    padding: 10px;
+    float: left;
+}
+#pay_right_box_id{
+    white-space:pre-line;
+}
+#pay_emptyaccount_box{
+    display: none;
+}
+#pay_card_box{
+    display: none;
+}
+#commit_info{
+    width: 365px;
+    text-align: center;
+}
+#payment_agree{
+    width: 300px;
+    padding-left: 45px;
+    padding-top: 30px;
+}
+
+#commit_btn{
+    margin: 0 auto;
+    padding-top: 70px;
+    width: 300px;
+    text-align: center;
+}

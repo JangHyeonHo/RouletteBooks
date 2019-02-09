@@ -1,0 +1,149 @@
+* {
+			text-decoration: none;
+		}
+		*:focus {
+			outline: none;
+		}
+		#contents {
+			width: 1080px;
+			height: 1000px;
+			margin: 0 auto;
+		}
+		#loginBox {
+			width: 500px;
+			height: 400px;
+			position: relative;
+			padding: 38px 50px 30px 50px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border: 1px solid #d9d9d9;
+		}
+		.loginemail{
+			width: 500px;
+			height: 100px;
+			float: left;
+		
+			
+		}
+		#lemail{
+			width: 500px;
+			height: 60px;
+			font-size: 20px;
+			color: #333;
+			margin: 17px 0px;
+			border: none;
+			border-bottom: 1px solid #d9d9d9;
+			
+		}
+
+		a{
+			font-size: 12px;
+		}
+		.loginpassword{
+			width: 500px;
+			height: 99px;
+			float: left;
+		
+			
+		}
+		#lpassword{
+			width: 500px;
+			height: 60px;
+			font-size: 20px;
+			color: #333;
+			margin: 17px 0px;
+			border: none;
+			border-bottom: 1px solid #d9d9d9;
+			
+		}
+		.loginsearch{
+			width: 500px;
+			height: 50px;
+			float: left;
+		
+		}
+		#maintainbox{
+			width: 150px;
+			height: 30px;
+		
+			float: left;
+		}
+		strong{
+			font-size: 12px;
+		}
+		#idselect{
+			width: 265px;
+			height: 30px;
+		
+			float: left;
+			
+		}
+		#idselect a{
+		float: right;
+		color: #333;
+		font-size: 12px;
+		}
+		#idselect a::after{
+			content: '';
+			display: inline-block;
+			margin-left: 8px;
+			margin-right: 5px;
+			width: 1px;
+			height: 8px;
+			background-color: #d9d9d9;
+			
+		}
+		
+		#passwordselect{
+			width: 85px;
+			height: 30px;
+		
+			float: left;
+		}
+		#passwordselect a{
+			float: left;
+			color: #333;
+			font-size: 12px;
+		}
+		.loginjoin{
+			width: 500px;
+			min-height: 30px;
+			float: left;
+			clear: both;
+			
+		}
+		.loginjoin input[type="submit"]{
+			width: 440px;
+			height: 50px;
+			border: 1px solid #f0562d;
+   			background-color: #ff5000;
+			border-radius: 40px;
+			text-align: center;
+			font-size: 25px;
+			color: white;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			
+		}
+		.loginsign{
+			width: 500px;
+			min-height: 30px;
+			float: left;
+			margin-top: 10px;
+			padding: 15px 0px;
+			
+		}
+		.lsign{
+			width: 244px;
+			height: 42px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.lsign button{
+			width: 244px;
+			height: 42px;
+			border-radius: 40px;
+		}

@@ -1,0 +1,165 @@
+* {
+    text-decoration: none;
+}
+
+#contents {
+    width: 1080px;
+    min-height: 1000px;
+    float: left;
+
+
+}
+
+#sidebar {
+
+    width: 180px;
+    min-height: 1000px;
+    font-weight: 900;
+    float: left;
+}
+
+#main_content {
+    width: 900px;
+    min-height: 1000px;
+
+    float: right;
+
+}
+
+#rental_category {
+    width: 180px;
+    height: 676px;
+    font-family: 'Do Hyeon', sans-serif;
+
+
+}
+
+/* #rental_best_seller{
+
+width: 180px;
+height: 300px;
+
+} */
+#rental_best_seller_title {
+    text-align: center;
+}
+
+#rental_recommend {
+    width: 894px;
+    height: 350px;
+
+
+
+}
+
+#rental_recommend_title {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    font-weight: 900;
+    margin: 5px;
+
+}
+
+.rentel_recommend_list2 {
+    display: none;
+}
+
+.rental_recommend_image {
+    width: auto; height: auto;
+     max-width: 200px;
+    max-height: 300px;
+    background-color: white;
+    float: left;
+}
+
+#retal_recommend_prev {
+    position: relative;
+    top: 100px;
+    margin: 5px;
+    float: left;
+
+}
+
+#retal_recommend_next {
+    position: relative;
+    top: 105px;
+    float: right;
+
+}
+
+#rental_new_book {
+    width: 900px;
+    height: 100px;
+
+    font-family: 'Do Hyeon', sans-serif;
+
+}
+
+#rental_new_book_detail {
+    height: 100px;
+    text-align: center;
+}
+
+#rental_list {
+    width: 900px;
+    min-height: 1000px;
+
+}
+
+#rental_list_info {
+    font-size: 12px;
+}
+
+#rental_list_grade {
+    color: blue;
+}
+
+#listul>li {
+    float: left;
+}
+
+#listul {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.rental_list_li {
+    width: auto; height: auto;
+    max-width: 200px;
+        max-height: 270px;
+
+    text-align: center;
+
+}
+.as{
+    float: left;
+    height : 300px;
+}
+#page {
+    width: 900px;
+    height: 50px;
+
+    clear: both;
+
+}
+
+#page_count {
+    text-align: center;
+}
+
+.rental_category_li {
+    padding: 27px 10px;
+    border-bottom: 1px dashed black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+.rental_category_li>a {
+    color: black;
+}
+
+.rental_category_li>a:hover {
+    color: darkorchid;
+}

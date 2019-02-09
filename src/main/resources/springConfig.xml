@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   
+   ">
+   
+   <!-- DBMS연결 하는 Bean -->
+   <bean id="dataSource"
+      class="com.mchange.v2.c3p0.ComboPooledDataSource"
+      destroy-method="close">
+      <property name="driverClass"
+         value="oracle.jdbc.driver.OracleDriver" />
+      <property name="jdbcUrl"
+         value="jdbc:oracle:thin:@localhost:1521:XE" />
+      <property name="user" value="study" />
+      <property name="password" value="study" />
+   </bean>
+<!-- Resources폴더의 Message를 이용한 Property관리 -->
+   <bean id="messageSource"
+      class="org.springframework.context.support.ResourceBundleMessageSource">
+      <property name="basenames">
+         <list>
+            <value>message.label</value>
+            <value>message.error</value>
+            <value>message.practice</value>
+         </list>
+      </property>
+      <property name="defaultEncoding" value="UTF-8" />
+   </bean>
+<!-- 파일 업로드 시에 필요한 MultiPart파일 Bean객체 -->
+   <bean id="multipartResolver"
+      class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+      <property name="maxUploadSize" value="10485760" /> <!--file 10MB 1024*1024*10 -->
+      <property name="maxInMemorySize" value="10485760" />
+   </bean>
+<!-- Mail객체 전달에 필요한 것 -->
+<!-- 주석 풀어야함 -->
+  <!--  <bean id="mailSender"
+      class="org.springframework.mail.javamail.JavaMailSenderImpl">
+      <property name="host" value="SMTP 주소" />
+      <property name="port" value="SMTP 포트번호" />
+      <property name="protocol" value="smtps" />
+      <property name="defaultEncoding" value="utf-8" />
+      <property name="username" value="아이디" />
+      <property name="password" value="비밀번호" />
+      <property name="javaMailProperties">
+         <props>
+            <prop key="mail.smtp.starttles.enable">true</prop>
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtps.ssl.checkserveridentity">true</prop>
+            <prop key="mail.smtps.debug">true</prop>
+            <prop key="mail.smtps.ssl.trust">*</prop>
+         </props>
+      </property>
+</bean> -->
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+</beans>   

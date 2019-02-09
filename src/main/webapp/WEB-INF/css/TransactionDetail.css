@@ -1,0 +1,302 @@
+	#contents {
+			width: 1080px;
+			height: 1000px;
+			margin: 0 auto;
+		}
+
+		.total_info {
+			width: 1080px;
+			margin: 50px 0px;
+			float: left;
+		}
+		.total_img {
+			width: 380px;
+			height: 444px;
+			float: left;
+		}
+		.total_main_img {
+			width: 370px;
+			height: 444px;
+			background-color: coral;
+			float: left;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.total_main_img>img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.total_detail {
+			width: 700px;
+			float: left;
+		}
+		.detail_box {
+			width: 700px;
+			float: left;
+			border-top: 2px solid royalblue;
+			border-bottom: 2px solid royalblue;
+		}
+		.tableBox {
+			min-height: 40px;
+		}
+		.leftText {
+			width: 230px;
+			height: 20px;
+			font-size: 23px;
+			background-color: #F3F3F3;
+			float: left;
+			padding: 8px 10px;
+			font-family: 'Do Hyeon', sans-serif;
+		}
+		.rightText {
+			width: 430px;
+			padding: 8px 10px;
+			font-size: 15px;
+			float: left;
+		}
+
+		.transaction_content {
+			width: 1080px;
+			margin: 10px 0px;
+			float: left;
+		}
+		.total_user_info {
+			width: 1080px;
+			float: left;
+			height: 50px;
+		}
+		.seller_user {
+			width: 200px;
+			font-size: 25px;
+			padding: 10px 0px;
+			float: left;
+			text-align: center;
+			border-radius: 70px 70px 0px 0px;
+			background-color: rgb(61, 45, 209);
+			font-family: 'Do Hyeon', sans-serif;
+			position: relative;
+   			left: 162px;
+		}
+		.buyer_user {
+			width: 200px;
+			font-size: 25px;
+			padding: 10px 0px;
+			float: left;
+			text-align: center;
+			border-radius: 70px 70px 0px 0px;
+			background-color: red;
+			font-family: 'Do Hyeon', sans-serif;
+			position: relative;
+  			left: 502px;
+		}
+		.info_tableBox {
+			background-color: rgb(132, 162, 219);
+			font-family: 'Do Hyeon', sans-serif;
+			text-align: center;
+			border-bottom: 1px solid darkgrey;
+			border-right: 1px solid darkgrey;
+			border-left: 1px solid darkgrey;
+			clear: both;
+			padding: 10px 0px;
+			width: 160px;
+			float: left;
+			font-size: 25px;
+		}
+		.info_value {
+			border-bottom: 1px solid darkgrey;
+			font-family: 'Do Hyeon', sans-serif;
+			padding: 10px 5px;
+			width: 368px;
+			float: left;
+			font-size: 25px;
+		}
+		.addr_box1{
+			font-family: 'Do Hyeon', sans-serif;
+			
+			width: 160px;
+			float: left;
+			background-color: rgb(132, 162, 219);
+			padding: 40px 0px;
+			
+		}
+		
+		.addr_box2{
+			font-family: 'Do Hyeon', sans-serif;
+		
+			width: 368px;
+			height: 91px;
+			float: right;
+		}
+		
+
+
+
+		.seller_info {
+			border-top: 5px solid darkgray;
+			width: 540px;
+			float: left;
+			border-bottom: 5px solid darkgray;
+		}
+		
+		.buyer_info {
+			border-top: 5px solid darkgray;
+			width: 540px;
+			float: left;
+			border-bottom: 5px solid darkgray;
+		}
+
+		.transaction_notice {
+			width: 1076px;
+			float: left;
+			margin-top: 40px;
+			border: 2px solid black;
+		}
+		.transaction_notice h3 {
+			font-size: 40px;
+			padding: 10px 10px;
+			color: red;
+		}
+		.transaction_notice li {
+			font-size: 20px;
+			padding: 10px 50px;
+		}
+		.transaction_footer {
+			width: 1080px;
+			margin: 30px 0px;
+			float: left;
+		}
+		.delivery_company {
+			width: 1080px;
+			float: left;
+		}
+		.company_title {
+			width: 270px;
+			float: left;
+			border-right: 1px solid darkgrey;
+			border-left: 1px solid darkgrey;
+			padding: 11px 0px;
+			text-align: center;
+			background-color: rgb(132, 162, 219);
+			border-top: 5px solid darkgray;
+			border-bottom: 1px solid darkgray;
+			font-family: 'Do Hyeon', sans-serif;
+			font-size: 25px;
+		}
+		.company_value {
+			width: 798px;
+			float: left;
+			padding: 10px 5px;
+			border-top: 5px solid darkgray;
+			border-bottom: 1px solid darkgray;
+			font-size: 25px;
+		}
+
+		.delivery_box_date {
+			width: 1080px;
+			float: left;
+		}
+		.delivery_date {
+			width: 270px;
+			float: left;
+			border-right: 1px solid darkgrey;
+			border-left: 1px solid darkgrey;
+			padding: 11px 0px;
+			text-align: center;
+			background-color: rgb(132, 162, 219);
+			border-bottom: 1px solid darkgray;	
+			font-family: 'Do Hyeon', sans-serif;
+			font-size: 25px;
+		}
+		.delivery_date_value {
+			width: 798px;
+			float: left;
+			padding: 10px 5px;
+			border-bottom: 1px solid darkgray;
+			font-size: 25px;
+		}
+		
+		.delivery_number {
+			width: 1080px;
+			float: left;
+		
+		}
+		.delivery_title {
+			width: 270px;
+			border-right: 1px solid darkgrey;
+			border-left: 1px solid darkgrey;
+			float: left;
+			padding: 10.5px 0px;
+			text-align: center;
+			background-color: rgb(132, 162, 219);
+			border-top: 1px solid darkgray;
+			border-bottom:5px solid darkgray;
+			font-family: 'Do Hyeon', sans-serif;
+			font-size: 25px;
+		}
+		.delivery_value {
+			width: 798px;
+			padding: 10px 5px;
+			float: left;
+			border-bottom: 5px solid darkgray;
+			font-size: 25px;
+		}
+		.deal_box {
+			width: 1078px;
+			float: left;
+			margin: 40px 0px;
+			border: 1px solid gainsboro;
+		}
+		.deal_img {
+			width: 270px;
+			float: left;
+			margin: 10px 0px;
+			height: 100px;
+			position: relative;
+		}
+		.deal_img>img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 0px 10px;
+		}
+		.deal_info {
+			width: 790px;
+			float: left;
+			margin: 10px 0px;
+			height: 100px;
+		}
+		.deal_info>h4 {
+			padding: 10px 20px;
+			font-size: 20px;
+		}
+		.deal_lastbox{
+			width: 1080px;
+		}
+		.buyer_sell_box{
+			width: 540px;
+			float: left;
+		}
+		.buyer_sell_box>button{
+			width: 200px;
+			height: 60px;
+			font-size: 30px;
+			float: right;
+			margin: 0px 15px;
+		}
+		.listback{
+			width: 540px;
+			float: left;
+		}
+		.listback>button{
+			width: 200px;
+			height: 60px;
+			font-size: 30px;
+			margin: 0px 15px;
+		}

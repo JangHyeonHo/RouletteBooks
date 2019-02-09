@@ -1,0 +1,257 @@
+        #contents {
+            width: 1080px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li>a:hover {
+            color: rosybrown;
+        }
+
+        .mainText {
+            padding: 6px;
+        }
+
+        span {
+            color: blue;
+        }
+
+        /* 마이페이지 사이드  240*1000 */
+        #MyPageSide {
+            width: 240px;
+            height: 1000px;
+            float: left;
+        }
+
+        /* 마이페이지사이드 회원등급 */
+        #MyPageSideFirst {
+            width: 220px;
+            min-height: 200px;
+            float: left;
+        }
+
+        #MyPageSideTitle1 {
+            width: 180px;
+            min-height: 40px;
+            padding: 0 0 0 20px;
+            float: left;
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 26px;
+            color: orange;
+        }
+
+        #rating {
+            width: 160px;
+            padding: 0 0 0 20px;
+            float: left;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #rating1 {
+            width: 200px;
+            height: 40px;
+            padding: 0 10px 0 0;
+            float: left;
+            text-align: center;
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 28px;
+            color: blue;
+        }
+
+        /* 마이페이지사이드 회원정보 */
+        #MyPageSideSecond {
+            width: 220px;
+            height: 360px;
+            padding: 0 0 0 20px;
+            float: left;
+        }
+
+        #sideInfo {
+            width: 220px;
+            height: 320px;
+            float: left;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 마이페이지사이드 배송관리 */
+        #MyPageSideThird {
+            width: 220px;
+            height: 200px;
+            padding: 0 0 0 20px;
+            float: left;
+        }
+
+        #delivery {
+            width: 220px;
+            height: 160px;
+            float: left;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* 빈공간 */
+        #MyPageSideFour {
+            width: 220px;
+            height: 200px;
+            padding: 0 0 0 20px;
+            float: left;
+        }
+
+        #bb {
+            width: 220px;
+            height: 160px;
+            float: left;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .MyPageSideTitle {
+            width: 180px;
+            height: 40px;
+            float: left;
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 26px;
+            color: orange;
+            border-bottom: 1px solid orange;
+        }
+
+        /* 마이페이지 사이드 끝 */
+
+        /* 마이페이지 헤더 840 * 200 */
+        #rantalListHeader {
+            width: 840px;
+            height: 200px;
+            float: left;
+        }
+
+        #DetailTop {
+            width: 840px;
+            height: 200px;
+            float: left;
+        }
+
+        #TopSubj {
+            width: 400px;
+            height: 200px;
+            float: left;
+        }
+
+        #MyheadLogo {
+            width: 240px;
+            height: 100px;
+            padding: 28px 0 0 28px;
+            float: left;
+        }
+
+        #cash {
+            width: 212px;
+            height: 160px;
+            margin-top: 20px;
+            float: left;
+            border-right: 1px solid gray;
+        }
+
+        #coupon {
+            width: 220px;
+            height: 160px;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .ccTop {
+            width: 210px;
+            height: 40px;
+            float: left;
+            padding: 10px 0 0 0;
+            text-align: center;
+        }
+
+        .ccLogo {
+            width: 160px;
+            height: 60px;
+            float: left;
+            padding: 20px 0 0 48px;
+        }
+
+        .ccLogo>img {
+            width: 60%;
+            height: 60%;
+        }
+
+        .ccLow {
+            width: 200px;
+            height: 40px;
+            float: left;
+            padding-right: 10px;
+            text-align: center;
+        }
+
+        /* 마이페이지 헤더 끝 */
+
+        #memberBaseInfo {
+            width: 840px;
+            height: 800px;
+            float: left;
+        }
+
+        #baseInfoTitle {
+            width: 820px;
+            height: 40px;
+            padding: 20px 0 20px 20px;
+            float: left;
+            font-size: 28px;
+            font-family: 'Do Hyeon', sans-serif;
+        }
+        #baseInfoCon{
+            width: 820px;
+            height: 680px;
+            float: left;
+            font-family: 'Noto Sans KR', sans-serif;
+            border: 1px solid black;
+        }
+        .inputBox{
+            margin: 10px 10px 10px 20px;
+        }
+        .inputBox input{
+            margin: 0 auto;
+        }
+        input{
+            width: 120px;
+            padding: 4px;
+            margin: 10px 0 10px 10px;
+        }
+        #address{
+            width: 280px;
+            padding: 4px;
+            margin: 0 0 0 20px;
+        }
+        .phoneNum{
+            width: 40px;
+        }
+        #address1{
+            width: 200px;
+        }
+        #phoneBox{
+            margin: 0 0 0 20px;
+        }
+        select{
+            padding: 4px;
+        }
+        #baseInfoCon span{
+            color: black;
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 18px;
+        }

@@ -1,0 +1,275 @@
+* {
+	text-decoration: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+#contents {
+	width: 1080px;
+	min-height: 1000px;
+	float: left;
+}
+
+#sidebar {
+	width: 180px;
+	min-height: 1000px;
+	float: left;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+#buycategory {
+	width: 180px;
+	height: 676px;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.buycategory_li {
+	padding: 27px 10px;
+	border-bottom: 1px dashed black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.buy_category_li>a {
+	color: black;
+}
+
+.buy_category_li>a:hover {
+	color: darkorchid;
+}
+
+#mainContent {
+	width: 900px;
+	min-height: 1000px;
+	float: left;
+}
+
+#mainbuy {
+	width: 896px;
+	min-height: 250px;
+	float: right;
+	border: 2px solid black;
+}
+
+#bestPeople {
+	font-family: 'Do Hyeon', sans-serif;
+	    margin: 10px 15px;
+    font-size: 25px;
+}
+
+.tradebox1 {
+	width: 224px;
+	height: 250px;
+	float: left;
+}
+
+.best_people_img {
+	width: 225px;
+	height: 200px;
+	float: left;
+}
+
+.best_people_img>img {
+	width: 80%;
+	height: 80%;
+	position: relative;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.best_people_book_name {
+	width: 225px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+#tradeContents {
+	width: 896px;
+	height: 50px;
+	border-bottom: 2px solid silver;
+}
+
+#tradeContentsNo {
+	width: 49px;
+	padding: 15px 0;
+	float: left;
+	font-family: 'Do Hyeon', sans-serif;
+	text-align: center;
+}
+
+#tradeContentsImg {
+	width: 199px;
+	padding: 15px 0;
+	font-family: 'Do Hyeon', sans-serif;
+	float: left;
+	text-align: center;
+}
+
+#tradeContentsInfo {
+	width: 499px;
+	padding: 15px 0;
+	font-family: 'Do Hyeon', sans-serif;
+	float: left;
+	text-align: center;
+}
+
+#tradeContentsPrice {
+	width: 149px;
+	padding: 15px 0;
+	font-family: 'Do Hyeon', sans-serif;
+	float: left;
+	text-align: center;
+}
+
+#tradelist {
+	width: 896px;
+	min-height: 750px;
+	float: right;
+	border: 2px solid black;
+}
+
+.tradewrite {
+	width: 896px;
+	height: 299px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.tradebookinfo {
+	width: 249px;
+	float: left;
+}
+
+.picture {
+	margin-top: 20px;
+	width: 199px;
+	float: left;
+}
+
+.picture>img {
+	width: 125px;
+	position: relative;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.idsellbuy {
+	width: 199px;
+	float: right;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.idinfo {
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'Do Hyeon', sans-serif;
+	color: black;
+}
+
+.sell {
+	text-align: center;
+	color: blue;
+}
+
+.buy {
+	text-align: center;
+	color: red;
+}
+
+.buyno {
+	width: 49px;
+	float: left;
+	font-family: 'Do Hyeon', sans-serif;
+	text-align: center;
+	margin: 100px 0px;
+}
+
+.tradetitle {
+	width: 499px;
+	float: left;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+.tradesubject {
+	width: 489px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 20px;
+	padding: 5px;
+	position: relative;
+	border-bottom: 1px solid lightgrey;
+}
+
+.tradeinfo {
+	width: 489px;
+	min-height: 225px;
+	font-size: 15px;
+	padding: 5px;
+	position: relative;
+	font-family: 'Noto Serif KR', serif;
+}
+
+.uploaddate {
+	width: 489px;
+	font-size: 15px;
+	padding: 5px;
+}
+
+.tradepricebox {
+	width: 148px;
+	float: left;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	top: 33%;
+	transform: translateY(-50%);
+	color: red;
+}
+
+.tradewaiting {
+	width: 148px;
+	float: left;
+	text-align: center;
+	position: relative;
+	top: 37%;
+	transform: translateY(-50%);
+}
+
+.bookscore {
+	width: 148px;
+	float: left;
+	text-align: center;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+	color: blue;
+}
+
+.listwrite {
+	width: 900px;
+	float: left;
+	margin: 10px 0px;
+}
+
+.listwrite button {
+	float: right;
+	width: 150px;
+	height: 42px;
+	border-radius: 5px;
+}
+
+.Paging {
+	width: 900px;
+	float: right;
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 0 20px;
+	height: 34px;
+	text-align: center;
+}

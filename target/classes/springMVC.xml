@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+   					   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+   ">
+   
+   <!-- 어노테이션 기능 @Controller를 사용하겠다는 처리 -->
+   <mvc:annotation-driven /> 
+   <!-- view경로를 /로 사용한다는 의미(RequestMapping 경로처리) -->
+   <mvc:default-servlet-handler /> 
+   <mvc:view-controller path="/main" view-name="main" />
+	<mvc:resources mapping="/**" location="/WEB-INF/" cache-period="31556926"/>
+	
+   <!-- .jsp라는 확장자를 생략할 수 있게 해주는 것 -->
+   <mvc:view-resolvers> 
+      <mvc:jsp prefix="/WEB-INF/view/" />
+   </mvc:view-resolvers>
+   
+   <!-- 받아서 자동으로 넘기게끔 처리하기 위한 Intercepter처리 -->
+  <!--  <mvc:interceptors>
+      <mvc:interceptor>
+         <mvc:mapping path="/member/**" />
+         <bean class="interceptor.AuthCheckInterceptor" />
+
+      </mvc:interceptor>
+</mvc:interceptors> -->
+   
+   
+   
+   
+   
+</beans>

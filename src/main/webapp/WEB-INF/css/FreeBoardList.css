@@ -1,0 +1,220 @@
+* {
+			text-decoration: none;
+		}
+		*:focus {
+			outline: none;
+		}
+
+		#contents {
+			width: 1080px;
+			height: 1000px;
+			margin: 0 auto;
+		}
+
+		.listheader {
+			float: left;
+			width: 1080px;
+			height: 50px;
+			font-size: 28px;
+			color: #151432;
+			margin-bottom: 10px;
+			
+		}
+		.titlename{
+			width: 300px;
+			float: left;
+			height: 37px;
+		}
+		.empty{
+			width: 200px;
+			float: left;
+			height: 37px;
+		}
+		.totalcount{
+			width: 130px;
+			float: left;
+			height: 37px;
+			font-size: 15px;
+			line-height: 37px;
+			text-align: center;
+		}
+		.selecttype{
+			width: 98px;
+			float: left;
+			height: 35px;
+			font-size: 20px;
+			padding:0px 5px;
+		}
+		.selectform{
+			width: 98px;
+			height: 37px;
+			border: 1px double black;
+			
+		}
+		.select{
+			width: 298px;
+			height: 35px;
+
+			float: left;
+		}
+		#search{
+			width: 293px;
+			float: left;
+			height: 35px;
+			font-size: 20px;
+			padding:0px;
+			border: 1px double black;
+		}
+		#btnsearch{
+			width: 44px;
+			float: left;
+			height: 37px;
+			font-size: 20px;
+			background: #3e3d55;
+			background-image: url(http://static.inven.co.kr/image_2011/common/isearch/icon_magnifier_left.png);
+			background-repeat:no-repeat ;
+			background-position:center;
+			
+		}
+
+		.freeboard {
+			width: 1080px;
+			height: 1000px;
+			float: left;
+		}
+
+		#boardheader {
+			width: 1080px;
+			height: 80px;
+			float: left;
+		}
+
+		.tr {
+			width: 1080px;
+			height: 80px;
+			float: left;
+		}
+
+		#trno {
+			width: 80px;
+			height: 65px;
+			float: left;
+			text-align: center;
+			border-top: 10px solid #3e3d55;
+			border-bottom: 5px solid #3e3d55;
+			line-height: 65px;
+		}
+
+		#trsubject {
+			width: 500px;
+			height: 65px;
+			float: left;
+			text-align: center;
+			border-top: 10px solid #3e3d55;
+			border-bottom: 5px solid #3e3d55;
+			line-height: 65px;
+		}
+
+		#trwrite {
+			width: 200px;
+			height: 65px;
+			float: left;
+			text-align: center;
+			border-top: 10px solid #3e3d55;
+			border-bottom: 5px solid #3e3d55;
+			line-height: 65px;
+		}
+
+		#trcount {
+			width: 100px;
+			height: 65px;
+			float: left;
+			text-align: center;
+			border-top: 10px solid #3e3d55;
+			border-bottom: 5px solid #3e3d55;
+			line-height: 65px;
+		}
+
+		#trdate {
+			width: 200px;
+			height: 65px;
+			float: left;
+			text-align: center;
+			border-top: 10px solid #3e3d55;
+			border-bottom: 5px solid #3e3d55;
+			line-height: 65px;
+		}
+
+		#write {
+			width: 1080px;
+			height: 920px;
+			float: left;
+		}
+
+		.listtitle li {
+			display: inline-block;
+			float: left;
+			height: 75px;
+			line-height: 75px;
+		}
+
+		.listno {
+			width: 80px;
+			text-align: center;
+			border-bottom: 1px dotted #7a7984;
+		}
+
+		.listsubject {
+			width: 500px;
+			text-align: center;
+			border-bottom: 1px dotted #7a7984;
+		}
+
+		.listwrite {
+			width: 200px;
+			text-align: center;
+			border-bottom: 1px dotted #7a7984;
+		}
+
+		.listcount {
+			width: 100px;
+			text-align: center;
+			border-bottom: 1px dotted #7a7984;
+		}
+
+		.listdate {
+			width: 200px;
+			text-align: center;
+			border-bottom: 1px dotted #7a7984;
+		}
+
+		#pagingbox {
+			width: 680px;
+			float: left;
+			height: 30px;
+		}
+		.pagingtotal{
+			width: 1080px;
+			float: left;
+			text-align: center;
+			height: 30px;
+		}
+		.pagingtotal li {
+			display: inline-block;
+			text-align: center;
+			width: 20px;
+			height: 30px;
+			line-height: 30px;
+		}
+		.writego{
+			width: 400px;
+			float: right;
+			height: 30px;
+			text-align: right;
+		}
+		.writego button{
+			float: right;
+			width: 150px;
+			height: 42px;
+			border-radius: 5px;
+		}
