@@ -5,6 +5,8 @@
     				   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!-- 장현호 공간 -->
-<!-- <bean class = "controller.HelloController" /> -->
+<bean class = "controller.company.CompanySiginUpOpenController" />
+<bean class = "controller.company.CompanyLoginOpenController" />
+<bean class = "controller.company.CompanyMainPageOpenController" />
 
 </beans>

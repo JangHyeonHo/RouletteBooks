@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 
 <!--제목 설정-->
-<title>사원 등록</title>
+<title>사원 로그인</title>
 
 <!-- 기본 설정  => 여기서부터 -->
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
@@ -38,11 +38,10 @@
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<%--  <link href="${pageContext.request.contextPath }/jsp/css/comSignIn_content.css" rel="stylesheet" type="text/css"> --%>
-<link href="../css/comSignIn_content.css" rel="stylesheet"/> 
+	<link href="css/comLogin_content.css" rel="stylesheet" type="text/css">
 
 	<!--contents js설정(페이지에 따라 바뀌는 값)-->
-	<script src="../js/comSignIn.js"></script>
+	<!-- <script src="../js/comSignIn.js"></script> -->
 
 </head>
 <body>
@@ -51,35 +50,13 @@
 <!-- Content 시작(내용 첨가) -->
 	<div id="contents">
 		<!-- 레이아웃 설정 -->
-		<div id="SignInForm">
+		<div id = "loginBox">
 			<form>
-				<h2>사원 등록</h2>
-				<div class="textBox">사원 사진</div>
-				<div id="photoZone"></div><input type="file" name="staffPhoto" id="imageSource" accept="image/*">
-				<div class="textBox">사원명</div><input type="text" name="staffName" placeholder="홍길동">
-				<div class="textBox">사원 비밀번호</div><input type="password" name="staffPw">
-				<div class="textBox">사원 비밀번호 확인</div><input type="password" name="staffPwConfirm">
-				<div class="textBox">사원 직책</div>
-				<select name="position">
-					<option value="사장">사장</option>
-					<option value="부장">부장</option>
-					<option value="과장">과장</option>
-					<option value="대리">대리</option>
-					<option value="사원">사원</option>
-				</select>
-				<div class="textBox">사원 부서</div>
-				<select name="department">
-					<option value="인사팀">인사팀</option>
-					<option value="총무팀">총무팀</option>
-					<option value="영업팀">영업팀</option>
-					<option value="전산팀">전산팀</option>
-					<option value="마케팅팀">마케팅팀</option>
-				</select>
-				<div class="textBox">사원 전화번호(핸드폰번호)</div>
-				<div id="phoneBox"><input type="text" name="phone1" maxlength="3" placeholder="010"> - <input type="text" name="phone2" maxlength="4" placeholder="5555">
-					- <input type="text" name="phone3" maxlength="4" placeholder="1111"></div>
-				<input type="submit" value="등록">
-				<input type="reset" value="다시 작성">
+			<div id = "loginHeaderBox"><h3>Roulette Books<p style="padding-top:6px;">사원Login</p></h3></div>
+			<div id = "loginIdBox"><div class = "TextBox">사원번호</div><input type = "text" name = "comId"></div>
+			<div id = "loginPwBox"><div class = "TextBox">사원 비밀번호</div><input type = "password" name = "comPw"></div>
+			<div id = "loginBtnBox"><input type = "submit" value="로그인">
+			<input type = "button" value="사원등록"></div>
 			</form>
 		</div>
 	</div>
