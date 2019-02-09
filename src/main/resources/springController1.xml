@@ -8,5 +8,10 @@
 <bean class = "controller.company.CompanySiginUpOpenController" />
 <bean class = "controller.company.CompanyLoginOpenController" />
 <bean class = "controller.company.CompanyMainPageOpenController" />
+<bean class = "controller.company.CompanyHRManaListOpenController" />
+<bean class = "controller.company.CompanyHRMemListOpenController" />
+<bean class = "controller.company.CompanyBookContractRegistController" />
+<bean class = "controller.company.CompanyPublisherRegistController" />
+<bean class = "controller.company.CompanyPublisherListController" />
 
 </beans>
