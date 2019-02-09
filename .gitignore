@@ -39,7 +39,7 @@ local.properties
 .classpath
 .factorypath
 .buildpath
-.target
+.target/
 .tern-project
 .springBeans
 .recommenders/
