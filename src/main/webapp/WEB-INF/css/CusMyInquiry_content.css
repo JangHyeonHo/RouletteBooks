@@ -60,12 +60,15 @@
         td {
             text-align: center;
         }
-
+		.answer{
+			color: red;
+		}
         #Subj {
             text-align: left;
         }
 
         em {
+        	font-style: normal;
             color: cadetblue;
         }
 
