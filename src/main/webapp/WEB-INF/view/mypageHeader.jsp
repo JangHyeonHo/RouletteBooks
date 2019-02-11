@@ -22,7 +22,7 @@
 		</div>
 
 		<div id="coupon">
-			<a href="#">
+			<a href="/roulettebooks/mypage/couponinfo">
 				<div class="ccTop">쿠폰 ▶</div>
 				<div class="ccLogo">
 					<img src="../img/쿠폰로고.PNG">
