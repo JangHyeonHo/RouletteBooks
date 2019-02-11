@@ -139,7 +139,7 @@ public class SignUpCommand {
 	//받아온 폰 번호 합치기
 	public String getPhoneNumber() {
 		// TODO Auto-generated method stub
-		return (phoneFirst+"-"+phone2+"-"+phone3);
+		return (phoneFirst+phone2+phone3);
 	}
 	//받아온 주소 합치기
 	public String getFullAddress() {
