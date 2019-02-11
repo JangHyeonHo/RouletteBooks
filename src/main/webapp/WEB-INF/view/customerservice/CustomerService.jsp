@@ -13,7 +13,8 @@
 <title>고객센터</title>
 
 <!-- 기본 설정  => 여기서부터 -->
-<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
 <!-- font 설정 -->
 <link href="https://fonts.googleapis.com/css?family=Do+Hyeon"
 	rel="stylesheet">
@@ -36,189 +37,118 @@
 <link href="../css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
-<script src = "../js/header.js"></script>
+<script src="../js/header.js"></script>
 
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="../css/CustomerService_content.css" rel="stylesheet" type="text/css">
+<link href="../css/CustomerService_content.css" rel="stylesheet"
+	type="text/css">
+<link href="../css/customerSide.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
 </head>
 <body>
-<!-- Header 시작 -->
-<jsp:include page="../Header.jsp" />
-<!-- Header 끝 -->
-<!-- Content 시작(내용 첨가) -->
-<div id="contents">
-        <div id = "customSide">
-            <div id = "customSide1">
-				<div class = "cusSideTitle">
-					퀵 메뉴
-				</div>
-				<ul>
-					<li><a href="#">주문 정보</a></li>
-					<li><a href="#">배송 정보</a></li>
-					<li><a href="#">중고구매/판매문의(FAQ)</a></li>
-					<li><a href="#">쿠폰내역조회</a></li>
-					<li><a href="#">개인정보수정</a></li>
-					<li><a href="#">이벤트 당첨자 확인</a></li>
-				</ul>
-				
-            </div>
-            <div id = "customSide2">
-                <div class = "cusSideTitle">
-					FAQ
-				</div>
-				<ul>
-						<li><a href="#">e-book</a></li>
-						<li><a href="#">중고문의</a></li>
-						<li><a href="#">결제문의</a></li>
-						<li><a href="#">배송문의</a></li>
-						<li><a href="#">회원관리</a></li>
-				</ul>
-            </div>
-            <div id = "customSide3">
-                <div class = "cusSideTitle">
-					1:1 문의
-				</div>
-				<ul>
-					<li><a href="#">내 문의글</a></li>
-					<li><a href="#">1:1 문의하기</a></li>
-				</ul>
-            </div>
-            <div id = "customSide4">
-                <div class = "cusSideTitle">
-					근무시간안내
-				</div>
-				24시간 쉬지 않습니다.<br> 24시간근무자 * 장현호 *
-            </div>
-            
+	<!-- Header 시작 -->
+	<jsp:include page="../Header.jsp" />
+	<!-- Header 끝 -->
+	<!-- Content 시작(내용 첨가) -->
+	<div id="contents">
 
-        </div>
-        
-
-        <div id = "customTop">
-			<div class = "TopBox">
-					<a href="#">
-				<div class="BoxImage">
-					<img src = "img/대여.PNG">
-				</div>
-				<div class = "TopBoxTitle">
-					대여 정보 확인하기
-				</div>
-				<div class="TopBoxCon">
-					대여 정보를 바로 확인하실 수 있습니다.
-				</div>
+		<!-- 고객센터 사이드 시작 -->
+		<jsp:include page="../customerSide.jsp" />
+		<!-- 고객센터 사이드 끝 -->
+		<div id="customTop">
+			<div class="TopBox">
+				<a href="#">
+					<div class="BoxImage">
+						<img src="../img/대여.PNG">
+					</div>
+					<div class="TopBoxTitle">대여 정보 확인하기</div>
+					<div class="TopBoxCon">대여 정보를 바로 확인하실 수 있습니다.</div>
 				</a>
 			</div>
-			<div class = "TopBox">	
-					<a href="#">
-				<div class="BoxImage">
-					<img src = "img/배송.PNG">
-				</div>
-				<div class = "TopBoxTitle">
-					거래(중고) 배송정보 확인하기
-				</div>
-				<div class="TopBoxCon">
-					거래 정보를 바로 확인하실 수 있습니다.
-				</div>
-					</a>
+			<div class="TopBox">
+				<a href="#">
+					<div class="BoxImage">
+						<img src="../img/배송.PNG">
+					</div>
+					<div class="TopBoxTitle">거래(중고) 배송정보 확인하기</div>
+					<div class="TopBoxCon">거래 정보를 바로 확인하실 수 있습니다.</div>
+				</a>
 			</div>
-			<div class = "TopBox">
-					<a href="#">
-				<div class="BoxImage">
-					<img src = "img/eBook.PNG">
-				</div>
-				<div class = "TopBoxTitle">
-					대여 하고싶은 e-book 정보 보러가기
-				</div>
-				<div class="TopBoxCon">
-					다양한 e-book 을 즐기실 수 있습니다.
-				</div>
-					</a>
+			<div class="TopBox">
+				<a href="#">
+					<div class="BoxImage">
+						<img src="../img/eBook.PNG">
+					</div>
+					<div class="TopBoxTitle">대여 하고싶은 e-book 정보 보러가기</div>
+					<div class="TopBoxCon">다양한 e-book 을 즐기실 수 있습니다.</div>
+				</a>
 			</div>
-			<div class = "TopBox">
-					<a href="#">
-				<div class="BoxImage">
-					<img src = "img/중고.PNG">
-				</div>
-				<div class = "TopBoxTitle">
-					거래(중고) 바로가기
-				</div>
-				<div class="TopBoxCon">
-					원하는 도서(중고)를 구매하실 수 있습니다.
-				</div>
-					</a>
+			<div class="TopBox">
+				<a href="#">
+					<div class="BoxImage">
+						<img src="../img/중고.PNG">
+					</div>
+					<div class="TopBoxTitle">거래(중고) 바로가기</div>
+					<div class="TopBoxCon">원하는 도서(중고)를 구매하실 수 있습니다.</div>
+				</a>
 			</div>
-			<div class = "TopBox">
-					<a href="#">
-				<div class="BoxImage">
-					<img src = "img/이벤트.PNG">
-				</div>
-				<div class = "TopBoxTitle">
-					진행중인 이벤트 확인하기
-				</div>
-				<div class="TopBoxCon">
-					다양한 이벤트와 당첨결과를 확인하실 수 있습니다.
-				</div>
-					</a>
+			<div class="TopBox">
+				<a href="#">
+					<div class="BoxImage">
+						<img src="../img/이벤트.PNG">
+					</div>
+					<div class="TopBoxTitle">진행중인 이벤트 확인하기</div>
+					<div class="TopBoxCon">다양한 이벤트와 당첨결과를 확인하실 수 있습니다.</div>
+				</a>
 			</div>
-			<div class = "TopBox">
-					<a href="#">
-				<div class="BoxImage">
-					<img src = "img/회원정보.PNG">
-				</div>
-				<div class = "TopBoxTitle">
-					회원정보 바로가기
-				</div>
-				<div class="TopBoxCon">
-					회원정보 확인/변경/탈퇴 등 개인정보를 관리하실 수 있습니다.
-				</div>
+			<div class="TopBox">
+				<a href="#">
+					<div class="BoxImage">
+						<img src="../img/회원정보.PNG">
+					</div>
+					<div class="TopBoxTitle">회원정보 바로가기</div>
+					<div class="TopBoxCon">회원정보 확인/변경/탈퇴 등 개인정보를 관리하실 수 있습니다.</div>
 				</a>
 			</div>
 
-        </div>
-        <div id = "customMid">
-			<div class = "customTitle">
-				1:1 문의
+		</div>
+		<div id="customMid">
+			<div class="customTitle">1:1 문의</div>
+			<div id="customMidCon">
+				로그인 후 이용 가능합니다.<br> Roulette Books 대한 모든 궁금증은 1:1 문의하기로 부담없이
+				확인하세요.
+				<button type="button" onclick="location.href='#'">로그인</button>
 			</div>
-			<div id = "customMidCon">
-			로그인 후 이용 가능합니다.<br>
-			Roulette Books 대한 모든 궁금증은 1:1 문의하기로 부담없이 확인하세요. 
-			<button type="button" onclick="location.href='#'">로그인</button>
-			</div>
-        </div>
-        <div id = "customLow">
-			<div class = "customTitle">
-				FAQ Top 10
-			</div>
+		</div>
+		<div id="customLow">
+			<div class="customTitle">FAQ Top 10</div>
 			<div class="FAQTop10">
 				<ul>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li><a href="#">8</a></li>
-						<li><a href="#">9</a></li>
-						<li><a href="#">10</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
 				</ul>
 			</div>
-			<div class="FAQTop10">
-				2
-			</div>
-			
-        </div>
-        
+			<div class="FAQTop10">2</div>
+
+		</div>
+
 
 	</div>
-<!-- Content 끝 -->
-<!-- Footer 시작 -->
-<jsp:include page="../Footer.jsp" />
-<!-- Footer 끝 -->
+	<!-- Content 끝 -->
+	<!-- Footer 시작 -->
+	<jsp:include page="../Footer.jsp" />
+	<!-- Footer 끝 -->
 </body>
 </html>

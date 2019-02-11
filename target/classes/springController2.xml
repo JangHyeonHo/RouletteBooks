@@ -14,8 +14,7 @@
 <bean class = "controller.mypage.MemberInfoConfirmController" />
 <bean class = "controller.mypage.MemberModifyController" />
 <bean class = "controller.mypage.MyPageMainController" />
-<bean class = "controller.rental.rantalListController" />
+<bean class = "controller.mypage.rantalListController" />
 <bean class = "controller.ranking.RankingMainController" />
-
 
 </beans>
