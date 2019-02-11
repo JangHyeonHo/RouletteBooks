@@ -61,7 +61,7 @@
 					<li><a href="#">주문 정보</a></li>
 					<li><a href="#">배송 정보</a></li>
 					<li><a href="#">중고구매/판매문의(FAQ)</a></li>
-					<li><a href="#">쿠폰내역조회</a></li>
+					<li><a href="/roulettebooks/mypage/couponinfo">쿠폰내역조회</a></li>
 					<li><a href="#">개인정보수정</a></li>
 					<li><a href="#">이벤트 당첨자 확인</a></li>
 				</ul>

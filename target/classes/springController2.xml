@@ -17,5 +17,4 @@
 <bean class = "controller.rental.rantalListController" />
 <bean class = "controller.ranking.RankingMainController" />
 
-
 </beans>
