@@ -25,7 +25,7 @@
                         <li><a href="myinfoconfirm">기본정보보기</a></li>
                         <li><a href="couponinfo">쿠폰내역</a></li>
                         <li><a href="#">거래내역</a></li>
-                        <li><a href="rantallist">대여내역</a></li>
+                        <li><a href="rentallist">대여내역</a></li>
                         <li><a href="#">충전내역</a></li>
                         <li><a href="#">위시리스트</a></li>
                         <li><a href="#">장바구니</a></li>

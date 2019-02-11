@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import controller.FrontControllerInterface;
 
 @Controller
-@RequestMapping("/mypage/rantallist")
-public class rantalListController implements FrontControllerInterface {
+@RequestMapping("/mypage/rentallist")
+public class rentalListController implements FrontControllerInterface {
 //이원학
 	
 	@Override
@@ -16,7 +16,7 @@ public class rantalListController implements FrontControllerInterface {
 	public String OpenProcessGet() {
 		// TODO Auto-generated method stub
 		System.out.println("open:대여내역");
-		return "mypage/rantalList";
+		return "mypage/rentalList";
 	}
 
 	@Override

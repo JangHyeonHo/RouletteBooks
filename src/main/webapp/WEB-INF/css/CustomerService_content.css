@@ -24,8 +24,9 @@ li > a{
     float: left;
     font-family: 'Do Hyeon', sans-serif;
     
-
-    
+}
+.TopBox a:hover{
+	color : gray;
 }
 .BoxImage{
     width: 122px;
