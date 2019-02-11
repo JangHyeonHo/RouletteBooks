@@ -62,36 +62,7 @@
 		</div>
 		
 		<div class="basket_main_box">
-			<div class="basket_main_box1">
-				<div class="basket_main_check"><input type="checkbox"></div>
-				<div class="basket_main_img"><img src="img/buybook4.jpg" /></div>
-				<div class="basket_main_subject">책제목</div>
-				<div class="basket_main_count">
-					<input type="number" value="1" min="0">
-				</div>
-				<div class="basket_main_money">20,000원</div>
-			</div>
-			<div class="basket_main_box2">
-				<div class="total_box">
-					<div class="money_info">상품금액</div>
-					<div class="money_info">20,000원</div>
-				</div>
-				<div class="total_box" style="font-size: 50px;">-</div>
-				<div class="total_box">
-					<div class="money_info">할인금액</div>
-					<div class="money_info">3,000원</div>
-				</div>
-				<div class="total_box" style="font-size: 50px;">+</div>
-				<div class="total_box">
-					<div class="money_info">배송비</div>
-					<div class="money_info">2,500원</div>
-				</div>
-				<div class="total_box" style="font-size: 50px;">=</div>
-				<div class="total_box">
-					<div class="money_info">주문금액</div>
-					<div class="money_info">50,000원</div>
-				</div>
-			</div>
+			
 
 			<div class="basket_main_box1">
 				<div class="basket_main_check"><input type="checkbox"></div>
@@ -104,49 +75,19 @@
 			</div>
 			<div class="basket_main_box2">
 				<div class="total_box">
-					<div class="money_info">상품금액</div>
+					<div class="money_info">대여금액</div>
 					<div class="money_info">20,000원</div>
 				</div>
 				<div class="total_box" style="font-size: 50px;">-</div>
 				<div class="total_box">
 					<div class="money_info">할인금액</div>
-					<div class="money_info">3,000원</div>
+					<div class="money_info">3,000</div>
 				</div>
-				<div class="total_box" style="font-size: 50px;">+</div>
+				<div class="total_box" style="font-size: 50px;">x</div>
 				<div class="total_box">
-					<div class="money_info">배송비</div>
-					<div class="money_info">2,500원</div>
-				</div>
-				<div class="total_box" style="font-size: 50px;">=</div>
-				<div class="total_box">
-					<div class="money_info">주문금액</div>
-					<div class="money_info">50,000원</div>
-				</div>
-			</div>
-
-			<div class="basket_main_box1">
-				<div class="basket_main_check"><input type="checkbox"></div>
-				<div class="basket_main_img"><img src="img/buybook4.jpg" /></div>
-				<div class="basket_main_subject">책제목</div>
-				<div class="basket_main_count">
-					<input type="number" value="1" min="0">
-				</div>
-				<div class="basket_main_money">20,000원</div>
-			</div>
-			<div class="basket_main_box2">
-				<div class="total_box">
-					<div class="money_info">상품금액</div>
-					<div class="money_info">20,000원</div>
-				</div>
-				<div class="total_box" style="font-size: 50px;">-</div>
-				<div class="total_box">
-					<div class="money_info">할인금액</div>
-					<div class="money_info">3,000원</div>
-				</div>
-				<div class="total_box" style="font-size: 50px;">+</div>
-				<div class="total_box">
-					<div class="money_info">배송비</div>
-					<div class="money_info">2,500원</div>
+					<div class="money_info">대여기간</div>
+					<div class="money_info">2017-10-04-2017-10-17<br>
+					(7일)</div>
 				</div>
 				<div class="total_box" style="font-size: 50px;">=</div>
 				<div class="total_box">
@@ -171,7 +112,7 @@
 			<div class="coin_info">전체주문금액
 				<div class="total_coin_money">55,000원</div>
 			</div>
-			<div class="coin_info"><button>주문하기</button></div>
+			<div class="coin_info"><button onclick="location='rental/payment'">주문하기</button></div>
 		</div>
 
 

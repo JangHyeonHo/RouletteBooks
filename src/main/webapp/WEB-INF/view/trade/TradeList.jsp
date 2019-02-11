@@ -132,7 +132,7 @@
 					</div>
 				
 			</div>
-					<div class="listwrite"><button><a href="">글 작성</a></button></div>
+					<div class="listwrite"><button onclick="location='trade/boardwrite'">글 작성</button></div>
 					<div class="Paging"><img src="img/Paging.jpg"></div>
 		</div>
 </div>

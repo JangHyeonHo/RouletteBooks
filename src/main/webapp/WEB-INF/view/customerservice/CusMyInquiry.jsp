@@ -85,14 +85,14 @@
                 <tr>
                     <td>1</td>
                     <td>배송</td>
-                    <td id="Subj"><a href="#">배송이 안와요.</a><em>[답변완료]</em></td>
+                    <td id="Subj"><a href="#">배송이 안와요.</a><span class = "answer">[답변완료]</span></td>
                     <td>2019.02.02</td>
                     <td><button><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>기타</td>
-                    <td id="Subj"><a href="#">책이 재미가 없어요.</a><em>[답변대기중]</em></td>
+                    <td id="Subj"><a href="#">책이 재미가 없어요.</a><span class = "answer">[답변대기중]</span></td>
                     <td>2019.02.12</td>
                     <td><button class = "btn_del"><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
