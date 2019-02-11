@@ -58,12 +58,12 @@
 <!-- Content 시작(내용 첨가) -->
 	<!-- Contents -->
 	<div id="contents">
-		<div id="customSide">
+	
 			
 			<jsp:include page="../mypageSide.jsp" />
 
 
-		</div>
+	
 		
 		<jsp:include page="../mypageHeader.jsp" />
 

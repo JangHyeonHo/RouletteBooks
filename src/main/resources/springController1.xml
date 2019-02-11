@@ -27,4 +27,16 @@
 <bean class = "controller.company.CompanyBookDetailOpenController" />
 <!-- /company/sales/book/detail -->
 
+<!-- DTO공간 -->
+<bean class = "dto.RMember" name="RMember" id="RMember"/>
+
+<!-- Command객체 공간 -->
+<bean class = "command.SignUpCommand" name="SignUpCommand" id="SignUpCommand"/>
+
+<!-- DAO공간 -->
+<bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>
+
+<!-- ActionController 공간 -->
+<bean class = "service.member.MemberSignUpService" name="MemberSignUpService" id="MemberSignUpService"/>
+
 </beans>

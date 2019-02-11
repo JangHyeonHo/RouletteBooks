@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,9 +54,9 @@
 	<div id="contents">
 		<!-- 레이아웃 설정 -->
 		<div id="SignInForm">
-			<form action="" method="post">
+			<form:form>
 				<h2>회원가입</h2>
-				<div class="textBox">이메일(아이디)</div><input type="text" id = "email" name="id" placeholder="abcdefgh@gmail.com">
+				<div class="textBox">이메일(아이디)</div><input type="text" id = "email" name="email" placeholder="abcdefgh@gmail.com">
 				<input type="button" id="emailFirm" value="중복확인">
 				<div class="textBox">비밀번호</div><input type="password" name="password">
 				<div class="textBox">비밀번호 확인</div><input type="password" name="passwordCon">
@@ -116,7 +116,7 @@
 				</div>
 				<input type="submit" value="가입">
 				<input type="reset" value="재 작성">
-			</form>
+			</form:form>
 		</div>
 	</div>
 <!-- Content 끝 -->
