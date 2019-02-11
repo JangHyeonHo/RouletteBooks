@@ -45,6 +45,8 @@
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
 <!-- <link href="css/sample.css" rel="stylesheet" type="text/css"> -->
 <link href="../css/customerCoupon_content.css" rel="stylesheet" type="text/css">
+<link href="../css/mypageSide.css" rel="stylesheet" type="text/css">
+<link href="../css/mypageHeader.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
@@ -56,56 +58,20 @@
 <!-- Content 시작(내용 첨가) -->
 	<!-- Contents -->
 	<div id="contents">
-		<div id="customSide">
-			<div id="customSide1">
-				<div class="cusSideTitle">
-					퀵 메뉴
-				</div>
-				<ul>
-					<li><a href="#">주문 정보</a></li>
-					<li><a href="#">배송 정보</a></li>
-					<li><a href="#">중고구매/판매문의(FAQ)</a></li>
-					<li><a href="#">쿠폰내역조회</a></li>
-					<li><a href="#">개인정보수정</a></li>
-					<li><a href="#">이벤트 당첨자 확인</a></li>
-				</ul>
-
-			</div>
-			<div id="customSide2">
-				<div class="cusSideTitle">
-					FAQ
-				</div>
-				<ul>
-					<li><a href="#">e-book</a></li>
-					<li><a href="#">중고문의</a></li>
-					<li><a href="#">결제문의</a></li>
-					<li><a href="#">배송문의</a></li>
-					<li><a href="#">회원관리</a></li>
-				</ul>
-			</div>
-			<div id="customSide3">
-				<div class="cusSideTitle">
-					1:1 문의
-				</div>
-				<ul>
-					<li><a href="#">내 문의글</a></li>
-					<li><a href="#">1:1 문의하기</a></li>
-				</ul>
-			</div>
-			<div id="customSide4">
-				<div class="cusSideTitle">
-					근무시간안내
-				</div>
-				24시간 쉬지 않습니다.<br> 24시간근무자 * 장현호 *
-			</div>
+	
+			
+			<jsp:include page="../mypageSide.jsp" />
 
 
-		</div>
+	
+		
+		<jsp:include page="../mypageHeader.jsp" />
 
 
 		<div id="customTop">
 			<div id="coupon_header">
-				<h2>쿠폰내역조회</h2>
+				<div id="gle"><h2>쿠폰내역조회</h2></div>
+				
 				<div id="coupon_announce">
 					<ul>
 						<li>- 룰렛북스 이벤트에서 받은 쿠폰으로, 표기된 할인율만큼 대여할인 받으실 수 있습니다.</li>
@@ -233,9 +199,6 @@
 						으아아
 					</div>
 				</div>
-			</div>
-			<div id="coupon_footer">
-
 			</div>
 		</div>
 

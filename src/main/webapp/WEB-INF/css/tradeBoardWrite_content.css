@@ -22,6 +22,9 @@
 #trade_nick_name{
     float: left;
 }
+#trade_book_publisher{
+	float: left;
+}
 #trade_password{
     float: left;
 }

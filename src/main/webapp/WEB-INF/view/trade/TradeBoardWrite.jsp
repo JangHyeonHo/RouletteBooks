@@ -97,6 +97,9 @@
 				<div id="trade_book_name">
 					<input type="text" class="trade_board_class" placeholder="도서명">
 				</div>
+				<div id="trade_book_publisher">
+					<input type="text" class="trade_board_class" placeholder="출판사명">
+				</div>
 				<div id="trade_book_price">
 					<input type="number" step=1000 min=0 class="trade_board_class" placeholder="희망 도서가격">
 				</div>

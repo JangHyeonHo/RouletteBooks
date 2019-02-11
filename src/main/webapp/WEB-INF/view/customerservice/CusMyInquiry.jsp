@@ -78,19 +78,32 @@
                     <th scope="col">분류</th>
                     <th scope="col">제목</th>
                     <th scope="col">날짜</th>
-                    <th scope="col"><span id="del">삭제</span></th>
+                    <th scope="col"><span id="del"></span></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
                     <td>배송</td>
-                    <td id="Subj"><a href="#">배송이 안와요.</a><em>[대기중]</em></td>
+                    <td id="Subj"><a href="#">배송이 안와요.</a><em>[답변완료]</em></td>
                     <td>2019.02.02</td>
                     <td><button><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
+                <tr>
+                    <td>2</td>
+                    <td>기타</td>
+                    <td id="Subj"><a href="#">책이 재미가 없어요.</a><em>[답변대기중]</em></td>
+                    <td>2019.02.12</td>
+                    <td><button class = "btn_del"><img src="../img/문의삭제로고.PNG"></button></td>
+                </tr>
             </tbody>
         </table>
+        <div id = "pasingNum">
+        	<span class = "pagebtn">이전</span>
+        	<em>1</em>
+        	<span class = "pagebtn">다음</span>
+        </div> 
+        
     </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->

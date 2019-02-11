@@ -61,7 +61,7 @@
 		<!-- 고객센터 사이드 끝 -->
 		<div id="customTop">
 			<div class="TopBox">
-				<a href="#">
+				<a href="../mypage/rantallist">
 					<div class="BoxImage">
 						<img src="../img/대여.PNG">
 					</div>
@@ -79,7 +79,7 @@
 				</a>
 			</div>
 			<div class="TopBox">
-				<a href="#">
+				<a href="../rental">
 					<div class="BoxImage">
 						<img src="../img/eBook.PNG">
 					</div>
@@ -97,7 +97,7 @@
 				</a>
 			</div>
 			<div class="TopBox">
-				<a href="#">
+				<a href="../event">
 					<div class="BoxImage">
 						<img src="../img/이벤트.PNG">
 					</div>
@@ -106,7 +106,7 @@
 				</a>
 			</div>
 			<div class="TopBox">
-				<a href="#">
+				<a href="../mypage/myinfoconfirm">
 					<div class="BoxImage">
 						<img src="../img/회원정보.PNG">
 					</div>

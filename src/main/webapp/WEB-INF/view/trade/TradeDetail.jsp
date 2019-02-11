@@ -66,12 +66,12 @@
 					</div>
 
 					<div id="detail_classification" class="tableBox">
-						<div class="leftText">현황</div>
+						<div class="leftText">거래명</div>
 						<div class="rightText">삽니다</div>
 					</div>
 
 					<div id="detail_genre" class="tableBox">
-						<div class="leftText">카테고리</div>
+						<div class="leftText">도서장르</div>
 						<div class="rightText">공포물</div>
 					</div>
 
@@ -102,19 +102,19 @@
 
 
 					<div id="detail_price" class="tableBox">
-						<div class="leftText">가격</div>
+						<div class="leftText">도서 가격</div>
 						<div class="rightText">20,000원</div>
 					</div>
 					<div id="detail_condition" class="tableBox">
-						<div class="leftText">도서상태</div>
+						<div class="leftText">도서 상태</div>
 						<div class="rightText">???</div>
 					</div>
 					<div id="detail_transaction" class="tableBox">
-						<div class="leftText">거래방법</div>
+						<div class="leftText">거래 방법</div>
 						<div class="rightText">택배거래/직거래</div>
 					</div>
 					<div id="detail_currentsituation" class="tableBox">
-						<div class="leftText">대기/구매/판매/중</div>
+						<div class="leftText">거래 현황</div>
 						<div class="rightText">대기중</div>
 					</div>
 					<div id="detail_graded" class="tableBox">
@@ -156,7 +156,7 @@
 				책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다책팝니다
 			</div>
 		</div>
-		<div class="last_box"><button>구매하기</button><button>목록으로</button></div>
+		<div class="last_box"><button>구매하기</button><button>글수정</button><button>글삭제</button><button>목록으로</button></div>
 </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->

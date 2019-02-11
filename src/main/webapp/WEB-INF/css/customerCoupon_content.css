@@ -80,9 +80,9 @@ hr.Sidehr {
 
 /* 메인상단 */
 #customTop {
-    width: 880px;
+    width: 800px;
     min-height: 1000px;
-    margin: 0 auto;
+    margin: 30px 0 0 20px;
     float: left;
 
 }
@@ -104,6 +104,7 @@ hr.Sidehr {
     width: 880px;
     min-height: 200px;
     float: left;
+    padding-left:20px;
     
 }
 
@@ -209,4 +210,8 @@ hr.Sidehr {
     padding: 7px 5px;
     text-align: center;
     border-bottom: 1px solid blue;
+}
+#gle{
+	width:800px;
+	border-bottom:1px solid black;
 }

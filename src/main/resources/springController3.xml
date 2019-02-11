@@ -12,4 +12,5 @@
 	<bean class = "controller.payment.PaymentController" />
 	<bean class = "controller.mypage.CustomerCouponController" />
 	<bean class = "controller.event.EventController" />
+	<bean class = "controller.mypage.MyPageOrderInfo" />
 </beans>

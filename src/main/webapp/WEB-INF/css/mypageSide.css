@@ -10,7 +10,7 @@ a{
 	text-decoration: none;
 	color: gray;
 }
-a:hover{
+#MyPageSide a:hover{
 	color: rosybrown;
 }
 .mainText{
