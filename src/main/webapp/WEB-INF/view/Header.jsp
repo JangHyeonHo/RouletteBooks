@@ -6,12 +6,12 @@
       <ul id="headerMyForm">
          <li class="greetLogin" style="display: none;"><span id="nick">닉네임</span>
             님 방문을 환영합니다.</li>
-         <li class="formBtn"><a href="#">로그인</a></li>
+         <li class="formBtn"><a href="/roulettebooks/rblogin">로그인</a></li>
          <li class="formBtn"><a href="#">로그아웃</a></li>
-         <li class="formBtn"><a href="#">회원가입</a></li>
+         <li class="formBtn"><a href="/roulettebooks/member/signup">회원가입</a></li>
          <li class="formBtn">
             <div id="myPageBtn">
-               <a href="#">마이 페이지</a>
+               <a href="/roulettebooks/mypage/main">마이 페이지</a>
             </div>
             <div id="myPageList">
                <ul id="myPageForm" style="display: none;">
@@ -28,7 +28,7 @@
    <!-- HeaderMid -->
    <div id="headerMid">
       <div id="logoIcon">
-         <img src="../img/logo.png" height="100%">
+         <a href="/roulettebooks/main"><img src="../img/logo.png" height="100%"></a>
       </div>
       <div id="searchBox">
          <form id="searchForm">
@@ -43,12 +43,12 @@
    <!-- HeaderBottom -->
    <div id="headerBottom">
       <ul id="headerNav">
-         <li><a href="rental">도서 대여<span style="font-size: 12px;">(Ebook)</span></a></li>
-         <li><a href="#">중고 도서 거래</a></li>
-         <li><a href="#">랭킹</a></li>
-         <li><a href="event">이벤트</a></li>
-         <li><a href="#">고객센터</a></li>
-         <li><a href="#">자유 게시판</a></li>
+         <li><a href="/roulettebooks/rental">도서 대여<span style="font-size: 12px;">(Ebook)</span></a></li>
+         <li><a href="/roulettebooks/tradelist">중고 도서 거래</a></li>
+         <li><a href="/roulettebooks/ranking/main">랭킹</a></li>
+         <li><a href="/roulettebooks/event">이벤트</a></li>
+         <li><a href="/roulettebooks/customerservice/main">고객센터</a></li>
+         <li><a href="/roulettebooks/freeboardlist">자유 게시판</a></li>
       </ul>
    </div>
 </header>

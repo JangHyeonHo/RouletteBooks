@@ -5,13 +5,38 @@
     				   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!-- 장현호 공간 -->
+
 <bean class = "controller.company.CompanySiginUpOpenController" />
+<!-- /company/signup -->
 <bean class = "controller.company.CompanyLoginOpenController" />
+<!-- /company/login -->
 <bean class = "controller.company.CompanyMainPageOpenController" />
+<!-- /company/main -->
 <bean class = "controller.company.CompanyHRManaListOpenController" />
+<!-- /company/hr/managerlist -->
 <bean class = "controller.company.CompanyHRMemListOpenController" />
+<!-- /company/hr/memberlist -->
 <bean class = "controller.company.CompanyBookContractRegistController" />
+<!-- /company/sales/publisher/contract -->
 <bean class = "controller.company.CompanyPublisherRegistController" />
+<!-- /company/sales/publisher/regist -->
 <bean class = "controller.company.CompanyPublisherListController" />
+<!-- /company/sales/publisher/list -->
+<bean class = "controller.company.CompanyBookServiceListController" />
+<!-- /company/sales/book/list -->
+<bean class = "controller.company.CompanyBookDetailOpenController" />
+<!-- /company/sales/book/detail -->
+
+<!-- DTO공간 -->
+<bean class = "dto.RMember" name="RMember" id="RMember"/>
+
+<!-- Command객체 공간 -->
+<bean class = "command.SignUpCommand" name="SignUpCommand" id="SignUpCommand"/>
+
+<!-- DAO공간 -->
+<bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>
+
+<!-- ActionController 공간 -->
+<bean class = "service.member.MemberSignUpService" name="MemberSignUpService" id="MemberSignUpService"/>
 
 </beans>

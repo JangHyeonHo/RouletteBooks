@@ -58,12 +58,15 @@ $(function(){
 		 $("#email").on("focusout",function(){
 			var emailReg = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
 			var regVal = $("#email").val();
-			if(regVal.match(emailReg) != null){
-				alert("확인되었습니다.");
-			}else{
-				alert("이메일이 옳바르지 않습니다.");
-				$("#email").val("");
+			if($("#email").val().length!=0){
+				if(regVal.match(emailReg) != null){
+					alert("확인되었습니다.");
+				}else{
+					alert("이메일이 옳바르지 않습니다.");
+					$("#email").val("");
+				}
 			}
+			
 		 })
 		 $(".phoneNum").on("keyup",function(){
 			 var numOnly = /^[0-9]+$/;
