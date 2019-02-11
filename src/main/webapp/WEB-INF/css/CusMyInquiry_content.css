@@ -2,7 +2,6 @@
             width: 1080px;
             height: 1000px;
             margin: 0 auto;
-            background-color: hotpink;
         }
         a{
 	        text-decoration: none;
@@ -29,21 +28,27 @@
             padding: 24px 0 0 20px;
             font-size: 30px;
             font-family: 'Do Hyeon', sans-serif;
-            background-color: violet;
         }
 
         tr {
             display: table-row;
-            vertical-align: inherit;
-            border-color: inherit;
         }
-
+		thead th{
+		height: 40px;
+		border-bottom: 1px solid gray;
+		background-color: #eeeef1;
+		
+		}
         #del {
+            width: 0;
+    		height: 0;
             overflow: hidden;
         }
 
         #inquiryTable {
-            padding: 20px;
+        	border-top: 2px solid black;
+            margin: 20px;
+            border-bottom: 1px solid gray;
         }
 
         table {
@@ -71,4 +76,9 @@
         }
         #Subj a:hover{
             color: skyblue;
+        }
+        #pasingNum{
+        width: 840px;
+        float:left;
+        text-align : center;
         }
