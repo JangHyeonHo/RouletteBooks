@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import dto.RMember;
+import other.AutoLinePrint;
 
 public class RMemberDao {
 	
@@ -29,9 +30,10 @@ public class RMemberDao {
 		sql = "insert into RMember(mno, memail, mphone, mname, mpassword, mnickname, mbirth_date, mgender, mgrade, mcre_date, mcash, maddress, macc_num, macc_bank, mstatus)"
 				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		i = jdbcTemplate.update(sql, member.getmNo(), member.getmEmail(), member.getmPhone(), member.getmName()
-				,member.getmPassword(),member.getmNickname(),member.getmBirthDate(),member.getmGrade()
+				,member.getmPassword(),member.getmNickname(),member.getmBirthDate(),member.getmGender(),member.getmGrade()
 				,member.getmCreDate(),member.getmCash(),member.getmAddress(),member.getmAccNum()
 				,member.getmAccBank(),member.getmStatus());
+		AutoLinePrint.println("회원번호 : "+ member.getmNo() +" 회원 가입 처리 완료");
 		
 		return i;
 	}
@@ -51,7 +53,7 @@ public class RMemberDao {
 		});
 		//"A0000001"
 		if(maxNo.isEmpty()) {
-			maxNo.add("A0000001");
+			maxNo.add("A0000000");
 		}
 		System.out.println("현재 가장 최근에 만든 회원의 회원 번호 : " + maxNo.get(0));
 		int nextNo = Integer.parseInt(maxNo.get(0).substring(1))+1;
