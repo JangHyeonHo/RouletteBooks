@@ -5,13 +5,26 @@
     				   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!-- 장현호 공간 -->
+
 <bean class = "controller.company.CompanySiginUpOpenController" />
+<!-- /company/signup -->
 <bean class = "controller.company.CompanyLoginOpenController" />
+<!-- /company/login -->
 <bean class = "controller.company.CompanyMainPageOpenController" />
+<!-- /company/main -->
 <bean class = "controller.company.CompanyHRManaListOpenController" />
+<!-- /company/hr/managerlist -->
 <bean class = "controller.company.CompanyHRMemListOpenController" />
+<!-- /company/hr/memberlist -->
 <bean class = "controller.company.CompanyBookContractRegistController" />
+<!-- /company/sales/publisher/contract -->
 <bean class = "controller.company.CompanyPublisherRegistController" />
+<!-- /company/sales/publisher/regist -->
 <bean class = "controller.company.CompanyPublisherListController" />
+<!-- /company/sales/publisher/list -->
+<bean class = "controller.company.CompanyBookServiceListController" />
+<!-- /company/sales/book/list -->
+<bean class = "controller.company.CompanyBookDetailOpenController" />
+<!-- /company/sales/book/detail -->
 
 </beans>
