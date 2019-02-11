@@ -22,39 +22,15 @@
                 </div>
                 <div id="sideInfo">
                     <ul>
-                        <li><a href="myinfoconfirm">기본정보보기</a></li>
-                        <li><a href="couponinfo">쿠폰내역</a></li>
-                        <li><a href="#">거래내역</a></li>
-                        <li><a href="rentallist">대여내역</a></li>
-                        <li><a href="#">충전내역</a></li>
-                        <li><a href="#">위시리스트</a></li>
-                        <li><a href="#">장바구니</a></li>
-                        <li><a href="#">회원등급정보</a></li>
+                        <li><a href="myinfoconfirm"><div class="myside">기본정보보기</div></a></li>
+                        <li><a href="couponinfo"><div class="myside">쿠폰내역</a></div></li>
+                        <li><a href="ordersearch"><div class="myside">거래 주문 및 배송정보</a></div></li>
+                        <li><a href="rentallist"><div class="myside">대여내역</a></div></li>
+                        <li><a href="#"><div class="myside">충전내역</a></div></li>
+                        <li><a href="#"><div class="myside">위시리스트</a></div></li>
+                        <li><a href="#"><div class="myside">장바구니</a></div></li>
+                        <li><a href="#"><div class="myside">회원등급정보</a></div></li>
                     </ul>
                 </div>
             </div>
-            <!-- 배송관리 -->
-            <div id="MyPageSideThird">
-                <div class="MyPageSideTitle">
-                    배송관리
-                </div>
-                <div id="delivery">
-                    <ul>
-                        <li><a href="#">주문 및 배송정보</a></li>
-                        <li><a href="#">배송지 관리</a></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 남는곳 -->
-            <div id="MyPageSideFour">
-                <div class="MyPageSideTitle">
-                    빈공간
-                </div>
-                <div id="bb">
-                    빈공간
-                </div>
-            </div>
-
         </div>

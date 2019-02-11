@@ -9,13 +9,12 @@ import controller.FrontControllerInterface;
 @RequestMapping("/rblogin")
 public class RbLoginController implements FrontControllerInterface {
 
-	//권도완
-	
+	// 권도완
 	@Override
 	@RequestMapping(method = RequestMethod.GET)
 	public String OpenProcessGet() {
 		// TODO Auto-generated method stub
-		System.out.println("회원 로그인 오픈");
+		System.out.println("아이디 찾기 오픈");
 		return "member/Login";
 	}
 

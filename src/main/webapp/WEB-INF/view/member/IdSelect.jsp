@@ -52,10 +52,11 @@
 <!-- Header 끝 -->
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
-<div class="title"><a href="#"><img src="img/logo1.png"></a></div>
+<div class="title"><img src="img/logo1.png"></div>
+		<div class="titlesubject"><h2>아이디찾기</h2></div>
 		<div class=id_body_box>
-			<div class="titlesubject"><h2>아이디찾기</h2></div>
-			<div class="minibox1">
+			
+			
 				
 			
 
@@ -65,30 +66,34 @@
 						<h2>아이디를 찾기위한</h2>
 					<h3><span>본인 확인 방법</span>을 선택해 주세요.</h3>
 					</div>
+					
+				<div class="box2">
+					<input type="radio" id="select" /><b>휴대폰 인증</b> <br>
+					<select name="phoneFirst" id="phoneFirst">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					<input type="text" class = "phoneNum" name="phone2" maxlength="4" placeholder="1234" style="padding: 5px 0px">
+					<input type="text" class = "phoneNum" name="phone3" maxlength="4" placeholder="5678" style="padding: 5px 0px">
+					<br><h4>가입된 휴대폰으로 본인 확인을 진행 합니다.</h4>
 				</div>
-			
-				<div class="minibox2">
-					<div class="title_select1">
-					<div class="box2">
-						<input type="radio" id="select" />휴대폰 인증 <br>
-						<input type="text" class="phoneok" style="width: 70px" >
-						<input type="text" class="phoneok" style="width: 70px" >
-						<input type="text" class="phoneok"  style="width: 70px">
-						<h4>가입된 휴대폰으로 본인 확인을 진행 합니다.</h4>
-					</div>
-					<div class="box2">
-						<input type="radio" >질문과 답변 인증
-						<h4>가입된 질문 및 답변으로  본인 확인을 진행 합니다.</h4>
-					</div>
-					<div class="box2_1">
-						<span>· 비밀번호를 찾으시나요?</span>
-						<button>비밀 번호 찾기</button>
-					</div>
-					<div class="box2_2"><a href="#"><button>확인하기</button></a></div>
+				
+				<div class="box2_1">
+					<span>· 비밀번호를 찾으시나요?</span>
+					<button onclick="location='idselect'">비밀 번호 찾기</button>
 				</div>
-			</div>	
+				<div class="box2_2"><button id="ok">확인하기</button></div>
+				
+				</div>
 
-			</div>
+			
+			
+				
+		
+
 		</div>
 </div>
 <!-- Content 끝 -->

@@ -157,6 +157,7 @@
 			</div>
 		</div>
 		<div class="last_box"><button>구매하기</button><button>글수정</button><button>글삭제</button><button>목록으로</button></div>
+
 </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->

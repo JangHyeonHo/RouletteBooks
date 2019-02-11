@@ -1,133 +1,120 @@
 #contents {
-			width: 1080px;
-			height: 1000px;
-			margin: 0 auto;
-			
-		}
-		.title{
-			width: 1080px;
-			height: 100px;
-			float: left;
-			margin: 30px 0px;
-		}
-		.title img{
-			max-width:100%;
-			max-height: 100%;
-			position: relative;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-		}
-		.id_body_box{
-			width: 1080px;
-			height: 900px;
-			float: left;
-		
-		}
-		.titlesubject{
-			width: 1080px;
-			margin: 45px 0px;
-			float: left;
-			position: relative;
-			top: 5%;
-			left: 25%;
-			transform: translateY(-50%);
-		}
-		.minibox1{
-			width: 1080px;
-			height: 425px;
-			float: left;
-			
-		}
+	width: 1080px;
+	height: 1000px;
+	margin: 0 auto;
+}
+
+.title {
+	width: 1080px;
+	height: 100px;
+	float: left;
+	margin: 30px 0px;
+}
+
+.title img {
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.id_body_box {
+	width: 540px;
+	float: left;
+	border: 1px solid;
+	margin: 0 270px;
+}
+
+.titlesubject {
+	width: 540px;
+	float: left;
+	margin: 5px 270px 10px;
+}
+
+.title_select {
+	width: 540px;
+	margin: 150px 0px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.title_box {
+	padding: 40px 0px;
+}
+
+.title_box>h2 {
+	padding: 20px 0px;
+}
+
+.title_box span {
+	color: blue;
 	
-		
-		.title_select{
-			width: 540px;
-			height: 425px;
-			position: relative;
-			
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			text-align: center;
-			border-top: 1px solid black;
-			border-right: 1px solid black;
-			border-left:  1px solid black;
-		}
-		.title_select1{
-			width: 540px;
-			height: 425px;
-			position: relative;
-			
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			border-bottom: 1px solid black;
-			border-right: 1px solid black;
-			border-left:  1px solid black;
-		}
-		.title_box{
-			padding: 40px 0px;
-			
-		}
-		.title_box > h2{
-			padding: 20px 0px;
-		}
-		.title_box span{
-			color: blue;
-		}
+}
+
+.box2 {
+	width: 500px;
+	float: left;
+	margin: 10px 20px;
+}
+
+select{
+	padding : 5px;
+	margin-left: 11px;
+	width: 80px;
+	margin: 5px;
+	float: left;
+}
 
 
-		.minibox2{
-			width: 1080px;
-			height: 425px;
-			float: left;
-			
-		}
-		.box2{
-			width: 500px;
-			float: left;
-			margin: 10px 20px;
-			position: relative;
-			top: -130px;
-			border-top: 1px solid white;
-			border-bottom: 1px solid darkgray;
-		}
-		
-		.box2_1{
-			width: 540px;
-			height: 40px;
-			float: left;
-			
-		}
-		.box2_1 > span{
-			color: gray;
-			margin: 0px 30px;
-		}
-		.box2_1 > button{
-			float: right;
-			height: 30px;
-			font-size: 12px;
-			color: #666;
-			font-weight: normal;
-			margin: 0px 30px;
-		}
+.box2 input {
+	float: left;
+	margin: 5px 5px;
+}
 
-		.box2_2{
-			width: 540px;
-			height: 45px;
-			float: left;
-			
-		}
-		.box2_2 button{
-			width: 100px;
-			position: relative;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			border: 1px solid #f0562d;
-			background-color: #ff5000;
-			color: white;
-			line-height: 34px;
-			margin: 40px 0px;
-		}
+.box2 b {
+	float: left;
+}
+
+.box2 h4 {
+	float: left;
+	    margin: 5px 30px;
+}
+
+.box2_1 {
+	width: 540px;
+	float: left;
+}
+
+.box2_1>span {
+	color: gray;
+	margin: 10px 20px;
+	float: left;
+}
+
+.box2_1>button {
+	float: right;
+	height: 30px;
+	font-size: 12px;
+	color: #666;
+	font-weight: normal;
+	margin: 10px 20px;
+}
+
+.box2_2 {
+	width: 540px;
+	float: left;
+}
+
+.box2_2 button {
+	width: 100px;
+	border: 1px solid #f0562d;
+	background-color: #ff5000;
+	color: white;
+	line-height: 34px;
+	    margin: 30px 0px;
+}

@@ -1,10 +1,15 @@
 $(document).ready(function(){ 
     $('#select').click(function(){ 
-        var state = $('.phoneok').css('display'); 
-        if(state == 'none'){  
-            $('.phoneok').show(); 
+        var state = $('.phoneFirst').css('display'); 
+        var state1 =  $('.phoneNum').css('display'); 
+        if(state && state1 == 'none'){  
+            $('.phoneFirst').show(); 
+            $('.phoneNum').show(); 
         }else{ 
-            $('.phoneok').hide();         
+            $('.phoneFirst').hide();   
+            $('.phoneNum').hide(); 
         }
+        
     });
+  
 });
