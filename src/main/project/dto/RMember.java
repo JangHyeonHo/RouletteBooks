@@ -2,25 +2,32 @@ package dto;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import command.SignUpCommand;
+
 public class RMember implements DTOTestInterface {
+	private static final String[] GRADENAME = {"브론즈", "실버", "골드", "플래티넘", "다이아몬드"};
+	private static final String[] STATUSNAME = {"활동 중", "휴면 계정", "회원 정지", "회원 탈퇴중"};
+	
 	//회원 정보 테이블
-	String mNo; //회원 번호
-	String mEmail; //회원 이메일
-	String mPhone; //회원 전화번호
-	String mName; //회원 이름
-	String mPassword; //회원 비밀번호
-	String mNickname; //회원 닉네임
-	Date mBirthDate; //회원 생년월일
-	String mGender; //회원 성별
-	String mGrade; //회원 등급
-	Date mCreDate; //회원 생성일
-	int mCash; //회원 예치금
-	String mAddress; //회원 주소
-	String mAccNum; //회원 계좌번호
-	String mAccBank; //회원 계좌 은행명
-	String mStatus; //회원 상태
+	private String mNo; //회원 번호
+	private String mEmail; //회원 이메일
+	private String mPhone; //회원 전화번호
+	private String mName; //회원 이름
+	private String mPassword; //회원 비밀번호
+	private String mNickname; //회원 닉네임
+	private Date mBirthDate; //회원 생년월일
+	private String mGender; //회원 성별
+	private String mGrade; //회원 등급
+	private Date mCreDate; //회원 생성일
+	private int mCash; //회원 예치금
+	private String mAddress; //회원 주소
+	private String mAccNum; //회원 계좌번호
+	private String mAccBank; //회원 계좌 은행명
+	private String mStatus; //회원 상태
 	
 	//Getter Setter
 	public String getmNo() {
@@ -145,7 +152,8 @@ public class RMember implements DTOTestInterface {
 			e.printStackTrace();
 		}
 		
-		System.out.println("비밀번호 암호화완료 : " + password);
+		System.out.println("비밀번호 암호화 : " + password);
+		System.out.println("이상 완료=============================================");
 		return password;
 	}
 	
@@ -154,21 +162,39 @@ public class RMember implements DTOTestInterface {
 	public void DTOTEST() {
 		System.out.println("회원 DTO 정보 확인");
 		System.out.println("회원 번호 : " + mNo);
-		System.out.println("회원 이메일" + mEmail);
+		System.out.println("회원 이메일 : " + mEmail);
 		System.out.println("회원 전화번호 : " + mPhone);
-		System.out.println("회원 이름" + mName);
+		System.out.println("회원 이름 : " + mName);
 		System.out.println("회원 비밀번호 : " + mPassword);
-		System.out.println("회원 닉네임" + mNickname);
+		System.out.println("회원 닉네임 : " + mNickname);
 		System.out.println("회원 생년월일 : " + mBirthDate);
-		System.out.println("회원 성별" + mGender);
+		System.out.println("회원 성별 : " + mGender);
 		System.out.println("회원 등급 : " + mGrade);
-		System.out.println("회원 생성일" + mCreDate);
+		System.out.println("회원 생성일 : " + mCreDate);
 		System.out.println("회원 예치금 : " + mCash);
-		System.out.println("회원 주소" + mAddress);
+		System.out.println("회원 주소 : " + mAddress);
 		System.out.println("회원 계좌 번호 : " + mAccNum);
-		System.out.println("회원 계좌 은행명" + mAccBank);
-		System.out.println("회원 상태" + mAccBank);
+		System.out.println("회원 계좌 은행명 : " + mAccBank);
+		System.out.println("회원 상태 : " + mStatus);
 		System.out.println("이상 완료=============================================");
+	}
+	public RMember commandChange(SignUpCommand command) {
+		// TODO Auto-generated method stub
+		mEmail = command.getEmail();
+		mPhone = command.getPhoneNumber();
+		mName = command.getName();
+		mPassword = PasswordMD5(command.getPassword());
+		mNickname = command.getNick();
+		mBirthDate = command.getFullBirthDate();
+		mGender = command.getSex();
+		mCreDate = new Date();
+		mGrade = GRADENAME[0];
+		mCash = 0;
+		mAddress = command.getFullAddress();
+		mAccNum = command.getAccountNum();
+		mAccBank = command.getBankName();
+		mStatus = STATUSNAME[0];
+		return this;
 	}
 	
 }
