@@ -53,7 +53,7 @@
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
 <div id = "loginBox">
-			<form action="#" method="POST">
+			<form action="#" method="get">
 			<div class="loginemail">
 				<input type="text" name = "email" id="lemail" placeholder=" 이메일 입력">
 			</div>
@@ -62,11 +62,11 @@
 			</div>
 			<div class="loginsearch">
 				<div id="maintainbox"><input type="checkbox" name=loginmaintain value="로그인유지"><strong>로그인유지</strong></div>
-				<div id="idselect"><a href="#">아이디 찾기</a></div>
+				<div id="idselect"><a href="idselect">아이디 찾기</a></div>
 				<div id="passwordselect"><a href="#">비밀번호 찾기</a></div>
 			</div>
 			<div class="loginjoin"><input type="submit" value="로그인" id = "submitBtn"></div>
-			<div class="loginsign"><div class="lsign"><button title="Roulette Books 회원가입"><a href="#"><strong>Roulette Books 회원가입</strong></a></button></div>
+			<div class="loginsign"><div class="lsign"><button type="button" title="Roulette Books 회원가입" onclick="location.href='member/signup'"><strong>Roulette Books 회원가입</strong></button></div>
 			</div>
 			</form>
 		</div>
