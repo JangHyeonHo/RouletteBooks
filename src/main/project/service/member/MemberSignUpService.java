@@ -22,8 +22,7 @@ public class MemberSignUpService {
 		
 		member.DTOTEST();
 		
-		
-//		memberDao.insertMember(member);
+		memberDao.insertMember(member);
 		
 	}
 	
