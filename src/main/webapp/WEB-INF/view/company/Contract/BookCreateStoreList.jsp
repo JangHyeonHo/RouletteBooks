@@ -107,7 +107,7 @@
 					<button>선택한 출판사와 계약하기</button>
 					<button>선택한 출판사 삭제하기</button>
 					<button type = "button" onClick="location.href='regist'">새로운 출판사 등록하기</button>
-					<button>현재 계약 내역 확인하기</button>
+					<button type = "button" onClick="location.href='regist'">현재 계약 내역 확인하기</button>
 				</div>
 				<div id="searchBox">
 					<select name="searchSet" id="search">
