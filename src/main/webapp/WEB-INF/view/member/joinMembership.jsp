@@ -54,7 +54,7 @@
 	<div id="contents">
 		<!-- 레이아웃 설정 -->
 		<div id="SignInForm">
-			<form>
+			<form action="" method="post">
 				<h2>회원가입</h2>
 				<div class="textBox">이메일(아이디)</div><input type="text" id = "email" name="id" placeholder="abcdefgh@gmail.com">
 				<input type="button" id="emailFirm" value="중복확인">

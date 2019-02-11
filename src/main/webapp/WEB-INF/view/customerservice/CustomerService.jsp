@@ -42,6 +42,7 @@
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
 <link href="../css/CustomerService_content.css" rel="stylesheet" type="text/css">
+<link href="../css/customerSide.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
@@ -52,58 +53,14 @@
 <!-- Header 끝 -->
 <!-- Content 시작(내용 첨가) -->
 <div id="contents">
-        <div id = "customSide">
-            <div id = "customSide1">
-				<div class = "cusSideTitle">
-					퀵 메뉴
-				</div>
-				<ul>
-					<li><a href="#">주문 정보</a></li>
-					<li><a href="#">배송 정보</a></li>
-					<li><a href="#">중고구매/판매문의(FAQ)</a></li>
-					<li><a href="#">쿠폰내역조회</a></li>
-					<li><a href="#">개인정보수정</a></li>
-					<li><a href="#">이벤트 당첨자 확인</a></li>
-				</ul>
-				
-            </div>
-            <div id = "customSide2">
-                <div class = "cusSideTitle">
-					FAQ
-				</div>
-				<ul>
-						<li><a href="#">e-book</a></li>
-						<li><a href="#">중고문의</a></li>
-						<li><a href="#">결제문의</a></li>
-						<li><a href="#">배송문의</a></li>
-						<li><a href="#">회원관리</a></li>
-				</ul>
-            </div>
-            <div id = "customSide3">
-                <div class = "cusSideTitle">
-					1:1 문의
-				</div>
-				<ul>
-					<li><a href="#">내 문의글</a></li>
-					<li><a href="#">1:1 문의하기</a></li>
-				</ul>
-            </div>
-            <div id = "customSide4">
-                <div class = "cusSideTitle">
-					근무시간안내
-				</div>
-				24시간 쉬지 않습니다.<br> 24시간근무자 * 장현호 *
-            </div>
-            
-
-        </div>
-        
-
+   				<!-- 고객센터 사이드 시작 -->
+        <jsp:include page="../customerSide.jsp" />
+				<!-- 고객센터 사이드 끝 -->
         <div id = "customTop">
 			<div class = "TopBox">
 					<a href="#">
 				<div class="BoxImage">
-					<img src = "img/대여.PNG">
+					<img src = "../img/대여.PNG">
 				</div>
 				<div class = "TopBoxTitle">
 					대여 정보 확인하기
@@ -116,7 +73,7 @@
 			<div class = "TopBox">	
 					<a href="#">
 				<div class="BoxImage">
-					<img src = "img/배송.PNG">
+					<img src = "../img/배송.PNG">
 				</div>
 				<div class = "TopBoxTitle">
 					거래(중고) 배송정보 확인하기
@@ -129,7 +86,7 @@
 			<div class = "TopBox">
 					<a href="#">
 				<div class="BoxImage">
-					<img src = "img/eBook.PNG">
+					<img src = "../img/eBook.PNG">
 				</div>
 				<div class = "TopBoxTitle">
 					대여 하고싶은 e-book 정보 보러가기
@@ -142,7 +99,7 @@
 			<div class = "TopBox">
 					<a href="#">
 				<div class="BoxImage">
-					<img src = "img/중고.PNG">
+					<img src = "../img/중고.PNG">
 				</div>
 				<div class = "TopBoxTitle">
 					거래(중고) 바로가기
@@ -155,7 +112,7 @@
 			<div class = "TopBox">
 					<a href="#">
 				<div class="BoxImage">
-					<img src = "img/이벤트.PNG">
+					<img src = "../img/이벤트.PNG">
 				</div>
 				<div class = "TopBoxTitle">
 					진행중인 이벤트 확인하기
@@ -168,7 +125,7 @@
 			<div class = "TopBox">
 					<a href="#">
 				<div class="BoxImage">
-					<img src = "img/회원정보.PNG">
+					<img src = "../img/회원정보.PNG">
 				</div>
 				<div class = "TopBoxTitle">
 					회원정보 바로가기
