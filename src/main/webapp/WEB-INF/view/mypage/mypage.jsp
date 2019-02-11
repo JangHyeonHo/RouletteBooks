@@ -65,7 +65,7 @@
             <div id="MyPageFirst">
                 <div class="MainPageTitle">
                     기본정보
-                    <button type="button" class="plus" onclick="location.href='#'">더보기</button>
+                    <button type="button" class="plus" onclick="location.href='myinfoconfirm'">더보기</button>
                 </div>
                 <div id="myInfo">
                     <div id="myInfo1">
@@ -136,7 +136,7 @@
             <div id="MyPageFour">
                 <div class="MainPageTitle">
                     1:1문의
-                    <button type="button" class="plus" onclick="location.href='#'">더보기</button>
+                    <button type="button" class="plus" onclick="location.href='../customerservice/myinquiry'">더보기</button>
                 </div>
                 <div id="question">
                     <span>로그인</span> 후 이용 가능합니다.<br>

@@ -43,6 +43,7 @@
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
 <link href="../css/rantalList_content.css" rel="stylesheet" type="text/css">
 <link href="../css/mypageSide.css" rel="stylesheet" type="text/css">
+<link href="../css/mypageHeader.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
@@ -57,46 +58,10 @@
     <jsp:include page="../mypageSide.jsp" />
     		<!-- 마이페이지 사이드 끝 -->
     
-                <!-- 대여내역 헤더 -->
-                <div id = "rantalListHeader">
-                   <div id = "DetailTop">
-							<div id = "TopSubj">
-								<div id = "MyheadLogo">
-									<img src="../img/마이페이지로고.PNG">
-								</div>
-							</div>
-							<div id = "cash">
-								<a href = "#">
-								<div class = "ccTop">
-									캐쉬 ▶
-								</div>
-								<div class = "ccLogo">
-									<img src="../img/캐시로고.PNG">
-								</div>
-								<div class = "ccLow">
-									<span>2000000</span>원
-								</div>
-								</a>
-							</div>
-							
-							<div id = "coupon">
-								<a href = "#">
-								<div class = "ccTop">
-									쿠폰 ▶
-								</div>
-								<div class = "ccLogo">
-									<img src="../img/쿠폰로고.PNG">
-								</div>
-								<div class = "ccLow">
-									<span>12</span>장
-								</div>
-								</a>
-							</div>
-				</div>    
-			</div>
-			  <!-- 헤더 끝 -->
-
-
+ 			<!-- 마이페이지 헤더 시작 -->
+     <jsp:include page="../mypageHeader.jsp" />
+			<!-- 마이페이지 헤더 끝 -->
+			
 			<div id = "rantalMain">
 				<div id = "mainTitle">
 					<div id = "title1">
