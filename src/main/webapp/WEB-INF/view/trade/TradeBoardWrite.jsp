@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +45,12 @@
 <link href="../css/tradeBoardWrite_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
-
+<c:if test="${empty loginInfo }">
+<script>
+alert("잘못된 접근 입니다.")
+location.href="../main"
+</script>
+</c:if>
 </head>
 <body>
 <!-- Header 시작 -->
@@ -58,8 +63,9 @@
 
 			<div id="trade_board_header">
 				<div id="trade_board_title">
-					<input type="text" id="trade_nick_name" class="trade_board_class" name="trade_board_nick_name" style="width: 200px; height: 25px;"
-					 placeholder="닉네임" readonly>
+					<input type="hidden" name="trade_board_nick_name" 
+					 value="${loginInfo.mNickname }">
+					 <div id="trade_nick_name" class="trade_board_class" style="width: 200px; height: 25px;">작성자 : <span style="color:darkred"> ${loginInfo.mNickname }</span></div>
 				
 					<select id="trade_subject_head" name="trade_board_horsehead" class="trade_board_class" style="width:100px; height:30px;">
 						<option>말머리선택</option>
