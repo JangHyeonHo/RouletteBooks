@@ -8,7 +8,8 @@
 <!-- <bean class = "controller.HelloController" /> -->
 <!-- member 공간 -->
 <bean class="controller.member.RbLoginController" />
-<bean class="controller.member.IdSelectcontroller" />
+<bean class="controller.member.IdSerachController" />
+<bean class="controller.member.PasswordSelectController" />
 
 <!-- Freeboard 공간 -->
 <bean class="controller.freeboard.FreeBoardListController" />

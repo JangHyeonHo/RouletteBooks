@@ -1,12 +1,9 @@
 package dto;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import command.SignUpCommand;
+import other.PasswordAutoMD5;
 
 public class RMember implements DTOTestInterface {
 	private static final String[] GRADENAME = {"브론즈", "실버", "골드", "플래티넘", "다이아몬드"};
@@ -136,27 +133,6 @@ public class RMember implements DTOTestInterface {
 		return this;
 	}
 	
-	//비밀번호 암호화
-	public String PasswordMD5(String password) {
-		MessageDigest md;
-		try {
-			md = MessageDigest.getInstance("SHA-256");
-			md.update(password.getBytes());
-			byte[] byteData = md.digest();
-			StringBuffer strBuf = new StringBuffer();
-			for(byte b : byteData) {
-				password = strBuf.append(Integer.toString((b&0xff) + 0x100, 16).substring(1)).toString();
-			}
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println("비밀번호 암호화 : " + password);
-		System.out.println("이상 완료=============================================");
-		return password;
-	}
-	
 	//모델에 제대로 들어갔는지 테스트
 	@Override
 	public void DTOTEST() {
@@ -183,7 +159,7 @@ public class RMember implements DTOTestInterface {
 		mEmail = command.getEmail();
 		mPhone = command.getPhoneNumber();
 		mName = command.getName();
-		mPassword = PasswordMD5(command.getPassword());
+		mPassword = PasswordAutoMD5.passwordChange(command.getPassword());
 		mNickname = command.getNick();
 		mBirthDate = command.getFullBirthDate();
 		mGender = command.getSex();

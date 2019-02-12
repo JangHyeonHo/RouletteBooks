@@ -14,7 +14,7 @@ public class MemberSignUpService {
 		this.memberDao = memberDao;
 	}
 	
-	public void SignUp(SignUpCommand command) {
+	public void action(SignUpCommand command) {
 		RMember member = new RMember();
 		member.commandChange(command);
 		

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 
 <!--제목 설정-->
-<title>로그인</title>
+<title>비밀번호 찾기</title>
 
 <!-- 기본 설정  => 여기서부터 -->
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
@@ -31,19 +31,19 @@
 	crossorigin="anonymous"></script>
 
 <!--css 설정(기본값)-->
-<link href="../css/body.css" rel="stylesheet" type="text/css">
-<link href="../css/header.css" rel="stylesheet" type="text/css">
-<link href="../css/footer.css" rel="stylesheet" type="text/css">
+<link href="css/body.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css">
+<link href="css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
-<script src = "../js/header.js"></script>
+<script src = "js/header.js"></script>
 
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="../css/Login_content.css" rel="stylesheet" type="text/css"> 
+<link href="css/PasswordSelect_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<script src = "../js/Login.js"></script>
+<script src = "js/PasswordSelect.js"></script>
 
 </head>
 <body>
@@ -52,25 +52,39 @@
 <!-- Header 끝 -->
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
-<div id = "loginBox">
-			<form:form commandName="command">
-			<div class="loginemail">
-				<form:input path="email" id="lemail" placeholder=" 이메일 입력"/>
-			</div>
-			<div class="loginpassword">
-				<form:password path="password" id="lpassword" placeholder="비밀번호 입력"/>
-				<form:errors path="email" cssStyle="color:red; display : inline-block; font-size : 13px;"/>
-				<form:errors path="password" cssStyle="color:red; display : inline-block; font-size : 13px;" />
-			</div>
-			<div class="loginsearch">
-				<div id="maintainbox"><form:checkbox path="loginmaintain" value="true"/><strong>로그인 자동완성</strong></div>
-				<div id="idselect"><a href="searchid">아이디 찾기</a></div>
-				<div id="passwordselect"><a href="searchpw">비밀번호 찾기</a></div>
-			</div>
-			<div class="loginjoin"><input type="submit" value="로그인" id = "submitBtn"></div>
-			<div class="loginsign"><div class="lsign"><button type="button" title="Roulette Books 회원가입" onclick="location.href='signup'"><strong>Roulette Books 회원가입</strong></button></div>
-			</div>
-			</form:form>
+<div class="title"><img src="img/logo1.png"></div>
+		<div class="titlesubject"><h2>비밀번호찾기</h2></div>
+		<div class=id_body_box>
+
+				<div class=title_select>
+					<div class="title_box">
+						<img src="img/member_status_img3.jpg">
+						<h2>비밀번호를 찾기위한</h2>
+					<h3><span>본인 확인 방법</span>을 선택해 주세요.</h3>
+					</div>
+					
+				<div class="box2">
+					<input type="radio" id="select" /><b>휴대폰 인증</b> <br>
+					<select name="phoneFirst" id="phoneFirst">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					<input type="text" class = "phoneNum" name="phone2" maxlength="4" placeholder="1234" style="padding: 5px 0px">
+					<input type="text" class = "phoneNum" name="phone3" maxlength="4" placeholder="5678" style="padding: 5px 0px">
+					<br><h4>가입된 휴대폰으로 본인 확인을 진행 합니다.</h4>
+				</div>
+				
+				<div class="box2_1">
+					<span>· 아이디를 찾으시나요?</span>
+					<button onclick="location.href='idselect'">아이디 찾기</button>
+				</div>
+				<div class="box2_2"><button  type="button" id="ok" onclick="location.href='#'">확인하기</button></div>
+				
+				</div>
+
 		</div>
 </div>
 <!-- Content 끝 -->
