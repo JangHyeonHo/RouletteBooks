@@ -52,13 +52,13 @@
 	<div id="contents">
 		<!-- 레이아웃 설정 -->
 		<div id="SignInForm">
-			<form>
+			<form method="post" enctype="multipart/form-data">
 				<h2>사원 등록</h2>
 				<div class="textBox">사원 사진</div>
 				<div id="photoZone"></div><input type="file" name="staffPhoto" id="imageSource" accept="image/*">
-				<div class="textBox">사원명</div><input type="text" name="staffName" placeholder="홍길동">
-				<div class="textBox">사원 비밀번호</div><input type="password" name="staffPw">
-				<div class="textBox">사원 비밀번호 확인</div><input type="password" name="staffPwConfirm">
+				<div class="textBox">사원명</div><input type = "text" name = "staffName" placeholder="홍길동">
+				<div class="textBox">사원 비밀번호</div><input type = "password" name = "staffPw">
+				<div class="textBox">사원 비밀번호 확인</div><input type = "password" name = "staffPwConfirm">
 				<div class="textBox">사원 직책</div>
 				<select name="position">
 					<option value="사장">사장</option>
@@ -75,9 +75,11 @@
 					<option value="전산팀">전산팀</option>
 					<option value="마케팅팀">마케팅팀</option>
 				</select>
+				<div class="textBox">사원 생년월일</div>
+				<input type="text" name = "birthDate" maxlength = "8">
 				<div class="textBox">사원 전화번호(핸드폰번호)</div>
-				<div id="phoneBox"><input type="text" name="phone1" maxlength="3" placeholder="010"> - <input type="text" name="phone2" maxlength="4" placeholder="5555">
-					- <input type="text" name="phone3" maxlength="4" placeholder="1111"></div>
+				<div id="phoneBox"><input type = "text" name = "phone1" maxlength="3" placeholder="010"> - <input type = "text" name = "phone2" maxlength="4" placeholder="5555">
+					- <input type = "text" name = "phone3" maxlength="4" placeholder="1111"></div>
 				<input type="submit" value="등록">
 				<input type="reset" value="다시 작성">
 			</form>

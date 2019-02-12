@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import controller.FrontControllerInterface;
 @Controller
-@RequestMapping("/idselect")
+@RequestMapping("/member/searchid")
 public class IdSerachController implements FrontControllerInterface {
 
 	@Override
