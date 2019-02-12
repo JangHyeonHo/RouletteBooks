@@ -18,6 +18,7 @@ public class TradeBoardWriteController implements FrontControllerInterface {
 	}
 
 	@Override
+	@RequestMapping(method=RequestMethod.POST)
 	public String OpenProcessPost() {
 		// TODO Auto-generated method stub
 		return null;
