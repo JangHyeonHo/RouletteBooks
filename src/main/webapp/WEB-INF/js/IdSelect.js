@@ -1,15 +1,9 @@
-$(document).ready(function(){ 
-    $('#select').click(function(){ 
-        var state = $('.phoneFirst').css('display'); 
-        var state1 =  $('.phoneNum').css('display'); 
-        if(state && state1 == 'none'){  
-            $('.phoneFirst').show(); 
+$(function(){
+	$('#phoneFirst').hide(); 
+    $('.phoneNum').hide();
+	$("#select").on("click",function(){
+
+		$('#phoneFirst').show(); 
             $('.phoneNum').show(); 
-        }else{ 
-            $('.phoneFirst').hide();   
-            $('.phoneNum').hide(); 
-        }
-        
-    });
-  
-});
+	})	
+})
