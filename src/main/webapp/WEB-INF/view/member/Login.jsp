@@ -56,11 +56,11 @@
 			<form:form commandName="command">
 			<div class="loginemail">
 				<form:input path="email" id="lemail" placeholder=" 이메일 입력"/>
-				<form:errors path="email" />
 			</div>
 			<div class="loginpassword">
 				<form:password path="password" id="lpassword" placeholder="비밀번호 입력"/>
-				<form:errors path="password" />
+				<form:errors path="email" cssStyle="color:red; display : inline-block; font-size : 13px;"/>
+				<form:errors path="password" cssStyle="color:red; display : inline-block; font-size : 13px;" />
 			</div>
 			<div class="loginsearch">
 				<div id="maintainbox"><form:checkbox path="loginmaintain" value="true"/><strong>로그인 자동완성</strong></div>
