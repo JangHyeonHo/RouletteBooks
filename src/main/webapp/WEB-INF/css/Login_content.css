@@ -6,7 +6,6 @@
 		}
 		#contents {
 			width: 1080px;
-			height: 1000px;
 			margin: 0 auto;
 		}
 		#loginBox {
@@ -14,9 +13,9 @@
 			height: 400px;
 			position: relative;
 			padding: 38px 50px 30px 50px;
-			top: 50%;
+			margin : 30px 0;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translateX(-50%);
 			border: 1px solid #d9d9d9;
 		}
 		.loginemail{
