@@ -69,6 +69,17 @@ public class AutoPaging {
 		return this;
 	}
 	
+	//오토 페이징(StartPage후 자동으로 EndPage까지 해줌)
+	public AutoPaging setAutoStartPage() {
+		startPage = (int)(((double)page/pageCount)-0.05)+1;
+		return setAutoEndPage();
+	}
+	public AutoPaging setAutoEndPage() {
+		endPage = (startPage+pageCount-1);
+		return this;
+	}
+	
+	
 	public void PagingTest() {
 		AutoLinePrint.println("페이징 처리 확인","현재 페이지 번호 : " + page,
 				"현재 페이지에 표시되는 게시글 갯수 : " + limit,
