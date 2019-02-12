@@ -6,6 +6,16 @@ public class LoginSessionInfomationCommand implements CommandTestInterface{
 	private String mNickname; //회원 닉네임
 	private int mCash; //회원 예치금
 	private String mStatus; //회원 상태
+	private String mGrade; //회원 등급
+	
+	
+	public String getmGrade() {
+		return mGrade;
+	}
+	public LoginSessionInfomationCommand setmGrade(String mGrade) {
+		this.mGrade = mGrade;
+		return this;
+	}
 	public String getmEmail() {
 		return mEmail;
 	}
@@ -42,6 +52,7 @@ public class LoginSessionInfomationCommand implements CommandTestInterface{
 		System.out.println("닉네임 : " + mNickname);
 		System.out.println("예치금 : " + mCash);
 		System.out.println("상태 : " + mStatus);
+		System.out.println("회원등급 : " + mGrade);
 		System.out.println("=======================================");
 	}
 	
