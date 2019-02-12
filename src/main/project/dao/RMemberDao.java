@@ -82,7 +82,7 @@ public class RMemberDao {
 
 	public LoginSessionInfomationCommand passwordConfirming(final LoginCommand command, final Errors error) {
 		// TODO Auto-generated method stub
-		sql = "select memail, mnickname, mcash, mstatus, mpassword from rmember where memail = ?";
+		sql = "select memail, mnickname, mcash, mstatus, mpassword, mgrade from rmember where memail = ?";
 		LoginSessionInfomationCommand sessionInfo = jdbcTemplate.query(sql, new ResultSetExtractor<LoginSessionInfomationCommand>() {
 			
 			@Override
@@ -97,7 +97,9 @@ public class RMemberDao {
 					return new LoginSessionInfomationCommand().setmEmail(rs.getString("memail"))
 								.setmNickname(rs.getString("mnickname"))
 								.setmCash(rs.getInt("mcash"))
-								.setmStatus(rs.getString("mstatus"));
+								.setmStatus(rs.getString("mstatus"))
+								.setmGrade(rs.getString("mgrade"));
+					
 				} else {
 					System.out.println("아이디 불일치");
 					error.rejectValue("email", "mismatch");
