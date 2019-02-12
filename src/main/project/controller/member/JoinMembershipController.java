@@ -40,7 +40,7 @@ public class JoinMembershipController implements FrontControllerInterface {
 		// TODO Auto-generated method stub
 		System.out.println("작업정보 도착");
 		command.CommandTest();
-		service.SignUp(command);
+		service.action(command);
 		
 		return null;
 	}

@@ -3,6 +3,7 @@ package command;
 public class LoginCommand {
 	private String email;
 	private String password;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -15,6 +16,7 @@ public class LoginCommand {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 	
 	
 }
