@@ -7,14 +7,22 @@
 <!-- 이원학 공간 -->
 <!-- <bean class = "controller.HelloController" /> -->
 
+<!-- 고객센터 -->
 <bean class = "controller.customerservice.CusMyInquiryController" />
 <bean class = "controller.customerservice.CustomerServiceController" />
+<bean class = "controller.customerservice.InquiryWriteContorller" />
+
+<!-- 멤버 -->
 <bean class = "controller.member.JoinMembershipController" />
+
+<!-- 마이페이지 -->
 <bean class = "controller.mypage.MemberInfoController" />
 <bean class = "controller.mypage.MemberInfoConfirmController" />
 <bean class = "controller.mypage.MemberModifyController" />
 <bean class = "controller.mypage.MyPageMainController" />
 <bean class = "controller.mypage.rentalListController" />
+
+<!-- 랭킹 -->
 <bean class = "controller.ranking.RankingMainController" />
 
 </beans>

@@ -9,7 +9,10 @@
 <!-- member 공간 -->
 <bean class="controller.member.RbLoginController" />
 <bean class="controller.member.IdSerachController" />
+<bean class="controller.member.IdSearchDetailController" />
 <bean class="controller.member.PasswordSelectController" />
+<bean class="controller.member.PasswordSearchDetailController" />
+<bean class="controller.member.EmailPwController" />
 
 <!-- Freeboard 공간 -->
 <bean class="controller.freeboard.FreeBoardListController" />
