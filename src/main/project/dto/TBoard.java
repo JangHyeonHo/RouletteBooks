@@ -2,6 +2,9 @@ package dto;
 
 import java.util.Date;
 
+import command.SignUpCommand;
+import command.TBoardWriteCommand;
+
 public class TBoard {
   
 	private int TNUM;
@@ -139,6 +142,40 @@ public class TBoard {
 	}
 	public void setTBUYERADDR(String tBUYERADDR) {
 		TBUYERADDR = tBUYERADDR;
+	}
+	
+	public void DTOTEST() {
+		System.out.println(TKIND);
+		System.out.println(TSUBJECT);
+		System.out.println(TCONTENT);
+		System.out.println(TMETHOD);
+		System.out.println(TBOOK_NAME);
+		System.out.println(TPRICE);
+		System.out.println(TBOOK_STATUS);
+		System.out.println(TBOOK_GENRE);
+		
+	}
+	
+	
+	
+	
+	public TBoard commandChange(TBoardWriteCommand command) {
+		
+		  TKIND = command.getTrade_board_horsehead();
+		  TSUBJECT = command.getTrade_board_subject();
+		  TCONTENT = command.getTextarea();
+		  TMETHOD = command.getTrade_method();
+		  TBOOK_NAME = command.getTrade_book_name();
+//		  TBOOK_ORI_IMG_NAME
+//		  TBOOK_STORE_IMG_NAME
+		  TPRICE = command.getTrade_book_price();
+		  TBOOK_STATUS = command.getTrade_book_status();
+		  TBOOK_GENRE = command.getTrade_genre();
+
+
+		  
+		  return this;
+		
 	}
 	
 }
