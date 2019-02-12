@@ -54,9 +54,9 @@
 <!-- Content 시작(내용 첨가) -->
     <!-- Contents -->
     <div id="contents">
-     		<!-- 마이페이지 사이드 시작 -->
+     		<!-- 고객센터 사이드 시작 -->
      <jsp:include page="../customerSide.jsp" />
-			<!-- 마이페이지 사이드 끝 -->
+			<!-- 고객센터 사이드 끝 -->
 
 
         <!-- 메인 상단 -->

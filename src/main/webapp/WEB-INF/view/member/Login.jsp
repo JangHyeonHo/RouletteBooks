@@ -53,17 +53,19 @@
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
 <div id = "loginBox">
-			<form:form>
+			<form:form commandName="command">
 			<div class="loginemail">
-				<input type="text" name = "email" id="lemail" placeholder=" 이메일 입력">
+				<form:input path="email" id="lemail" placeholder=" 이메일 입력"/>
 			</div>
 			<div class="loginpassword">
-				<input type="password" name = "password" id="lpassword" placeholder="비밀번호 입력">
+				<form:password path="password" id="lpassword" placeholder="비밀번호 입력"/>
+				<form:errors path="email" cssStyle="color:red; display : inline-block; font-size : 13px;"/>
+				<form:errors path="password" cssStyle="color:red; display : inline-block; font-size : 13px;" />
 			</div>
 			<div class="loginsearch">
-				<div id="maintainbox"><input type="checkbox" name=loginmaintain value="로그인유지"><strong>로그인유지</strong></div>
-				<div id="idselect"><a href="idselect">아이디 찾기</a></div>
-				<div id="passwordselect"><a href="#">비밀번호 찾기</a></div>
+				<div id="maintainbox"><form:checkbox path="loginmaintain" value="true"/><strong>로그인 자동완성</strong></div>
+				<div id="idselect"><a href="searchid">아이디 찾기</a></div>
+				<div id="passwordselect"><a href="searchpw">비밀번호 찾기</a></div>
 			</div>
 			<div class="loginjoin"><input type="submit" value="로그인" id = "submitBtn"></div>
 			<div class="loginsign"><div class="lsign"><button type="button" title="Roulette Books 회원가입" onclick="location.href='signup'"><strong>Roulette Books 회원가입</strong></button></div>

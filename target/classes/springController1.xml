@@ -28,6 +28,11 @@
 <!-- /company/sales/book/detail -->
 
 <bean class = "controller.MainOpenController" />
+<!-- /main -->
+
+<bean class = "controller.member.RbLogoutController" />
+<!-- /member/logout -->
+
 
 <!-- DTO공간 -->
 <bean class = "dto.RMember" name="RMember" id="RMember"/>
@@ -35,6 +40,7 @@
 <!-- Command객체 공간 -->
 <bean class = "command.SignUpCommand" name="SignUpCommand" id="SignUpCommand"/>
 <bean class = "command.LoginCommand" name="LoginCommand" id="LoginCommand"/>
+<bean class = "command.LoginSessionInfomationCommand" name="LoginSessionInfomationCommand" id="LoginSessionInfomationCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>

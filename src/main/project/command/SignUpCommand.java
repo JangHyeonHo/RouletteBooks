@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class SignUpCommand {
+public class SignUpCommand implements CommandTestInterface{
 	//회원가입 커맨드 객체;
 	
 	private String email;
