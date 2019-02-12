@@ -27,6 +27,8 @@
 <bean class = "controller.company.CompanyBookDetailOpenController" />
 <!-- /company/sales/book/detail -->
 
+<bean class = "controller.MainOpenController" />
+
 <!-- DTO공간 -->
 <bean class = "dto.RMember" name="RMember" id="RMember"/>
 
