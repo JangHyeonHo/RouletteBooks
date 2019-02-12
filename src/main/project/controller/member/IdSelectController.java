@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import controller.FrontControllerInterface;
 @Controller
 @RequestMapping("/idselect")
-public class IdSelectcontroller implements FrontControllerInterface {
+public class IdSelectController implements FrontControllerInterface {
 
 	//권도완
 	
