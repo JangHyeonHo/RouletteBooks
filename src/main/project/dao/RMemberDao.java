@@ -7,9 +7,14 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.validation.Errors;
 
+import command.LoginCommand;
+import command.LoginSessionInfomationCommand;
 import dto.RMember;
 import other.AutoLinePrint;
 
@@ -73,6 +78,38 @@ public class RMemberDao {
 		System.out.println("새롭게 부여한 회원 번호 : " + newMno);
 		System.out.println("이상 완료 =======================================");
 		return newMno;
+	}
+
+	public LoginSessionInfomationCommand passwordConfirming(final LoginCommand command, final Errors error) {
+		// TODO Auto-generated method stub
+		sql = "select memail, mnickname, mcash, mstatus, mpassword from rmember where memail = ?";
+		LoginSessionInfomationCommand sessionInfo = jdbcTemplate.query(sql, new ResultSetExtractor<LoginSessionInfomationCommand>() {
+			
+			@Override
+			public LoginSessionInfomationCommand extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				if(rs.next()) {
+					if(!rs.getString("mpassword").equals(command.getPassword())){
+						System.out.println("비밀번호 불일치");
+						error.rejectValue("password", "mismatch");
+						return null;
+					} 
+					return new LoginSessionInfomationCommand().setmEmail(rs.getString("memail"))
+								.setmNickname(rs.getString("mnickname"))
+								.setmCash(rs.getInt("mcash"))
+								.setmStatus(rs.getString("mstatus"));
+				} else {
+					System.out.println("아이디 불일치");
+					error.rejectValue("email", "mismatch");
+					return null;
+				}
+				
+			}
+			
+		}, command.getEmail());
+		
+		
+		return (sessionInfo==null) ? null : sessionInfo;
 	}
 	
 }

@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import controller.FrontControllerInterface;
 @Controller
 @RequestMapping("/idselect")
-public class IdSelectcontroller implements FrontControllerInterface {
+public class IdSerachController implements FrontControllerInterface {
 
-	//권도완
-	
 	@Override
 	@RequestMapping(method = RequestMethod.GET)
 	public String OpenProcessGet() {

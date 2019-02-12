@@ -6,7 +6,7 @@
       <ul id="headerMyForm">
          <li class="greetLogin" style="display: none;"><span id="nick">닉네임</span>
             님 방문을 환영합니다.</li>
-         <li class="formBtn"><a href="/roulettebooks/rblogin">로그인</a></li>
+         <li class="formBtn"><a href="/roulettebooks/member/login">로그인</a></li>
          <li class="formBtn"><a href="#">로그아웃</a></li>
          <li class="formBtn"><a href="/roulettebooks/member/signup">회원가입</a></li>
          <li class="formBtn">
