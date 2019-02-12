@@ -21,7 +21,6 @@
 		}
 		.loginemail{
 			width: 500px;
-			height: 100px;
 			float: left;
 		
 			
@@ -37,12 +36,9 @@
 			
 		}
 
-		a{
-			font-size: 12px;
-		}
+		
 		.loginpassword{
 			width: 500px;
-			height: 99px;
 			float: left;
 		
 			

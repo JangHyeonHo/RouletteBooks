@@ -7,17 +7,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import controller.FrontControllerInterface;
 
 @Controller
-@RequestMapping("/member/searchpw")
-public class PasswordSelectController implements FrontControllerInterface {
-	
-	//권도완
-	
+@RequestMapping("/member/searchdetail")
+public class IdSearchDetailController implements FrontControllerInterface {
+
+	// 권도완
 	@Override
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public String OpenProcessGet() {
 		// TODO Auto-generated method stub
-		System.out.println("비밀번호 찾기 오픈");
-		return "member/PasswordSelect";
+		System.out.println("아이디 찾기 상세정보 오픈");
+		return "member/IdSearchDetail";
 	}
 
 	@Override

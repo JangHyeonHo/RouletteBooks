@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 
 <!--제목 설정-->
-<title>비밀번호 찾기</title>
+<title>비밀번호 메일링</title>
 
 <!-- 기본 설정  => 여기서부터 -->
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
@@ -41,9 +41,9 @@
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="../css/PasswordSelect_content.css" rel="stylesheet" type="text/css">
+<<link href="../css/EmailPw_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<script src = "../js/PasswordSelect.js"></script>
+<!-- <script src = "js/sample.js"></script> -->
 
 </head>
 <body>
@@ -52,40 +52,28 @@
 <!-- Header 끝 -->
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
-<div class="title"><img src="../img/logo1.png"></div>
-		<div class="titlesubject"><h2>비밀번호찾기</h2></div>
-		<div class=id_body_box>
+<form action="#" method="POST">
+		<div id="contents">
+			<!-- 레이아웃 설정 -->
 
-				<div class=title_select>
-					<div class="title_box">
-						<img src="../img/member_status_img3.jpg">
-						<h2>비밀번호를 찾기위한</h2>
-					<h3><span>본인 확인 방법</span>을 선택해 주세요.</h3>
-					</div>
-					
-				<div class="box2">
-					<input type="radio" id="select" /><b>휴대폰 인증</b> <br>
-					<select name="phoneFirst" id="phoneFirst">
-						<option value="010">010</option>
-						<option value="011">011</option>
-						<option value="016">016</option>
-						<option value="018">018</option>
-						<option value="019">019</option>
-					</select>
-					<input type="text" class = "phoneNum" name="phone2" maxlength="4" placeholder="1234" style="padding: 5px 0px">
-					<input type="text" class = "phoneNum" name="phone3" maxlength="4" placeholder="5678" style="padding: 5px 0px">
-					<br><h4>가입된 휴대폰으로 본인 확인을 진행 합니다.</h4>
+			<div class="title"><img src="../img/logo1.png"></div>
+			<div id="big_box">
+				<div class="id_search">
+					<h3>비밀번호 변경</h3>
 				</div>
-				
-				<div class="box2_1">
-					<span>· 아이디를 찾으시나요?</span>
-					<button onclick="location.href='idselect'">아이디 찾기</button>
+				<div class="id_count"><img src="../img/member_status_img3.jpg">
+					<div class="changpw">변경 비밀번호<input placeholder="변경하실 비밀번호를 입력하세요." type="password"/></div>
+					<div class="changpw">비밀번호 확인<input placeholder="비밀번호를 다시 입력해주세요." type="password" /></div>
 				</div>
-				<div class="box2_2"><button  type="button" id="ok" onclick="location.href='#'">확인하기</button></div>
-				
+
+				<div class="final_box">
+					<button type="button" onclick="location.href='member/login'">로그인 하러 가기</button> <button
+						type="submit">변경하기</button>
 				</div>
+			</div>
 
 		</div>
+	</form>
 </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->
