@@ -22,8 +22,8 @@ public class PasswordAutoMD5 {
 			e.printStackTrace();
 		}
 		
-		System.out.println("비밀번호 암호화 : " + password);
-		System.out.println("이상 완료=============================================");
+		AutoLinePrint.println("비밀번호 암호화 : " + password);
+		
 		return password;
 	}
 }

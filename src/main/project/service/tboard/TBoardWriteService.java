@@ -11,6 +11,8 @@ import org.springframework.web.multipart.MultipartFile;
 import command.TBoardWriteCommand;
 import dao.TBoardDao;
 import dto.TBoard;
+import other.AutoFileClassfication;
+import other.ClassifiedFile;
 import other.ContextPathRoute;
 
 public class TBoardWriteService {
@@ -25,11 +27,17 @@ public class TBoardWriteService {
 //		String path;
 	    String contextPath = ContextPathRoute.route(request, "trade/uploadImage/");
 	    System.out.println(contextPath);
-	    File file = new File(contextPath);
+	    ContextPathRoute.createDirectory(new File(contextPath));
+	    /* 위에걸로 대체
+	     * File file = new File(contextPath);
 	    if(!file.exists()) {
 	    	file.mkdirs();
-	    }
-	    MultipartFile[] imgArray = command.getTrade_book_img();
+	    }*/
+	    ClassifiedFile file = AutoFileClassfication.ArrayFileClassficationing(command.getTrade_book_img(),contextPath);
+	    
+	    /*위에 걸로 대체
+	     * 
+	     * MultipartFile[] imgArray = command.getTrade_book_img();
 	      String originalFile = "";
 	      String storeFileList = "";
 	      for(MultipartFile img : imgArray) {
@@ -56,11 +64,13 @@ public class TBoardWriteService {
 //	            path="report/submissionForm";
 	         } 
 	      }
-
+*/
 		TBoard tboard = new TBoard();
 		tboard.commandChange(command);
-		tboard.settBookOriImgName(originalFile);
-		tboard.settBookStoreImg_Name(storeFileList);
+//		이부분 수정함
+		tboard.settBookOriImgName(file.getFileOriginName());
+		tboard.settBookStoreImg_Name(file.getFileStoreName());
+		
 		tboard.DTOTEST();
 		
 //		tboardDao.insert(tboard,request);

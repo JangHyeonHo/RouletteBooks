@@ -76,7 +76,7 @@
 					<option value="마케팅팀">마케팅팀</option>
 				</select>
 				<div class="textBox">사원 생년월일</div>
-				<input type="text" name = "birthDate" maxlength = "8">
+				<input type="text" name = "birthDate" maxlength = "8" placeholder="19900101">
 				<div class="textBox">사원 전화번호(핸드폰번호)</div>
 				<div id="phoneBox"><input type = "text" name = "phone1" maxlength="3" placeholder="010"> - <input type = "text" name = "phone2" maxlength="4" placeholder="5555">
 					- <input type = "text" name = "phone3" maxlength="4" placeholder="1111"></div>
