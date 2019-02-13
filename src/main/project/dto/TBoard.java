@@ -6,7 +6,7 @@ import command.SignUpCommand;
 import command.TBoardWriteCommand;
 
 public class TBoard {
-  
+	private String tUploader;
 	private int tNum;
 	private String tKind;
 	private String tSubject;
@@ -77,6 +77,23 @@ public class TBoard {
 		return tContent;
 	}
 
+	public String gettUploader() {
+		return tUploader;
+	}
+
+
+
+
+	public void settUploader(String tUploader) {
+		this.tUploader = tUploader;
+	}
+
+
+
+
+	public void settBookStoreImgName(String tBookStoreImgName) {
+		this.tBookStoreImgName = tBookStoreImgName;
+	}
 
 
 
@@ -303,6 +320,8 @@ public class TBoard {
 		System.out.println(tKind);
 		System.out.println(tSubject);
 		System.out.println(tMethod);
+		System.out.println(tBookOriImgName);
+		System.out.println(tBookStoreImgName);
 		System.out.println(tBookName);
 		System.out.println(tPrice);
 		System.out.println(tBookStatus);
@@ -314,7 +333,7 @@ public class TBoard {
 	
 	
 	public TBoard commandChange(TBoardWriteCommand command) {
-		
+		tUploader = command.getTrade_board_nick_name();
 		tKind = command.getTrade_board_horsehead();
 		tSubject = command.getTrade_board_subject();
 		tContent = command.getTextarea();

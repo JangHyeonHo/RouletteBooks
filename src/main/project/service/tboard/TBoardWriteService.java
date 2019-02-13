@@ -73,7 +73,7 @@ public class TBoardWriteService {
 		
 		tboard.DTOTEST();
 		
-//		tboardDao.insert(tboard,request);
+		tboardDao.insert(tboard,request);
 		
 	}
 }

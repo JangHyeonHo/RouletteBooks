@@ -22,9 +22,11 @@ public class TBoardDao {
 
 	public Integer insert(TBoard tboard,HttpServletRequest request) {
 		Integer i = null;
-		sql = "insert into tboard(TNUM,TKIND,TSUBJECT,TCONTENT,TMETHOD,TSITUATION,TREG_DATE,TBOOK_NAME,TPRICE,TBOOK_STATUS,TBOOK_GENRE)"
-		+ " values(tnum.nextval,?,?,?,?,?,sysdate,?,?,?,?)";		
-	 	i = jdbcTemplate.update(sql,tboard.gettKind(),tboard.gettSubject(),tboard.gettContent(),tboard.gettMethod(),tboard.gettSituation(),tboard.gettBookName(),tboard.gettPrice(),tboard.gettBookStatus(),tboard.gettBookGenre());
+		sql = "insert into tboard(TNUM, TUPLOADER, TKIND, TSUBJECT, TCONTENT, TMETHOD,"
+				+ "TSITUATION, TREG_DATE, TBOOK_NAME, TBOOK_ORI_IMG_NAME, TBOOK_STORE_IMG_NAME,"
+				+ "TPRICE, TBOOK_STATUS, TBOOK_GENRE)"
+		+ " values(tnum.nextval,?,?,?,?,?,?,sysdate,?,?,?,?,?,?)";		
+	 	i = jdbcTemplate.update(sql,tboard.gettUploader(),tboard.gettKind(),tboard.gettSubject(),tboard.gettContent(),tboard.gettMethod(),tboard.gettSituation(),tboard.gettBookName(),tboard.gettBookOriImgName(),tboard.gettBookStoreImgName(),tboard.gettPrice(),tboard.gettBookStatus(),tboard.gettBookGenre());
 	 			AutoLinePrint.println("글번호 : "+ tboard.gettNum() +" 글쓰기 처리 완료");
 		
 		return i;

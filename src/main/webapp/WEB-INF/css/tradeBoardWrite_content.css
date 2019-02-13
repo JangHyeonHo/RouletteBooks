@@ -60,6 +60,7 @@
     float: left;
 }
 #image_announce{
+	white-space:pre-line;
     color: #888;
 }
 #trade_board_footer{
