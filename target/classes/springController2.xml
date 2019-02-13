@@ -25,4 +25,17 @@
 <!-- 랭킹 -->
 <bean class = "controller.ranking.RankingMainController" />
 
+
+<!-- DTO공간 -->
+<bean class = "dto.CusServiceDTO" name="CusServiceDTO" id="CusServiceDTO"/>
+
+<!-- DAO공간 -->
+<bean class = "dao.CusServiceDao" name="CusServiceDao" id="CusServiceDao"/>
+
+<!-- service공간 -->
+<bean class = "service.cusservice.cusService" name="cusService" id="cusService"/>
+
+<!-- command공간 -->
+<bean class = "command.CusServiceCommand" name="CusCommand" id="CusCommand"/>
+
 </beans>

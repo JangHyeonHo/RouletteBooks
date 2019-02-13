@@ -41,7 +41,6 @@
 	height: 160px;
 	padding: 0 0 0 20px;
 	float: left;
-	border-bottom: 1px solid #b4b0b0;
 }
 
 .label {
@@ -82,29 +81,6 @@
 	color: blue;
 }
 
-#alarmBox {
-	width: 840px;
-	height: 200px;
-	padding: 20px 0 0 20px;
-	float: left;
-	font-family: 'Do Hyeon', sans-serif;
-}
-
-#alarm_phone {
-	width: 440px;
-	height: 200px;
-	float: left;
-	font-family: 'Do Hyeon', sans-serif;
-}
-
-.al_phone {
-	padding-right: 20px;
-}
-
-.al_text {
-	font-size: 14px;
-	font-family: 'Noto Sans KR', sans-serif;
-}
 
 #agreeTitle {
 	width: 800px;
@@ -132,7 +108,7 @@
 
 #btn {
 	position: relative;
-	left: 50%;
+	left: 30%;
 	padding: 20px 80px 20px 80px;
 	margin-bottom:20px;
 	margin-top:20px;
