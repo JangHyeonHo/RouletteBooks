@@ -67,7 +67,7 @@
 				</div>
 
 				<div class="final_box">
-					<button type="button" onclick="location.href='member/login'">로그인 하러 가기</button> <button
+					<button type="button" onclick="location.href='login'">로그인 하러 가기</button> <button
 						type="submit">변경하기</button>
 				</div>
 			</div>

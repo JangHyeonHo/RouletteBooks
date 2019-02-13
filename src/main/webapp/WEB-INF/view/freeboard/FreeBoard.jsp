@@ -58,7 +58,7 @@
 			<div class="totalcount">총 162,121개</div>
 			<form action="123" method="GET">			<div class="selecttype"><select class="selectform"><option value="title">제목</option>
 									<option value="title">작성자</option></select></div>
-				<div class="select"><input type="text" id="search" placeholder="검색"></div>
+				<div class="select"><input type="text" id="search1" placeholder="검색"></div>
 				<button id="btnsearch" onclick="$"></button>
 			</form>
 
@@ -166,7 +166,7 @@
 			</div>
 			
 			<div id="pagingbox"></div>
-			<div class="writego"><button onclick="location='trade/boardwrite'">글작성</button></div>
+			<div class="writego"><button onclick="location.href='trade/boardwrite'">글작성</button></div>
 			<div class="pagingtotal">
 					<ul>
 							<li><a href="#">◀</a></li>
