@@ -11,12 +11,15 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 
 import command.LoginCommand;
 import command.LoginSessionInfomationCommand;
+import command.MemberListPageCommand;
 import dto.RMember;
 import other.AutoLinePrint;
+import other.AutoPaging;
 
 public class RMemberDao {
 	
@@ -113,6 +116,63 @@ public class RMemberDao {
 		
 		
 		return (sessionInfo==null) ? null : sessionInfo;
+	}
+
+	public Model memberListCall(MemberListPageCommand command, Model model) {
+		// TODO Auto-generated method stub
+		AutoPaging paging = new AutoPaging(command.getPage(),20,10);
+		int minNum = ((paging.getPage()-1)*paging.getLimit())+1;
+		int maxNum = minNum+paging.getLimit()-1;
+		AutoLinePrint.println("최소 게시글 : " + minNum,"최대 게시글 : " + maxNum);
+		String query = "";
+		try {
+		if(!command.getSearchSet().equals("money") && !command.getSearchSet().equals("hogu")) {
+			query = " like '%" + command.getQuery() + "%'";
+		} else {
+			query = command.getQuery();
+		}
+		}catch(NullPointerException e) {
+			
+		}
+		sql = "select * from "
+				+ "(select rownum as rnum, m.* from "
+				+ "(select mno, memail, mname, mnickname, mgender, "
+				+ "mcre_date, mcash, macc_num, macc_bank, mgrade, "
+				+ "mphone from rmember " 
+				+ ((command.getSearchSet()!=null)?"where "+command.getSearchSet() + query:"") 
+				+ " order by mcre_date desc) "
+				+ "m where rownum<=?) where rnum>=?";
+		List<RMember> memberList = jdbcTemplate.query(sql, new RowMapper<RMember>() {
+
+			@Override
+			public RMember mapRow(ResultSet rs, int rowNum) throws SQLException {
+				// TODO Auto-generated method stub
+				String phoneNum = rs.getString("mphone");
+				phoneNum = phoneNum.substring(0, 7) + "xxxx";
+				return new RMember().setmNo(rs.getString("mno"))
+						.setmEmail(rs.getString("memail"))
+						.setmName(rs.getString("mname"))
+						.setmNickname(rs.getString("mnickname"))
+						.setmGender(rs.getString("mgender"))
+						.setmCreDate(rs.getDate("mcre_date"))
+						.setmCash(rs.getInt("mcash"))
+						.setmAccNum(rs.getString("macc_num"))
+						.setmAccBank(rs.getString("macc_bank"))
+						.setmGrade(rs.getString("mgrade"))
+						.setmPhone(phoneNum);
+			}
+			
+		}, maxNum, minNum);
+		paging.setListCount(memberList.size());
+		
+		//테스트(주석처리 하기바람)
+		/*for(RMember member: memberList) {
+			member.DTOTEST();
+		}*/
+		model.addAttribute("page", paging);
+		paging.PagingTest();
+		model.addAttribute("memberList", memberList);
+		return model;
 	}
 	
 }

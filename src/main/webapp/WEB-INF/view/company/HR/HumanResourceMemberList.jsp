@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,9 +37,11 @@
 	<style>
 		
 	</style>
+	<c:if test="${empty managerInfo }">
 	<script>
-
+		location.href="../login"
 	</script>
+	</c:if>
 </head>
 <body>
 	<jsp:include page="../mheader.jsp"/>
@@ -66,22 +68,24 @@
 					<th class="ninety">핸드폰 번호</th>
 					<th class="fourty">비고</th>
 				</tr>
+				<c:forEach items="${memberList}" var="member">
 				<tr>
-					<td>1</td>
-					<td>gusghwkd202@naver.com</td>
-					<td>이름여섯글자</td>
-					<td>asdf</td>
-					<td>남</td>
-					<td>2019-01-25</td>
-					<td>다이아몬드</td>
-					<td>120,000 ￦</td>
+					<td>${member.mNo } </td>
+					<td>${member.mEmail }</td>
+					<td>${member.mName }</td>
+					<td>${member.mNickname }</td>
+					<td>${member.mGender }</td>
+					<td>${member.mCreDate }</td>
+					<td>${member.mGrade }</td>
+					<td>${member.mCash } ￦</td>
 					<td>1,100,000 ￦</td>
-					<td>2344-xxxx-xxxx-1233</td>
-					<td>010-3242-xxxx</td>
+					<td>${member.mAccNum }</td>
+					<td>${member.mPhone }</td>
 					<!-- 정지 혹은 해제를 둬서 정지인 유저는 해제하게, 정지 안된 유저는 정지시키게 둠. -->
 					<td><a href="#">[정지]</a><br><a href="#">[해제]</a></td>
 
 				</tr>
+				</c:forEach>
 				<tr>
 					<!-- 페이징 -->
 					<td colspan="12">1 2 3 4 5 6 7 8</td>
@@ -89,15 +93,15 @@
 			</table>
 			<div id="searchBox">
 				<select name="searchSet" id="search">
-					<option value="email">이메일(아이디)로 찾기</option>
-					<option value="name">이름으로 찾기</option>
-					<option value="nickname">닉네임으로 찾기</option>
-					<option value="gender">성별로 찾기</option>
-					<option value="createDate">가입일자로 찾기</option>
-					<option value="grade">회원등급으로 찾기</option>
-					<option value="money">보유 캐쉬으로 찾기</option>
+					<option value="memail">이메일(아이디)로 찾기</option>
+					<option value="mname">이름으로 찾기</option>
+					<option value="mnickname">닉네임으로 찾기</option>
+					<option value="mgender">성별로 찾기</option>
+					<option value="mcre_date">가입일자로 찾기</option>
+					<option value="mgrade">회원등급으로 찾기</option>
+					<option value="mcash">보유 캐쉬으로 찾기</option>
 					<option value="hogu">결제 금액으로 찾기</option>
-					<option value="phone">핸드폰 번호로 찾기</option>
+					<option value="mphone">핸드폰 번호로 찾기</option>
 				</select>
 				<input type="text" name="query" placeholder="example@roulette.com" id="textLine">
 				<input type="submit" value="찾기">
