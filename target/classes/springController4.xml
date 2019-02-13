@@ -16,6 +16,7 @@
 
 <!-- Freeboard 공간 -->
 <bean class="controller.freeboard.FreeBoardListController" />
+<bean class="controller.freeboard.FreeBoardWriteController" />
 
 <!-- mypage 공간 -->
 <bean class="controller.mypage.ShoppingBasketController" />

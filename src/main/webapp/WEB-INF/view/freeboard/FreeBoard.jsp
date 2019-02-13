@@ -166,7 +166,7 @@
 			</div>
 			
 			<div id="pagingbox"></div>
-			<div class="writego"><button onclick="location.href='trade/boardwrite'">글작성</button></div>
+			<div class="writego"><button onclick="location.href='freeboardwirte'">글작성</button></div>
 			<div class="pagingtotal">
 					<ul>
 							<li><a href="#">◀</a></li>
