@@ -44,6 +44,8 @@
 <bean class = "command.SignUpCommand" name="SignUpCommand" id="SignUpCommand"/>
 <bean class = "command.LoginCommand" name="LoginCommand" id="LoginCommand"/>
 <bean class = "command.LoginSessionInfomationCommand" name="LoginSessionInfomationCommand" id="LoginSessionInfomationCommand"/>
+<bean class = "command.ManagerSessionInfomationCommand" name="ManagerSessionInfomationCommand" id="ManagerSessionInfomationCommand"/>
+<bean class = "command.MemberListPageCommand" name="MemberListPageCommand" id="MemberListPageCommand"/>
 
 
 <!-- DAO공간 -->
@@ -55,7 +57,7 @@
 <bean class = "service.member.MemberLoginService" name="MemberLoginService" id="MemberLoginService"/>
 <bean class = "service.company.ManagerSignUpService" name="ManagerSignUpService" id="ManagerSignUpService"/>
 <bean class = "service.company.ManagerLoginService" name="ManagerLoginService" id="ManagerLoginService"/>
-
+<bean class = "service.company.MemberListService" name="MemberListService" id="MemberListService"/>
 
 
 </beans>
