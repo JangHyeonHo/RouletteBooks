@@ -79,9 +79,9 @@
 				
 				<div class="box2_1">
 					<span>· 아이디를 찾으시나요?</span>
-					<button onclick="location.href='idselect'">아이디 찾기</button>
+					<button onclick="location.href='searchid'">아이디 찾기</button>
 				</div>
-				<div class="box2_2"><button  type="button" id="ok" onclick="location.href='#'">확인하기</button></div>
+				<div class="box2_2"><button  type="button" id="ok" onclick="location.href='searchpwdetail'">확인하기</button></div>
 				
 				</div>
 

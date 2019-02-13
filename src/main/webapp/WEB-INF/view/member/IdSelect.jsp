@@ -83,9 +83,9 @@
 				
 				<div class="box2_1">
 					<span>· 비밀번호를 찾으시나요?</span>
-					<button onclick="location='passwordselect'">비밀 번호 찾기</button>
+					<button onclick="location='searchpw'">비밀 번호 찾기</button>
 				</div>
-				<div class="box2_2"><button id="ok">확인하기</button></div>
+				<div class="box2_2"><button id="ok" onclick="location.href='searchdetail'">확인하기</button></div>
 				
 				</div>
 
