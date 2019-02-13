@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import command.LoginCommand;
 import command.ManagerLoginCommand;
+import command.ManagerSessionInfomationCommand;
 import controller.FrontControllerInterface;
 import service.company.ManagerLoginService;
 
@@ -31,6 +31,9 @@ public class CompanyLoginOpenController implements FrontControllerInterface {
 		if(session.getAttribute("loginInfo")!=null) {
 			return "redirect:/main";
 		}
+		if(session.getAttribute("managerInfo")!=null) {
+			return "redirect:/company/main";
+		}
 		System.out.println("로그인 페이지 오픈");
 		return "company/member/Login";
 	}
@@ -39,8 +42,10 @@ public class CompanyLoginOpenController implements FrontControllerInterface {
 	public String OpenProcessPost(@ModelAttribute("command") ManagerLoginCommand command, HttpSession session, Errors error , BindingResult bindingResult) {
 		// TODO Auto-generated method stub
 		command.CommandTest();
-		service.action(command, error);
-		return null;
+		ManagerSessionInfomationCommand managerInfo = service.action(command, error);
+		
+		session.setAttribute("managerInfo", managerInfo);
+		return "redirect:/company/main";
 	}
 
 	@Override

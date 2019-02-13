@@ -44,7 +44,7 @@
 <bean class = "command.SignUpCommand" name="SignUpCommand" id="SignUpCommand"/>
 <bean class = "command.LoginCommand" name="LoginCommand" id="LoginCommand"/>
 <bean class = "command.LoginSessionInfomationCommand" name="LoginSessionInfomationCommand" id="LoginSessionInfomationCommand"/>
-
+<bean class = "command.ManagerSessionInfomationCommand" name="ManagerSessionInfomationCommand" id="ManagerSessionInfomationCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>

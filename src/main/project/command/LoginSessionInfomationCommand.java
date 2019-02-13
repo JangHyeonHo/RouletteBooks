@@ -2,6 +2,7 @@ package command;
 
 public class LoginSessionInfomationCommand implements CommandTestInterface{
 	//회원 기본 상태에 관한 커멘드(Session에 담을 기본 자료)
+	private String mNo; //회원 번호
 	private String mEmail; //회원 이메일
 	private String mNickname; //회원 닉네임
 	private int mCash; //회원 예치금
@@ -9,6 +10,13 @@ public class LoginSessionInfomationCommand implements CommandTestInterface{
 	private String mGrade; //회원 등급
 	
 	
+	public String getmNo() {
+		return mNo;
+	}
+	public LoginSessionInfomationCommand setmNo(String mNo) {
+		this.mNo = mNo;
+		return this;
+	}
 	public String getmGrade() {
 		return mGrade;
 	}
