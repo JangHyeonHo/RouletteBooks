@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,13 +33,11 @@
 	<link href="../css/comMain_content.css" rel="stylesheet" type="text/css">
 	<!--contents js설정(페이지에 따라 바뀌는 값)-->
 	<!-- <script src="js/페이지명.js"></script> -->
-
-	<style>
-		
-	</style>
+	<c:if test="${empty managerInfo }">
 	<script>
-
+		location.href="login"
 	</script>
+	</c:if>
 </head>
 <body>
 	<jsp:include page="mheader.jsp"/>

@@ -7,170 +7,322 @@ import command.TBoardWriteCommand;
 
 public class TBoard {
   
-	private int TNUM;
-	private String TKIND;
-	private String TSUBJECT;
-	private String TCONTENT;
-	private String TMETHOD;
-	private String TSITUATION;
-	private Date TREG_DATE;
-	private String TBOOK_NAME;
-	private String TBOOK_ORI_IMG_NAME;
-	private String TBOOK_STORE_IMG_NAME;
-	private int TPRICE;
-	private String TBOOK_STATUS;
-	private String TBOOK_GENRE;
-	private Date TSTART_DATE;
-	private String TDELIVERY_NUM;
-	private String TDELIVERY_NAME;
-	private Date TDELIVERY_NUM_DATE;
-	private int TCHARGE;
-	private String TBUYERADDR;
+	private int tNum;
+	private String tKind;
+	private String tSubject;
+	private String tContent;
+	private String tMethod;
+	private String tSituation;
+	private Date tRegDate;
+	private String tBookName;
+	private String tBookOriImgName;
+	private String tBookStoreImgName;
+	private int tPrice;
+	private String tBookStatus;
+	private String tBookGenre;
+	private Date tStartDate;
+	private String tDeliveryNum;
+	private String tDeliveryName;
+	private Date tDeliveryNumDate;
+	private int tCharge;
+	private String tBuyerAddr;
 	
 	
 	
-	public int getTNUM() {
-		return TNUM;
+	
+	
+	public int gettNum() {
+		return tNum;
 	}
-	public void setTNUM(int tNUM) {
-		TNUM = tNUM;
+
+
+
+
+	public void settNum(int tNum) {
+		this.tNum = tNum;
 	}
-	public String getTKIND() {
-		return TKIND;
+
+
+
+
+	public String gettKind() {
+		return tKind;
 	}
-	public void setTKIND(String tKIND) {
-		TKIND = tKIND;
+
+
+
+
+	public void settKind(String tKind) {
+		this.tKind = tKind;
 	}
-	public String getTSUBJECT() {
-		return TSUBJECT;
+
+
+
+
+	public String gettSubject() {
+		return tSubject;
 	}
-	public void setTSUBJECT(String tSUBJECT) {
-		TSUBJECT = tSUBJECT;
+
+
+
+
+	public void settSubject(String tSubject) {
+		this.tSubject = tSubject;
 	}
-	public String getTCONTENT() {
-		return TCONTENT;
+
+
+
+
+	public String gettContent() {
+		return tContent;
 	}
-	public void setTCONTENT(String tCONTENT) {
-		TCONTENT = tCONTENT;
+
+
+
+
+	public void settContent(String tContent) {
+		this.tContent = tContent;
 	}
-	public String getTMETHOD() {
-		return TMETHOD;
+
+
+
+
+	public String gettMethod() {
+		return tMethod;
 	}
-	public void setTMETHOD(String tMETHOD) {
-		TMETHOD = tMETHOD;
+
+
+
+
+	public void settMethod(String tMethod) {
+		this.tMethod = tMethod;
 	}
-	public String getTSITUATION() {
-		return TSITUATION;
+
+
+
+
+	public String gettSituation() {
+		return tSituation;
 	}
-	public void setTSITUATION(String tSITUATION) {
-		TSITUATION = tSITUATION;
+
+
+
+
+	public void settSituation(String tSituation) {
+		this.tSituation = tSituation;
 	}
-	public Date getTREG_DATE() {
-		return TREG_DATE;
+
+
+
+
+	public Date gettRegDate() {
+		return tRegDate;
 	}
-	public void setTREG_DATE(Date tREG_DATE) {
-		TREG_DATE = tREG_DATE;
+
+
+
+
+	public void settRegDate(Date tRegDate) {
+		this.tRegDate = tRegDate;
 	}
-	public String getTBOOK_NAME() {
-		return TBOOK_NAME;
+
+
+
+
+	public String gettBookName() {
+		return tBookName;
 	}
-	public void setTBOOK_NAME(String tBOOK_NAME) {
-		TBOOK_NAME = tBOOK_NAME;
+
+
+
+
+	public void settBookName(String tBookName) {
+		this.tBookName = tBookName;
 	}
-	public String getTBOOK_ORI_IMG_NAME() {
-		return TBOOK_ORI_IMG_NAME;
+
+
+
+
+	public String gettBookOriImgName() {
+		return tBookOriImgName;
 	}
-	public void setTBOOK_ORI_IMG_NAME(String tBOOK_ORI_IMG_NAME) {
-		TBOOK_ORI_IMG_NAME = tBOOK_ORI_IMG_NAME;
+
+
+
+
+	public void settBookOriImgName(String tBookOriImgName) {
+		this.tBookOriImgName = tBookOriImgName;
 	}
-	public String getTBOOK_STORE_IMG_NAME() {
-		return TBOOK_STORE_IMG_NAME;
+
+
+
+
+	public String gettBookStoreImgName() {
+		return tBookStoreImgName;
 	}
-	public void setTBOOK_STORE_IMG_NAME(String tBOOK_STORE_IMG_NAME) {
-		TBOOK_STORE_IMG_NAME = tBOOK_STORE_IMG_NAME;
+
+
+
+
+	public void settBookStoreImg_Name(String tBookStoreImgName) {
+		this.tBookStoreImgName = tBookStoreImgName;
 	}
-	public int getTPRICE() {
-		return TPRICE;
+
+
+
+
+	public int gettPrice() {
+		return tPrice;
 	}
-	public void setTPRICE(int tPRICE) {
-		TPRICE = tPRICE;
+
+
+
+
+	public void settPrice(int tPrice) {
+		this.tPrice = tPrice;
 	}
-	public String getTBOOK_STATUS() {
-		return TBOOK_STATUS;
+
+
+
+
+	public String gettBookStatus() {
+		return tBookStatus;
 	}
-	public void setTBOOK_STATUS(String tBOOK_STATUS) {
-		TBOOK_STATUS = tBOOK_STATUS;
+
+
+
+
+	public void settBookStatus(String tBookStatus) {
+		this.tBookStatus = tBookStatus;
 	}
-	public String getTBOOK_GENRE() {
-		return TBOOK_GENRE;
+
+
+
+
+	public String gettBookGenre() {
+		return tBookGenre;
 	}
-	public void setTBOOK_GENRE(String tBOOK_GENRE) {
-		TBOOK_GENRE = tBOOK_GENRE;
+
+
+
+
+	public void settBookGenre(String tBookGenre) {
+		this.tBookGenre = tBookGenre;
 	}
-	public Date getTSTART_DATE() {
-		return TSTART_DATE;
+
+
+
+
+	public Date gettStartDate() {
+		return tStartDate;
 	}
-	public void setTSTART_DATE(Date tSTART_DATE) {
-		TSTART_DATE = tSTART_DATE;
+
+
+
+
+	public void settStartDate(Date tStartDate) {
+		this.tStartDate = tStartDate;
 	}
-	public String getTDELIVERY_NUM() {
-		return TDELIVERY_NUM;
+
+
+
+
+	public String gettDeliveryNum() {
+		return tDeliveryNum;
 	}
-	public void setTDELIVERY_NUM(String tDELIVERY_NUM) {
-		TDELIVERY_NUM = tDELIVERY_NUM;
+
+
+
+
+	public void settDeliveryNum(String tDeliveryNum) {
+		this.tDeliveryNum = tDeliveryNum;
 	}
-	public String getTDELIVERY_NAME() {
-		return TDELIVERY_NAME;
+
+
+
+
+	public String gettDeliveryName() {
+		return tDeliveryName;
 	}
-	public void setTDELIVERY_NAME(String tDELIVERY_NAME) {
-		TDELIVERY_NAME = tDELIVERY_NAME;
+
+
+
+
+	public void settDeliveryName(String tDeliveryName) {
+		this.tDeliveryName = tDeliveryName;
 	}
-	public Date getTDELIVERY_NUM_DATE() {
-		return TDELIVERY_NUM_DATE;
+
+
+
+
+	public Date gettDeliveryNumDate() {
+		return tDeliveryNumDate;
 	}
-	public void setTDELIVERY_NUM_DATE(Date tDELIVERY_NUM_DATE) {
-		TDELIVERY_NUM_DATE = tDELIVERY_NUM_DATE;
+
+
+
+
+	public void settDeliveryNumDate(Date tDeliveryNumDate) {
+		this.tDeliveryNumDate = tDeliveryNumDate;
 	}
-	public int getTCHARGE() {
-		return TCHARGE;
+
+
+
+
+	public int gettCharge() {
+		return tCharge;
 	}
-	public void setTCHARGE(int tCHARGE) {
-		TCHARGE = tCHARGE;
+
+
+
+
+	public void settCharge(int tCharge) {
+		this.tCharge = tCharge;
 	}
-	public String getTBUYERADDR() {
-		return TBUYERADDR;
+
+
+
+
+	public String gettBuyerAddr() {
+		return tBuyerAddr;
 	}
-	public void setTBUYERADDR(String tBUYERADDR) {
-		TBUYERADDR = tBUYERADDR;
+
+
+
+
+	public void settBuyerAddr(String tBuyerAddr) {
+		this.tBuyerAddr = tBuyerAddr;
 	}
 	
+	
+
+
 	public void DTOTEST() {
-		System.out.println(TKIND);
-		System.out.println(TSUBJECT);
-		System.out.println(TCONTENT);
-		System.out.println(TMETHOD);
-		System.out.println(TBOOK_NAME);
-		System.out.println(TPRICE);
-		System.out.println(TBOOK_STATUS);
-		System.out.println(TBOOK_GENRE);
+		System.out.println("DTO테스트 시작");
+		System.out.println(tNum);
+		System.out.println(tKind);
+		System.out.println(tSubject);
+		System.out.println(tMethod);
+		System.out.println(tBookName);
+		System.out.println(tPrice);
+		System.out.println(tBookStatus);
+		System.out.println(tBookGenre);
+		System.out.println("끝");
 		
 	}
-	
 	
 	
 	
 	public TBoard commandChange(TBoardWriteCommand command) {
 		
-		  TKIND = command.getTrade_board_horsehead();
-		  TSUBJECT = command.getTrade_board_subject();
-		  TCONTENT = command.getTextarea();
-		  TMETHOD = command.getTrade_method();
-		  TBOOK_NAME = command.getTrade_book_name();
-//		  TBOOK_ORI_IMG_NAME
-//		  TBOOK_STORE_IMG_NAME
-		  TPRICE = command.getTrade_book_price();
-		  TBOOK_STATUS = command.getTrade_book_status();
-		  TBOOK_GENRE = command.getTrade_genre();
+		tKind = command.getTrade_board_horsehead();
+		tSubject = command.getTrade_board_subject();
+		tContent = command.getTextarea();
+		tMethod = command.getTrade_method();
+		tBookName = command.getTrade_book_name();
+		tPrice = command.getTrade_book_price();
+		tBookStatus = command.getTrade_book_status();
+		tBookGenre = command.getTrade_genre();
 
 
 		  

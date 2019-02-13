@@ -1,5 +1,6 @@
 package dao;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +20,12 @@ public class TBoardDao {
 		this.jdbcTemplate = new JdbcTemplate(datasource);
 	}
 
-	public Integer insert(TBoard tboard) {
+	public Integer insert(TBoard tboard,HttpServletRequest request) {
 		Integer i = null;
 		sql = "insert into tboard(TNUM,TKIND,TSUBJECT,TCONTENT,TMETHOD,TSITUATION,TREG_DATE,TBOOK_NAME,TPRICE,TBOOK_STATUS,TBOOK_GENRE)"
 		+ " values(tnum.nextval,?,?,?,?,?,sysdate,?,?,?,?)";		
-	 	i = jdbcTemplate.update(sql,tboard.getTKIND(),tboard.getTSUBJECT(),tboard.getTCONTENT(),tboard.getTMETHOD(),tboard.getTSITUATION(),tboard.getTBOOK_NAME(),tboard.getTPRICE(),tboard.getTBOOK_STATUS(),tboard.getTBOOK_GENRE());
-	 			AutoLinePrint.println("글번호 : "+ tboard.getTNUM() +" 글쓰기 처리 완료");
+	 	i = jdbcTemplate.update(sql,tboard.gettKind(),tboard.gettSubject(),tboard.gettContent(),tboard.gettMethod(),tboard.gettSituation(),tboard.gettBookName(),tboard.gettPrice(),tboard.gettBookStatus(),tboard.gettBookGenre());
+	 			AutoLinePrint.println("글번호 : "+ tboard.gettNum() +" 글쓰기 처리 완료");
 		
 		return i;
 		
