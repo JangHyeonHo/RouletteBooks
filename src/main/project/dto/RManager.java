@@ -1,9 +1,17 @@
 package dto;
 
+import java.io.File;
 import java.util.Date;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.multipart.MultipartFile;
+
 import command.CompanyManagerSignUpCommand;
+import other.AutoFileClassfication;
 import other.AutoLinePrint;
+import other.ClassifiedFile;
+import other.ContextPathRoute;
 import other.PasswordAutoMD5;
 
 public class RManager implements DTOTestInterface {
@@ -116,15 +124,24 @@ public class RManager implements DTOTestInterface {
 				"사원 급여 : " + rmsalary,"사원 성과금 : " + rmcommission,
 				"사원 입사일 : " + rmcreDate,"사원 부서 : " + rmdepartment);
 	}
-	public RManager CommandChange(CompanyManagerSignUpCommand command) {
+	public RManager commandChange(HttpServletRequest request, CompanyManagerSignUpCommand command) {
 		rmname = command.getStaffName();
 		rmphone = command.getPhoneNumber();
 		rmpassword = PasswordAutoMD5.passwordChange(command.getStaffPw());
 		rmsalary = 0;
+		rmbirthDate = command.getFormatBirthDate();
 		rmgrade = command.getPosition();
 		rmcreDate = new Date();
 		rmdepartment = command.getDepartment();
 		
+		ContextPathRoute.createDirectory(new File(ContextPathRoute.route(request, "company/manager/photo")));
+		ClassifiedFile file = AutoFileClassfication.OnefileClassficationing(command.getStaffPhoto(),ContextPathRoute.route(request, "company/manager/photo"));
+		
+		return setFilesName(file);
+	}
+	public RManager setFilesName(ClassifiedFile file) {
+		this.rmImgOriginFile = file.getFileOriginName();
+		this.rmImgStoreFile = file.getFileStoreName();
 		return this;
 	}
 

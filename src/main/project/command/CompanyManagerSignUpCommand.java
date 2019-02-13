@@ -1,5 +1,9 @@
 package command;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import other.AutoLinePrint;
@@ -14,6 +18,14 @@ public class CompanyManagerSignUpCommand implements CommandTestInterface {
 	private String phone1;
 	private String phone2;
 	private String phone3;
+	private String birthDate;
+	
+	public String getBirthDate() {
+		return birthDate;
+	}
+	public void setBirthDate(String birthDate) {
+		this.birthDate = birthDate;
+	}
 	public MultipartFile getStaffPhoto() {
 		return staffPhoto;
 	}
@@ -72,13 +84,23 @@ public class CompanyManagerSignUpCommand implements CommandTestInterface {
 	public void CommandTest() {
 		// TODO Auto-generated method stub
 		AutoLinePrint.println("커멘드 객체 테스트","사원 이름 : " + staffName,"사원 비밀번호 : " + staffPw,
-				"사원 비밀번호 재작성 : " + staffPwConfirm,"사원 직책 : " + position,"사원 부서 : " + department
+				"사원 비밀번호 재작성 : " + staffPwConfirm,"사원 직책 : " + position,"사원 부서 : " + department,"사원 생년월일 : " + birthDate
 				,"사원 전화번호 : " + phone1+phone2+phone3,"사원 사진 파일 : " + staffPhoto.getOriginalFilename());
 	}
 	//전화번호
 	public String getPhoneNumber() {
 		// TODO Auto-generated method stub
 		return (phone1+phone2+phone3);
+	}
+	public Date getFormatBirthDate() {
+		// TODO Auto-generated method stub
+		try {
+			return new SimpleDateFormat("yyyyMMdd").parse(birthDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			return null;
+
+		}
 	}
 	
 	
