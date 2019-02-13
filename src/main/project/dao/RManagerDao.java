@@ -7,11 +7,18 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.validation.Errors;
 
+import command.LoginSessionInfomationCommand;
+import command.ManagerLoginCommand;
+import command.ManagerSessionInfomationCommand;
 import dto.RManager;
 import other.AutoLinePrint;
+import other.PasswordAutoMD5;
 
 public class RManagerDao {
 	
@@ -63,6 +70,40 @@ public class RManagerDao {
 		
 		return i;
 
+	}
+
+	public ManagerSessionInfomationCommand passwordConfirming(final ManagerLoginCommand command, final Errors error) {
+		// TODO Auto-generated method stub
+		sql = "select rmno, rmname, rmgrade, rmdepartment, rmpassword from rmanager where rmno = ?";
+		command.setComPw(PasswordAutoMD5.passwordChange(command.getComPw()));
+		ManagerSessionInfomationCommand sessionInfo = jdbcTemplate.query(sql, new ResultSetExtractor<ManagerSessionInfomationCommand>() {
+			
+			@Override
+			public ManagerSessionInfomationCommand extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				if(rs.next()) {
+					if(!rs.getString("rmpassword").equals(command.getComPw())){
+						System.out.println("비밀번호 불일치");
+						error.rejectValue("password", "mismatch");
+						return null;
+					} 
+					return new ManagerSessionInfomationCommand().setRmno(rs.getString("rmno"))
+								.setRmname(rs.getString("rmname"))
+								.setRmdepartment(rs.getString("rmdepartment"))
+								.setRmgrade(rs.getString("rmgrade"));
+					
+				} else {
+					System.out.println("아이디 불일치");
+					error.rejectValue("comnum", "mismatch");
+					return null;
+				}
+				
+			}
+			
+		}, command.getComId());
+		
+		
+		return (sessionInfo==null) ? null : sessionInfo;
 	}
 	
 	

@@ -55,6 +55,7 @@
 			<div id = "loginHeaderBox"><h3>Roulette Books<p style="padding-top:6px;">사원Login</p></h3></div>
 			<div id = "loginIdBox"><div class = "TextBox">사원번호</div><form:input path="comId"/></div>
 			<div id = "loginPwBox"><div class = "TextBox">사원 비밀번호</div><form:password path="comPw"/></div>
+			<div><form:errors path="comId" cssStyle="color:red; display : inline-block; font-size : 13px;" /><form:errors path="comPw" cssStyle="color:red; display : inline-block; font-size : 13px;"/></div>
 			<div id = "loginBtnBox"><input type = "submit" value="로그인">
 			<input type = "button" value="사원등록" onclick="location.href='signup'"></div>
 			</form:form>
