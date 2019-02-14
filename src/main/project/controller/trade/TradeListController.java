@@ -13,7 +13,7 @@ import dto.TBoard;
 import service.tboard.TBoardListService;
 @Controller
 @RequestMapping("/tradelist")
-public class TradeListController  {
+public class TradeListController implements  FrontControllerInterface {
 	//권도완,유승재	
 	
 	private TBoardListService tboardlistservice;
@@ -36,9 +36,19 @@ public class TradeListController  {
 	
 	}
 	
+	
+	@Override
+	public String OpenProcessGet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
 	public String OpenProcessPost() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

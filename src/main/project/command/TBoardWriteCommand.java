@@ -207,6 +207,7 @@ public class TBoardWriteCommand {
 		System.out.println(trade_book_price);
 		System.out.println(trade_book_status);
 		System.out.println(textarea);
+		System.out.println(trade_book_img);
 		System.out.println("끝");
 	}
 
