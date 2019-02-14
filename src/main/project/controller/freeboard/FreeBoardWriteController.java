@@ -1,20 +1,28 @@
 package controller.freeboard;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import command.FreeBoardWriteCommand;
-import command.TBoardWriteCommand;
 import controller.FrontControllerInterface;
+import service.freeboard.FreeBoardWriteService;
 @Controller
 @RequestMapping("/freeboardwirte")
 public class FreeBoardWriteController implements FrontControllerInterface {
 	//권도완
+	
+	private FreeBoardWriteService service;
+	
+	@Autowired
+	public FreeBoardWriteController(FreeBoardWriteService service) {
+		super();
+		this.service = service;
+	}
+	
+	
 	
 	@Override
 	@RequestMapping(method = RequestMethod.GET)
@@ -23,6 +31,7 @@ public class FreeBoardWriteController implements FrontControllerInterface {
 		System.out.println("자유게시판 글쓰기 오픈");
 		return "freeboard/FreeBoardWrite";
 	}
+
 
 	@Override
 	public String OpenProcessPost() {
@@ -35,6 +44,7 @@ public class FreeBoardWriteController implements FrontControllerInterface {
 		// TODO Auto-generated method stub
 		System.out.println("자유게시판 포스트 작동");
 		command.CommandTest();
+		service.action(command);
 		return null;
 	}
 

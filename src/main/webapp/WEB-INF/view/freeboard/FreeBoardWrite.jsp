@@ -65,7 +65,7 @@ location.href="main"
 	<!-- Content 시작(내용 첨가) -->
 	<form:form action="#" method="post">
 		<div id="contents">
-	<input type="hidden" name="nMo" 
+	<input type="hidden" name="mNo" 
 					 value="${loginInfo.mNo }">
 			<div id="board_title">
 				<strong>글쓰기</strong>
