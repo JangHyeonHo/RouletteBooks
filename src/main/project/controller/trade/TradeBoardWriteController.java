@@ -48,6 +48,6 @@ public class TradeBoardWriteController implements FrontControllerInterface {
 			model.addAttribute("command", command);
 			service.action(command,request);
 			
-			return null;
+			return "redirect:/tradelist";
 		}
 }
