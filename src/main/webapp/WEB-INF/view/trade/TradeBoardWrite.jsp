@@ -59,7 +59,7 @@ location.href="../main"
 <!-- Header 끝 -->
 <!-- Content 시작(내용 첨가) -->
 
-	<form:form action="#"  method="post" enctype="multipart/form-data">
+	<form:form method="post" enctype="multipart/form-data">
 		<div id="contents">
 
 			<div id="trade_board_header">
