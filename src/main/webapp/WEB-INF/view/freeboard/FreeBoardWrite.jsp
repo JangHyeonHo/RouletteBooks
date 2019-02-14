@@ -63,7 +63,7 @@ location.href="main"
 	<jsp:include page="../Header.jsp" />
 	<!-- Header 끝 -->
 	<!-- Content 시작(내용 첨가) -->
-	<form:form action="#" method="post">
+	<form:form  method="post">
 		<div id="contents">
 	<input type="hidden" name="mNo" 
 					 value="${loginInfo.mNo }">

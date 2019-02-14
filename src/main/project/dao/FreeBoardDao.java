@@ -38,7 +38,8 @@ public class FreeBoardDao {
 	//자유게시판 리스트
 
 	public List<FreeBoard> fblist() {
-		sql = "select FNO,FSUBJECT,FHIT,FDATE from FREEBOARD";
+		sql = "select FNO,FSUBJECT,FHIT,FDATE from FREEBOARD ORDER BY FNO DESC";
+				
 		list = jdbcTemplate.query(sql,new FreeBoardRowMapper() );
 		return list;
 	}

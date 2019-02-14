@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ page import="java.util.*, dto.FreeBoard" %>
-	<%List<FreeBoard> list = (List)request.getAttribute("Freeboardlist"); %> 
+<%@ page import="java.util.*, dto.FreeBoard" %>
+<%List<FreeBoard> list = (List)request.getAttribute("Freeboardlist"); %> 
 	
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
@@ -87,18 +87,19 @@
 			</div>
 	
 			<div id=write>
-				
+				<c:forEach items="${Freeboardlist}" var="member">
 				<ul class="biglistwrite">
 					
 					<ul class="listtitle">
-						<li class="listno"><%=list.get(1).getfNo() %></li>
-						<li class="listsubject"><%=list.get(1).getfSubject() %></li>
+						<li class="listno">${member.fNo }</li>
+						<li class="listsubject">${member.fSubject }</li>
 						<li class="listwrite">권도완</li>
 						<li class="listcount"></li>
-						<li class=listdate><%=list.get(1).getfDate() %></li>
+						<li class=listdate>${member.fDate }</li>
 					</ul>
 					
 				</ul>
+				</c:forEach>
 			</div>
 			
 	

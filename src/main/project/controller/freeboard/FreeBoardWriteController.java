@@ -45,7 +45,7 @@ public class FreeBoardWriteController implements FrontControllerInterface {
 		System.out.println("자유게시판 포스트 작동");
 		command.CommandTest();
 		service.action(command);
-		return null;
+		return "redirect:/freeboardlist";
 	}
 
 }
