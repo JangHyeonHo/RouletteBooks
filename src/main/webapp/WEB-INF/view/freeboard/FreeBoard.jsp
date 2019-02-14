@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page import="java.util.*, dto.FreeBoard" %>
+	<%List<FreeBoard> list = (List)request.getAttribute("Freeboardlist"); %> 
+	
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
@@ -82,21 +85,27 @@
 					<div id="trdate">날짜</div>
 				</div>
 			</div>
+	
 			<div id=write>
-				<ul class="biglistwrite">
 				
+				<ul class="biglistwrite">
+					
 					<ul class="listtitle">
-						<li class="listno">${FreeBoard.fNo }</li>
-						<li class="listsubject">${FreeBoard.subject}</li>
+						<li class="listno"><%=list.get(1).getfNo() %></li>
+						<li class="listsubject"><%=list.get(1).getfSubject() %></li>
 						<li class="listwrite">권도완</li>
-						<li class="listcount">20</li>
-						<li class=listdate>${FreeBoard.fDate}</li>
+						<li class="listcount"></li>
+						<li class=listdate><%=list.get(1).getfDate() %></li>
 					</ul>
-			
-
+					
 				</ul>
 			</div>
-
+			
+	
+				
+			
+			</div>
+	
 			<div id="pagingbox"></div>
 			<div class="writego">
 				<button onclick="location.href='freeboardwirte'">글작성</button>
