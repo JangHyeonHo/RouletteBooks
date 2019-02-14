@@ -2,6 +2,9 @@ package dto;
 
 import java.util.Date;
 
+import command.FreeBoardWriteCommand;
+import command.TBoardWriteCommand;
+
 public class FreeBoard implements DTOTestInterface {
 	private int fNo; //게시판 글번호
 	private String fMno; // 회원번호
@@ -106,5 +109,20 @@ public class FreeBoard implements DTOTestInterface {
 		System.out.println("등록일자  : " + fDate);
 		System.out.println("이상 완료=============================================");
 	}
+	
+	
+	
+	public FreeBoard commandChange(FreeBoardWriteCommand command) {
+		fMno = command.getmNo();
+		fSubject = command.getSubject();
+		fContent = command.getContent();
+		
+
+
+		  
+		  return this;
+		
+	}
+	
 
 }

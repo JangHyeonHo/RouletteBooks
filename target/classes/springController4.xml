@@ -27,4 +27,21 @@
 
 <!-- payment 공간 -->
 <bean class="controller.payment.TransactionDetailController" />
+
+<!-- DTO공간 -->
+<bean class = "dto.FreeBoard" name="FreeBoard" id="FreeBoard"/>
+
+<!-- Command객체 공간 -->
+ <bean class = "command.FreeBoardWriteCommand" name="FreeBoardWriteCommand" id="FreeBoardWriteCommand"/>
+
+
+<!-- DAO공간 -->
+<bean class = "dao.FreeBoardDao" name="FreeBoardDao" id="FreeBoardDao"/>
+
+<!-- ActionController 공간 -->
+<bean class = "service.freeboard.FreeBoardWriteService" name="FreeBoardWriteService" id="FreeBoardWriteService"/>
+
+
+
+
 </beans>
