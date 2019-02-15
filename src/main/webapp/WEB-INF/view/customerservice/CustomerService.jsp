@@ -48,6 +48,13 @@
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
+<c:if test="${empty loginInfo }">
+<script>
+alert("로그인이 필요합니다.")
+location.href="../member/login"
+</script>
+</c:if>
+
 </head>
 <body>
 	<!-- Header 시작 -->
@@ -148,15 +155,15 @@
                 </tr>
             </thead>
             <tbody>
-        	<c:forEach items="${List }" var="list">
-        	       	
+            
+        	<c:forEach items="${List }" var="list">	
                 <tr>
                     <td>${list.csNo }</td>
                     <td>${list.csKind }</td>
                     <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
                     <td>${list.csRegDate }</td>
                     <td><button><img src="../img/문의삭제로고.PNG"></button></td>
-                </tr>                
+                </tr>       
             </c:forEach>
             	
             </tbody>

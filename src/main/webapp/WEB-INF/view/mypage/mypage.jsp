@@ -47,6 +47,13 @@
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
+<c:if test="${empty loginInfo }">
+<script>
+alert("로그인이 필요합니다.")
+location.href="../member/login"
+</script>
+</c:if>
+
 </head>
 <body>
 	<!-- Header 시작 -->

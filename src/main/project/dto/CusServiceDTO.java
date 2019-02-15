@@ -17,9 +17,18 @@ public class CusServiceDTO {
 	private String csAnswerCon;	//답변내용
 	private Date csAnswerDate;	//답변 작성일
 	private String csMailAgree;	//이메일이용동의
+	private String csMno; //회원등록번호
 	
 
 
+
+	public String getCsMno() {
+		return csMno;
+	}
+
+	public void setCsMno(String csMno) {
+		this.csMno = csMno;
+	}
 
 	public String getCsMailAgree() {
 		return csMailAgree;
@@ -116,7 +125,7 @@ public class CusServiceDTO {
 		csSubject =	command.getSubject();
 		csContent = command.getContent();
 		email = command.getEmailNumber();
-		
+		csMno = command.getInquirywriter_mno();
 	}
 	public void DTOTEST() {
 		System.out.println(csNo);
