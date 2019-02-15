@@ -21,8 +21,9 @@ public class FreeBoard implements DTOTestInterface {
 
 
 
-	public void setfNo(int fNo) {
+	public FreeBoard setfNo(int fNo) {
 		this.fNo = fNo;
+		return this;
 	}
 
 
@@ -35,8 +36,9 @@ public class FreeBoard implements DTOTestInterface {
 
 
 
-	public void setfMno(String fMno) {
+	public FreeBoard setfMno(String fMno) {
 		this.fMno = fMno;
+		return this;
 	}
 
 
@@ -49,8 +51,9 @@ public class FreeBoard implements DTOTestInterface {
 
 
 
-	public void setfSubject(String fSubject) {
+	public FreeBoard setfSubject(String fSubject) {
 		this.fSubject = fSubject;
+		return this;
 	}
 
 
@@ -63,8 +66,9 @@ public class FreeBoard implements DTOTestInterface {
 
 
 
-	public void setfContent(String fContent) {
+	public FreeBoard setfContent(String fContent) {
 		this.fContent = fContent;
+		return this;
 	}
 
 
@@ -77,8 +81,9 @@ public class FreeBoard implements DTOTestInterface {
 
 
 
-	public void setfHit(int fHit) {
+	public FreeBoard setfHit(int fHit) {
 		this.fHit = fHit;
+		return this;
 	}
 
 
@@ -91,8 +96,9 @@ public class FreeBoard implements DTOTestInterface {
 
 
 
-	public void setfDate(Date fDate) {
+	public FreeBoard setfDate(Date fDate) {
 		this.fDate = fDate;
+		return this;
 	}
 
 
