@@ -34,6 +34,7 @@
 
 <!-- service공간 -->
 <bean class = "service.cusservice.cusService" name="cusService" id="cusService"/>
+<bean class = "service.cusservice.myInquiryService" name="inquiryList" id="inquiryList"/>
 
 <!-- command공간 -->
 <bean class = "command.CusServiceCommand" name="CusCommand" id="CusCommand"/>

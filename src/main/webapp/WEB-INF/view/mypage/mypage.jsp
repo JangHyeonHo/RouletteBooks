@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,7 +88,7 @@
             <div id="MyPageSecond">
                 <div class="MainPageTitle">
                     거래정보
-                    <button class="plus" onclick="location.href='#'">더보기</button>
+                    <button class="plus" onclick="location.href='ordersearch'">더보기</button>
                 </div>
                 <div id="dealInfo">
                     <div id="buyInfo">
@@ -139,16 +139,44 @@
                     <button type="button" class="plus" onclick="location.href='../customerservice/myinquiry'">더보기</button>
                 </div>
                 <div id="question">
-                    <span>로그인</span> 후 이용 가능합니다.<br>
-                    Roulette Books 대한 모든 궁금증은 1:1 문의하기로 부담없이 확인하세요.
-                    <button type="button" id="questLog" onclick="location.href='#'">로그인</button>
+                     <table id="inquiryTable">
+            <colgroup>
+                <col width="12%">
+                <col width="18%">
+                <col width="45%">
+                <col width="20%">
+                <col width="5%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">접수번호</th>
+                    <th scope="col">분류</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">날짜</th>
+                    <th scope="col"><span id="del"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+        	<c:forEach items="${List }" var="list">
+        	       	
+                <tr>
+                    <td>${list.csNo }</td>
+                    <td>${list.csKind }</td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
+                    <td>${list.csRegDate }</td>
+                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
+                </tr>
+            </c:forEach>
+            </tbody>
+            
+        </table>
                 </div>
             </div>
             <!-- 대여목록 -->
             <div id="MyPageThird">
                 <div id="MainPageTitle1">
                     대여목록
-                <button type="button" class="plus" onclick="location.href='#'">더보기</button>
+                <button type="button" class="plus" onclick="location.href='rentallist'">더보기</button>
                 </div>
                 <div id="rantalList">
                     <div class="ranList">
