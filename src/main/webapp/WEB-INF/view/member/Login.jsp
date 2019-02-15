@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
@@ -31,19 +31,19 @@
 	crossorigin="anonymous"></script>
 
 <!--css 설정(기본값)-->
-<link href="css/body.css" rel="stylesheet" type="text/css">
-<link href="css/header.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
+<link href="../css/body.css" rel="stylesheet" type="text/css">
+<link href="../css/header.css" rel="stylesheet" type="text/css">
+<link href="../css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
-<script src = "js/header.js"></script>
+<script src = "../js/header.js"></script>
 
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="css/Login_content.css" rel="stylesheet" type="text/css"> 
+<link href="../css/Login_content.css" rel="stylesheet" type="text/css"> 
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<script src = "js/Login.js"></script>
+<script src = "../js/Login.js"></script>
 
 </head>
 <body>
@@ -53,22 +53,24 @@
 <!-- Content 시작(내용 첨가) -->
 <div id = "contents">
 <div id = "loginBox">
-			<form action="#" method="POST">
+			<form:form commandName="command">
 			<div class="loginemail">
-				<input type="text" name = "email" id="lemail" placeholder=" 이메일 입력">
+				<form:input path="email" id="lemail" placeholder=" 이메일 입력"/>
 			</div>
 			<div class="loginpassword">
-				<input type="password" name = "password" id="lpassword" placeholder="비밀번호 입력">
+				<form:password path="password" id="lpassword" placeholder="비밀번호 입력"/>
+				<form:errors path="email" cssStyle="color:red; display : inline-block; font-size : 13px;"/>
+				<form:errors path="password" cssStyle="color:red; display : inline-block; font-size : 13px;" />
 			</div>
 			<div class="loginsearch">
-				<div id="maintainbox"><input type="checkbox" name=loginmaintain value="로그인유지"><strong>로그인유지</strong></div>
-				<div id="idselect"><a href="#">아이디 찾기</a></div>
-				<div id="passwordselect"><a href="#">비밀번호 찾기</a></div>
+				<div id="maintainbox"><form:checkbox path="loginmaintain" value="true"/><strong>로그인 자동완성</strong></div>
+				<div id="idselect"><a href="searchid">아이디 찾기</a></div>
+				<div id="passwordselect"><a href="searchpw">비밀번호 찾기</a></div>
 			</div>
 			<div class="loginjoin"><input type="submit" value="로그인" id = "submitBtn"></div>
-			<div class="loginsign"><div class="lsign"><button title="Roulette Books 회원가입"><a href="#"><strong>Roulette Books 회원가입</strong></a></button></div>
+			<div class="loginsign"><div class="lsign"><button type="button" title="Roulette Books 회원가입" onclick="location.href='signup'"><strong>Roulette Books 회원가입</strong></button></div>
 			</div>
-			</form>
+			</form:form>
 		</div>
 </div>
 <!-- Content 끝 -->

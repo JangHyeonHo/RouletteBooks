@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,8 +43,16 @@
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
 <link href="../css/MyPage_content.css" rel="stylesheet" type="text/css">
+<link href="../css/mypageSide.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
+
+<c:if test="${empty loginInfo }">
+<script>
+alert("로그인이 필요합니다.")
+location.href="../member/login"
+</script>
+</c:if>
 
 </head>
 <body>
@@ -54,85 +62,31 @@
 	<!-- Content 시작(내용 첨가) -->
    <!-- Contents -->
     <div id="contents">
-        <!-- 마이페이지 왼쪽사이드 -->
-        <div id="MyPageSide">
-            <!-- 등급 -->
-            <div id="MyPageSideFirst">
-                <div id="MyPageSideTitle1">
-                    회원등급
-                </div>
-                <div id="rating">
-                    <img src="../img/등급-골드.PNG">
-                </div>
-                <div id="rating1">
-                    골드
-                </div>
-            </div>
-            <!-- 회원정보 -->
-            <div id="MyPageSideSecond">
-                <div class="MyPageSideTitle">
-                    회원정보
-                </div>
-                <div id="sideInfo">
-                    <ul>
-                        <li><a href="#">기본정보보기</a></li>
-                        <li><a href="#">거래내역</a></li>
-                        <li><a href="#">대여내역</a></li>
-                        <li><a href="#">충전내역</a></li>
-                        <li><a href="#">위시리스트</a></li>
-                        <li><a href="#">장바구니</a></li>
-                        <li><a href="#">회원등급정보</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 배송관리 -->
-            <div id="MyPageSideThird">
-                <div class="MyPageSideTitle">
-                    배송관리
-                </div>
-                <div id="delivery">
-                    <ul>
-                        <li><a href="#">주문 및 배송정보</a></li>
-                        <li><a href="#">배송지 관리</a></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 남는곳 -->
-            <div id="MyPageSideFour">
-                <div class="MyPageSideTitle">
-                    빈공간
-                </div>
-                <div id="bb">
-                    빈공간
-                </div>
-            </div>
-
-        </div>
-
-
+    		<!-- 마이페이지 사이드 시작 -->
+     <jsp:include page="../mypageSide.jsp" />
+			<!-- 마이페이지 사이드 끝 -->
+			
         <!-- 마이페이지 메인 -->
         <div id="MyPageMain">
             <!-- 기본정보 -->
             <div id="MyPageFirst">
                 <div class="MainPageTitle">
                     기본정보
-                    <button type="button" class="plus" onclick="location.href='#'">더보기</button>
+                    <button type="button" class="plus" onclick="location.href='myinfoconfirm'">더보기</button>
                 </div>
                 <div id="myInfo">
                     <div id="myInfo1">
                         <ul>
-                            <li class="mainText"><span>아이디 :</span> 먹이를찾아헤매는하예나</li>
-                            <li class="mainText"><span>핸드폰 번호 :</span> 010-2244-4468</li>
-                            <li class="mainText"><span>주소 :</span> 사랑시 고백구 행복동 하하호 호 </li>
+                            <li class="mainText"><span class = "sub">아이디 :</span> 먹이를찾아헤매는하예나</li>
+                            <li class="mainText"><span class = "sub">핸드폰 번호 :</span> 010-2244-4468</li>
+                            <li class="mainText"><span class = "sub">주소 :</span> 사랑시 고백구 행복동 하하호 호 </li>
                         </ul>
                     </div>
                     <div id="myInfo2">
                         <ul>
-                            <li class="mainText"><span>보유 캐쉬 : </span> 200원</li>
-                            <li class="mainText"><span>보유 쿠폰 : </span> 4장</li>
-                            <li class="mainText"><span>등록 계좌 : </span> 계좌정보가 없습니다.</li>
+                            <li class="mainText"><span class = "sub">보유 캐쉬 : </span> 200원</li>
+                            <li class="mainText"><span class = "sub">보유 쿠폰 : </span> 4장</li>
+                            <li class="mainText"><span class = "sub">등록 계좌 : </span> 계좌정보가 없습니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -141,7 +95,7 @@
             <div id="MyPageSecond">
                 <div class="MainPageTitle">
                     거래정보
-                    <button class="plus" onclick="location.href='#'">더보기</button>
+                    <button class="plus" onclick="location.href='ordersearch'">더보기</button>
                 </div>
                 <div id="dealInfo">
                     <div id="buyInfo">
@@ -189,19 +143,47 @@
             <div id="MyPageFour">
                 <div class="MainPageTitle">
                     1:1문의
-                    <button type="button" class="plus" onclick="location.href='#'">더보기</button>
+                    <button type="button" class="plus" onclick="location.href='../customerservice/myinquiry'">더보기</button>
                 </div>
                 <div id="question">
-                    <span>로그인</span> 후 이용 가능합니다.<br>
-                    Roulette Books 대한 모든 궁금증은 1:1 문의하기로 부담없이 확인하세요.
-                    <button type="button" id="questLog" onclick="location.href='#'">로그인</button>
+                     <table id="inquiryTable">
+            <colgroup>
+                <col width="12%">
+                <col width="18%">
+                <col width="45%">
+                <col width="20%">
+                <col width="5%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">접수번호</th>
+                    <th scope="col">분류</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">날짜</th>
+                    <th scope="col"><span id="del"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+        	<c:forEach items="${List }" var="list">
+        	       	
+                <tr>
+                    <td>${list.csNo }</td>
+                    <td>${list.csKind }</td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
+                    <td>${list.csRegDate }</td>
+                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
+                </tr>
+            </c:forEach>
+            </tbody>
+            
+        </table>
                 </div>
             </div>
             <!-- 대여목록 -->
             <div id="MyPageThird">
                 <div id="MainPageTitle1">
                     대여목록
-                <button type="button" class="plus" onclick="location.href='#'">더보기</button>
+                <button type="button" class="plus" onclick="location.href='rentallist'">더보기</button>
                 </div>
                 <div id="rantalList">
                     <div class="ranList">

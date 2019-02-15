@@ -1,0 +1,163 @@
+#contents {
+    width: 1080px;
+    min-height: 1000px;
+    margin: 0 auto;
+    
+}
+
+#orderinfo {
+    margin-top: 65px;
+    width: 840px;
+    min-height: 750px;
+    
+    float: left;
+}
+
+#orderinfo_header {
+    margin-top: 50px;
+    width: 840px;
+    min-height: 180px;
+    
+}
+
+#orderinfo_content {
+
+    width: 840px;
+    min-height: 215px;
+    
+}
+
+#order_announce {
+    color: #888;
+    font-size: 11px;
+
+}
+
+#order_search {
+    border: 3px solid rgba(0, 102, 255, 0.699);
+    border-radius: 10px;
+    margin-top: 30px;
+    height: 50px;
+}
+
+#order_search_content {
+    text-align: center;
+}
+#order_search_content{
+    margin: 10px 0 0 0;
+}
+#order_search_btn{
+    background-color: #CC66FF;
+    border-radius: 10px;
+}
+#order_num {
+    clear: both;
+    padding: 7px 5px;
+    float: left;
+    width: 220px;
+    color: #606060;
+    font-size: 11px;
+    background: #f5f5f5;
+    border: 1px solid #888;
+    text-align: center;
+}
+
+#order_content {
+    float: left;
+    width: 255px;
+    color: #606060;
+    font-size: 11px;
+    padding: 7px 5px;
+    background: #f5f5f5;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    border-right: 1px solid #888;
+    text-align: center;
+}
+
+#order_pay {
+    float: left;
+    width: 100px;
+    color: #606060;
+    font-size: 11px;
+    padding: 7px 5px;
+    background: #f5f5f5;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    border-right: 1px solid #888;
+    text-align: center;
+}
+#order_delinum{
+	float: left;
+    width: 100px;
+    font-size: 11px;
+    color: #606060;
+    padding: 7px 5px;
+    background: #f5f5f5;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    border-right: 1px solid #888;
+    text-align: center;
+}
+
+#order_regdate {
+    float: left;
+    width: 100px;
+    font-size: 11px;
+    color: #606060;
+    padding: 7px 5px;
+    background: #f5f5f5;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    border-right: 1px solid #888;
+    text-align: center;
+}
+#order_have {
+    clear: both;
+    float: left;
+}
+
+.have_order_num {
+    float: left;
+    width: 220px;
+    padding: 7px 5px;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+.have_order_content {
+    float: left;
+    width: 255px;
+    padding: 7px 5px;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+.have_order_pay {
+    float: left;
+    width: 105px;
+    padding: 7px 5px;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+.have_order_regdate {
+    float: left;
+    width: 100px;
+    padding: 7px 5px;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+.have_order_delinum{
+	 float: left;
+    width: 100px;
+    padding: 7px 5px;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+#orderinfo_footer{
+    clear: both;
+    float: left;
+    color: #888;
+    white-space: pre-line;
+}

@@ -3,124 +3,12 @@
     min-height: 1000px;
     margin: 0 auto;
 }
-body {
-	margin: 20px 0 0 0;
-}
-
-img{
-	width: 100%;
-	height: 100%;
-}
-li > a{
-	text-decoration: none;
-	color: black;
-}
-a{
-	text-decoration: none;
-	color: gray;
-}
-a:hover{
-	color: rosybrown;
-}
-.mainText{
-	padding: 6px;
-}
-span{
-	font-style: italic;
-	color: darkmagenta;
-}
-/* 마이페이지 사이드 */
-#MyPageSide{
-	width: 240px;
-	height: 1000px;
-	float: left;
-}
-/* 마이페이지사이드 회원등급 */
-#MyPageSideFirst{
-	width: 220px;
-	min-height: 200px;
-	float: left;
-}
-#MyPageSideTitle1{
-	width: 180px;
-	min-height: 40px;
-	padding: 0 0 0 20px;
-	float: left;
-	font-family: 'Do Hyeon', sans-serif;
-	font-size: 26px;
-	color: orange;
-}
-#rating{
-	width: 160px;
-	padding: 0 0 0 20px;
-	float: left;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-#rating1{
-	width: 200px;
-	height: 40px;
-	padding: 0 10px 0 0;
-	float: left;
-	text-align: center;
-	font-family: 'Do Hyeon', sans-serif;
-	font-size: 28px;
-	color: blue;
-}
-/* 마이페이지사이드 회원정보 */
-#MyPageSideSecond{
-	width: 220px;
-	height: 360px;
-	padding: 0 0 0 20px;
-	float: left;
-}
-#sideInfo{
-	width: 220px;
-	height: 320px;
-	float: left;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-/* 마이페이지사이드 배송관리 */
-#MyPageSideThird{
-	width: 220px;
-	height: 200px;
-	padding: 0 0 0 20px;
-	float: left;
-}
-#delivery{
-	width: 220px;
-	height: 160px;
-	float: left;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-/* 빈공간 */
-#MyPageSideFour{
-	width: 220px;
-	height: 200px;
-	padding: 0 0 0 20px;
-	float: left;
-}
-#bb{
-	width: 220px;
-	height: 160px;
-	float: left;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-.MyPageSideTitle{
-	width: 180px;
-	height: 40px;
-	float: left;
-	font-family: 'Do Hyeon', sans-serif;
-	font-size: 26px;
-	color: orange;
-	border-bottom: 1px solid orange;
-}
-
-
 
 /* 마이페이지 메인 */
 #MyPageMain{
 	width: 840px;
 	min-height: 1000px;
+	margin: 20px 0 0 0;
 	float: left;
 }
 /* 더보기 */
@@ -139,6 +27,10 @@ span{
 	width: 840px;
 	height: 250px;
 	float: left;
+}
+.sub{
+	font-style: italic;
+	color: darkmagenta;
 }
 #myInfo1{
 	width: 400px;
@@ -240,10 +132,10 @@ span{
 	width: 840px;
 	height: 60px;
 	float: left;
+	margin-top:10px;
 	font-family: 'Do Hyeon', sans-serif;
 	font-size: 34px;
 	color: green;
-	border-top: 1px dashed green;
 }
 #rantalList{
 	width: 840px;
@@ -261,17 +153,59 @@ span{
 /* 1:1문의 내역 */
 #MyPageFour{
 	width: 840px;
-	height: 250px;
+	min-height: 250px;
 	float: left;
 	
 }
 #question{
 	width: 840px;
-	height: 190px;
+	min-height: 190px;
 	float: left;
 	text-align: center;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 22px;
+}
+tr {
+	display: table-row;
+}
+
+thead th {
+	height: 40px;
+	border-bottom: 1px solid gray;
+	background-color: #eeeef1;
+}
+
+#inquiryTable {
+	margin: 10px;
+	border-top: 2px solid black;
+	border-bottom: 1px solid black;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 2px;
+	border-color: grey;
+}
+
+td {
+	text-align: center;
+}
+
+.answer {
+	color: red;
+}
+
+#Subj {
+	text-align: center;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+#Subj a:hover {
+	color: skyblue;
 }
 #questLog{
 	padding: 12px;

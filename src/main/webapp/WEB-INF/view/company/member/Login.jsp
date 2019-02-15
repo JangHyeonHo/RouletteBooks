@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  --%>
 <!DOCTYPE html>
@@ -51,13 +51,14 @@
 	<div id="contents">
 		<!-- 레이아웃 설정 -->
 		<div id = "loginBox">
-			<form>
+			<form:form>
 			<div id = "loginHeaderBox"><h3>Roulette Books<p style="padding-top:6px;">사원Login</p></h3></div>
-			<div id = "loginIdBox"><div class = "TextBox">사원번호</div><input type = "text" name = "comId"></div>
-			<div id = "loginPwBox"><div class = "TextBox">사원 비밀번호</div><input type = "password" name = "comPw"></div>
+			<div id = "loginIdBox"><div class = "TextBox">사원번호</div><form:input path="comId"/></div>
+			<div id = "loginPwBox"><div class = "TextBox">사원 비밀번호</div><form:password path="comPw"/></div>
+			<div><form:errors path="comId" cssStyle="color:red; display : inline-block; font-size : 13px;" /><form:errors path="comPw" cssStyle="color:red; display : inline-block; font-size : 13px;"/></div>
 			<div id = "loginBtnBox"><input type = "submit" value="로그인">
 			<input type = "button" value="사원등록" onclick="location.href='signup'"></div>
-			</form>
+			</form:form>
 		</div>
 	</div>
 <!-- Footer 시작 -->

@@ -12,4 +12,22 @@
 	<bean class = "controller.payment.PaymentController" />
 	<bean class = "controller.mypage.CustomerCouponController" />
 	<bean class = "controller.event.EventController" />
+	<bean class = "controller.mypage.MyPageOrderInfo" />
+
+
+
+<!-- DTO공간 -->
+<bean class = "dto.TBoard" name="TBoard" id="TBoard"/>
+
+<!-- Command객체 공간 -->
+ <bean class = "command.TBoardWriteCommand" name="TBoardWriteCommand" id="TBoardWriteCommand"/>
+
+
+<!-- DAO공간 -->
+<bean class = "dao.TBoardDao" name="TBoardDao" id="TBoardDao"/>
+
+<!-- ActionController 공간 -->
+<bean class = "service.tboard.TBoardWriteService" name="TBoardWriteService" id="TBoardWriteService"/>
+<bean class = "service.tboard.TBoardListService" name="TBoardListService" id="TBoardListService"/>
+
 </beans>

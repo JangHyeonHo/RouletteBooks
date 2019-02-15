@@ -12,7 +12,7 @@ $(function () {
                 $("#textLine").attr('placeholder', "남(혹은 여)");
                 break;
             case "createDate":
-                $("#textLine").attr('placeholder', "20190101(년월일)");
+                $("#textLine").attr('placeholder', "2019-01-01(년월일)");
                 break;
             case "grade":
                 $("#textLine").attr('placeholder', "다이아몬드(등급표)");

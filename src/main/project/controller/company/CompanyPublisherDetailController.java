@@ -1,4 +1,4 @@
-package controller.rental;
+package controller.company;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,16 +7,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import controller.FrontControllerInterface;
 
 @Controller
-@RequestMapping("/rantal/rantallist")
-public class rantalListController implements FrontControllerInterface {
-//이원학
-	
+@RequestMapping("/company/sales/publisher/detail")
+public class CompanyPublisherDetailController implements FrontControllerInterface {
+
 	@Override
 	@RequestMapping(method = RequestMethod.GET)
 	public String OpenProcessGet() {
 		// TODO Auto-generated method stub
-		System.out.println("open:대여내역");
-		return "rental/rantalList";
+		System.out.println("출판사 상세 페이지");
+		return "company/Contract/PublisherDetail";
 	}
 
 	@Override

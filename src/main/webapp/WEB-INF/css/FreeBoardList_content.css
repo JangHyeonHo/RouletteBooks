@@ -18,6 +18,7 @@
 			font-size: 28px;
 			color: #151432;
 			margin-bottom: 10px;
+			margin-top: 20px;
 			
 		}
 		.titlename{
@@ -57,7 +58,7 @@
 
 			float: left;
 		}
-		#search{
+		#search1{
 			width: 293px;
 			float: left;
 			height: 35px;

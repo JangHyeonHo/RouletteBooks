@@ -1,8 +1,11 @@
 #contents {
+
     width: 1080px;
     min-height: 1000px;
-
-    border: 3px solid #888;
+    border: 2px solid #888;
+    padding-top:20px;
+    margin-top:30px;
+    margin-bottom:30px;
 }
 #trade_board_header{
     width: 1080px;
@@ -21,6 +24,9 @@
 }
 #trade_nick_name{
     float: left;
+}
+#trade_book_publisher{
+	float: left;
 }
 #trade_password{
     float: left;
@@ -54,6 +60,7 @@
     float: left;
 }
 #image_announce{
+	white-space:pre-line;
     color: #888;
 }
 #trade_board_footer{

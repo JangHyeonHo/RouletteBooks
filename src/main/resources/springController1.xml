@@ -5,13 +5,59 @@
     				   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!-- 장현호 공간 -->
+
 <bean class = "controller.company.CompanySiginUpOpenController" />
+<!-- /company/signup -->
 <bean class = "controller.company.CompanyLoginOpenController" />
+<!-- /company/login -->
 <bean class = "controller.company.CompanyMainPageOpenController" />
+<!-- /company/main -->
 <bean class = "controller.company.CompanyHRManaListOpenController" />
+<!-- /company/hr/managerlist -->
 <bean class = "controller.company.CompanyHRMemListOpenController" />
+<!-- /company/hr/memberlist -->
 <bean class = "controller.company.CompanyBookContractRegistController" />
+<!-- /company/sales/publisher/contract -->
 <bean class = "controller.company.CompanyPublisherRegistController" />
+<!-- /company/sales/publisher/regist -->
 <bean class = "controller.company.CompanyPublisherListController" />
+<!-- /company/sales/publisher/list -->
+<bean class = "controller.company.CompanyBookServiceListController" />
+<!-- /company/sales/book/list -->
+<bean class = "controller.company.CompanyBookDetailOpenController" />
+<!-- /company/sales/book/detail -->
+
+<bean class = "controller.MainOpenController" />
+<!-- /main -->
+
+<bean class = "controller.member.RbLogoutController" />
+<!-- /member/logout -->
+
+
+<!-- DTO공간 -->
+<bean class = "dto.RMember" name="RMember" id="RMember"/>
+<bean class = "dto.RManager" name="RManager" id="RManager"/>
+
+<!-- Command객체 공간 -->
+<bean class = "command.CompanyManagerSignUpCommand" name="CompanyManagerSignUpCommand" id="CompanyManagerSignUpCommand"/>
+<bean class = "command.ManagerLoginCommand" name="ManagerLoginCommand" id="ManagerLoginCommand"/>
+<bean class = "command.SignUpCommand" name="SignUpCommand" id="SignUpCommand"/>
+<bean class = "command.LoginCommand" name="LoginCommand" id="LoginCommand"/>
+<bean class = "command.LoginSessionInfomationCommand" name="LoginSessionInfomationCommand" id="LoginSessionInfomationCommand"/>
+<bean class = "command.ManagerSessionInfomationCommand" name="ManagerSessionInfomationCommand" id="ManagerSessionInfomationCommand"/>
+<bean class = "command.MemberListPageCommand" name="MemberListPageCommand" id="MemberListPageCommand"/>
+
+
+<!-- DAO공간 -->
+<bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>
+<bean class = "dao.RManagerDao" name="RManagerDao" id="RManagerDao"/>
+
+<!-- ActionController 공간 -->
+<bean class = "service.member.MemberSignUpService" name="MemberSignUpService" id="MemberSignUpService"/>
+<bean class = "service.member.MemberLoginService" name="MemberLoginService" id="MemberLoginService"/>
+<bean class = "service.company.ManagerSignUpService" name="ManagerSignUpService" id="ManagerSignUpService"/>
+<bean class = "service.company.ManagerLoginService" name="ManagerLoginService" id="ManagerLoginService"/>
+<bean class = "service.company.MemberListService" name="MemberListService" id="MemberListService"/>
+
 
 </beans>
