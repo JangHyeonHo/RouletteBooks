@@ -33,7 +33,7 @@
 
 <!-- Command객체 공간 -->
  <bean class = "command.FreeBoardWriteCommand" name="FreeBoardWriteCommand" id="FreeBoardWriteCommand"/>
-
+  <bean class ="command.FreeBoardListPageCommand" name="FreeBoardListPageCommand" id="FreeBoardListPageCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.FreeBoardDao" name="FreeBoardDao" id="FreeBoardDao"/>
@@ -41,6 +41,7 @@
 <!-- ActionController 공간 -->
 <bean class = "service.freeboard.FreeBoardWriteService" name="FreeBoardWriteService" id="FreeBoardWriteService"/>
 <bean class = "service.freeboard.FreeBoardListService" name="FreeBoardListService" id="FreeBoardListService"/>
+
 
 
 
