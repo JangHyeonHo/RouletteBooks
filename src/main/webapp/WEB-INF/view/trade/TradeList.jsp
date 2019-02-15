@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page import="java.util.*,dto.TBoard"  %>
+	<% List <TBoard> list =(List)request.getAttribute("tboardlist"); %>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
@@ -89,48 +91,25 @@
 				<div class="tradewrite">
 					<a href="tradedetail"><div class="tradebookinfo">
 						<div class="buyno">1</div>
-						<div class="picture"><img src="img/buybook1.jpg"></div>
+						<div class="picture"><img src="trade/uploadImage/"<%=list.get(0).gettBookOriImgName() %>></div>
 						<div class="idsellbuy">
 							<div class="idinfo">닉네임: 이디야커피</div>
 							<div class="sell">판매</div>
 						</div>
 					</div></a>
 					<div class="tradetitle">
-						<a href="tradedetail"><div class="tradesubject">돼지책 급처분 합니다 커피값에 사가세요.</div></a>
-						<div class="tradeinfo">베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다
-								베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다
-								베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다.</div>
-						<div class="uploaddate">2019년 01월 25일</div>
+						<a href="tradedetail"><div class="tradesubject"><%=list.get(0).gettSubject() %></div></a>
+						<div class="tradeinfo"><%=list.get(0).gettContent() %></div>
+						<div class="uploaddate"><%=list.get(0).gettRegDate() %></div>
 					
 					
 					</div>
-					<div class="tradepricebox"><strong>20,000원</strong></div>
+					<div class="tradepricebox"><strong><%=list.get(0).gettPrice() %>원</strong></div>
 					<div class="tradewaiting">대기중</div>
 					<div class="bookscore">★★★★★</div>
 				</div>
-				<div class="tradewrite">
-					<a href="tradedetail"><div class="tradebookinfo">
-							<div class="buyno">1</div>
-							<div class="picture"><img src="img/buybook2.jpg"></div>
-							<div class="idsellbuy">
-								<div class="idinfo">닉네임: 스타벅스커피</div>
-								<div class="buy">구매</div>
-							</div>
-						</div></a>
-						
-						<div class="tradetitle">
-							<a href="tradedetail"><div class="tradesubject">돼지책 급처분 합니다 커피값에 사가세요.</div></a>
-							<div class="tradeinfo">베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다
-									베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다
-									베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다베스트셀러입니다.</div>
-							<div class="uploaddate">2019년 01월 25일</div>
-						
-						
-						</div>
-						<div class="tradepricebox"><strong>20,000원</strong></div>
-						<div class="tradewaiting">대기중</div>
-						<div class="bookscore">★★★</div>
-					</div>
+	
+				
 				
 			</div>
 					<div class="listwrite"><button onclick="location='trade/boardwrite'">글 작성</button></div>
