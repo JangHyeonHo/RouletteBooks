@@ -49,7 +49,7 @@ public class RMemberDao {
 	//아이디 새로 만들 때 회원번호 생성
 	public String mnoCall() {
 		// TODO Auto-generated method stub
-		sql = "select mno, MCRE_DATE from rmember WHERE MCRE_DATE = (SELECT max(MCRE_DATE) FROM RMEMBER GROUP BY MCRE_DATE)";
+		sql = "select mno, MCRE_DATE from rmember WHERE MCRE_DATE in (SELECT max(MCRE_DATE) FROM RMEMBER GROUP BY MCRE_DATE)";
 		List<String> maxNo = jdbcTemplate.query(sql, new RowMapper<String>() {
 
 			@Override
