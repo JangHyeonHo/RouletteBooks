@@ -15,10 +15,7 @@ a{
 .mainText{
 	padding: 6px;
 }
-span{
-	font-style: italic;
-	color: darkmagenta;
-}
+
 /* 마이페이지 사이드 */
 #MyPageSide{
 	width: 240px;

@@ -3,12 +3,6 @@
     min-height: 1000px;
     margin: 0 auto;
 }
-body {
-	margin: 20px 0 0 0;
-}
-
-
-
 
 /* 마이페이지 메인 */
 #MyPageMain{
@@ -33,6 +27,10 @@ body {
 	width: 840px;
 	height: 250px;
 	float: left;
+}
+.sub{
+	font-style: italic;
+	color: darkmagenta;
 }
 #myInfo1{
 	width: 400px;
@@ -199,11 +197,6 @@ td {
 
 #Subj {
 	text-align: center;
-}
-
-em {
-	font-style: normal;
-	color: cadetblue;
 }
 
 tbody {

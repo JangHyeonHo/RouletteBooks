@@ -70,16 +70,16 @@
                 <div id="myInfo">
                     <div id="myInfo1">
                         <ul>
-                            <li class="mainText"><span>아이디 :</span> 먹이를찾아헤매는하예나</li>
-                            <li class="mainText"><span>핸드폰 번호 :</span> 010-2244-4468</li>
-                            <li class="mainText"><span>주소 :</span> 사랑시 고백구 행복동 하하호 호 </li>
+                            <li class="mainText"><span class = "sub">아이디 :</span> 먹이를찾아헤매는하예나</li>
+                            <li class="mainText"><span class = "sub">핸드폰 번호 :</span> 010-2244-4468</li>
+                            <li class="mainText"><span class = "sub">주소 :</span> 사랑시 고백구 행복동 하하호 호 </li>
                         </ul>
                     </div>
                     <div id="myInfo2">
                         <ul>
-                            <li class="mainText"><span>보유 캐쉬 : </span> 200원</li>
-                            <li class="mainText"><span>보유 쿠폰 : </span> 4장</li>
-                            <li class="mainText"><span>등록 계좌 : </span> 계좌정보가 없습니다.</li>
+                            <li class="mainText"><span class = "sub">보유 캐쉬 : </span> 200원</li>
+                            <li class="mainText"><span class = "sub">보유 쿠폰 : </span> 4장</li>
+                            <li class="mainText"><span class = "sub">등록 계좌 : </span> 계좌정보가 없습니다.</li>
                         </ul>
                     </div>
                 </div>

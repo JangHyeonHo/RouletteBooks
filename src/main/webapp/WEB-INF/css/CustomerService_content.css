@@ -121,11 +121,6 @@ td {
 	text-align: center;
 }
 
-em {
-	font-style: normal;
-	color: cadetblue;
-}
-
 tbody {
 	display: table-row-group;
 	vertical-align: middle;
