@@ -46,4 +46,4 @@ public class InquiryWriteContorller implements FrontControllerInterface {
 			return "redirect:/customerservice/inquirywrite";
 		}
 
-	}
+}
