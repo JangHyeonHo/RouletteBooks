@@ -24,6 +24,16 @@ public class FreeBoardDao {
    public FreeBoardDao(DataSource datasource) {
       this.jdbcTemplate = new JdbcTemplate(datasource);
    }
+   
+   public Integer Detail(FreeBoard freeboard) {
+	   Integer i = null;
+	   sql = "update FreeBoard set fsubject = ?"
+			   + " fcontent = ? "
+			   + " where fno = ?";
+	   i = jdbcTemplate.update(sql, freeboard.getfContent(), freeboard.getfNo(),freeboard.getfSubject());
+	   
+	   return i;
+   }
 
    //자유게시판 글쓰기
    public Integer insert(FreeBoard freeboard) {
@@ -42,6 +52,13 @@ public class FreeBoardDao {
             
       list = jdbcTemplate.query(sql,new FreeBoardRowMapper() );
       return list;
+   }
+   
+   public Integer boardDelete(FreeBoard freeboard,int num) {
+	   Integer i =null;
+	   sql = "delete from FreeBoar where fno_num = ?";
+	   i = jdbcTemplate.update(sql,freeboard.getfNo());
+	   return i;
    }
 
 
