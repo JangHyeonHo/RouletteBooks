@@ -17,7 +17,7 @@ public class myInquiryService {
 		this.cusServiceDao = cusServiceDao;
 	}
 
-	public List<CusServiceDTO> inquiryList(String mno) {
+	public List<CusServiceDTO> inquiryList() {
 		list = cusServiceDao.inquiryList();
 		
 		return list;
