@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: ￪ﾶﾌ￫ﾏﾄ￬ﾙﾄ
-=======
-Built-By: HKEDU
->>>>>>> 22f615407948c5c75ce041df4762a86a59b64588
 Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 
