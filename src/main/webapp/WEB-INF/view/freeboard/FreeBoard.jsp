@@ -92,7 +92,7 @@
 					
 					<ul class="listtitle">
 						<li class="listno">${member.fNo }</li>
-						<li class="listsubject">${member.fSubject }</li>
+						<li class="listsubject"><a href="freeboardwirte">${member.fSubject }</a></li>
 						<li class="listwrite">권도완</li>
 						<li class="listcount"></li>
 						<li class=listdate>${member.fDate }</li>
