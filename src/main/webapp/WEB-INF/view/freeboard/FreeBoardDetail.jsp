@@ -67,11 +67,13 @@
 			<div id="board_title">
 				<strong>글쓰기</strong>
 			</div>
+			
 			<div id="board_subject">
-				<strong>제목</strong><input type="text" placeholder="제목을 입력하세요." name="subject"/>
+			
+				<strong>제목</strong><input type="text" name="subject" value=""/>
 			</div>
 			<div id="board_write">
-				<textarea name="content" id="editor"></textarea>
+				<textarea name="content" id="editor"><%-- <%=%> --%></textarea>
 				<script>
 				 
 				 ClassicEditor
@@ -82,6 +84,7 @@
 				
 					</script>
 			</div>
+		
 			<div id="board_end">
 				<button type="button">수정</button>
 				<button type="button" >삭제</button>
