@@ -42,9 +42,9 @@
 <!-- ActionController 공간 -->
 <bean class = "service.freeboard.FreeBoardWriteService" name="FreeBoardWriteService" id="FreeBoardWriteService"/>
 <bean class = "service.freeboard.FreeBoardListService" name="FreeBoardListService" id="FreeBoardListService"/>
+<bean class = "service.freeboard.FreeBoardDetailService" name="FreeBoardDetailService" id="FreeBoardDetailService"/>
 
-<bean class = "service.freeboard.FreeBoardDetailService" name="FreeBoardDetailService" id="FreeBoardDetailService" />
-
+ 
 
 
 
