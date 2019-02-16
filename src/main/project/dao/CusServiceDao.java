@@ -36,11 +36,11 @@ public class CusServiceDao {
 		return i;
 	}
 
-	public List<CusServiceDTO> inquiryList(String mno) {
+	public List<CusServiceDTO> inquiryList() {
 		// TODO Auto-generated method stub
-		sql = "select CSNO, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE from CUSSERVICE where mno = ? order by CSREG_DATE desc";
+		sql = "select CSNO, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE from CUSSERVICE order by CSREG_DATE desc";
 		
-		list = jdbcTemplate.query(sql,mno, new inquiryRowMapper());
+		list = jdbcTemplate.query(sql, new inquiryRowMapper());
 		return list;
 	}
 
