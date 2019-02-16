@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+  
 <!--제목 설정-->
 <title>이벤트</title>
 
@@ -45,6 +45,8 @@
 <link href="css/event_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
+   <script type="text/javascript" src="js/Winwheel.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
 </head>
 <body>
@@ -59,9 +61,146 @@
 				<h1>룰렛 이벤트 !</h1>
 			</div>
 			<div id="event_roulette_contents">
-				<div id="roulette_image"><img src="img/rouletteBg.png"></div>
+				<div id="roulette_image">
+				      <div align="center">
+           
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    
+                        
+                    
+                    <td width="438" height="582" class="the_wheel" align="center" valign="center">
+                        <canvas id="canvas" width="434" height="434">
+                            <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+                            
+                        </canvas>
+                     
+                    </td>
+                </tr>
+            </table>
+            <div class="power_controls">
+                       
+
+                
+            </div>
+        </div>
+        <script>
+            // Create new wheel object specifying the parameters at creation time.
+            let theWheel = new Winwheel({
+                'numSegments'  : 8,     // Specify number of segments.
+                'outerRadius'  : 212,   // Set outer radius so wheel fits inside the background.
+                'textFontSize' : 28,    // Set font size as desired.
+                'segments'     :        // Define segments including colour and text.
+                [
+                   {'fillStyle' : '#eae56f', 'text' : '당첨'},
+                   {'fillStyle' : '#89f26e', 'text' : '꽝'},
+                   {'fillStyle' : '#7de6ef', 'text' : '당첨'},
+                   {'fillStyle' : '#e7706f', 'text' : '꽝'},
+                   {'fillStyle' : '#eae56f', 'text' : '당첨'},
+                   {'fillStyle' : '#89f26e', 'text' : '꽝'},
+                   {'fillStyle' : '#7de6ef', 'text' : '당첨'},
+                   {'fillStyle' : '#e7706f', 'text' : '꽝'}
+                ],
+                'animation' :           // Specify the animation to use.
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : 5,     // Duration in seconds.
+                    'spins'    : 8,     // Number of complete spins.
+                    'callbackFinished' : alertPrize
+                }
+            });
+
+            // Vars used by the code in this page to do power controls.
+            let wheelPower    = 0;
+            let wheelSpinning = false;
+
+            // -------------------------------------------------------
+            // Function to handle the onClick on the power buttons.
+            // -------------------------------------------------------
+            function powerSelected(powerLevel)
+            {
+                // Ensure that power can't be changed while wheel is spinning.
+                if (wheelSpinning == false) {
+                    // Reset all to grey incase this is not the first time the user has selected the power.
+                    document.getElementById('pw1').className = "";
+                    document.getElementById('pw2').className = "";
+                    document.getElementById('pw3').className = "";
+
+                    // Now light up all cells below-and-including the one selected by changing the class.
+                    if (powerLevel >= 1) {
+                        document.getElementById('pw1').className = "pw1";
+                    }
+
+                    if (powerLevel >= 2) {
+                        document.getElementById('pw2').className = "pw2";
+                    }
+
+                    if (powerLevel >= 3) {
+                        document.getElementById('pw3').className = "pw3";
+                    }
+
+                    // Set wheelPower var used when spin button is clicked.
+                    wheelPower = powerLevel;
+
+                    // Light up the spin button by changing it's source image and adding a clickable class to it.
+                    document.getElementById('spin_button').src = "spin_on.png";
+                    document.getElementById('spin_button').className = "clickable";
+                }
+            }
+
+            // -------------------------------------------------------
+            // Click handler for spin button.
+            // -------------------------------------------------------
+            function startSpin()
+            {
+                // Ensure that spinning can't be clicked again while already running.
+                if (wheelSpinning == false) {
+                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
+                    // to rotate with the duration of the animation the quicker the wheel spins.
+                    if (wheelPower == 1) {
+                        theWheel.animation.spins = 3;
+                    } else if (wheelPower == 2) {
+                        theWheel.animation.spins = 8;
+                    } else if (wheelPower == 3) {
+                        theWheel.animation.spins = 15;
+                    }
+
+                    // Disable the spin button so can't click again while wheel is spinning.
+                    /* document.getElementById('spin_button').src       = "spin_off.png"; */
+                  
+
+                    // Begin the spin animation by calling startAnimation on the wheel object.
+                    theWheel.startAnimation();
+
+                    // Set to true so that power can't be changed and spin button re-enabled during
+                    // the current animation. The user will have to reset before spinning again.
+                    wheelSpinning = true;
+                }
+            }
+
+         
+
+            // -------------------------------------------------------
+            // Called when the spin animation has finished by the callback feature of the wheel because I specified callback in the parameters
+            // note the indicated segment is passed in as a parmeter as 99% of the time you will want to know this to inform the user of their prize.
+            // -------------------------------------------------------
+            function alertPrize(indicatedSegment)
+            {
+                // Do basic alert of the segment text. You would probably want to do something more interesting with this information.
+                alert(indicatedSegment.text);
+                location.href="/roulettebooks/event";
+            }
+        </script>
+				
+				
+				
+				
+				
+				
+				</div>
 				<div id="roulette_chance_announce">유승재님 실버등급 남은횟수 : 3</div>
-				<div id="roulette_btn"><button id="roulette_btn_style">돌려 돌려 돌림판</button></div>
+				<div id="roulette_btn"><button id="spin_button" class="roulette_btn_style" onClick="startSpin();">돌려 돌려 돌림판</button>
+				</div>
 			</div>
 		</div>
 		<div id="event_discount">
