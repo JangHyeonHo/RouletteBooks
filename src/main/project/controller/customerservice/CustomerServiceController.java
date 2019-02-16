@@ -34,7 +34,7 @@ public class CustomerServiceController implements FrontControllerInterface {
 		//System.out.println("mno:"+mno);
 		//RMember member = service.memberNo(mno);
 		//model.addAttribute("member",member);
-		List<CusServiceDTO> list = service.inquiryList(mno);
+		List<CusServiceDTO> list = service.inquiryList();
 		model.addAttribute("List",list);
 		return "customerservice/CustomerService";
 	}
