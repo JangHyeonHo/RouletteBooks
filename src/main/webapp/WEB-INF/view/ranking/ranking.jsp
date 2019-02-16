@@ -56,29 +56,26 @@
             <h1><a href="#">Ranking</a></h1>
         </div>
         <div class="rankSide">
-            <div class="rankSideList">
-                <h3>대분류1</h3>
-                <li>소분류1</li>
+         	<div id ="rankSideTitle">
+                <h3>리스트</h3>
             </div>
             <div class="rankSideList">
-                <h3>대분류1</h3>
-                <li>소분류1</li>
+                <h3><a href="#">문학/역사</a></h3>
             </div>
             <div class="rankSideList">
-                <h3>대분류1</h3>
-                <li>소분류1</li>
+                <h3><a href="#">유아/어린이/청소년</a></h3>
             </div>
             <div class="rankSideList">
-                <h3>대분류1</h3>
-                <li>소분류1</li>
+                <h3><a href="#">참고서/자격증</a></h3>
             </div>
             <div class="rankSideList">
-                <h3>대분류1</h3>
-                <li>소분류1</li>
+                <h3><a href="#">자연과학/IT</a></h3>
             </div>
             <div class="rankSideList">
-                <h3>대분류1</h3>
-                <li>소분류1</li>
+                <h3><a href="#">예술/인물</a></h3>
+            </div>
+            <div class="rankSideList">
+                <h3><a href="#">여행/잡지/취미</a></h3>
             </div>
         </div>
         <div id="MainTop">

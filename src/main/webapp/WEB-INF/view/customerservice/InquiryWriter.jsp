@@ -81,6 +81,8 @@ location.href="../member/login"
         </div>
     <form:form action=""  method="post" >
         <div class = "conBox">
+        	<input type="hidden" name="inquirywriter_mno" 
+					 value="${loginInfo.mNo }">
                 <div class ="label">답변 받을 이메일<span class = "ess">(필수)</span></div>
             <div class = "inputBox">
             <input type="text" class = "tBox" id = "emailid" name="emailid">@<input type="text" class = "tBox" id = "emailpath" name="emailpath">

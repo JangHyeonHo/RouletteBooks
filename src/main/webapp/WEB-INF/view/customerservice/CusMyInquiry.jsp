@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*, dto.*" %>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,6 +74,7 @@ location.href="../member/login"
         <div id="mainTitle">
             내 문의내역
         </div>
+        <c:if test="${empty list }">
         <table id="inquiryTable">
             <colgroup>
                 <col width="12%">
@@ -89,28 +93,25 @@ location.href="../member/login"
                 </tr>
             </thead>
             <tbody>
+        	<c:forEach items="${List }" var="list">
+        	       	
                 <tr>
-                    <td>1</td>
-                    <td>배송</td>
-                    <td id="Subj"><a href="#">배송이 안와요.</a><span class = "answer">[답변완료]</span></td>
-                    <td>2019.02.02</td>
+                    <td>${list.csNo }</td>
+                    <td>${list.csKind }</td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
+                    <td>${list.csRegDate }</td>
                     <td><button><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>기타</td>
-                    <td id="Subj"><a href="#">책이 재미가 없어요.</a><span class = "answer">[답변대기중]</span></td>
-                    <td>2019.02.12</td>
-                    <td><button class = "btn_del"><img src="../img/문의삭제로고.PNG"></button></td>
-                </tr>
+            </c:forEach>
             </tbody>
+            
         </table>
         <div id = "pasingNum">
         	<span class = "pagebtn">이전</span>
         	<em>1</em>
         	<span class = "pagebtn">다음</span>
         </div> 
-        
+        </c:if>
     </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->

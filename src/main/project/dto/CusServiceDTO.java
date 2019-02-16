@@ -8,7 +8,7 @@ public class CusServiceDTO {
 
 	private int csNo;			//문의번호
 	private String email;		//답변받을 이메일
-	private String cskind;		//문의분류
+	private String csKind;		//문의분류
 	private String csSubject;	//문의제목
 	private String csContent;	//문의내용
 	private String csSituation;	//문의상황
@@ -17,9 +17,18 @@ public class CusServiceDTO {
 	private String csAnswerCon;	//답변내용
 	private Date csAnswerDate;	//답변 작성일
 	private String csMailAgree;	//이메일이용동의
-	 
+	private String csMno; //회원등록번호
+	
 
 
+
+	public String getCsMno() {
+		return csMno;
+	}
+
+	public void setCsMno(String csMno) {
+		this.csMno = csMno;
+	}
 
 	public String getCsMailAgree() {
 		return csMailAgree;
@@ -45,12 +54,12 @@ public class CusServiceDTO {
 		this.email = email;
 	}
 
-	public String getCskind() {
-		return cskind;
+	public String getCsKind() {
+		return csKind;
 	}
 
-	public void setCskind(String cskind) {
-		this.cskind = cskind;
+	public void setCsKind(String csKind) {
+		this.csKind = csKind;
 	}
 
 	public String getCsSubject() {
@@ -112,15 +121,23 @@ public class CusServiceDTO {
 	public void commandChange(CusServiceCommand command) {
 		// TODO Auto-generated method stub
 		
-		cskind = command.getKind();
+		csKind = command.getKind();
 		csSubject =	command.getSubject();
 		csContent = command.getContent();
 		email = command.getEmailNumber();
+		csMno = command.getInquirywriter_mno();
+	}
+	public void DTOTEST() {
+		System.out.println(csNo);
+		System.out.println(csKind);
+		System.out.println(csSubject);
+		System.out.println(csRegDate);
 		
 	}
+
 	
-	public void DTOTEST() {
-		System.out.println(cskind);
+	public void DTOTEST2() {
+		System.out.println(csKind);
 		System.out.println(csSubject);
 		System.out.println(csContent);
 		System.out.println(email);

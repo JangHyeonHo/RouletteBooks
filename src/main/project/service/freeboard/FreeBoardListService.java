@@ -8,18 +8,18 @@ import dao.FreeBoardDao;
 import dto.FreeBoard;
 
 public class FreeBoardListService {
-	private FreeBoardDao freeboarddao;
-	List<FreeBoard> freeboards;
-	
-	@Autowired
-	public FreeBoardListService(FreeBoardDao freeboarddao) {
-		this.freeboarddao = freeboarddao;
-	}
-	
-	public List<FreeBoard> freeboardlist(){
-		freeboards = freeboarddao.fblist();
-		
-		return freeboards;
-	}
-	
+   private FreeBoardDao freeboarddao;
+   List<FreeBoard> freeboards;
+   
+   @Autowired
+   public FreeBoardListService(FreeBoardDao freeboarddao) {
+      this.freeboarddao = freeboarddao;
+   }
+   
+   public List<FreeBoard> freeboardlist(){
+      freeboards = freeboarddao.fblist();
+      
+      return freeboards;
+   }
+   
 }
