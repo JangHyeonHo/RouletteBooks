@@ -23,26 +23,30 @@ public class FreeBoardDetailController implements FrontControllerInterface {
 	public FreeBoardDetailController(FreeBoardDetailService freeboarddetailservice) {
 		this.freeboarddetailservice = freeboarddetailservice;
 	}
-	@Override
+	
+	
 	@RequestMapping(method = RequestMethod.GET)
-	public String OpenProcessGet() {
+	public String OpenProcessGet(Model model, int fno) {
 		// TODO Auto-generated method stub
 		System.out.println("자유게시판 디테일 오픈");
+		List<FreeBoard> Freeboarddetail = freeboarddetailservice.Detaillist(fno);
+		model.addAttribute("Freeboarddetail",Freeboarddetail);
+		
 		return "freeboard/FreeBoardDetail";
 	}
 	
-	@Override
-	public String OpenProcessPost() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@RequestMapping(method = RequestMethod.POST)
-	public String OpenProcessPost(@ModelAttribute FreeBoardDetailCommand command ) {
-		System.out.println("자유게시판 디테일 포스트 작동");
-		freeboarddetailservice.Detail(command);
-		
-		return "reditect:/freeboard/detail";
-	}
+
+	   @Override
+	   public String OpenProcessPost() {
+	      // TODO Auto-generated method stub
+	      return null;
+	   }
+
+	   @Override
+	   public String OpenProcessGet() {
+	      // TODO Auto-generated method stub
+	      return null;
+	   }
+	   
 
 }

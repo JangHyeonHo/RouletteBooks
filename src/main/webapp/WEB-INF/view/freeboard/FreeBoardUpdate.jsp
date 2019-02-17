@@ -68,11 +68,11 @@
 			</div>
 			
 			<div id="board_subject">
-			<c:forEach items="${Freeboarddetail }" var="detail">
-				<strong>제목</strong><input type="text" name="subject" value="${detail.fSubject }"/>
+			<c:forEach items="${FreeboardUpdate }" var="update">
+				<strong>제목</strong><input type="text" name="subject" value="${update.fSubject }"/>
 			</div>
 			<div id="board_write">
-				<textarea name="content" id="editor">${detail.fContent }</textarea>
+				<textarea name="content" id="editor">${update.fContent }</textarea>
 				<script>
 				
 				 ClassicEditor
@@ -86,9 +86,8 @@
 			</div>
 	
 			<div id="board_end">
-				<button type="button" onclick="location.href='update'">수정</button>
-				<button type="button" >삭제</button>
-				<button type="button" onclick="location.href='freeboardlist'">목록으로</button>
+				<button type="button" onclick="location.href='freeboardlist'">수정</button>
+				<button type="button" onclick="location.href='freeboardlist'">취소</button>
 			</div>
 
 		</div>

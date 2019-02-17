@@ -91,10 +91,10 @@
 				<ul class="biglistwrite">
 					
 					<ul class="listtitle">
-						<li class="listno">${member.fNo }</li>
-						<li class="listsubject"><a href="freeboardwirte">${member.fSubject }</a></li>
+						<li class="listno"><a href="freeboard/detail?fno=${member.fNo }">${member.fNo }</a></li>
+						<li class="listsubject"><a href="freeboard/detail?fno=${member.fNo }">${member.fSubject }</a></li>
 						<li class="listwrite">권도완</li>
-						<li class="listcount"></li>
+						<li class="listcount">${member.fHit }</li>
 						<li class=listdate>${member.fDate }</li>
 					</ul>
 					

@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.ui.Model;
 
 import dto.FreeBoard;
 import dto.TBoard;
@@ -25,15 +26,7 @@ public class FreeBoardDao {
       this.jdbcTemplate = new JdbcTemplate(datasource);
    }
    
-   public Integer Detail(FreeBoard freeboard) {
-	   Integer i = null;
-	   sql = "update FreeBoard set fsubject = ?"
-			   + " fcontent = ? "
-			   + " where fno = ?";
-	   i = jdbcTemplate.update(sql, freeboard.getfContent(), freeboard.getfNo(),freeboard.getfSubject());
-	   
-	   return i;
-   }
+
 
    //자유게시판 글쓰기
    public Integer insert(FreeBoard freeboard) {
@@ -45,21 +38,38 @@ public class FreeBoardDao {
       AutoLinePrint.println("글번호 : "+ freeboard.getfNo() +" 글쓰기 처리 완료");
       return i;
    }
-   //자유게시판 리스트
+ 
+   //게시글 상세정보
+  public List<FreeBoard> detaillist(int fno){
+	   sql = "select fno,fmno,fsubject,fcontent,fhit,fdate from freeboard where fno = ?";
+	   list = jdbcTemplate.query(sql,new FreeBoardRowMapper(),fno);
 
+	  return list;
+  }
+   //자유게시판 리스트
    public List<FreeBoard> fblist() {
-      sql = "select FNO,FSUBJECT,FHIT,FDATE from FREEBOARD ORDER BY FNO DESC";
-            
-      list = jdbcTemplate.query(sql,new FreeBoardRowMapper() );
+      sql = "select FNO,FSUBJECT,FCONTENT,FHIT,FDATE from FREEBOARD ORDER BY FNO DESC";
+      list = jdbcTemplate.query(sql,new FreeBoardRowMapper());
       return list;
    }
    
-   public Integer boardDelete(FreeBoard freeboard,int num) {
+   public List<FreeBoard> Update() {
+	   sql = " update freeboard set fsubject = fsubject,"
+				+ " FCONTENT = FCONTENT "
+			   + " where fno = FNO";
+
+	   list = jdbcTemplate.query(sql,new FreeBoardRowMapper());
+	
+
+		  return list;
+	}
+   
+  /* public Integer boardDelete(FreeBoard freeboard,int num) {
 	   Integer i =null;
 	   sql = "delete from FreeBoar where fno_num = ?";
 	   i = jdbcTemplate.update(sql,freeboard.getfNo());
 	   return i;
-   }
+   }*/
 
 
    
@@ -70,11 +80,22 @@ class FreeBoardRowMapper implements RowMapper<FreeBoard>{
          FreeBoard freeboarddto = new FreeBoard();
          freeboarddto.setfNo(rs.getInt("FNO"));
          freeboarddto.setfSubject(rs.getString("FSUBJECT"));
+         freeboarddto.setfContent(rs.getString("FCONTENT"));
          freeboarddto.setfHit(rs.getInt("FHIT"));
          freeboarddto.setfDate(rs.getDate("FDATE"));
          System.out.println("자유게시판 다오 글 넘버 확인 :" + freeboarddto.getfNo());
          return freeboarddto;
       }
    }
+
+
+
+
+
+
+
+
+
+
 
 }

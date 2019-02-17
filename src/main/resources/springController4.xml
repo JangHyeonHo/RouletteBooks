@@ -18,6 +18,7 @@
 <bean class="controller.freeboard.FreeBoardListController" />
 <bean class="controller.freeboard.FreeBoardWriteController" />
 <bean class="controller.freeboard.FreeBoardDetailController" />
+<bean class="controller.freeboard.FreeBoardUpdateController" />
 
 <!-- mypage 공간 -->
 <bean class="controller.mypage.ShoppingBasketController" />
@@ -43,7 +44,7 @@
 <bean class = "service.freeboard.FreeBoardWriteService" name="FreeBoardWriteService" id="FreeBoardWriteService"/>
 <bean class = "service.freeboard.FreeBoardListService" name="FreeBoardListService" id="FreeBoardListService"/>
 <bean class = "service.freeboard.FreeBoardDetailService" name="FreeBoardDetailService" id="FreeBoardDetailService"/>
-
+<bean class = "service.freeboard.FreeBoardUpdateService" name="FreeBoardUpdateService" id="FreeBoardUpdateService"/>
  
 
 
