@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import command.CusServiceCommand;
+import command.LoginSessionInfomationCommand;
 import dao.CusServiceDao;
 import dto.CusServiceDTO;
 import dto.RMember;
@@ -28,16 +29,10 @@ public class cusService {
 		cusServiceDao.insert(cusService);
 	}
 	
-	public List<CusServiceDTO> inquiryList() {
-		list = cusServiceDao.inquiryList();
+	public List<CusServiceDTO> inquiryList(String mno) {
+		list = cusServiceDao.inquiryList(mno);
 		
 		return list;
 	}
 	
-	public RMember memberNo(String mno) {
-		RMember member = cusServiceDao.selectById(mno);
-		
-		return member;
-		
-	}
 }
