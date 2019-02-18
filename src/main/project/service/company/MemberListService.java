@@ -1,6 +1,5 @@
 package service.company;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +17,9 @@ public class MemberListService {
 		this.memberDao = memberDao;
 	}
 	
-	public Model action(MemberListPageCommand command, Model model){
-		Model memberList = memberDao.memberListCall(command, model);
+	public List<RMember> action(MemberListPageCommand command, Model model){
+		List<RMember> list = memberDao.memberListCall(command, model);
 		
-		return model;
+		return list;
 	}
 }
