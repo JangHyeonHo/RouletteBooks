@@ -1,84 +1,86 @@
-   #contents {
-            width: 1080px;
-            height: 1000px;
-            margin: 0 auto;
-        }
-        a{
-	        text-decoration: none;
-        }
+#contents {
+	width: 1080px;
+	height: 1000px;
+	margin: 0 auto;
+}
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
+a {
+	text-decoration: none;
+}
 
-        li>a:hover {
-            color: #ddd;
-        }
+img {
+	width: 100%;
+	height: 100%;
+}
 
+#mainTitle {
+	width: 840px;
+	height: 60px;
+	float: left;
+	padding: 24px 0 0 20px;
+	font-size: 30px;
+	font-family: 'Do Hyeon', sans-serif;
+}
 
+tr {
+	display: table-row;
+}
 
-        #mainTitle {
-            width: 840px;
-            height: 60px;
-            float: left;
-            padding: 24px 0 0 20px;
-            font-size: 30px;
-            font-family: 'Do Hyeon', sans-serif;
-        }
+thead th {
+	height: 40px;
+	border-bottom: 1px solid gray;
+	background-color: #eeeef1;
+}
 
-        tr {
-            display: table-row;
-        }
-		thead th{
-		height: 40px;
-		border-bottom: 1px solid gray;
-		background-color: #eeeef1;
-		
-		}
-        #del {
-            width: 0;
-    		height: 0;
-            overflow: hidden;
-        }
+#del {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
 
-        #inquiryTable {
-        	border-top: 2px solid black;
-            margin: 20px;
-            border-bottom: 1px solid gray;
-        }
+#inquiryTable {
+	border-top: 2px solid black;
+	margin: 20px;
+	border-bottom: 1px solid gray;
+}
 
-        table {
-            border-collapse: separate;
-            border-spacing: 2px;
-            border-color: grey;
-        }
+table {
+	border-collapse: separate;
+	border-spacing: 2px;
+	border-color: grey;
+}
 
-        td {
-            text-align: center;
-        }
-		.answer{
-			color: red;
-		}
-        #Subj {
-            text-align: left;
-        }
+td {
+	text-align: center;
+}
 
-        em {
-        	font-style: normal;
-            color: cadetblue;
-        }
+.answer {
+	color: red;
+}
 
-        tbody {
-            display: table-row-group;
-            vertical-align: middle;
-            border-color: inherit;
-        }
-        #Subj a:hover{
-            color: skyblue;
-        }
-        #pasingNum{
-        width: 840px;
-        float:left;
-        text-align : center;
-        }
+#Subj {
+	text-align: left;
+}
+#Subj a{
+	color: blue;
+}
+em {
+	font-style: normal;
+	color: cadetblue;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+#Subj a:hover {
+	color: skyblue;
+}
+
+#pasingNum {
+	width: 840px;
+	float: left;
+	text-align: center;
+}
