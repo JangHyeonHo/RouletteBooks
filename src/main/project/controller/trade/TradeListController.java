@@ -2,14 +2,18 @@ package controller.trade;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import controller.FrontControllerInterface;
 import dto.TBoard;
+import other.ContextPathRoute;
 import service.tboard.TBoardListService;
 @Controller
 @RequestMapping("/tradelist")
@@ -24,14 +28,15 @@ public class TradeListController implements  FrontControllerInterface {
 }
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String OpenProcessGet(Model model) {
+	public String OpenProcessGet(Model model, HttpServletRequest request) {
 		System.out.println("구매/판매 게시판 오픈");
 		List<TBoard> tboardlist =  tboardlistservice.tboardList();
+		model.addAttribute("directory", ContextPathRoute.route(request, "trade/uploadImage/") );
 		model.addAttribute("tboardlist",tboardlist);
 		
-		System.out.println("글번호"+tboardlist.get(0).gettNum()
+		/*System.out.println("글번호"+tboardlist.get(0).gettNum()
 						+"글내용"+tboardlist.get(0).gettContent()
-						+"가격"+tboardlist.get(0).gettPrice()	);
+						+"가격"+tboardlist.get(0).gettPrice()	);*/
 		return "trade/TradeList";
 	
 	}

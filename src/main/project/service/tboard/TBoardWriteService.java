@@ -25,9 +25,11 @@ public class TBoardWriteService {
 	
 	public void action(TBoardWriteCommand command,HttpServletRequest request) {
 //		String path;
+		
 	    String contextPath = ContextPathRoute.route(request, "trade/uploadImage/");
 	    System.out.println(contextPath);
 	    ContextPathRoute.createDirectory(new File(contextPath));
+	   
 	    /* 위에걸로 대체
 	     * File file = new File(contextPath);
 	    if(!file.exists()) {
@@ -67,6 +69,7 @@ public class TBoardWriteService {
 */
 		TBoard tboard = new TBoard();
 		tboard.commandChange(command);
+		
 //		이부분 수정함
 		tboard.settBookOriImgName(file.getFileOriginName());
 		tboard.settBookStoreImg_Name(file.getFileStoreName());
