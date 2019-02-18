@@ -4,13 +4,12 @@
 }
 #formWriting{
     width: 500px;
-    position: absolute;
-    top : 20px;
+    position: relative;
     left: 50vw;
     background-color: white;
     transform: translateX(-50%);
     border: 6px rgb(65, 65, 65) solid;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 #title{
     text-align: center;
