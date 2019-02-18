@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.FreeBoardUpdateCommand;
 import command.LoginSessionInfomationCommand;
 import controller.FrontControllerInterface;
 import dto.FreeBoard;
@@ -50,10 +51,13 @@ public class FreeBoardUpdateController implements FrontControllerInterface {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	@Override
-	public String OpenProcessPost() {
+	public String OpenProcessPost(@ModelAttribute FreeBoardUpdateCommand command,Model model) {
 		// TODO Auto-generated method stub
-		return null;
+		System.out.println("자유게시판 수정 포스트 작동");
+		
+		freeboardupdateservice.PostUpdate(command);
+	
+		return "redirect:/freeboardlist";
 	}
 	
 	@Override
@@ -61,5 +65,13 @@ public class FreeBoardUpdateController implements FrontControllerInterface {
 	      // TODO Auto-generated method stub
 	      return null;
 	   }
+
+
+
+	@Override
+	public String OpenProcessPost() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

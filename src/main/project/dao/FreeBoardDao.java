@@ -52,11 +52,13 @@ public class FreeBoardDao {
       return list;
    }
    
-   public List<FreeBoard> Update(FreeBoard freeboard) {
-
-	   sql = "update freeboard set fsubject= ?, fcontent= ? where fno = ?";
-	  jdbcTemplate.update(sql,freeboard.getfSubject(),freeboard.getfContent(),freeboard.getfNo());
-	   return list;
+   //게시글 수정
+   public Integer Update(FreeBoard freeboard) {
+		 
+	   System.out.println("?");
+	   sql = "update freeboard set fsubject = ?, fcontent = ? where fno = ?";
+	  return jdbcTemplate.update(sql,freeboard.getfSubject(),freeboard.getfContent(),freeboard.getfNo());
+	 
 	}
    
   /* public Integer boardDelete(FreeBoard freeboard,int num) {
