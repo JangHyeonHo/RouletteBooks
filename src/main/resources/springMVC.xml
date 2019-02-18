@@ -13,7 +13,6 @@
    <mvc:default-servlet-handler /> 
    <mvc:view-controller path="/main" view-name="main" />
 	<mvc:resources mapping="/**" location="/WEB-INF/" cache-period="31556926"/>
-	
    <!-- .jsp라는 확장자를 생략할 수 있게 해주는 것 -->
    <mvc:view-resolvers> 
       <mvc:jsp prefix="/WEB-INF/view/" />
@@ -25,7 +24,7 @@
          <mvc:mapping path="/member/**" />
          <bean class="interceptor.AuthCheckInterceptor" />
 
-      </mvc:interceptor>
+      </mvc:interceptor>s
 </mvc:interceptors> -->
    
    

@@ -342,7 +342,7 @@ public class TBoard {
 		tPrice = command.getTrade_book_price();
 		tBookStatus = command.getTrade_book_status();
 		tBookGenre = command.getTrade_genre();
-
+		
 
 		  
 		  return this;

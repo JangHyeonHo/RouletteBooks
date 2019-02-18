@@ -14,7 +14,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.ui.Model;
 
 import dto.FreeBoard;
-import dto.TBoard;
 import other.AutoLinePrint;
 
 public class FreeBoardDao {
@@ -53,15 +52,11 @@ public class FreeBoardDao {
       return list;
    }
    
-   public List<FreeBoard> Update() {
-	   sql = " update freeboard set fsubject = fsubject,"
-				+ " FCONTENT = FCONTENT "
-			   + " where fno = FNO";
+   public List<FreeBoard> Update(FreeBoard freeboard) {
 
-	   list = jdbcTemplate.query(sql,new FreeBoardRowMapper());
-	
-
-		  return list;
+	   sql = "update freeboard set fsubject= ?, fcontent= ? where fno = ?";
+	  jdbcTemplate.update(sql,freeboard.getfSubject(),freeboard.getfContent(),freeboard.getfNo());
+	   return list;
 	}
    
   /* public Integer boardDelete(FreeBoard freeboard,int num) {

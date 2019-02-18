@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -118,11 +119,10 @@ public class RMemberDao {
 		return (sessionInfo==null) ? null : sessionInfo;
 	}
 
-	public Model memberListCall(MemberListPageCommand command, Model model) {
+	public List<RMember> memberListCall(MemberListPageCommand command, AutoPaging page) {
 		// TODO Auto-generated method stub
-		AutoPaging paging = new AutoPaging(command.getPage(),20,10);
-		int minNum = ((paging.getPage()-1)*paging.getLimit())+1;
-		int maxNum = minNum+paging.getLimit()-1;
+		int minNum = ((page.getPage()-1)*page.getLimit())+1;
+		int maxNum = minNum+page.getLimit()-1;
 		AutoLinePrint.println("최소 게시글 : " + minNum,"최대 게시글 : " + maxNum);
 		String query = "";
 		try {
@@ -163,16 +163,12 @@ public class RMemberDao {
 			}
 			
 		}, maxNum, minNum);
-		paging.setListCount(memberList.size());
 		
 		//테스트(주석처리 하기바람)
 		/*for(RMember member: memberList) {
 			member.DTOTEST();
 		}*/
-		model.addAttribute("page", paging);
-		paging.PagingTest();
-		model.addAttribute("memberList", memberList);
-		return model;
+		return memberList;
 	}
 	
 }

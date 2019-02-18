@@ -36,6 +36,7 @@
 <!-- Command객체 공간 -->
  <bean class = "command.FreeBoardWriteCommand" name="FreeBoardWriteCommand" id="FreeBoardWriteCommand"/>
   <bean class ="command.FreeBoardListPageCommand" name="FreeBoardListPageCommand" id="FreeBoardListPageCommand"/>
+    <bean class ="command.FreeBoardUpdateCommand" name="FreeBoardUpdateCommand" id="FreeBoardUpdateCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.FreeBoardDao" name="FreeBoardDao" id="FreeBoardDao"/>

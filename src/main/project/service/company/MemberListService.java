@@ -1,14 +1,13 @@
 package service.company;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 
 import command.MemberListPageCommand;
 import dao.RMemberDao;
 import dto.RMember;
+import other.AutoPaging;
 
 public class MemberListService {
 	private RMemberDao memberDao;
@@ -18,9 +17,9 @@ public class MemberListService {
 		this.memberDao = memberDao;
 	}
 	
-	public Model action(MemberListPageCommand command, Model model){
-		Model memberList = memberDao.memberListCall(command, model);
+	public List<RMember> action(MemberListPageCommand command, AutoPaging page){
+		List<RMember> list = memberDao.memberListCall(command, page);
 		
-		return model;
+		return list;
 	}
 }

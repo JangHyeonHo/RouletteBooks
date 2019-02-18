@@ -51,7 +51,7 @@
 <link href="../css/FreeBoardDetail_content.css" rel="stylesheet"
 	type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<!-- <script src = "js/FreeBoardWrite.js"></script> -->
+<script src = "js/FreeBoardModify.js"></script>
 
 </head>
 <body>
@@ -59,7 +59,7 @@
 	<jsp:include page="../Header.jsp" />
 	<!-- Header 끝 -->
 	<!-- Content 시작(내용 첨가) -->
-	<form:form  method="post">
+	<form:form method="post">
 		<div id="contents">
 	<input type="hidden" name="mNo" 
 					 value="${loginInfo.mNo }">
@@ -86,9 +86,11 @@
 			</div>
 	
 			<div id="board_end">
-				<button type="button" onclick="location.href='update'">수정</button>
-				<button type="button" >삭제</button>
-				<button type="button" onclick="location.href='freeboardlist'">목록으로</button>
+				<button type="button" id="modity_btn"><a href="update" style="text-decoration:none">수정</a></button>
+				<button type="button" id="delete_btn" onclick="location.href='delete()'">삭제</button>
+			
+				<button type="button" onclick="location.href='../freeboardlist'">목록으로</button>
+					
 			</div>
 
 		</div>
