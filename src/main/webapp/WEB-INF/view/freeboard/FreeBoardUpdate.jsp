@@ -59,7 +59,7 @@
 	<jsp:include page="../Header.jsp" />
 	<!-- Header 끝 -->
 	<!-- Content 시작(내용 첨가) -->
-	<form:form  method="post">
+	<form:form>
 		<div id="contents">
 	<input type="hidden" name="mNo" 
 					 value="${loginInfo.mNo }">
@@ -68,11 +68,11 @@
 			</div>
 			
 			<div id="board_subject">
-			<c:forEach items="${FreeboardUpdate }" var="update">
-				<strong>제목</strong><input type="text" name="subject" value="${update.fSubject }"/>
+				<c:forEach items="${Freeboarupdate }" var="update">
+				<strong>제목</strong><input type="text" name="subject" value="${Freeboarupdate.fSubject }"/>
 			</div>
 			<div id="board_write">
-				<textarea name="content" id="editor">${update.fContent }</textarea>
+				<textarea name="content" id="editor">${Freeboarupdate.fContent }</textarea>
 				<script>
 				
 				 ClassicEditor
@@ -82,12 +82,12 @@
 			        } );
 				
 					</script>
-					</c:forEach>
+				</c:forEach>
 			</div>
 	
 			<div id="board_end">
-				<button type="button" onclick="location.href='freeboardlist'">수정</button>
-				<button type="button" onclick="location.href='freeboardlist'">취소</button>
+				<button type="button" onclick="location.href='../freeboardlist'">완료</button>
+				<button type="button" onclick="location.href='../freeboardlist'">취소</button>
 			</div>
 
 		</div>
