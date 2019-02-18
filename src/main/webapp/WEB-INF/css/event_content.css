@@ -99,7 +99,7 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-#roulette_btn_style {
+.roulette_btn_style {
     width: 200px;
     height: 50px;
     background-color: yellow;
@@ -121,4 +121,10 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
 
+}
+td.the_wheel
+{
+    background-image: url(../img/wheel_back.png);
+    background-position: center;
+    background-repeat: none;
 }

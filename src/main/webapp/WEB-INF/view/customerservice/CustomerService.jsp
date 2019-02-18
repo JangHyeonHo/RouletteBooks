@@ -132,6 +132,7 @@ location.href="../member/login"
 				로그인 후 이용 가능합니다.<br> Roulette Books 대한 모든 궁금증은 1:1 문의하기로 부담없이
 				확인하세요.
 				<button type="button" onclick="location.href='../member/login'">로그인</button>
+				
 			</div>
 			</c:when>
 			<c:otherwise>

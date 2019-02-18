@@ -145,6 +145,7 @@ location.href="../member/login"
                     1:1문의
                     <button type="button" class="plus" onclick="location.href='../customerservice/myinquiry'">더보기</button>
                 </div>
+              
                 <div id="question">
                      <table id="inquiryTable">
             <colgroup>
@@ -177,7 +178,7 @@ location.href="../member/login"
             </tbody>
             
         </table>
-                </div>
+        </div>
             </div>
             <!-- 대여목록 -->
             <div id="MyPageThird">

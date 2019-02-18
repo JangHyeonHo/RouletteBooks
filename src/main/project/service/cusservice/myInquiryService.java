@@ -3,6 +3,9 @@ package service.cusservice;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import command.LoginSessionInfomationCommand;
+import command.ManagerSessionInfomationCommand;
 import dao.CusServiceDao;
 import dto.CusServiceDTO;
 
@@ -18,7 +21,7 @@ public class myInquiryService {
 	}
 
 	public List<CusServiceDTO> inquiryList(String mno) {
-		list = cusServiceDao.inquiryList();
+		list = cusServiceDao.inquiryList(mno);
 		
 		return list;
 	}
