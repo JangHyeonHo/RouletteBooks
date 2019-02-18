@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import command.LoginSessionInfomationCommand;
 import controller.FrontControllerInterface;
 import dto.CusServiceDTO;
-import service.cusservice.myInquiryService;
+import service.mypage.mainService;
 
 
 
@@ -22,10 +22,10 @@ import service.cusservice.myInquiryService;
 public class MyPageMainController implements FrontControllerInterface {
 //이원학
 	
-	private myInquiryService service;
+	private mainService service;
 	
 	@Autowired
-	public MyPageMainController(myInquiryService service) {
+	public MyPageMainController(mainService service) {
 		this.service = service;
 	}
 	

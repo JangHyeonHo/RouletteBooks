@@ -21,7 +21,8 @@ public class CusServiceDTO {
 	
 
 
-
+	public CusServiceDTO() {}
+	
 	
 
 	public String getmNo() {
