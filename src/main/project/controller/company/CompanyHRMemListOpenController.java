@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import command.MemberListPageCommand;
 import controller.FrontControllerInterface;
 import dto.RMember;
+import other.AutoPaging;
 import service.company.MemberListService;
 
 @Controller
@@ -33,8 +34,12 @@ public class CompanyHRMemListOpenController implements FrontControllerInterface 
 		}
 		
 		command.CommandTest();
-		List<RMember> list = service.action(command, model);
-		model.addAttribute("list",list);
+		AutoPaging page = new AutoPaging(command.getPage(),20,10);
+		List<RMember> list = service.action(command, page);
+		page.setListCount(list.size());
+		page.PagingTest();
+		model.addAttribute("page",page);
+		model.addAttribute("memberList",list);
 		
 		return "company/HR/HumanResourceMemberList";
 	}

@@ -92,7 +92,7 @@
 				<div class="tradewrite">
 					<a href="tradedetail"><div class="tradebookinfo">
 						<div class="buyno">1</div>
-						<div class="picture"><img src="${directory }${tlist.tBookStoreImgName }"></div>
+						<div class="picture"><img src="<c:url value = "trade/uploadImage/${tlist.tBookStoreImgName }" />"></div>
 						<div class="idsellbuy">
 							<div class="idinfo">닉네임: 이디야커피</div>
 							<div class="sell">판매</div>
