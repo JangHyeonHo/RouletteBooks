@@ -9,9 +9,16 @@ public class CusServiceCommand {
 	private String content;		//문의글 내용
 	private String phoneNum;	//문의글 폰번호설정(답변알림)
 	private String mailAgree;	//이메일 이용동의
+	private String inquirywriter_mno; //회원 등록번호 
 	
 	public String getEmailid() {
 		return emailid;
+	}
+	public String getInquirywriter_mno() {
+		return inquirywriter_mno;
+	}
+	public void setInquirywriter_mno(String inquirywriter_mno) {
+		this.inquirywriter_mno = inquirywriter_mno;
 	}
 	public void setEmailid(String emailid) {
 		this.emailid = emailid;
@@ -70,5 +77,6 @@ public class CusServiceCommand {
 		return (emailid+"@"+emailpath);
 		
 	}
+
 	
 }
