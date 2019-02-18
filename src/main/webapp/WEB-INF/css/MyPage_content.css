@@ -3,12 +3,6 @@
     min-height: 1000px;
     margin: 0 auto;
 }
-body {
-	margin: 20px 0 0 0;
-}
-
-
-
 
 /* 마이페이지 메인 */
 #MyPageMain{
@@ -33,6 +27,10 @@ body {
 	width: 840px;
 	height: 250px;
 	float: left;
+}
+.sub{
+	font-style: italic;
+	color: darkmagenta;
 }
 #myInfo1{
 	width: 400px;
@@ -134,10 +132,10 @@ body {
 	width: 840px;
 	height: 60px;
 	float: left;
+	margin-top:10px;
 	font-family: 'Do Hyeon', sans-serif;
 	font-size: 34px;
 	color: green;
-	border-top: 1px dashed green;
 }
 #rantalList{
 	width: 840px;
@@ -155,17 +153,59 @@ body {
 /* 1:1문의 내역 */
 #MyPageFour{
 	width: 840px;
-	height: 250px;
+	min-height: 250px;
 	float: left;
 	
 }
 #question{
 	width: 840px;
-	height: 190px;
+	min-height: 190px;
 	float: left;
 	text-align: center;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 22px;
+}
+tr {
+	display: table-row;
+}
+
+thead th {
+	height: 40px;
+	border-bottom: 1px solid gray;
+	background-color: #eeeef1;
+}
+
+#inquiryTable {
+	margin: 10px;
+	border-top: 2px solid black;
+	border-bottom: 1px solid black;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 2px;
+	border-color: grey;
+}
+
+td {
+	text-align: center;
+}
+
+.answer {
+	color: red;
+}
+
+#Subj {
+	text-align: center;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+#Subj a:hover {
+	color: skyblue;
 }
 #questLog{
 	padding: 12px;

@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,6 +48,13 @@
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
+<c:if test="${empty loginInfo }">
+<script>
+alert("로그인이 필요합니다.")
+location.href="../member/login"
+</script>
+</c:if>
+
 </head>
 <body>
 	<!-- Header 시작 -->
@@ -61,7 +68,7 @@
 		<!-- 고객센터 사이드 끝 -->
 		<div id="customTop">
 			<div class="TopBox">
-				<a href="../mypage/rantallist">
+				<a href="../mypage/rentallist">
 					<div class="BoxImage">
 						<img src="../img/대여.PNG">
 					</div>
@@ -72,10 +79,10 @@
 			<div class="TopBox">
 				<a href="#">
 					<div class="BoxImage">
-						<img src="../img/배송.PNG">
+						<img src="../img/cashInfo.jpg">
 					</div>
-					<div class="TopBoxTitle">거래(중고) 배송정보 확인하기</div>
-					<div class="TopBoxCon">거래 정보를 바로 확인하실 수 있습니다.</div>
+					<div class="TopBoxTitle">충전내역 확인하기</div>
+					<div class="TopBoxCon">캐쉬정보를 바로 확인하실 수 있습니다.</div>
 				</a>
 			</div>
 			<div class="TopBox">
@@ -88,7 +95,7 @@
 				</a>
 			</div>
 			<div class="TopBox">
-				<a href="#">
+				<a href="../tradelist">
 					<div class="BoxImage">
 						<img src="../img/중고.PNG">
 					</div>
@@ -117,13 +124,58 @@
 
 		</div>
 		<div id="customMid">
+
 			<div class="customTitle">1:1 문의</div>
+			<c:choose>
+			<c:when test="${empty loginInfo }">
 			<div id="customMidCon">
 				로그인 후 이용 가능합니다.<br> Roulette Books 대한 모든 궁금증은 1:1 문의하기로 부담없이
 				확인하세요.
-				<button type="button" onclick="location.href='#'">로그인</button>
+				<button type="button" onclick="location.href='../member/login'">로그인</button>
+				
 			</div>
+			</c:when>
+			<c:otherwise>
+
+			<div id="customMidCon">
+			 <table id="inquiryTable">
+            <colgroup>
+                <col width="12%">
+                <col width="18%">
+                <col width="45%">
+                <col width="20%">
+                <col width="5%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">접수번호</th>
+                    <th scope="col">분류</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">날짜</th>
+                    <th scope="col"><span id="del"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+            
+        	<c:forEach items="${List }" var="list">	
+                <tr>
+                    <td>${list.csNo }</td>
+                    <td>${list.csKind }</td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
+                    <td>${list.csRegDate }</td>
+                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
+                </tr>       
+            </c:forEach>
+            	
+            </tbody>
+        </table>
+        <div id = "plus"><a href = "myinquiry" id = "plus">[더보기]</a></div>
+        
+        </div>
+			</c:otherwise>
+			</c:choose>
 		</div>
+			
 		<div id="customLow">
 			<div class="customTitle">FAQ Top 10</div>
 			<div class="FAQTop10">

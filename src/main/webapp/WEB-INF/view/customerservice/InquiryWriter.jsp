@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+ <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +45,16 @@
 <link href="../css/customerSide.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
+
+<c:if test="${empty loginInfo }">
+<script>
+alert("로그인이 필요합니다.")
+location.href="../member/login"
+</script>
+</c:if>
+
+
+</head>
 <body>
 <!-- Header 시작 -->
 <jsp:include page="../Header.jsp" />
@@ -69,8 +79,10 @@
                     </ul>
             </div>
         </div>
-    <form>
+    <form:form action=""  method="post" >
         <div class = "conBox">
+        	<input type="hidden" name="inquirywriter_mno" 
+					 value="${loginInfo.mNo }">
                 <div class ="label">답변 받을 이메일<span class = "ess">(필수)</span></div>
             <div class = "inputBox">
             <input type="text" class = "tBox" id = "emailid" name="emailid">@<input type="text" class = "tBox" id = "emailpath" name="emailpath">
@@ -80,12 +92,12 @@
                 <div class ="label">문의 분류<span class = "ess">(필수)</span></div>
             <div class = "inputBox">
                 <select name="kind" class = "tBox" name="kind">
-					<option value="1">구매/판매</option>
-					<option value="2">대여</option>
-					<option value="3">결제/취소</option>
-					<option value="4">이벤트</option>
-                    <option value="3">회원정보</option>
-					<option value="4">기타</option>
+					<option value="구매/판매">구매/판매</option>
+					<option value="대여">대여</option>
+					<option value="결제/취소">결제/취소</option>
+					<option value="이벤트">이벤트</option>
+                    <option value="회원정보">회원정보</option>
+					<option value="기타">기타</option>
                 </select>
             </div>    
         </div>
@@ -101,22 +113,6 @@
             <textarea id="content" name = "content"></textarea>
             </div>
         </div>
-        <div id = "alarmBox">
-            <div class = "label" id = "alarm">핸드폰 답변 알림</div>
-            <div id = "alarm_phone">
-                <input type="hidden" id="phoneNum" name="phoneNum" value="">
-                <span class = "al_phone">010-2222-4444</span>
-                <input type = "button" value="폰번호 설정">
-
-                <p class = "al_text">
-                    문의가 접수되거나 답변이 등록되었을 때에 카카오 알림톡 및 문자 메시지로 알려 드립니다.<br>
-                    알림을 받으시려면 휴대폰 번호를 꼭 확인 해주세요.<br>
-                    문의접수 및 답변 알림을 받으시겠습니까?
-                </p>
-                <input type="radio" name="al_agree" value="Y">네
-				<input type="radio" name="al_agree" value="N">아니요
-            </div>
-        </div>
 
         <div id = "infoagree">
             <div id = "agreeTitle">
@@ -125,7 +121,7 @@
             <div id = "agreeCon">
                 <p class="al_text">문의 접수와 처리, 회신을 위한 최소한의 개인정보입니다. 동의를 필요로 합니다.</p>
                 <div id = "agreeCheck">
-                <input type="checkbox" id = "mailAgree">
+                <input type="checkbox" id = "mailAgree" name="mailAgree" value="동의">
                 <label>이메일 정보 수집 동의<span class="ess">(필수)</span></label>
                 <input type="button" value="전문보기">
                 </div>
@@ -144,7 +140,7 @@
         </div>
         
         <input type="submit" id = "btn" value="문의하기">
-    </form>
+    </form:form>
     </div>
 
 </body>

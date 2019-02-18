@@ -1,40 +1,48 @@
- #contents {
-            width: 1080px;
-            height: 1000px;
-            margin: 0 auto;
-        }
+#contents {
+	width: 1080px;
+	height: 1000px;
+	margin: 0 auto;
+}
 
-        #memberBaseInfo {
-            width: 840px;
-            height: 800px;
-            float: left;
-        }
+.sub {
+	font-style: italic;
+	color: darkmagenta;
+}
 
-        #baseInfoTitle {
-            width: 820px;
-            height: 40px;
-            padding: 20px 0 20px 20px;
-            float: left;
-            font-size: 28px;
-            border-bottom: 1px solid black;
-            font-family: 'Do Hyeon', sans-serif;
-        }
-        #baseInfoCon{
-            width: 840px;
-            height: 720px;
-            float: left;
-            font-family: 'Noto Sans KR', sans-serif;
-            text-align: center;
-            font-size: 20px;
-           
-        }
-        #baseInfoCon span{
-            color: darkmagenta;
-        }
-        .inputBox{
-            margin: 10px 10px 10px 20px;
-        }
-        .btn{
-            padding: 10px;
-            margin: 10px 0 10px 10px;
-        }
+#memberBaseInfo {
+	width: 840px;
+	height: 800px;
+	float: left;
+}
+
+#baseInfoTitle {
+	width: 820px;
+	height: 40px;
+	padding: 20px 0 20px 20px;
+	float: left;
+	font-size: 28px;
+	border-bottom: 1px solid black;
+	font-family: 'Do Hyeon', sans-serif;
+}
+
+#baseInfoCon {
+	width: 840px;
+	height: 720px;
+	float: left;
+	font-family: 'Noto Sans KR', sans-serif;
+	text-align: center;
+	font-size: 20px;
+}
+
+#baseInfoCon span {
+	color: darkmagenta;
+}
+
+.inputBox {
+	margin: 10px 10px 10px 20px;
+}
+
+.btn {
+	padding: 10px;
+	margin: 10px 0 10px 10px;
+}
