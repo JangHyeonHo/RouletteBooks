@@ -43,6 +43,9 @@ public class AutoFileClassfication {
 		String storeFileList = "";
 		String fileSize = "";
 		for(MultipartFile file : files) {
+			if(file.isEmpty()) {
+			 break;
+			}
 			if(originalFile != "") {
 				originalFile += "&";
 				storeFileList += "&";
