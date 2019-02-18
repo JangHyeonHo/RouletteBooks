@@ -51,7 +51,7 @@
 <link href="../css/FreeBoardDetail_content.css" rel="stylesheet"
 	type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<script src = "js/FreeBoardModify.js"></script>
+<script src="js/FreeBoardModify.js"></script>
 
 </head>
 <body>
@@ -59,42 +59,29 @@
 	<jsp:include page="../Header.jsp" />
 	<!-- Header 끝 -->
 	<!-- Content 시작(내용 첨가) -->
-	<form:form method="post">
 		<div id="contents">
-	<input type="hidden" name="mNo" 
-					 value="${loginInfo.mNo }">
 			<div id="board_title">
 				<strong>글쓰기</strong>
 			</div>
-			
-			<div id="board_subject">
 			<c:forEach items="${Freeboarddetail }" var="detail">
-				<strong>제목</strong><input type="text" name="subject" value="${detail.fSubject }"/>
+			<div id="board_subject">
+				<strong>제목</strong>${detail.fSubject }
 			</div>
-			<div id="board_write">
-				<textarea name="content" id="editor">${detail.fContent }</textarea>
-				<script>
-				
-				 ClassicEditor
-			        .create( document.querySelector( '#editor' ) )
-			        .catch( error => {
-			            console.error( error );
-			        } );
-				
-					</script>
-					</c:forEach>
-			</div>
-	
+			<div id="board_write">${detail.fContent }</div>
 			<div id="board_end">
-				<button type="button" id="modity_btn"><a href="update" style="text-decoration:none">수정</a></button>
-				<button type="button" id="delete_btn" onclick="location.href='delete()'">삭제</button>
-			
+				<c:set var="loginNum" value="${loginInfo.mNo}" />
+				<c:if test="${detail.fMno == loginNum}">
+				<button type="button" id="modity_btn" onclick="location.href='update?fno=${detail.fNo }'">
+					수정
+				</button>
+				<button type="button" id="delete_btn"
+					onclick="location.href='delete()'">삭제</button>
+				</c:if>
 				<button type="button" onclick="location.href='../freeboardlist'">목록으로</button>
-					
+	
 			</div>
-
+			</c:forEach>
 		</div>
-	</form:form>
 
 	<!-- Content 끝 -->
 	<!-- Footer 시작 -->
