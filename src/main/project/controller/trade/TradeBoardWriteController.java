@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.TBoardListCommand;
 import command.TBoardWriteCommand;
 import controller.FrontControllerInterface;
 import service.tboard.TBoardWriteService;
@@ -45,8 +46,10 @@ public class TradeBoardWriteController implements FrontControllerInterface {
 		public String OpenProcessPost(@ModelAttribute TBoardWriteCommand command, HttpServletRequest request, Model model) {
 			System.out.println("중고거래 포스트 작동");
 			command.CommandTest();
+		
 			model.addAttribute("command", command);
-			service.action(command,request);
+			service.action(command,request);	
+			
 			
 			return "redirect:/tradelist";
 		}

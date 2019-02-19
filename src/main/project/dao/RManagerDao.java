@@ -84,7 +84,7 @@ public class RManagerDao {
 				if(rs.next()) {
 					if(!rs.getString("rmpassword").equals(command.getComPw())){
 						System.out.println("비밀번호 불일치");
-						error.rejectValue("password", "mismatch");
+						error.rejectValue("comPw", "mismatch");
 						return null;
 					} 
 					return new ManagerSessionInfomationCommand().setRmno(rs.getString("rmno"))
@@ -94,7 +94,7 @@ public class RManagerDao {
 					
 				} else {
 					System.out.println("아이디 불일치");
-					error.rejectValue("comnum", "mismatch");
+					error.rejectValue("comId", "mismatch");
 					return null;
 				}
 				

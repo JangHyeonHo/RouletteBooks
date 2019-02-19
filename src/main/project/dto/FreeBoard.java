@@ -2,7 +2,9 @@ package dto;
 
 import java.util.Date;
 
+import command.FreeBoardDeleteCommand;
 import command.FreeBoardDetailCommand;
+import command.FreeBoardUpdateCommand;
 import command.FreeBoardWriteCommand;
 import command.TBoardWriteCommand;
 
@@ -132,6 +134,23 @@ public class FreeBoard implements DTOTestInterface {
 		fSubject = command.getSubject();
 		fContent = command.getContent();
 		return this;
+	}
+
+
+
+
+	public FreeBoard commandUpdate(FreeBoardUpdateCommand command) {
+		fNo = command.getFno();
+		fSubject = command.getSubject();
+		fContent = command.getContent();
+		return this;
+		
+	}
+	
+	public FreeBoard commandDelete(FreeBoardDeleteCommand command) {
+		fNo = command.getFno();
+		return this;
+		
 	}
 	
 

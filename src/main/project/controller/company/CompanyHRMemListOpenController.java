@@ -1,5 +1,7 @@
 package controller.company;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import command.MemberListPageCommand;
 import controller.FrontControllerInterface;
+import dto.RMember;
+import other.AutoPaging;
 import service.company.MemberListService;
 
 @Controller
@@ -28,8 +32,14 @@ public class CompanyHRMemListOpenController implements FrontControllerInterface 
 		if(command.getPage()==0) {
 			command.setPage(1);
 		}
+		
 		command.CommandTest();
-		model = service.action(command, model);
+		AutoPaging page = new AutoPaging(command.getPage(),20,10);
+		List<RMember> list = service.action(command, page);
+		page.setListCount(list.size());
+		page.PagingTest();
+		model.addAttribute("page",page);
+		model.addAttribute("memberList",list);
 		
 		return "company/HR/HumanResourceMemberList";
 	}

@@ -1,0 +1,104 @@
+#contents {
+	width: 1080px;
+	min-height: 1000px;
+	margin: 0 auto;
+}
+
+#mainTitle {
+	width: 840px;
+	height: 60px;
+	float: left;
+	padding: 24px 0 0 20px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	border-bottom: 2px solid black;
+	font-family: 'Do Hyeon', sans-serif;
+}
+#detailCon{
+	width: 840px;
+	min-height: 900px;
+	float: left;
+	
+}
+
+#subTitle{
+	width: 840px;
+	min-height: 100px;
+	float: left;
+}
+.subLeft{
+	width: 60px;
+	min-height: 80px;
+	float: left;
+	margin:0 20px 0 20px;
+	font-size: 80px;
+	font-family: 'Do Hyeon', sans-serif;
+}
+.subKind{
+	width: 840px;
+	min-height: 40px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 18px;
+	color: darkblue;
+}
+.subSubject{
+	width: 840px;
+	min-height: 40px;
+	padding-bottom: 20px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 36px;
+}
+#subCon{
+	width: 740px;
+	min-height: 200px;
+	padding:0 0 40px 100px;
+	margin-bottom:20px;
+	float: left;
+	font-size: 16px;
+	font-family: 'Noto Sans KR', sans-serif;
+	white-space: pre-line;
+	line-height: 30px;
+	letter-spacing: -1px;
+}
+#answer{
+	width: 840px;
+	min-height: 200px;
+	float: left;
+	border-top: 1px solid gray;
+	padding-top: 40px; 
+}
+#answerCon{
+	width: 740px;
+	min-height: 200px;
+	padding:0 0 40px 100px;
+	margin-bottom: 40px;
+	font-size: 18px;
+	white-space: pre-line;
+	line-height: 30px;
+	letter-spacing: -1px;
+}
+#score{
+	text-align: center;
+	margin-bottom:40px;
+}
+#date{
+	text-align: right;
+}
+#backList{
+	width: 200px;
+	height: 20px;
+	margin: 40px;
+	text-align: center;
+	padding: 20px 0 ;
+	float: left;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 20px;
+	background-color: gray;
+}
+a{
+	color: black;
+}
+
+
+
+

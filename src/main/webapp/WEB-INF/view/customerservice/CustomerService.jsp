@@ -140,11 +140,10 @@ location.href="../member/login"
 			<div id="customMidCon">
 			 <table id="inquiryTable">
             <colgroup>
-                <col width="12%">
-                <col width="18%">
-                <col width="45%">
-                <col width="20%">
-                <col width="5%">
+                <col width="100px">
+                <col width="140px">
+                <col width="380px">
+                <col width="180px">
             </colgroup>
             <thead>
                 <tr>
@@ -152,7 +151,7 @@ location.href="../member/login"
                     <th scope="col">분류</th>
                     <th scope="col">제목</th>
                     <th scope="col">날짜</th>
-                    <th scope="col"><span id="del"></span></th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -161,9 +160,9 @@ location.href="../member/login"
                 <tr>
                     <td>${list.csNo }</td>
                     <td>${list.csKind }</td>
-                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a><span class = "answer">${list.csSituation }</span></td>
                     <td>${list.csRegDate }</td>
-                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
+                   
                 </tr>       
             </c:forEach>
             	

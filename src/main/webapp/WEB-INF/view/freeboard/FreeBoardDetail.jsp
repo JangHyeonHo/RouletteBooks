@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="java.util.*, dto.FreeBoard" %>
-<%List<FreeBoard> list = (List)request.getAttribute("Freeboardlist"); %> 
+
 
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -52,7 +51,7 @@
 <link href="../css/FreeBoardDetail_content.css" rel="stylesheet"
 	type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<!-- <script src = "js/FreeBoardWrite.js"></script> -->
+<script src="js/FreeBoardModify.js"></script>
 
 </head>
 <body>
@@ -60,39 +59,29 @@
 	<jsp:include page="../Header.jsp" />
 	<!-- Header 끝 -->
 	<!-- Content 시작(내용 첨가) -->
-	<form:form  method="post">
 		<div id="contents">
-	<input type="hidden" name="mNo" 
-					 value="${loginInfo.mNo }">
 			<div id="board_title">
 				<strong>글쓰기</strong>
 			</div>
-			
+			<c:forEach items="${Freeboarddetail }" var="detail">
 			<div id="board_subject">
-			
-				<strong>제목</strong><input type="text" name="subject" value=""/>
+				<strong>제목</strong>${detail.fSubject }
 			</div>
-			<div id="board_write">
-				<textarea name="content" id="editor"><%-- <%=%> --%></textarea>
-				<script>
-				 
-				 ClassicEditor
-			        .create( document.querySelector( '#editor' ) )
-			        .catch( error => {
-			            console.error( error );
-			        } );
-				
-					</script>
-			</div>
-		
+			<div id="board_write">${detail.fContent }</div>
 			<div id="board_end">
-				<button type="button">수정</button>
-				<button type="button" >삭제</button>
-				<button type="button" onclick="location.href='freeboardlist'">목록으로</button>
+				<c:set var="loginNum" value="${loginInfo.mNo}" />
+				<c:if test="${detail.fMno == loginNum}">
+				<button type="button" id="modity_btn" onclick="location.href='update?fno=${detail.fNo }'">
+					수정
+				</button>
+				<button type="button" id="delete_btn"
+					onclick="location.href='delete?fno=${detail.fNo }'">삭제</button>
+				</c:if>
+				<button type="button" onclick="location.href='../freeboardlist'">목록으로</button>
+	
 			</div>
-
+			</c:forEach>
 		</div>
-	</form:form>
 
 	<!-- Content 끝 -->
 	<!-- Footer 시작 -->

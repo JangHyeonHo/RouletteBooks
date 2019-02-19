@@ -18,6 +18,8 @@
 <bean class="controller.freeboard.FreeBoardListController" />
 <bean class="controller.freeboard.FreeBoardWriteController" />
 <bean class="controller.freeboard.FreeBoardDetailController" />
+<bean class="controller.freeboard.FreeBoardUpdateController" />
+<bean class="controller.freeboard.FreeBoardDeleteController" />
 
 <!-- mypage 공간 -->
 <bean class="controller.mypage.ShoppingBasketController" />
@@ -34,7 +36,9 @@
 
 <!-- Command객체 공간 -->
  <bean class = "command.FreeBoardWriteCommand" name="FreeBoardWriteCommand" id="FreeBoardWriteCommand"/>
-  <bean class ="command.FreeBoardListPageCommand" name="FreeBoardListPageCommand" id="FreeBoardListPageCommand"/>
+ <bean class ="command.FreeBoardListPageCommand" name="FreeBoardListPageCommand" id="FreeBoardListPageCommand"/>
+ <bean class ="command.FreeBoardUpdateCommand" name="FreeBoardUpdateCommand" id="FreeBoardUpdateCommand"/>
+ <bean class ="command.FreeBoardDeleteCommand" name="FreeBoardDeleteCommand" id="FreeBoardDeleteCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.FreeBoardDao" name="FreeBoardDao" id="FreeBoardDao"/>
@@ -43,8 +47,8 @@
 <bean class = "service.freeboard.FreeBoardWriteService" name="FreeBoardWriteService" id="FreeBoardWriteService"/>
 <bean class = "service.freeboard.FreeBoardListService" name="FreeBoardListService" id="FreeBoardListService"/>
 <bean class = "service.freeboard.FreeBoardDetailService" name="FreeBoardDetailService" id="FreeBoardDetailService"/>
-
- 
+<bean class = "service.freeboard.FreeBoardUpdateService" name="FreeBoardUpdateService" id="FreeBoardUpdateService"/>
+ <bean class ="service.freeboard.FreeBoardDeleteService" name="FreeBoardDeleteService" id="FreeBoardDeleteService"/>
 
 
 

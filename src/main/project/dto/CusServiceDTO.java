@@ -5,6 +5,7 @@ import java.util.Date;
 import command.CusServiceCommand;
 
 public class CusServiceDTO {
+	private static final String[] SITU = {"답변대기중", "답변완료"};
 
 	private int csNo;			//문의번호
 	private String email;		//답변받을 이메일
@@ -21,7 +22,8 @@ public class CusServiceDTO {
 	
 
 
-
+	public CusServiceDTO() {}
+	
 	
 
 	public String getmNo() {
@@ -128,6 +130,7 @@ public class CusServiceDTO {
 		csContent = command.getContent();
 		email = command.getEmailNumber();
 		mNo = command.getInquirywriter_mno();
+		csSituation = SITU[0];
 	}
 	public void DTOTEST() {
 		System.out.println(csNo);

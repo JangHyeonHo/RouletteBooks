@@ -11,9 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import command.LoginSessionInfomationCommand;
+import command.CusServiceCommand;
 import dto.CusServiceDTO;
-import dto.RMember;
 import other.AutoLinePrint;
 
 public class CusServiceDao {
@@ -39,11 +38,34 @@ public class CusServiceDao {
 
 	public List<CusServiceDTO> inquiryList(String mno) {
 		// TODO Auto-generated method stub
-		sql = "select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE from CUSSERVICE where mno = ? order by CSREG_DATE desc";
+		sql = "select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE, cscontent, csscore, CSANSWERCON, CSANSWER_DATE from CUSSERVICE where mno = ? order by CSREG_DATE desc";
 		
 		list = jdbcTemplate.query(sql, new inquiryRowMapper(), mno);
 		return list;
 	}
+
+	public CusServiceDTO detail(int listcsNo) {
+		// TODO Auto-generated method stub
+		CusServiceDTO dto = null;
+		sql = "select CSNO, mno, CSKIND, CSSUBJECT, CSREG_DATE, CSSITUATION, CSCONTENT, CSSCORE, CSANSWERCON, CSANSWER_DATE from CUSSERVICE "
+				+ " where csno = ? ";
+		list = jdbcTemplate.query(sql, new inquiryRowMapper(), listcsNo);
+		if(!list.isEmpty()) dto = (CusServiceDTO) list.get(0);
+		
+		return dto;
+	}
+
+	public Integer delete(CusServiceDTO dto) {
+		// TODO Auto-generated method stub
+		Integer i = null;
+		sql="delete from cusservice where csno = ?";
+		i = jdbcTemplate.q
+		
+		
+		return i;
+	}
+
+	
 
 	
 }
@@ -57,6 +79,11 @@ class inquiryRowMapper implements RowMapper<CusServiceDTO>  {
 		cs.setCsSituation(rs.getString("CSSITUATION"));
 		cs.setCsRegDate(rs.getDate("CSREG_DATE"));
 		cs.setmNo(rs.getString("mno"));
+		cs.setCsContent(rs.getString("cscontent"));
+		cs.setCsScore(rs.getInt("csscore"));
+		cs.setCsAnswerDate(rs.getDate("CSANSWER_DATE"));
+		cs.setCsAnswerCon(rs.getString("CSANSWERCON"));
+		
 		return cs;
 	}
 }

@@ -11,6 +11,7 @@
 <bean class = "controller.customerservice.CusMyInquiryController" />
 <bean class = "controller.customerservice.CustomerServiceController" />
 <bean class = "controller.customerservice.InquiryWriteContorller" />
+<bean class = "controller.customerservice.InquiryDetailController" />
 
 <!-- 멤버 -->
 <bean class = "controller.member.JoinMembershipController" />
@@ -35,8 +36,12 @@
 <!-- service공간 -->
 <bean class = "service.cusservice.cusService" name="cusService" id="cusService"/>
 <bean class = "service.cusservice.myInquiryService" name="inquiryList" id="inquiryList"/>
+<bean class = "service.cusservice.DetailService" name="DetailService" id="DetailService"/>
+<bean class = "service.mypage.mainService" name="mainService" id="mainService"/>
+
 
 <!-- command공간 -->
 <bean class = "command.CusServiceCommand" name="CusCommand" id="CusCommand"/>
 
 </beans>
+
