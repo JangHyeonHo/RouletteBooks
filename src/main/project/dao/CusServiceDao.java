@@ -10,6 +10,8 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+
+import command.CusServiceCommand;
 import dto.CusServiceDTO;
 import other.AutoLinePrint;
 
@@ -51,6 +53,16 @@ public class CusServiceDao {
 		if(!list.isEmpty()) dto = (CusServiceDTO) list.get(0);
 		
 		return dto;
+	}
+
+	public Integer delete(CusServiceDTO dto) {
+		// TODO Auto-generated method stub
+		Integer i = null;
+		sql="delete from cusservice where csno = ?";
+		i = jdbcTemplate.q
+		
+		
+		return i;
 	}
 
 	

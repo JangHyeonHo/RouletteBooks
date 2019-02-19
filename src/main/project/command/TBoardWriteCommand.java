@@ -3,7 +3,7 @@ package command;
 import org.springframework.web.multipart.MultipartFile;
 
 public class TBoardWriteCommand {
-	private String trade_board_nick_name; //닉네임
+	private String trade_board_Mno; //회원번호
 	private String trade_board_horsehead; //말머리
 	private String trade_board_subject; //제목
 	private String trade_method; //거래방법
@@ -19,16 +19,22 @@ public class TBoardWriteCommand {
 
 
 
-	public String getTrade_board_nick_name() {
-		return trade_board_nick_name;
+	
+
+
+
+
+
+	public String getTrade_board_Mno() {
+		return trade_board_Mno;
 	}
 
 
 
 
 
-	public void setTrade_board_nick_name(String trade_board_nick_name) {
-		this.trade_board_nick_name = trade_board_nick_name;
+	public void setTrade_board_Mno(String trade_board_Mno) {
+		this.trade_board_Mno = trade_board_Mno;
 	}
 
 
@@ -197,7 +203,7 @@ public class TBoardWriteCommand {
 
 	public void CommandTest() {
 		System.out.println("중고거래 글쓰기 커맨드 객체 테스트");
-		System.out.println(trade_board_nick_name);
+		System.out.println(trade_board_Mno);
 		System.out.println(trade_board_horsehead);
 		System.out.println(trade_board_subject);
 		System.out.println(trade_method);

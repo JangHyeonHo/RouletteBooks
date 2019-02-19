@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  --%>
 <!DOCTYPE html>
@@ -53,10 +53,10 @@
 	<!-- Contents -->
 	<div id="contents">
 		<div id="formWriting">
-			<form>
+			<form:form>
 				<h2 id="title">새로운 출판사 등록</h2>
 				<div class="textBox">출판사명</div>
-				<input type="text" name="ReName"> <span style=" font-family: 'Noto Sans KR', sans-serif;">출판사</span>
+				<input type="text" name="pName"> <span style=" font-family: 'Noto Sans KR', sans-serif;">출판사</span>
 				<div class="textBox">출판사 전화번호</div>
 				<div class="formBox">
 					<select name="phone1">
@@ -83,11 +83,11 @@
 				<div class="textBox">출판사 발행자번호</div>
 				<input type="text" name="pNum">
 				<div class="textBox">출판사 대표자명</div>
-				<input type="text" name="pNum">
+				<input type="text" name="pCeo">
 				<div class="textBox">출판사 등록일</div>
 				<div class="formBox" id="regi_days"></div>
 				<div id = "btnBox"><input type="submit" value="등록하기"><input type="button" value="등록 후 계약 등록 하기"><input type = "reset" value = "다시 작성하기"></div>
-			</form>
+			</form:form>
 		</div>
 		<!-- 레이아웃 설정 -->
 	</div>

@@ -58,11 +58,11 @@ td {
 	color: red;
 }
 
-#Subj {
+.Subj {
 	text-align: left;
 }
-#Subj a{
-	color: blue;
+.Subj a{
+	color: gray;
 }
 em {
 	font-style: normal;
@@ -75,7 +75,7 @@ tbody {
 	border-color: inherit;
 }
 
-#Subj a:hover {
+.Subj a:hover {
 	color: skyblue;
 }
 

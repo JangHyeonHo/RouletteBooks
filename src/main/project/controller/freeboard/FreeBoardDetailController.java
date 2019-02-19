@@ -38,7 +38,7 @@ public class FreeBoardDetailController implements FrontControllerInterface {
 
 	   @Override
 	   public String OpenProcessPost() {
-	      // TODO Auto-generated method stub
+	      // TODO Auto-generated method stub 
 	      return null;
 	   }
 

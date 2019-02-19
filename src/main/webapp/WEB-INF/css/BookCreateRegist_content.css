@@ -5,7 +5,7 @@
 #formWriting{
     width: 500px;
     position: relative;
-    left: 50vw;
+    left: 50%;
     background-color: white;
     transform: translateX(-50%);
     border: 6px rgb(65, 65, 65) solid;

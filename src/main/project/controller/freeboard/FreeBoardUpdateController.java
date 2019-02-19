@@ -56,7 +56,7 @@ public class FreeBoardUpdateController implements FrontControllerInterface {
 		System.out.println("자유게시판 수정 포스트 작동");
 		
 		freeboardupdateservice.PostUpdate(command);
-	
+
 		return "redirect:/freeboardlist";
 	}
 	

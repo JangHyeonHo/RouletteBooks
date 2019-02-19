@@ -1,6 +1,5 @@
 package controller.trade;
 
-import java.io.File;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -11,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.TBoardListCommand;
 import controller.FrontControllerInterface;
-import dto.TBoard;
 import other.ContextPathRoute;
 import service.tboard.TBoardListService;
 @Controller
@@ -30,7 +29,7 @@ public class TradeListController implements  FrontControllerInterface {
 	@RequestMapping(method = RequestMethod.GET)
 	public String OpenProcessGet(Model model, HttpServletRequest request) {
 		System.out.println("구매/판매 게시판 오픈");
-		List<TBoard> tboardlist =  tboardlistservice.tboardList();
+		List<TBoardListCommand> tboardlist =  tboardlistservice.tboardList();
 		model.addAttribute("directory", ContextPathRoute.route(request, "trade/uploadImage/") );
 		model.addAttribute("tboardlist",tboardlist);
 		

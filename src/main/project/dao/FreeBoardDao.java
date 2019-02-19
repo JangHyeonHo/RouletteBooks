@@ -42,9 +42,10 @@ public class FreeBoardDao {
   public List<FreeBoard> detaillist(int fno){
 	   sql = "select fno,fmno,fsubject,fcontent,fhit,fdate from freeboard where fno = ?";
 	   list = jdbcTemplate.query(sql,new FreeBoardRowMapper(),fno);
-
 	  return list;
   }
+ 
+  
    //자유게시판 리스트
    public List<FreeBoard> fblist() {
       sql = "select FNO,FSUBJECT,FCONTENT,FHIT,FDATE,fmno from FREEBOARD ORDER BY FNO DESC";
@@ -54,19 +55,15 @@ public class FreeBoardDao {
    
    //게시글 수정
    public Integer Update(FreeBoard freeboard) {
-		 
-	   System.out.println("?");
 	   sql = "update freeboard set fsubject = ?, fcontent = ? where fno = ?";
 	  return jdbcTemplate.update(sql,freeboard.getfSubject(),freeboard.getfContent(),freeboard.getfNo());
-	 
 	}
    
-  /* public Integer boardDelete(FreeBoard freeboard,int num) {
-	   Integer i =null;
-	   sql = "delete from FreeBoar where fno_num = ?";
-	   i = jdbcTemplate.update(sql,freeboard.getfNo());
-	   return i;
-   }*/
+   //게시글 삭제
+   public Integer Delete(FreeBoard freeboard) {
+	   sql = "delete from FreeBoard where fno = ?";
+	   return  jdbcTemplate.update(sql,freeboard.getfNo());
+   }
 
 
    
