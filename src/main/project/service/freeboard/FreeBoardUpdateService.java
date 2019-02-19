@@ -30,7 +30,7 @@ public class FreeBoardUpdateService {
 	public void PostUpdate(FreeBoardUpdateCommand command) {
 		// TODO Auto-generated method stub
 		FreeBoard freeboard = new FreeBoard();
-		freeboard.commandUpdate(command);
+		freeboard = freeboard.commandUpdate(command);
 		
 		freeboardDao.Update(freeboard);
 	

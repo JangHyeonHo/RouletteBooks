@@ -69,21 +69,54 @@
         <div id="mainTitle">
             내 문의내역
         </div>
+        <div id = "detailCon">
        <div id = "subTitle">
-	       <div id ="subLeft">
+	       <div class ="subLeft">
 	       Q
 	       </div>
-	       <div id = "subKind">
+	       <div class = "subKind">
 	       ${dto.csKind }
 	       </div>
-	       <div id = "subSubject">
+	       <div class = "subSubject">
 	       ${dto.csSubject }
 	       </div>
        </div>
+       
        <div id = "subCon">
-       ${dto.csContent }
+     	${dto.csContent }      
        </div>
        
+       <div id = "answer">
+           <div class ="subLeft">
+	       	A
+	       </div>
+	       <div class = "subKind">
+	       ${dto.csKind }
+	       </div>
+	       <div class = "subSubject">
+	       [${dto.csSubject }아아아아아아아아아아아앙아아아]아아아아
+	       </div>
+	       <div id = "answerCon">
+	       [여기에 내용을 쓰세요]
+	       </div>
+	       <div id ="score">
+	       	답변 만족도 :
+	       	<input type="radio" value="1" name = "csscore">매우불만족
+	       	<input type="radio" value="2" name = "csscore">불만족
+	       	<input type="radio" value="3" name = "csscore">보통
+	       	<input type="radio" value="4" name = "csscore">만족
+	       	<input type="radio" value="5" name = "csscore">매우만족
+	       </div>
+      	<div id = "date">
+      		답변 작성일 : 2018.08.08
+      	</div>
+       
+       </div>
+       	<a href = "myinquiry"> <div id = "backList">
+       		◀◀목록으로
+       		</div></a>
+       
+       	</div>
        
 
  

@@ -21,7 +21,7 @@ public class InquiryDetailController implements FrontControllerInterface {
 		this.detailService = detailService;
 	}
 
-	@RequestMapping("/customerservice/detail={fuck}") 
+		@RequestMapping("/customerservice/detail={fuck}")
 	public String OpenProcessGet(@PathVariable("fuck")int listcsNo, Model model) {
 		// TODO Auto-generated method stub
 		System.out.println("open:디테일");
