@@ -4,13 +4,21 @@ public class FreeBoardUpdateCommand {
 	private String mNo;
 	private String subject;
 	private String content;
+	private int fno;
 	
 	
+	
+	public int getFno() {
+		return fno;
+	}
+	public void setFno(int fno) {
+		this.fno = fno;
+	}
 	public String getMNo() {
 		return mNo;
 	}
 	public void setMNo(String mNo) {
-		mNo = mNo;
+		this.mNo = mNo;
 	}
 	public String getSubject() {
 		return subject;
