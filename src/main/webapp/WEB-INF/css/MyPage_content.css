@@ -162,8 +162,8 @@
 	min-height: 190px;
 	float: left;
 	text-align: center;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 22px;
+	
+	font-size: 18px;
 }
 tr {
 	display: table-row;
@@ -173,12 +173,14 @@ thead th {
 	height: 40px;
 	border-bottom: 1px solid gray;
 	background-color: #eeeef1;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 #inquiryTable {
 	margin: 10px;
 	border-top: 2px solid black;
 	border-bottom: 1px solid black;
+	font-size: 18px;
 }
 
 table {

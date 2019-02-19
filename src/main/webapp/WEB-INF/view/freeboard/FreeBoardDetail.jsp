@@ -75,7 +75,7 @@
 					수정
 				</button>
 				<button type="button" id="delete_btn"
-					onclick="location.href='delete()'">삭제</button>
+					onclick="location.href='delete?fno=${detail.fNo }'">삭제</button>
 				</c:if>
 				<button type="button" onclick="location.href='../freeboardlist'">목록으로</button>
 	
