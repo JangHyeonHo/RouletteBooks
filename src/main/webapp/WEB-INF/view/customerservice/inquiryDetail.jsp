@@ -44,17 +44,12 @@
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="../css/CusMyInquiry_content.css" rel="stylesheet" type="text/css">
+<link href="../css/MyInquiryDetail_content.css" rel="stylesheet" type="text/css">
 <link href="../css/customerSide.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
-<c:if test="${empty loginInfo }">
-<script>
-alert("로그인이 필요합니다.")
-location.href="../member/login"
-</script>
-</c:if>
+
 
 </head>
 <body>
@@ -74,44 +69,25 @@ location.href="../member/login"
         <div id="mainTitle">
             내 문의내역
         </div>
-        <c:if test="${empty list }">
-        <table id="inquiryTable">
-            <colgroup>
-                <col width="12%">
-                <col width="18%">
-                <col width="45%">
-                <col width="20%">
-                <col width="5%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">접수번호</th>
-                    <th scope="col">분류</th>
-                    <th scope="col">제목</th>
-                    <th scope="col">날짜</th>
-                    <th scope="col"><span id="del"></span></th>
-                </tr>
-            </thead>
-            <tbody>
-        	<c:forEach items="${List }" var="list">
-        	       	
-                <tr>
-                    <td>${list.csNo }</td>
-                    <td>${list.csKind }</td>
-                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a><span class = "answer">${list.csSituation }</span></td>
-                    <td>${list.csRegDate }</td>
-                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
-                </tr>
-            </c:forEach>
-            </tbody>
-            
-        </table>
-        <div id = "pasingNum">
-        	<span class = "pagebtn">이전</span>
-        	<em>1</em>
-        	<span class = "pagebtn">다음</span>
-        </div> 
-        </c:if>
+       <div id = "subTitle">
+	       <div id ="subLeft">
+	       Q
+	       </div>
+	       <div id = "subKind">
+	       ${dto.csKind }
+	       </div>
+	       <div id = "subSubject">
+	       ${dto.csSubject }
+	       </div>
+       </div>
+       <div id = "subCon">
+       ${dto.csContent }
+       </div>
+       
+       
+
+ 
+       
     </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->

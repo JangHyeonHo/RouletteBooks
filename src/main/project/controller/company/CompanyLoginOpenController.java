@@ -35,6 +35,7 @@ public class CompanyLoginOpenController implements FrontControllerInterface {
 			return "redirect:/company/main";
 		}
 		System.out.println("로그인 페이지 오픈");
+		
 		return "company/member/Login";
 	}
 
@@ -43,8 +44,11 @@ public class CompanyLoginOpenController implements FrontControllerInterface {
 		// TODO Auto-generated method stub
 		command.CommandTest();
 		ManagerSessionInfomationCommand managerInfo = service.action(command, error);
-		
+		if(managerInfo == null) {
+			return "company/member/Login";
+		}
 		session.setAttribute("managerInfo", managerInfo);
+		
 		return "redirect:/company/main";
 	}
 

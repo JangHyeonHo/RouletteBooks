@@ -161,7 +161,7 @@ location.href="../member/login"
                 <tr>
                     <td>${list.csNo }</td>
                     <td>${list.csKind }</td>
-                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">배송이 안와요.</a><span class = "answer">${list.csSituation }</span></td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a><span class = "answer">${list.csSituation }</span></td>
                     <td>${list.csRegDate }</td>
                     <td><button><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>       

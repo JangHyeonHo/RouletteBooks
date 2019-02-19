@@ -24,7 +24,7 @@
          <mvc:mapping path="/member/**" />
          <bean class="interceptor.AuthCheckInterceptor" />
 
-      </mvc:interceptor>
+      </mvc:interceptor>s
 </mvc:interceptors> -->
    
    

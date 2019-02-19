@@ -44,7 +44,7 @@ public class TBoardDao {
 	
 	
 	public List<TBoard> tboardlist() {
-		sql ="select TNUM,TSUBJECT,TCONTENT,TPRICE,TREG_DATE,TBOOK_STORE_IMG_NAME from tboard order by TNUM desc";
+		sql ="select TNUM,TSUBJECT,TCONTENT,TPRICE,TREG_DATE,TBOOK_STORE_IMG_NAME,r.MNICKNAME from tboard t, rmember r order by TNUM DESC";
 		 list = jdbcTemplate.query(sql,new TboardRowMapper());
 		
 		return list;
