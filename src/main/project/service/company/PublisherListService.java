@@ -17,7 +17,7 @@ public class PublisherListService {
 	public List<PubListCommand> action() {
 		// TODO Auto-generated method stub
 		List<PubListCommand> list = dao.publisherList();
-		return null;
+		return list;
 	}
 	
 }

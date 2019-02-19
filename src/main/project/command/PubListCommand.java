@@ -2,6 +2,8 @@ package command;
 
 import java.util.Date;
 
+import other.AutoLinePrint;
+
 public class PubListCommand implements CommandTestInterface {
 	
 	private String pubName;
@@ -11,12 +13,21 @@ public class PubListCommand implements CommandTestInterface {
 	private Date pubCreDate;
 	private Date cbContractDate;
 	private Date cbExpiredDate;
+	private int cbNum;
 	private int cbMoney;
 	private int cbRoyalty;
 	private String cbStatus;
 	private int allBook;
+	private String[] bookNames;
 	
 
+	public int getCbNum() {
+		return cbNum;
+	}
+	public PubListCommand setCbNum(int cbNum) {
+		this.cbNum = cbNum;
+		return this;
+	}
 	public String getPubName() {
 		return pubName;
 	}
@@ -94,14 +105,24 @@ public class PubListCommand implements CommandTestInterface {
 		this.allBook = allBook;
 		return this;
 	}
-
-
-
-
+	public String[] getBookNames() {
+		return bookNames;
+	}
+	public void setBookNames(String[] bookNames) {
+		this.bookNames = bookNames;
+	}
+	
 	@Override
 	public void CommandTest() {
 		// TODO Auto-generated method stub
-
+		AutoLinePrint.println("커멘드 객체 테스트","출판사 이름 : " + pubName,"출판사 전화번호 : " + pubPhone,"출판사 번호 : " + pubNo,"출판사 대표명 : " + pubCeo,"출판사 등록일 : " + pubCreDate
+				,"계약일자 : " + cbContractDate,"출판사 계약종료일 : " + cbExpiredDate,"출판사 계약금 : " + cbMoney,"출판사 계약 번호 : " + cbNum,"출판사 로열티 : " + cbRoyalty,"출판사 책 상태 : " + cbStatus,"출판사 책 종류 : " + allBook);
+		if(bookNames!=null) {
+			for(int a = 0; a<bookNames.length; a++) {
+				System.out.println("책의 종류 : " + bookNames[a]);
+			}
+		}
+		
 	}
 
 }

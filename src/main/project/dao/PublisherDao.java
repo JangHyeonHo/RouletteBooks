@@ -41,7 +41,9 @@ public class PublisherDao {
 			public PubListCommand mapRow(ResultSet rs, int rowNum) throws SQLException {
 				// TODO Auto-generated method stub
 				
-				return new PubListCommand();
+				return new PubListCommand().setPubName(rs.getString("PUBNAME")).setPubPhone(rs.getString("PUBPHONE")).setPubNo(rs.getString("PUBNO"))
+						.setPubCeo(rs.getString("PUBCEO")).setPubCreDate(rs.getDate("PUB_CRE_DATE")).setCbContractDate(rs.getDate("CB_CONTRACT_DATE"))
+						.setCbExpiredDate(rs.getDate("CB_EXPIRED_DATE")).setCbMoney(0).setCbRoyalty(0).setCbStatus(rs.getString("CB_STATUS")).setAllBook(0);
 			}
 			
 		});
