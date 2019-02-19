@@ -94,7 +94,7 @@ public class RManagerDao {
 					
 				} else {
 					System.out.println("아이디 불일치");
-					error.rejectValue("comnum", "mismatch");
+					error.rejectValue("comId", "mismatch");
 					return null;
 				}
 				
