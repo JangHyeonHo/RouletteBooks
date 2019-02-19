@@ -3,8 +3,8 @@ package service.tboard;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 
+import command.TBoardListCommand;
 import dao.TBoardDao;
 import dto.TBoard;
 
@@ -12,7 +12,6 @@ public class TBoardListService {
 
 	
 	private TBoardDao tboarddao;
-	List<TBoard> tboards;
 	
 	
 	@Autowired
@@ -23,10 +22,10 @@ public class TBoardListService {
 
 
 
-	public List<TBoard> tboardList() {
+	public List<TBoardListCommand> tboardList() {
 		
 		
-		tboards = tboarddao.tboardlist();
+		List<TBoardListCommand> tboards = tboarddao.tboardlist();
 		
 		
 		return tboards;

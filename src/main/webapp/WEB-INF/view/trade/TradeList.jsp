@@ -90,24 +90,24 @@
 				</div>
 				<c:forEach items="${ tboardlist}" var="tlist">
 				<div class="tradewrite">
-					<a href="tradedetail"><div class="tradebookinfo">
-						<div class="buyno">1</div>
+					<a href="tradedetail?tnum=${tlist.tNum }"><div class="tradebookinfo">
+						<div class="buyno">${tlist.tNum }</div>
 						<div class="picture"><img src="<c:url value = "trade/uploadImage/${tlist.tBookStoreImgName }" />"></div>
 						<div class="idsellbuy">
-							<div class="idinfo">닉네임: 이디야커피</div>
-							<div class="sell">판매</div>
+							<div class="idinfo">닉네임: ${tlist.tNickName }</div>
+							<div class="sell">${tlist.tKind }</div>
 						</div>
 					</div></a>
 					<div class="tradetitle">
-						<a href="tradedetail"><div class="tradesubject">${tlist.tSubject }</div></a>
+						<a href="tradedetail?tnum=${tlist.tNum }""><div class="tradesubject">${tlist.tSubject }</div></a>
 						<div class="tradeinfo">${tlist.tContent }</div>
-						<div class="uploaddate"></div>
+						<div class="uploaddate">${tlist.tRegDate }</div>
 					
 					
 					</div>
 					<div class="tradepricebox"><strong>${ tlist.tPrice}원</strong></div>
-					<div class="tradewaiting">대기중</div>
-					<div class="bookscore">★★★★★</div>
+					<div class="tradewaiting">${tlist.tSituation}</div>
+					<div class="bookscore">${tlist.tBookStatus}</div>
 				</div>
 				</c:forEach>
 				
