@@ -40,6 +40,7 @@
 <bean class = "service.cusservice.DetailService" name="DetailService" id="DetailService"/>
 <bean class = "service.cusservice.DeleteService" name="DeleteService" id="DeleteService"/>
 <bean class = "service.mypage.mainService" name="mainService" id="mainService"/>
+<bean class = "service.mypage.InfoService" name="InfoService" id="InfoService"/>
 
 
 

@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import command.CusServiceCommand;
 import dto.CusServiceDTO;
+import dto.RMember;
 import other.AutoLinePrint;
 
 public class CusServiceDao {
@@ -64,6 +65,8 @@ public class CusServiceDao {
 		
 		
 	}
+
+
 
 	
 

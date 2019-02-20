@@ -47,7 +47,7 @@ public class MemberInfoConfirmController implements FrontControllerInterface {
 		
 		LoginSessionInfomationCommand com = (LoginSessionInfomationCommand)session.getAttribute("loginInfo");
 		service.action(PasswordAutoMD5.passwordChange(password), com.getmNo());
-		return null;
+		return "redirect:/mypage/myinfo";
 	}
 
 	@Override
