@@ -116,12 +116,12 @@ $(function(){
 	});
 });
         
-        
+
 </script>
         <div id = "pasingNum">
-        	<span class = "pagebtn">이전</span>
-        	<em>1</em>
-        	<span class = "pagebtn">다음</span>
+		<c:forEach begin="${ap.startPage }" end="${ap.endPage }" step="1" var="i">
+         <div class="Paging"><a href="?page=${i }">${i }</a></div>
+               </c:forEach>
         </div> 
         </c:if>
     </div>

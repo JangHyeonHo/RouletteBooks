@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import command.LoginSessionInfomationCommand;
 import controller.FrontControllerInterface;
 import dto.CusServiceDTO;
+import other.AutoPaging;
 import service.cusservice.myInquiryService;
 
 @Controller
@@ -32,12 +33,17 @@ public class CusMyInquiryController implements FrontControllerInterface {
 	public String OpenProcessGet(HttpSession session, Model model) {
 		// TODO Auto-generated method stub
 		System.out.println("open:내 문의내역");
+		AutoPaging ap = new AutoPaging(1,10,5);
+
 		session.getAttribute("loginInfo");
 		LoginSessionInfomationCommand command = null;
 		if(session.getAttribute("loginInfo")!= null) {
 			command = (LoginSessionInfomationCommand) session.getAttribute("loginInfo");
 		}
-		List<CusServiceDTO> list = service.inquiryList(command.getmNo());
+		List<CusServiceDTO> list = service.inquiryList(command.getmNo(),ap);
+		ap.setListCount(list.size());
+		ap.PagingTest();
+		model.addAttribute("ap",ap);
 		model.addAttribute("List",list);
 		
 		

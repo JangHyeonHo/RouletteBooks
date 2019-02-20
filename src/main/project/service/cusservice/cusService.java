@@ -12,6 +12,7 @@ import command.LoginSessionInfomationCommand;
 import dao.CusServiceDao;
 import dto.CusServiceDTO;
 import dto.RMember;
+import other.AutoPaging;
 
 public class cusService {
 	private CusServiceDao cusServiceDao;
@@ -34,5 +35,6 @@ public class cusService {
 		
 		return list;
 	}
+
 	
 }

@@ -1,5 +1,7 @@
 package command;
 
+import other.AutoLinePrint;
+
 public class FreeBoardListPageCommand {
 	private String search;
 	private String query;
@@ -25,6 +27,11 @@ public class FreeBoardListPageCommand {
 	public FreeBoardListPageCommand setPage(int page) {
 		this.page = page;
 		return this;
+	}
+	
+	public void CommandTest() {
+		// TODO Auto-generated method stub
+		AutoLinePrint.println("멤버 리스트 커멘드", "무엇으로 찾기 : " + search,"질문 내용 : " + query, "페이지 수 : " + page);
 	}
 	
 }
