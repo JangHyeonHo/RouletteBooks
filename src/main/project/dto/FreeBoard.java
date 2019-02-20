@@ -15,8 +15,21 @@ public class FreeBoard implements DTOTestInterface {
     private String fContent; // 게시판 글내용
     private int fHit; // 게시판 조회수
     private Date fDate ; // 등록일자
-
+    private String mnickname; // 조인 시킨 닉니엠
+    
 	
+	public String getMnickname() {
+		return mnickname;
+	}
+
+	public FreeBoard setMnickname(String mnickname) {
+		this.mnickname = mnickname;
+		return this;
+	}
+
+
+
+
 	public int getfNo() {
 		return fNo;
 	}

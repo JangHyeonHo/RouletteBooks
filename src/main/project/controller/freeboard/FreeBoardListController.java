@@ -31,6 +31,7 @@ public class FreeBoardListController implements FrontControllerInterface {
       System.out.println("자유게시판 오픈");
       List<FreeBoard> Freeboardlist = freeboardlistservice.freeboardlist();
       model.addAttribute("Freeboardlist",Freeboardlist);
+      System.out.println(Freeboardlist.size());
       return "freeboard/FreeBoard";
    }
    
