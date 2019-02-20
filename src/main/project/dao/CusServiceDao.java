@@ -15,6 +15,7 @@ import command.CusServiceCommand;
 import dto.CusServiceDTO;
 import dto.RMember;
 import other.AutoLinePrint;
+import other.AutoPaging;
 
 public class CusServiceDao {
 	private JdbcTemplate jdbcTemplate;
@@ -36,12 +37,27 @@ public class CusServiceDao {
 		
 		return i;
 	}
+	//고객센터 내문의
+	public List<CusServiceDTO> inquiryList(String mno, AutoPaging ap) {
+		// TODO Auto-generated method stub
+		 int minNum = ((ap.getPage()-1)*ap.getLimit())+1;
+	     int maxNum = minNum+ap.getLimit()-1;
+	      
+		sql = "select * from (select rownum as rnum, c.* from "
+				+ "(select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE, cscontent, csscore, CSANSWERCON, CSANSWER_DATE "
+				+ "from CUSSERVICE where mno = ? order by CSREG_DATE desc) c where rownum <= ?) where rnum >= ?";
+		
+		list = jdbcTemplate.query(sql, new inquiryRowMapper(), mno,maxNum, minNum);
 
+		return list;
+	}
+	//고객센터 메인
 	public List<CusServiceDTO> inquiryList(String mno) {
 		// TODO Auto-generated method stub
-		sql = "select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE, cscontent, csscore, CSANSWERCON, CSANSWER_DATE from CUSSERVICE where mno = ? order by CSREG_DATE desc";
-		
+		sql = "select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE, cscontent, csscore, CSANSWERCON, CSANSWER_DATE " 
+				+ " from CUSSERVICE where mno = ? order by CSREG_DATE desc";
 		list = jdbcTemplate.query(sql, new inquiryRowMapper(), mno);
+		
 		return list;
 	}
 
@@ -65,6 +81,8 @@ public class CusServiceDao {
 		
 		
 	}
+
+
 
 
 
