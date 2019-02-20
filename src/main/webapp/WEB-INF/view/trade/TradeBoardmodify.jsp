@@ -46,12 +46,7 @@
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 	<script src = "../js/tradeboardwrite.js"></script>
-<c:if test="${empty loginInfo }">
-<script>
-alert("잘못된 접근 입니다.")
-location.href="../main"
-</script>
-</c:if>
+
 </head>
 <body>
 <!-- Header 시작 -->
@@ -73,8 +68,8 @@ location.href="../main"
 						<option value="삽니다">삽니다.</option>
 						<option value="팝니다">팝니다.</option>
 					</select>
-					<input type="text" id="trade_subject" class="trade_board_class" name="trade_board_subject" style="width: 800px; height: 25px;"
-					 placeholder="제목을 입력해 주세요.">
+					<input type="text" id="trade_subject" class="trade_board_class" name="trade_board_subject" value="${tboard.tSubject }" style="width: 800px; height: 25px;"
+					 >
 				</div>
 
 			</div>
@@ -102,13 +97,13 @@ location.href="../main"
 				</div>
 
 				<div id="trade_book_name">
-					<input type="text" name="trade_book_name"class="trade_board_class" placeholder="도서명">
+					<input type="text" name="trade_book_name"class="trade_board_class" value="${tboard.tBookName }">
 				</div>
 				<div id="trade_book_publisher">
-					<input type="text" name="trade_book_publisher" class="trade_board_class" placeholder="출판사명">
+					<input type="text" name="trade_book_publisher" class="trade_board_class" value="${tboard.tPublicher}">
 				</div>
 				<div id="trade_book_price">
-					<input type="number" step=1000 min=0 name="trade_book_price" class="trade_board_class" placeholder="희망 도서가격">
+					<input type="number" step=1000 min=0 name="trade_book_price" class="trade_board_class" value="${tboard.tPrice}">
 				</div>
 				<div id="trade_book_status">
 					<select class="trade_board_class" name="trade_book_status">
@@ -136,10 +131,10 @@ location.href="../main"
 			</div>
 			<div id="trade_board_footer">
 				<div id="board_textarea">
-				<textarea name="textarea" style="margin:0 20px; width:1035px; height:500px;" placeholder="책 구입시기, 구입가등 중고구매,판매에 필요한 상세정보를 기입해주세요."></textarea>
+				<textarea name="textarea"  style="margin:0 20px; width:1035px; height:500px;" >${tboard.tContent}</textarea>
 				</div>
 				<div id="trade_board_btn">
-					<input type="submit" value="등록" style="width:100px; height:50px; background: #4a57a8; border-color: #3c4790; color: #fff;">
+					<input type="submit" value="수정" style="width:100px; height:50px; background: #4a57a8; border-color: #3c4790; color: #fff;">
 					<input type="reset" value="취소" style="width:100px; height:50px; background: #4a57a8; border-color: #3c4790; color: #fff;" >
 				</div>
 			</div>

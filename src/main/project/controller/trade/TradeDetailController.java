@@ -13,7 +13,7 @@ import command.TBoardDetailCommand;
 import controller.FrontControllerInterface;
 import service.tboard.TBoardDetailService;
 @Controller
-@RequestMapping("/tradedetail")
+@RequestMapping("/trade/detail")
 public class TradeDetailController implements FrontControllerInterface {
 
 	//권도완,유승재

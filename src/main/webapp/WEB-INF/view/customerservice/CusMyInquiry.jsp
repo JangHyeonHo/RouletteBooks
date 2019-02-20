@@ -55,7 +55,6 @@ alert("로그인이 필요합니다.")
 location.href="../member/login"
 </script>
 </c:if>
-
 </head>
 <body>
 <!-- Header 시작 -->
@@ -100,7 +99,7 @@ location.href="../member/login"
                     <td>${list.csKind }</td>
                     <td class="Subj">
                     <a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a>
-                    <span class = "answer">${list.csSituation }</span></td>
+                    <span class = "answer">[${list.csSituation }]</span></td>
                     <td>${list.csRegDate }</td>
                     <td><button class = "deleteBtn" value = "${list.csNo }"><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
@@ -112,7 +111,7 @@ location.href="../member/login"
 $(function(){
 	$('.deleteBtn').click(function(){
 		if(confirm("삭제 후 복구할 수 없습니다.정말로 삭제하시겠습니까?")){
-			self.location.href = "./delete?listcsNo=" + $(this).val();
+			self.location.href = "./delete?csNo="+ $(this).val() ;
 		}
 	});
 });
