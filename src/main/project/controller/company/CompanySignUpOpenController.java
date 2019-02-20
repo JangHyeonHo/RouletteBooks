@@ -15,7 +15,7 @@ import service.company.ManagerSignUpService;
 
 @Controller
 @RequestMapping("/company/signup")
-public class CompanySiginUpOpenController implements FrontControllerInterface {
+public class CompanySignUpOpenController implements FrontControllerInterface {
 	
 	@Autowired
 	private ManagerSignUpService service;

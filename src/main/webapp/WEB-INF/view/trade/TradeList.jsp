@@ -90,7 +90,7 @@
 				</div>
 				<c:forEach items="${ tboardlist}" var="tlist">
 				<div class="tradewrite">
-					<a href="tradedetail?tnum=${tlist.tNum }"><div class="tradebookinfo">
+					<a href=trade/detail?tnum=${tlist.tNum }"><div class="tradebookinfo">
 						<div class="buyno">${tlist.tNum }</div>
 						<div class="picture"><img src="<c:url value = "trade/uploadImage/${tlist.tBookStoreImgName }" />"></div>
 						<div class="idsellbuy">
@@ -99,7 +99,7 @@
 						</div>
 					</div></a>
 					<div class="tradetitle">
-						<a href="tradedetail?tnum=${tlist.tNum }""><div class="tradesubject">${tlist.tSubject }</div></a>
+						<a href="trade/detail?tnum=${tlist.tNum }""><div class="tradesubject">${tlist.tSubject }</div></a>
 						<div class="tradeinfo">${tlist.tContent }</div>
 						<div class="uploaddate">${tlist.tRegDate }</div>
 					

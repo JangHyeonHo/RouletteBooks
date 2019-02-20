@@ -169,7 +169,7 @@ location.href="../member/login"
                 <tr>
                     <td>${list.csNo }</td>
                     <td>${list.csKind }</td>
-                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a><span class = "answer">${list.csSituation }</span></td>
+                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a><span class = "answer">[${list.csSituation }]</span></td>
                     <td>${list.csRegDate }</td>                   
                 </tr>
             </c:forEach>

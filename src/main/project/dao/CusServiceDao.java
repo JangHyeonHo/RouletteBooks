@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import command.CusServiceCommand;
 import dto.CusServiceDTO;
+import dto.RMember;
 import other.AutoLinePrint;
 
 public class CusServiceDao {
@@ -27,10 +28,10 @@ public class CusServiceDao {
 	
 	public Integer insert(CusServiceDTO cusService) {
 		Integer i = null;
-		sql = "insert into cusservice(csno, mno, cskind, cssubject, cscontent,  "
+		sql = "insert into cusservice(csno, mno, cskind, CSSITUATION, cssubject, cscontent,  "
 				+ " csreg_date, csmailagree ) "
-				+ " values(csno.nextval,?, ?, ?, ?, sysdate, ?)";
-		i = jdbcTemplate.update(sql,cusService.getmNo(), cusService.getCsKind(), cusService.getCsSubject(), cusService.getCsContent(), cusService.getCsMailAgree());
+				+ " values(csno.nextval, ?, ?, ?, ?, ?, sysdate, ?)";
+		i = jdbcTemplate.update(sql,cusService.getmNo(), cusService.getCsKind(),cusService.getCsSituation(), cusService.getCsSubject(), cusService.getCsContent(), cusService.getCsMailAgree());
 		AutoLinePrint.println("회원번호 : "+ cusService.getCsNo() +" 문의글 처리 완료");
 		
 		return i;
@@ -55,15 +56,17 @@ public class CusServiceDao {
 		return dto;
 	}
 
-	public Integer delete(CusServiceDTO dto) {
+	public void delete(int csNo) {
 		// TODO Auto-generated method stub
-		Integer i = null;
+		
 		sql="delete from cusservice where csno = ?";
-		i = jdbcTemplate.q
+		 jdbcTemplate.update(sql, csNo);
 		
 		
-		return i;
+		
 	}
+
+
 
 	
 

@@ -2,17 +2,23 @@ package other;
 
 public class AutoPaging {
 	
-	private int page; //현재 페이지
-	private int limit; //한 페이지에 쓸 게시글의 갯수7
+	/**현재 페이지*/
+	private int page;
+	/**한 페이지에 쓸 게시글의 갯수7*/
+	private int limit; 
 	private int startPage; //현재 페이지에서 보이는 가장 처음 숫자(1 2 3 4 5 6 7 8 9 10 에서 1을 담당함)
 	private int endPage; //현재 페이지에서 보이는 가장 마지막 숫자(11 12 13 14 15 16 17 18 19 20에서 20을 담당함)
 	private int maxPage; //최종 페이지
 	private int pageCount; //현재 페이지에서 보이는 처음 숫자와 마지막 숫자 사이의 숫자 개수 (1 2 3 4 5 6 7) => 7개
 	private int listCount; //총 게시글의 갯수7
 	
-	//생성자 생성시 현재 페이지와 페이지의 개수, 페이지 사이의 개수를 받아오게 함.
-	//예시 1~10까지 3페이지에서 불러오게 하고 싶고 개수는 한 페이지당 게시글 20개만 불러오고 싶을 때
-	//AutoPaging paging = new AutoPaging(3,20,10);
+	/**생성자 생성시 현재 페이지와 페이지의 개수, 페이지 사이의 개수를 받아오게 함.<br>
+	예시 1~10까지 3페이지에서 불러오게 하고 싶고 개수는 한 페이지당 게시글 20개만 불러오고 싶을 때<br>
+	AutoPaging paging = new AutoPaging(3,20,10);
+	@param page 현재 페이지
+	@param limit 한 페이지의 게시글 개수
+	@param pageConunt 한 사이트에 보이는 첫 페이지와 마지막 페이지 사이의 개수
+	*/
 	public AutoPaging(int page, int limit, int pageCount) {
 		this.page = page;
 		this.limit = limit;

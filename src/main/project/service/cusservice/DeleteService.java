@@ -1,4 +1,4 @@
-package controller.customerservice;
+package service.cusservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,11 +17,13 @@ public class DeleteService {
 	}
 	
 	
-	public void delete(CusServiceCommand command) {
+	public void delete(int csNo) {
 		// TODO Auto-generated method stub
-		CusServiceDTO dto = new CusServiceDTO();
-		dto.commandChange(command);
-		cusServiceDao.delete(dto);
+//		CusServiceDTO serviceDTO = new CusServiceDTO();
+//		serviceDTO.getCsNo();
+		cusServiceDao.delete(csNo);
+
+		
 		
 	}
 

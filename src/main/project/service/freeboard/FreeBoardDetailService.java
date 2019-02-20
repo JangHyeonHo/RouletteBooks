@@ -19,9 +19,14 @@ public class FreeBoardDetailService {
 	
 	public List<FreeBoard> Detaillist(int fno) {
 		freeboarddto = freeboardDao.detaillist(fno);
-		
+		if(!freeboarddto.isEmpty()) {
+			freeboardDao.detailcount(fno);
+			  
+		}
 		return freeboarddto;	
 	}
+
+	
 	
 	
 	

@@ -148,7 +148,11 @@ public class TBoardDetailCommand {
 	}
 
 	
+public void CommandTest() {
+	System.out.println(tSubject);
+	System.out.println(tContent);
 	
+}
 	
 	
 	
