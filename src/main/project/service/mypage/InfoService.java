@@ -16,7 +16,6 @@ public class InfoService {
 	
 
 
-	@Autowired
 	public boolean action(String passwordChange, String getmNo) {
 		// TODO Auto-generated method stub
 		boolean rm = cusServiceDao.InfoConfirm(passwordChange, getmNo);
