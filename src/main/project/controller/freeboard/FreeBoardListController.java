@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.FreeBoardListPageCommand;
 import command.FreeBoardWriteCommand;
 import controller.FrontControllerInterface;
 import dto.FreeBoard;
+import other.AutoPaging;
 import service.freeboard.FreeBoardListService;
 @Controller
 @RequestMapping("/freeboardlist")
@@ -26,12 +28,19 @@ public class FreeBoardListController implements FrontControllerInterface {
    }
    
    @RequestMapping(method = RequestMethod.GET)
-   public String OpenProcessGet(Model model) {
+   public String OpenProcessGet(Model model, @ModelAttribute FreeBoardListPageCommand command) {
       // TODO Auto-generated method stub
+	  command.CommandTest();
+	  if(command.getPage() == 0) {
+		  command.setPage(1);
+	  }
       System.out.println("자유게시판 오픈");
-      List<FreeBoard> Freeboardlist = freeboardlistservice.freeboardlist();
+      AutoPaging pagin = new AutoPaging(command.getPage(),10,10);
+      List<FreeBoard> Freeboardlist = freeboardlistservice.freeboardlist(pagin,command);
+      pagin.setListCount(freeboardlistservice.total(command));
+      pagin.PagingTest();
+      model.addAttribute("pagin",pagin);
       model.addAttribute("Freeboardlist",Freeboardlist);
-      System.out.println(Freeboardlist.size());
       return "freeboard/FreeBoard";
    }
    
