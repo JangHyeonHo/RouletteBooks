@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -32,17 +32,20 @@
 	crossorigin="anonymous"></script>
 
 <!--css 설정(기본값)-->
-<link href="css/body.css" rel="stylesheet" type="text/css">
-<link href="css/header.css" rel="stylesheet" type="text/css">
-<link href="css/footer.css" rel="stylesheet" type="text/css">
+<link href="../css/body.css" rel="stylesheet" type="text/css">
+<link href="../css/header.css" rel="stylesheet" type="text/css">
+<link href="../css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
 <script src="js/header.js"></script>
-
+<script>
+console.log("${loginInfo.mNickname}");
+console.log("${detail.tNickName}");
+</script>
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="css/TradeDetail_content.css" rel="stylesheet"
+<link href="../css/TradeDetail_content.css" rel="stylesheet"
 	type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
@@ -59,7 +62,7 @@
 			<!--메인사진 1장-->
 			<div class="total_img">
 				<div class="total_main_img">
-					<img src="<c:url value = "trade/uploadImage/${detail.tBookImage }" />">
+					<img src="<c:url value = "../trade/uploadImage/${detail.tBookImage }" />">
 				</div>
 			</div>
 			<!--제목,가격,수량,책상태,날짜-->
@@ -138,17 +141,20 @@
 			
 			<div class="detail_img">
 			<c:forEach items="${detail.tBookImageSub }" var="image">
-			<img src="<c:url value = "trade/uploadImage/${image }" />">
+			<img src="<c:url value = "../trade/uploadImage/${image }" />">
 			</c:forEach>
 			</div>
 		
 			<div class="detailwrite">${detail.tContent }</div>
 		</div>
 		<div class="last_box">
-			<button>구매하기</button>
-			<button><a href=trade/modify?tnum=${detail.tNum }>글수정</a></button>
-			<button>글삭제</button>
-			<button>목록으로</button>
+			<button><a href=trading?tnum=${detail.tNum }>구매하기</a></button>
+			<c:set var="dnick" value="${detail.tNickName}"/>
+			<c:if test="${dnick eq loginInfo.mNickname}">
+			<button><a href=modify?tnum=${detail.tNum }>글수정</a></button>
+			<button><a href=delete?tnum=${detail.tNum }>글삭제</a></button>
+			</c:if>
+			<button><a href=../tradelist>목록으로</a></button>
 		</div>
 
 	</div>
