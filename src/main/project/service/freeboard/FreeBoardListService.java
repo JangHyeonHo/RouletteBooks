@@ -18,7 +18,6 @@ public class FreeBoardListService {
    
    public List<FreeBoard> freeboardlist(){
       freeboards = freeboarddao.fblist();
-      
       return freeboards;
    }
    

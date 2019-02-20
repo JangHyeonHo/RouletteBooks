@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +43,7 @@
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
 <link href="../css/IdSelect_content.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
-<script src = "js/IdSelect.js"></script>
+<script src = "../js/IdSelect.js"></script>
 
 </head>
 <body>
@@ -66,7 +66,7 @@
 						<h2>아이디를 찾기위한</h2>
 					<h3><span>본인 확인 방법</span>을 선택해 주세요.</h3>
 					</div>
-					
+			<form:form>
 				<div class="box2">
 					<input type="radio" id="select" /><b>휴대폰 인증</b> <br>
 					<select name="phoneFirst" id="phoneFirst">
@@ -80,7 +80,7 @@
 					<input type="text" class = "phoneNum" name="phone3" maxlength="4" placeholder="5678" style="padding: 5px 0px">
 					<br><h4>가입된 휴대폰으로 본인 확인을 진행 합니다.</h4>
 				</div>
-				
+			</form:form>
 				<div class="box2_1">
 					<span>· 비밀번호를 찾으시나요?</span>
 					<button onclick="location='searchpw'">비밀 번호 찾기</button>
