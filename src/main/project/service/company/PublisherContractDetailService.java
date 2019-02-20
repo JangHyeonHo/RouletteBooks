@@ -2,12 +2,12 @@ package service.company;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import command.PublisherRegistCommand;
+import command.PubListCommand;
 import dao.PublisherConstractDao;
 import dao.PublisherDao;
 import dto.Publisher;
 
-public class PublisherRegisterService {
+public class PublisherContractDetailService {
 	
 	@Autowired
 	private PublisherDao dao;
@@ -25,17 +25,11 @@ public class PublisherRegisterService {
 		this.consDao = consDao;
 	}
 
-
-	public boolean action(PublisherRegistCommand command) {
+	public PubListCommand action(String pubNo) {
 		// TODO Auto-generated method stub
-		dto.CommandChange(command);
-		dto.DTOTEST();
-		if(dao.publisherRegister(dto)!=null) {
-			if(consDao.consOnRegister(dto)!=null) {
-				return true;
-			}
-		}
-		return false;
+		PubListCommand command = consDao.ContractPublisher(pubNo);
+		command.CommandTest();
+		return command;
 	}
-	
+
 }

@@ -13,7 +13,7 @@
 	<bean class = "controller.mypage.CustomerCouponController" />
 	<bean class = "controller.event.EventController" />
 	<bean class = "controller.mypage.MyPageOrderInfo" />
-
+	<bean class = "controller.trade.TradeModifyController" />
 
 
 <!-- DTO공간 -->
@@ -21,6 +21,8 @@
 
 <!-- Command객체 공간 -->
  <bean class = "command.TBoardWriteCommand" name="TBoardWriteCommand" id="TBoardWriteCommand"/>
+<bean class = "command.TBoardListCommand" name="TBoardListCommand" id="TBoardListCommand"/>
+<bean class = "command.TBoardDetailCommand" name="TBoardDetailCommand" id="TBoardDetailCommand"/>
 
 
 <!-- DAO공간 -->
@@ -29,5 +31,5 @@
 <!-- ActionController 공간 -->
 <bean class = "service.tboard.TBoardWriteService" name="TBoardWriteService" id="TBoardWriteService"/>
 <bean class = "service.tboard.TBoardListService" name="TBoardListService" id="TBoardListService"/>
-
+<bean class = "service.tboard.TBoardDetailService" name="TBoardDetailService" id="TBoardDetailService"/>
 </beans>

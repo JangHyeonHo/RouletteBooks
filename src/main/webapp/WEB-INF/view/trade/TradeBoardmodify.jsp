@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 
 <!--제목 설정-->
-<title>중고거래글쓰기</title>
+<title>중고거래글쓰기수정</title>
 
 <!-- 기본 설정  => 여기서부터 -->
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
