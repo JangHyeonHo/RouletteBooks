@@ -2,26 +2,24 @@ package service.mypage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import dao.CusServiceDao;
-import dao.MyPageDao;
-import dto.RMember;
+import dao.RMemberDao;
 
 public class InfoService {
 
 	
-	private MyPageDao cusServiceDao;
+	private RMemberDao cusServiceDao;
 	
 		@Autowired
-		public InfoService(MyPageDao cusServiceDao) {
+		public InfoService(RMemberDao cusServiceDao) {
 		this.cusServiceDao = cusServiceDao;
 	}
 	
 
 
 	@Autowired
-	public RMember action(String passwordChange, String getmNo) {
+	public boolean action(String passwordChange, String getmNo) {
 		// TODO Auto-generated method stub
-		RMember rm = cusServiceDao.InfoConfirm(passwordChange, getmNo);
+		boolean rm = cusServiceDao.InfoConfirm(passwordChange, getmNo);
 		
 		return rm;
 	}

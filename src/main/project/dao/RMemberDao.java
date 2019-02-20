@@ -171,4 +171,31 @@ public class RMemberDao {
 		return memberList;
 	}
 	
+	public boolean InfoConfirm(final String passwordChange, String getmNo) {
+		// TODO Auto-generated method stub
+		boolean dto;
+		sql= " select mpassword from Rmember where mno=?";
+		dto = jdbcTemplate.query(sql, new ResultSetExtractor<Boolean>() {
+
+			@Override
+			public Boolean extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				if(rs.next()) {
+					if(passwordChange.equals(rs.getString("mpassword"))) {
+						return true;
+					}
+				}
+				
+				return false;
+			}
+			
+			
+		}, getmNo);
+		
+		
+		return dto;
+		
+		
+	}
+	
 }
