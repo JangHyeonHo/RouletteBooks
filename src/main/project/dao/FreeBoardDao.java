@@ -44,7 +44,6 @@ public class FreeBoardDao {
 	   list = jdbcTemplate.query(sql,new FreeBoardRowMapper(),fno);
 	  return list;
   }
- 
   
    //자유게시판 리스트
    public List<FreeBoard> fblist() {
@@ -109,6 +108,9 @@ public FreeBoard detail(int fno, final String getmNo) {
 	}, fno);
 	return freeboard;
 }
+
+
+
 
 
 

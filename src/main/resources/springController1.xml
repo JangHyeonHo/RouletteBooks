@@ -47,14 +47,19 @@
 <bean class = "command.LoginSessionInfomationCommand" name="LoginSessionInfomationCommand" id="LoginSessionInfomationCommand"/>
 <bean class = "command.ManagerSessionInfomationCommand" name="ManagerSessionInfomationCommand" id="ManagerSessionInfomationCommand"/>
 <bean class = "command.MemberListPageCommand" name="MemberListPageCommand" id="MemberListPageCommand"/>
-
+<bean class = "command.PublisherContractCommand" name="PublisherContractCommand" id="PublisherContractCommand"/>
+<bean class = "command.PublisherRegistCommand" name="PublisherRegistCommand" id="PublisherRegistCommand"/>
+<bean class = "command.PubListCommand" name="PubListCommand" id="PubListCommand"/>
+<bean class = "command.BookContractMoneyCommand" name="BookContractMoneyCommand" id="BookContractMoneyCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>
 <bean class = "dao.RManagerDao" name="RManagerDao" id="RManagerDao"/>
 <bean class = "dao.PublisherDao" name="PublisherDao" id="PublisherDao"/>
+<bean class = "dao.PublisherConstractDao" name="PublisherConstractDao" id="PublisherConstractDao"/>
 
-<!-- ActionController 공간 --> PublisherListService
+
+<!-- ActionController 공간 -->
 <bean class = "service.member.MemberSignUpService" name="MemberSignUpService" id="MemberSignUpService"/>
 <bean class = "service.member.MemberLoginService" name="MemberLoginService" id="MemberLoginService"/>
 <bean class = "service.company.ManagerSignUpService" name="ManagerSignUpService" id="ManagerSignUpService"/>
@@ -62,5 +67,6 @@
 <bean class = "service.company.MemberListService" name="MemberListService" id="MemberListService"/>
 <bean class = "service.company.PublisherRegisterService" name="PublisherRegisterService" id="PublisherRegisterService"/>
 <bean class = "service.company.PublisherListService" name="PublisherListService" id="PublisherListService"/>
+<bean class = "service.company.PublisherContractDetailService" name="PublisherContractDetailService" id="PublisherContractDetailService"/>
 
 </beans>

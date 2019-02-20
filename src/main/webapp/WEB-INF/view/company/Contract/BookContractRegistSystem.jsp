@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +35,15 @@
 	<!-- <script src="../../js/HumanResourceManagerList.js"></script> -->
 
 	<style>
-		
+		#bookHideBox{
+			position: absolute;
+			width: 400px;
+		    height: 300px;
+		    top: 170px;
+		    left: 70px;
+			background-color : white;
+			border : 10px solid gray;
+		}
 	</style>
 	<script>
 		$(function () {
@@ -118,7 +126,11 @@
 					changeDays += "<option value=" + i + ">" + zeroSum + "</option>"
 				}
 				$("#endDays").html(changeDays);
+				
 			})
+			$("#bookSign").on("click",function(){
+				$("#bookHideBox").toggle({direction : "right"},300);
+			});
 
 		})
 
@@ -129,13 +141,14 @@
 	<!-- Contents -->
 	<div id="contents">
 		<div id="formWriting">
-			<form>
+			<form:form>
 				<h2 id="title">출판사 계약 등록</h2>
 				<div class="textBox">계약 번호</div>
-				<div class="valueBox"><input type="hidden" value="485039">485039</div>
+				<div class="valueBox"><input type="hidden" value="${contractDetail.cbNum }">${contractDetail.cbNum }</div>
 				<div class="textBox">출판사명</div>
-				<div class="valueBox"><input type="hidden" value="고려출판사">고려출판사</div>
+				<div class="valueBox"><input type="hidden" value="${contractDetail.pubName }">${contractDetail.pubName }</div>
 				<div class="textBox">계약 체결일</div>
+				<c:if test="${empty contractDetail.cbContractDate }">
 				<div class="daysformBox">
 					<select class="years" name="years">
 
@@ -159,6 +172,7 @@
 
 					</select>일
 				</div>
+				</c:if>
 				<div class="textBox">계약 도서 목록</div>
 				<div id="tableBox">
 					<table border="1px">
@@ -189,13 +203,14 @@
 							<td colspan="2">12,000,000￦</td>
 						</tr>
 					</table>
+					<div id = "bookHideBox" style="display:none;"></div>
 				</div>
 				<input type="button" value="계약할 도서 가등록하기" id = "bookSign">
 				<div class="alertBox">※현재 선택하신 도서는 가 등록 상태입니다.<br>사이트에 제대로 등록하시려면 별도의 등록 절차를 걸치세요</div>
 				<div class="textBox">로열티</div>
-				<input type="number" name="money" min="0" step="1000" value = "0">￦
+				<input type="number" name="money" min="0" step="1000" value = "${contractDetail.cbRoyalty }">￦
 				<div id="btnBox"><input type="submit" value="계약하기"><input type="reset" value="다시 작성하기"></div>
-			</form>
+			</form:form>
 		</div>
 		<!-- 레이아웃 설정 -->
 	</div>

@@ -32,6 +32,7 @@ public class FreeBoardDetailController implements FrontControllerInterface {
 		List<FreeBoard> Freeboarddetail = freeboarddetailservice.Detaillist(fno);
 		model.addAttribute("Freeboarddetail",Freeboarddetail);
 		
+		
 		return "freeboard/FreeBoardDetail";
 	}
 	

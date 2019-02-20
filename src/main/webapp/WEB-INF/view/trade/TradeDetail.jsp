@@ -146,7 +146,7 @@
 		</div>
 		<div class="last_box">
 			<button>구매하기</button>
-			<button>글수정</button>
+			<button><a href=trade/modify?tnum=${detail.tNum }>글수정</a></button>
 			<button>글삭제</button>
 			<button>목록으로</button>
 		</div>

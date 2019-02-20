@@ -49,7 +49,7 @@ public class Publisher implements DTOTestInterface {
 	@Override
 	public void DTOTEST() {
 		// TODO Auto-generated method stub
-		AutoLinePrint.println("출판사 테이블 정보", "출판사명 : " + pubname,"출판사 전화번호 : " + pubname,"출판사 발행자번호 : " + pubno,"출판사 대표자명 : " + pubceo,"출판사 등록일 : " + pubCreDate);
+		AutoLinePrint.println("출판사 테이블 정보", "출판사명 : " + pubname,"출판사 전화번호 : " + pubphone,"출판사 발행자번호 : " + pubno,"출판사 대표자명 : " + pubceo,"출판사 등록일 : " + pubCreDate);
 		
 	}
 	public void CommandChange(PublisherRegistCommand command) {
