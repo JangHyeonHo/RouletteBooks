@@ -17,8 +17,10 @@ import org.springframework.jdbc.core.RowMapper;
 
 import command.TBoardDetailCommand;
 import command.TBoardListCommand;
+import command.TBoardWriteCommand;
 import dto.TBoard;
 import other.AutoLinePrint;
+import other.AutoPaging;
 
 public class TBoardDao {
 	
@@ -48,7 +50,9 @@ public class TBoardDao {
 	
 	
 	
-	public List<TBoardListCommand> tboardlist() {
+	public List<TBoardListCommand> tboardlist(AutoPaging page) {
+		
+		
 		sql ="select TNUM,TKIND,TBOOK_STATUS,TSUBJECT,TCONTENT,TPRICE,TBOOK_STATUS,TREG_DATE,TBOOK_STORE_IMG_NAME,TSITUATION,r.MNICKNAME from tboard t, rmember r WHERE t.TUPLOADER = r.MNO order by TNUM DESC";
 		 list = jdbcTemplate.query(sql,new TboardRowMapper());
 		
@@ -68,8 +72,19 @@ public class TBoardDao {
 				TBoardDetailCommand detail = new TBoardDetailCommand();
 				
 				if(rs.next()) {
+					if(rs.getString("TBOOK_STORE_IMG_NAME")!=null) {
 				String[] image = rs.getString("TBOOK_STORE_IMG_NAME").split("&");
+				detail.settBookImage(image[0]);
+				for(int i=0;i<image.length;i++) {
+					
+					detail.settBookImageSub(image);
+						
+						System.out.println(detail.gettBookImageSub()[i]);
+					}
 				System.out.println("asdf"+image.length);
+					}else {
+						detail.settBookImage(rs.getString("TBOOK_STORE_IMG_NAME"));
+					}
 
 				detail.settNum(rs.getInt("TNUM"));
 				detail.settSubject(rs.getString("TSUBJECT"));
@@ -87,13 +102,8 @@ public class TBoardDao {
 				detail.settMemberGrade(rs.getString("grade"));
 				detail.settMemberPhone(rs.getString("phone"));
 				detail.settMemberEmail(rs.getString("email"));
-				detail.settBookImage(image[0]);
-				for(int i=0;i<image.length;i++) {
-					
-				detail.settBookImageSub(image);
-					
-					System.out.println(detail.gettBookImageSub()[i]);
-				}
+				
+				
 				
 			
 				}
@@ -107,16 +117,35 @@ public class TBoardDao {
 	
 	
 
+	public Integer modify(TBoard tboard, int number) {
+		Integer i = null;
+		
+		sql="update tboard set TSUBJECT=?,TKIND=?,TCONTENT=?,TMETHOD=?,TBOOK_NAME=?,TBOOK_ORI_IMG_NAME=?,TBOOK_STORE_IMG_NAME=?,TPRICE=?,TBOOK_STATUS=?,TBOOK_GENRE=?,TPUBLISHER=? where tnum=?";
+		i = jdbcTemplate.update(sql,tboard.gettSubject(),tboard.gettKind(),tboard.gettContent(),tboard.gettMethod(),tboard.gettBookName(),tboard.gettBookOriImgName(),tboard.gettBookStoreImgName(),tboard.gettPrice(),tboard.gettBookStatus(),tboard.gettBookGenre(),tboard.gettBookPublisher(),number);
+		
+		return i;
+	}
 	
-	
-	
+	public void delete(int number) {
+		sql="delete from tboard where TNUM=?";
+	    jdbcTemplate.update(sql,number);
+		
+		
+	}
 	
 	 
  class TboardRowMapper implements RowMapper<TBoardListCommand>{
 	public TBoardListCommand mapRow(ResultSet rs, int rowNum) throws SQLException {
 		TBoardListCommand listcommand = new TBoardListCommand();
-		String[] image = rs.getString("TBOOK_STORE_IMG_NAME").split("&");
-		
+	
+		if(rs.getString("TBOOK_STORE_IMG_NAME")!=null) {
+			String[] image = rs.getString("TBOOK_STORE_IMG_NAME").split("&");
+			listcommand.settBookStoreImgName(image[0]);
+			System.out.println("이미지 배열에 넣니?");
+		}else {
+			listcommand.settBookStoreImgName("TBOOK_STORE_IMG_NAME");
+			System.out.println("이미지 배열에 안넣니?");
+		}
 		
 		listcommand.settNickName(rs.getString("MNICKNAME"));
 		listcommand.settNum(rs.getInt("TNUM"));
@@ -125,7 +154,6 @@ public class TBoardDao {
 		listcommand.settContent(rs.getString("TCONTENT"));
 		listcommand.settPrice(rs.getInt("TPRICE"));
 		listcommand.settRegDate(rs.getDate("TREG_DATE"));
-		listcommand.settBookStoreImgName(image[0]);
 		listcommand.settBookStatus(rs.getString("TBOOK_STATUS"));
 		listcommand.settSituation(rs.getString("TSITUATION"));
 				

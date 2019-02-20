@@ -132,6 +132,7 @@ public class CusServiceDTO {
 		mNo = command.getInquirywriter_mno();
 		csSituation = SITU[0];
 	}
+	
 	public void DTOTEST() {
 		System.out.println(csNo);
 		System.out.println(csKind);
