@@ -61,15 +61,17 @@
 			<div class="titlename">자유게시판</div>
 			<div class="empty"></div>
 				
-			<div class="totalcount">총 ${Freeboardlist.size()}개</div>
+			<div class="totalcount">총 ${pagin.listCount}개</div>
 		
-			<form action="123" method="GET">
+			<form method="GET">
 				<div class="selecttype">
-					<select class="selectform"><option value="title">제목</option>
-						<option value="title">작성자</option></select>
+					<select class="selectform" name="search">
+						<option value="fsubject">제목</option>
+						<option value="mnickname">작성자</option>
+					</select>
 				</div>
 				<div class="select">
-					<input type="text" id="search1" placeholder="검색">
+					<input type="text" id="search1" placeholder="검색" name="query">
 				</div>
 				<button id="btnsearch" onclick="$"></button>
 			</form>
@@ -115,18 +117,14 @@
 			</div>
 			<div class="pagingtotal">
 				<ul>
-					<li><a href="#">◀</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li><a href="#">7</a></li>
-					<li><a href="#">8</a></li>
-					<li><a href="#">9</a></li>
-					<li><a href="#">10</a></li>
-					<li><a href="#">▶</a></li>
+					<li><a href="#">◀이전</a></li>
+					<c:forEach begin="${pagin.startPage}" end="${pagin.endPage }"  step="1" var="i">	
+					<li><a href="?page=${i}">${i}</a></li>
+					
+				
+					
+					</c:forEach>
+					<li><a href="#">다음▶</a></li>
 				</ul>
 			</div>
 
