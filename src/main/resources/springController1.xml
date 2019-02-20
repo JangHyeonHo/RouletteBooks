@@ -6,7 +6,7 @@
 
 <!-- 장현호 공간 -->
 
-<bean class = "controller.company.CompanySiginUpOpenController" />
+<bean class = "controller.company.CompanySignUpOpenController" />
 <!-- /company/signup -->
 <bean class = "controller.company.CompanyLoginOpenController" />
 <!-- /company/login -->
@@ -38,6 +38,7 @@
 <bean class = "dto.RMember" name="RMember" id="RMember"/>
 <bean class = "dto.RManager" name="RManager" id="RManager"/>
 <bean class = "dto.Publisher" name="Publisher" id="Publisher"/>
+<bean class = "dto.BookList" name="BookList" id="BookList"/>
 
 <!-- Command객체 공간 -->
 <bean class = "command.CompanyManagerSignUpCommand" name="CompanyManagerSignUpCommand" id="CompanyManagerSignUpCommand"/>
@@ -57,6 +58,7 @@
 <bean class = "dao.RManagerDao" name="RManagerDao" id="RManagerDao"/>
 <bean class = "dao.PublisherDao" name="PublisherDao" id="PublisherDao"/>
 <bean class = "dao.PublisherConstractDao" name="PublisherConstractDao" id="PublisherConstractDao"/>
+<bean class = "dao.BookListDao" name="BookListDao" id="BookListDao"/>
 
 
 <!-- ActionController 공간 -->

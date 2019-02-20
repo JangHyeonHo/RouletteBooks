@@ -13,32 +13,36 @@ public class BookContractMoneyCommand implements CommandTestInterface {
 		return bookName;
 	}
 
-	public void setBookName(String bookName) {
+	public BookContractMoneyCommand setBookName(String bookName) {
 		this.bookName = bookName;
+		return this;
 	}
 	
 	public int getBookNum() {
 		return bookNum;
 	}
 
-	public void setBookNum(int bookNum) {
+	public BookContractMoneyCommand setBookNum(int bookNum) {
 		this.bookNum = bookNum;
+		return this;
 	}
 
 	public int getBookMoney() {
 		return bookMoney;
 	}
 
-	public void setBookMoney(int bookMoney) {
+	public BookContractMoneyCommand setBookMoney(int bookMoney) {
 		this.bookMoney = bookMoney;
+		return this;
 	}
 
 	public int getBookContractMoney() {
 		return bookContractMoney;
 	}
 
-	public void setBookContractMoney(int bookContractMoney) {
+	public BookContractMoneyCommand setBookContractMoney(int bookContractMoney) {
 		this.bookContractMoney = bookContractMoney;
+		return this;
 	}
 
 	@Override

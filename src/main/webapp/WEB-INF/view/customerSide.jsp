@@ -7,8 +7,7 @@
 					퀵 메뉴
 				</div>
 				<ul>
-					<li><a href="#">주문 정보</a></li>
-					<li><a href="#">배송 정보</a></li>
+					<li><a href="../mypage/ordersearch">주문 및 배송 정보</a></li>
 					<li><a href="#">중고구매/판매문의(FAQ)</a></li>
 					<li><a href="../mypage/myinfoconfirm">개인정보수정</a></li>
 					<li><a href="#">이벤트 당첨자 확인</a></li>
