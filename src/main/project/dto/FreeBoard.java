@@ -2,7 +2,9 @@ package dto;
 
 import java.util.Date;
 
+import command.FreeBoardDeleteCommand;
 import command.FreeBoardDetailCommand;
+import command.FreeBoardUpdateCommand;
 import command.FreeBoardWriteCommand;
 import command.TBoardWriteCommand;
 
@@ -13,8 +15,21 @@ public class FreeBoard implements DTOTestInterface {
     private String fContent; // 게시판 글내용
     private int fHit; // 게시판 조회수
     private Date fDate ; // 등록일자
-
+    private String mnickname; // 조인 시킨 닉니엠
+    
 	
+	public String getMnickname() {
+		return mnickname;
+	}
+
+	public FreeBoard setMnickname(String mnickname) {
+		this.mnickname = mnickname;
+		return this;
+	}
+
+
+
+
 	public int getfNo() {
 		return fNo;
 	}
@@ -132,6 +147,23 @@ public class FreeBoard implements DTOTestInterface {
 		fSubject = command.getSubject();
 		fContent = command.getContent();
 		return this;
+	}
+
+
+
+
+	public FreeBoard commandUpdate(FreeBoardUpdateCommand command) {
+		fNo = command.getFno();
+		fSubject = command.getSubject();
+		fContent = command.getContent();
+		return this;
+		
+	}
+	
+	public FreeBoard commandDelete(FreeBoardDeleteCommand command) {
+		fNo = command.getFno();
+		return this;
+		
 	}
 	
 

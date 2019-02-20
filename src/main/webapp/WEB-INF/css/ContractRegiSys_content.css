@@ -1,73 +1,123 @@
 #contents {
-    width: 1080px;
-    margin: 0 auto;
-}
-#formWriting{
-    width: 500px;
-    position: absolute;
-    top : 20px;
-    left: 50vw;
-    background-color: white;
-    transform: translateX(-50%);
-    border: 6px rgb(65, 65, 65) solid;
-    margin-bottom: 20px;
-}
-#title{
-    text-align: center;
-    padding : 20px 0;
-    border-bottom: 6px double #bbb;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-.textBox{
-    margin: 10px 0;
-    font-family : 'Do Hyeon', sans-serif;
-    padding : 0px 10px;
-    font-size : 20px;
-}
-.valueBox{
-    font-family: 'Noto Sans KR', sans-serif;
-    margin : 0 10px;
-}
-.daysformBox{
-    margin: 0 10px;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-.daysformBox > select{
-    height: 25px;
-}
-#tableBox{
-    margin: 0 10px;
+	width: 1080px;
+	margin: 0 auto;
 }
 
-th{
-    width:100px;
+#formWriting {
+	width: 500px;
+	position: relative;
+	left: 50%;
+	background-color: white;
+	transform: translateX(-50%);
+	border: 6px rgb(65, 65, 65) solid;
+	margin: 20px 0;
 }
-td{
-    text-align: center;
-    font-size: 14px;
+
+#title {
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 6px double #bbb;
+	font-family: 'Noto Sans KR', sans-serif;
 }
-#bookSign{
-    float: right;
-    margin : 10px 10px 0 0;
-    height: 30px;
-    width: 170px;
+
+.textBox {
+	margin: 10px 0;
+	font-family: 'Do Hyeon', sans-serif;
+	padding: 0px 10px;
+	font-size: 20px;
 }
-.alertBox{
-    color:red;
-    margin : 5px 0 0 10px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size:12px;
+
+.valueBox {
+	font-family: 'Noto Sans KR', sans-serif;
+	margin: 0 10px;
 }
-input[type=number]{
-    margin: 0 10px;
-    height: 25px;
-    padding : 0 10px;
-    width : 100px;
+
+.daysformBox {
+	margin: 0 10px;
+	font-family: 'Noto Sans KR', sans-serif;
 }
-#btnBox{
-    margin : 20px 10px;
+
+.daysformBox>select {
+	height: 25px;
 }
-#btnBox > input{
-    width : 120px;
-    height : 30px;
+
+#tableBox {
+	margin: 0 10px;
+}
+
+th {
+	width: 100px;
+}
+
+td {
+	text-align: center;
+	font-size: 14px;
+}
+
+#bookSign {
+	float: right;
+	margin: 10px 10px 0 0;
+	height: 30px;
+	width: 170px;
+}
+
+.alertBox {
+	color: red;
+	margin: 5px 0 0 10px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 12px;
+}
+
+input[type=number] {
+	margin: 0 10px;
+	height: 25px;
+	padding: 0 10px;
+	width: 100px;
+}
+
+.btnBox {
+	margin: 20px 10px;
+}
+
+.btnBox>input {
+	width: 120px;
+	height: 30px;
+}
+
+#bookHideBox {
+	position: absolute;
+	width: 400px;
+	height: 300px;
+	top: 170px;
+	left: 70px;
+	background-color: white;
+	border: 10px solid gray;
+}
+
+#bookHideBox>div {
+	margin-left: 70px;
+}
+
+h3 {
+	margin: 30px 0;
+	text-align: center;
+}
+
+.popUpBox>input {
+	width: 170px;
+	height: 30px;
+}
+
+.popUpBox {
+	margin: 10px 0;
+}
+
+.popUpBox>input[type=number] {
+	width: 150px;
+	margin-left: 0px;
+}
+
+.popUpBox>span {
+	width: 90px;
+	display: inline-block;
 }

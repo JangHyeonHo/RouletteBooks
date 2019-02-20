@@ -1,6 +1,7 @@
 package command;
 
 public class CusServiceCommand {
+	
 
 	private String emailid;		//이메일id
 	private String emailpath;	//이메일 사이트
@@ -10,7 +11,16 @@ public class CusServiceCommand {
 	private String phoneNum;	//문의글 폰번호설정(답변알림)
 	private String mailAgree;	//이메일 이용동의
 	private String inquirywriter_mno; //회원 등록번호 
+	private String situation;	//답변 상황
 	
+	
+
+	public String getSituation() {
+		return situation;
+	}
+	public void setSituation(String situation) {
+		this.situation = situation;
+	}
 	public String getEmailid() {
 		return emailid;
 	}

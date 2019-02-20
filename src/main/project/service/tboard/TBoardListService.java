@@ -3,16 +3,16 @@ package service.tboard;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 
+import command.TBoardListCommand;
 import dao.TBoardDao;
 import dto.TBoard;
+import other.AutoPaging;
 
 public class TBoardListService {
 
 	
 	private TBoardDao tboarddao;
-	List<TBoard> tboards;
 	
 	
 	@Autowired
@@ -23,10 +23,10 @@ public class TBoardListService {
 
 
 
-	public List<TBoard> tboardList() {
+	public List<TBoardListCommand> tboardList(AutoPaging page) {
 		
 		
-		tboards = tboarddao.tboardlist();
+		List<TBoardListCommand> tboards = tboarddao.tboardlist(page);
 		
 		
 		return tboards;

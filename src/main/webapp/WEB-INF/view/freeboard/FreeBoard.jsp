@@ -60,7 +60,9 @@
 		<div class="listheader">
 			<div class="titlename">자유게시판</div>
 			<div class="empty"></div>
-			<div class="totalcount">총 162,121개</div>
+				
+			<div class="totalcount">총 ${Freeboardlist.size()}개</div>
+		
 			<form action="123" method="GET">
 				<div class="selecttype">
 					<select class="selectform"><option value="title">제목</option>
@@ -93,7 +95,7 @@
 					<ul class="listtitle">
 						<li class="listno"><a href="freeboard/detail?fno=${member.fNo }">${member.fNo }</a></li>
 						<li class="listsubject"><a href="freeboard/detail?fno=${member.fNo }">${member.fSubject }</a></li>
-						<li class="listwrite">권도완</li>
+						<li class="listwrite">${member.mnickname }</li>
 						<li class="listcount">${member.fHit }</li>
 						<li class=listdate>${member.fDate }</li>
 					</ul>

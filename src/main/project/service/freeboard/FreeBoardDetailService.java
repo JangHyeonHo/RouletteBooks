@@ -11,7 +11,7 @@ public class FreeBoardDetailService {
 
 	private FreeBoardDao freeboardDao;
 	List<FreeBoard> freeboarddto;
-
+	
 	@Autowired
 	public FreeBoardDetailService(FreeBoardDao freeboardDao) {
 		this.freeboardDao = freeboardDao;
@@ -19,8 +19,15 @@ public class FreeBoardDetailService {
 	
 	public List<FreeBoard> Detaillist(int fno) {
 		freeboarddto = freeboardDao.detaillist(fno);
-		
-		return freeboarddto;
-		
+		if(!freeboarddto.isEmpty()) {
+			freeboardDao.detailcount(fno);
+			  
+		}
+		return freeboarddto;	
 	}
+
+	
+	
+	
+	
 }

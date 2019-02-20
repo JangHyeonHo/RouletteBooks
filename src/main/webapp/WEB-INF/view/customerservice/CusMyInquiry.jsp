@@ -55,7 +55,6 @@ alert("로그인이 필요합니다.")
 location.href="../member/login"
 </script>
 </c:if>
-
 </head>
 <body>
 <!-- Header 시작 -->
@@ -74,7 +73,7 @@ location.href="../member/login"
         <div id="mainTitle">
             내 문의내역
         </div>
-        <c:if test="${empty list }">
+        <c:if test="${!empty List }">
         <table id="inquiryTable">
             <colgroup>
                 <col width="12%">
@@ -98,14 +97,27 @@ location.href="../member/login"
                 <tr>
                     <td>${list.csNo }</td>
                     <td>${list.csKind }</td>
-                    <td id="Subj"><a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a><span class = "answer">${list.csSituation }</span></td>
+                    <td class="Subj">
+                    <a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a>
+                    <span class = "answer">[${list.csSituation }]</span></td>
                     <td>${list.csRegDate }</td>
-                    <td><button><img src="../img/문의삭제로고.PNG"></button></td>
+                    <td><button class = "deleteBtn" value = "${list.csNo }"><img src="../img/문의삭제로고.PNG"></button></td>
                 </tr>
             </c:forEach>
+
             </tbody>
-            
         </table>
+<script> 
+$(function(){
+	$('.deleteBtn').click(function(){
+		if(confirm("삭제 후 복구할 수 없습니다.정말로 삭제하시겠습니까?")){
+			self.location.href = "./delete?csNo="+ $(this).val() ;
+		}
+	});
+});
+        
+        
+</script>
         <div id = "pasingNum">
         	<span class = "pagebtn">이전</span>
         	<em>1</em>

@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +44,11 @@
 		((days.getMonth() + 1) < 10 ? "0"+(days.getMonth() + 1) : (days.getMonth() + 1)) + "-" + 
 		(days.getDate() < 10 ? "0" + days.getDate() : days.getDate());
 		$("#regi_days").html("<input type = 'hidden' value = '" + YYMMSS + "' id = 'regi_day'>" + YYMMSS);
+		
+		$("#contract").on("click",function(){
+			var name = $('[name="change"]:checked').val()
+			location.href=("./contract?pubNo=" + name);
+		});
 	})
 
 	</script>
@@ -69,34 +74,22 @@
 						<th class="ninetyfive">출판사 계약상태</th>
 						<th class="check">변경사항</th>
 					</tr>
+					<c:forEach items="${PublisherList }" var="publisher">
 					<tr>
-						<th>(주)아름출판사</th>
-						<th>02-3939-3939</th>
-						<th>384029</th>
-						<th>유승재</th>
-						<th>2011-09-23</th>
-						<th>2014-06-23</th>
-						<th>2017-09-23</th>
-						<th>12,400,000￦</th>
-						<th>800,000￦</th>
-						<th>32권</th>
-						<th>계약 중</th>
-						<th><input type = "radio" name = "change"></th>
+						<th>${publisher.pubName }</th>
+						<th>${publisher.pubPhone }</th>
+						<th>${publisher.pubNo }</th>
+						<th>${publisher.pubCeo }</th>
+						<th>${publisher.pubCreDate }</th>
+						<th>${publisher.cbContractDate }</th>
+						<th>${publisher.cbExpiredDate }</th>
+						<th>${publisher.cbMoney }￦</th>
+						<th>${publisher.cbRoyalty }￦</th>
+						<th>${publisher.allBook }권</th>
+						<th>${publisher.cbStatus }</th>
+						<th><input type = "radio" name = "change" value = "${publisher.pubNo }"></th>
 					</tr>
-					<tr>
-						<th>(주)한경출판사</th>
-						<th>02-3939-3939</th>
-						<th>394024</th>
-						<th>이원학</th>
-						<th>2016-09-23</th>
-						<th>2016-06-23</th>
-						<th>2016-09-23</th>
-						<th>1,400,000￦</th>
-						<th>0￦</th>
-						<th>2권</th>
-						<th>계약 종료</th>
-						<th><input type = "radio" name = "change"></th>
-					</tr>
+					</c:forEach>
 					<tr>
 						<!-- 페이징 -->
 						<td colspan="12">1 2 3 4 5 6 7 8</td>
@@ -104,7 +97,7 @@
 				</table>
 				<div id = "btnBox">
 					<button>선택한 출판사 상세정보보기</button>
-					<button>선택한 출판사와 계약하기</button>
+					<button type = "button" id = "contract">선택한 출판사와 계약하기</button>
 					<button>선택한 출판사 삭제하기</button>
 					<button type = "button" onClick="location.href='regist'">새로운 출판사 등록하기</button>
 					<button type = "button" onClick="location.href='regist'">현재 계약 내역 확인하기</button>

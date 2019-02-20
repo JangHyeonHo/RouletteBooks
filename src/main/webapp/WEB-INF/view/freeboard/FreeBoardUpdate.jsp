@@ -63,16 +63,17 @@
 		<div id="contents">
 	<input type="hidden" name="mNo" 
 					 value="${loginInfo.mNo }">
+	<input type="hidden" name="fno" 
+					 value="${freeboard.fNo }">
 			<div id="board_title">
 				<strong>글쓰기</strong>
 			</div>
 			
 			<div id="board_subject">
-				<c:forEach items="${Freeboarupdate }" var="update">
-				<strong>제목</strong><input type="text" name="subject" value="${Freeboarupdate.fSubject }"/>
+				<strong>제목</strong><input type="text" name="subject" value="${freeboard.fSubject }"/>
 			</div>
 			<div id="board_write">
-				<textarea name="content" id="editor">${Freeboarupdate.fContent }</textarea>
+				<textarea name="content" id="editor">${freeboard.fContent }</textarea>
 				<script>
 				
 				 ClassicEditor
@@ -82,11 +83,11 @@
 			        } );
 				
 					</script>
-				</c:forEach>
+				
 			</div>
 	
 			<div id="board_end">
-				<button type="button" onclick="location.href='../freeboardlist'">완료</button>
+				<input type="submit" value="완료">
 				<button type="button" onclick="location.href='../freeboardlist'">취소</button>
 			</div>
 

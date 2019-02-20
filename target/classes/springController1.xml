@@ -6,7 +6,7 @@
 
 <!-- 장현호 공간 -->
 
-<bean class = "controller.company.CompanySiginUpOpenController" />
+<bean class = "controller.company.CompanySignUpOpenController" />
 <!-- /company/signup -->
 <bean class = "controller.company.CompanyLoginOpenController" />
 <!-- /company/login -->
@@ -37,6 +37,8 @@
 <!-- DTO공간 -->
 <bean class = "dto.RMember" name="RMember" id="RMember"/>
 <bean class = "dto.RManager" name="RManager" id="RManager"/>
+<bean class = "dto.Publisher" name="Publisher" id="Publisher"/>
+<bean class = "dto.BookList" name="BookList" id="BookList"/>
 
 <!-- Command객체 공간 -->
 <bean class = "command.CompanyManagerSignUpCommand" name="CompanyManagerSignUpCommand" id="CompanyManagerSignUpCommand"/>
@@ -46,11 +48,18 @@
 <bean class = "command.LoginSessionInfomationCommand" name="LoginSessionInfomationCommand" id="LoginSessionInfomationCommand"/>
 <bean class = "command.ManagerSessionInfomationCommand" name="ManagerSessionInfomationCommand" id="ManagerSessionInfomationCommand"/>
 <bean class = "command.MemberListPageCommand" name="MemberListPageCommand" id="MemberListPageCommand"/>
-
+<bean class = "command.PublisherContractCommand" name="PublisherContractCommand" id="PublisherContractCommand"/>
+<bean class = "command.PublisherRegistCommand" name="PublisherRegistCommand" id="PublisherRegistCommand"/>
+<bean class = "command.PubListCommand" name="PubListCommand" id="PubListCommand"/>
+<bean class = "command.BookContractMoneyCommand" name="BookContractMoneyCommand" id="BookContractMoneyCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.RMemberDao" name="RMemberDao" id="RMemberDao"/>
 <bean class = "dao.RManagerDao" name="RManagerDao" id="RManagerDao"/>
+<bean class = "dao.PublisherDao" name="PublisherDao" id="PublisherDao"/>
+<bean class = "dao.PublisherConstractDao" name="PublisherConstractDao" id="PublisherConstractDao"/>
+<bean class = "dao.BookListDao" name="BookListDao" id="BookListDao"/>
+
 
 <!-- ActionController 공간 -->
 <bean class = "service.member.MemberSignUpService" name="MemberSignUpService" id="MemberSignUpService"/>
@@ -58,6 +67,8 @@
 <bean class = "service.company.ManagerSignUpService" name="ManagerSignUpService" id="ManagerSignUpService"/>
 <bean class = "service.company.ManagerLoginService" name="ManagerLoginService" id="ManagerLoginService"/>
 <bean class = "service.company.MemberListService" name="MemberListService" id="MemberListService"/>
-
+<bean class = "service.company.PublisherRegisterService" name="PublisherRegisterService" id="PublisherRegisterService"/>
+<bean class = "service.company.PublisherListService" name="PublisherListService" id="PublisherListService"/>
+<bean class = "service.company.PublisherContractDetailService" name="PublisherContractDetailService" id="PublisherContractDetailService"/>
 
 </beans>

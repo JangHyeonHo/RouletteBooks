@@ -6,15 +6,19 @@ import command.SignUpCommand;
 import command.TBoardWriteCommand;
 
 public class TBoard {
+
+	
+	
 	private String tUploader;
 	private int tNum;
 	private String tKind;
 	private String tSubject;
 	private String tContent;
 	private String tMethod;
-	private String tSituation;
+	private String[] tSituation = {"대기중","거래중","거래완료"};;
 	private Date tRegDate;
 	private String tBookName;
+	private String tBookPublisher;
 	private String tBookOriImgName;
 	private String tBookStoreImgName;
 	private int tPrice;
@@ -28,6 +32,18 @@ public class TBoard {
 	private String tBuyerAddr;
 	
 	
+	
+
+	public String gettBookPublisher() {
+		return tBookPublisher;
+	}
+
+
+
+
+	public void settBookPublisher(String tBookPublisher) {
+		this.tBookPublisher = tBookPublisher;
+	}
 	
 	
 	
@@ -118,14 +134,14 @@ public class TBoard {
 
 
 
-	public String gettSituation() {
+	public String[] gettSituation() {
 		return tSituation;
 	}
 
 
 
 
-	public void settSituation(String tSituation) {
+	public void settSituation(String[] tSituation) {
 		this.tSituation = tSituation;
 	}
 
@@ -333,18 +349,18 @@ public class TBoard {
 	
 	
 	public TBoard commandChange(TBoardWriteCommand command) {
-		tUploader = command.getTrade_board_nick_name();
+		tUploader = command.getTrade_board_Mno();
 		tKind = command.getTrade_board_horsehead();
 		tSubject = command.getTrade_board_subject();
 		tContent = command.getTextarea();
 		tMethod = command.getTrade_method();
 		tBookName = command.getTrade_book_name();
+		tBookPublisher = command.getTrade_book_publisher();
 		tPrice = command.getTrade_book_price();
 		tBookStatus = command.getTrade_book_status();
 		tBookGenre = command.getTrade_genre();
 		
 
-		  
 		  return this;
 		
 	}

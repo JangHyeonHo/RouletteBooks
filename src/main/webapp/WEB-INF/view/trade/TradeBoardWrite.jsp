@@ -64,9 +64,9 @@ location.href="../main"
 
 			<div id="trade_board_header">
 				<div id="trade_board_title">
-					<input type="hidden" name="trade_board_nick_name" 
+					<input type="hidden" name="trade_board_Mno" 
 					 value="${loginInfo.mNo }">
-					 <div id="trade_nick_name" class="trade_board_class" style="width: 200px; height: 25px;">작성자 : <span style="color:darkred"> ${loginInfo.mNickname }</span></div>
+					 <div id="trade_nick_name" class="trade_board_class" style="width: 200px; height: 25px;">작성자 : <span style="color:darkred" name="trade_board_nick_name"> ${loginInfo.mNickname }</span></div>
 				
 					<select id="trade_subject_head" name="trade_board_horsehead" class="trade_board_class" style="width:100px; height:30px;">
 						<option>말머리선택</option>
