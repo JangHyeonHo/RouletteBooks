@@ -28,8 +28,16 @@ public class TBoardListService {
 		
 		List<TBoardListCommand> tboards = tboarddao.tboardlist(page);
 		
-		
 		return tboards;
+	}
+	
+	public Integer listcount() {
+		Integer i = null;
+		
+		i = tboarddao.tboardlistcount();
+		
+		return i;
+		
 	}
 
 }

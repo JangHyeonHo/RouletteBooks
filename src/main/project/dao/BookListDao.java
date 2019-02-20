@@ -23,9 +23,9 @@ public class BookListDao {
 	public void insertReserved(List<BookContractMoneyCommand> reservedList, PublisherContractCommand command) {
 		// TODO Auto-generated method stub
 		sql = "insert into bookList(bnum, bcontract_num, bpublisher_num, bname, bpublisher_price, bprice) "
-				+ "values(bk_num, ?, ? ,?, ?, ?)";
+				+ "values(bk_num.nextval, ?, ? ,?, ?, ?)";
 		for(BookContractMoneyCommand book : reservedList) {
-			jdbcTemplate.update(sql, command.getConNum(), command.getConsName(),book.getBookName(), book.getBookContractMoney(), book.getBookMoney());
+			jdbcTemplate.update(sql, command.getConsNum(), command.getConsName(),book.getBookName(), book.getBookContractMoney(), book.getBookMoney());
 		}
 		
 	}

@@ -24,12 +24,12 @@ public class PublisherContractCommand implements CommandTestInterface{
 	private int royalty;
 	
 	
-	public int getConNum() {
+	public int getConsNum() {
 		return consNum;
 	}
 
 
-	public PublisherContractCommand setConNum(int conNum) {
+	public PublisherContractCommand setConsNum(int conNum) {
 		this.consNum = conNum;
 		return this;
 	}
