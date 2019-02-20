@@ -51,6 +51,8 @@ public class TBoardDao {
 	
 	
 	public List<TBoardListCommand> tboardlist(AutoPaging page) {
+		
+		
 		sql ="select TNUM,TKIND,TBOOK_STATUS,TSUBJECT,TCONTENT,TPRICE,TBOOK_STATUS,TREG_DATE,TBOOK_STORE_IMG_NAME,TSITUATION,r.MNICKNAME from tboard t, rmember r WHERE t.TUPLOADER = r.MNO order by TNUM DESC";
 		 list = jdbcTemplate.query(sql,new TboardRowMapper());
 		
