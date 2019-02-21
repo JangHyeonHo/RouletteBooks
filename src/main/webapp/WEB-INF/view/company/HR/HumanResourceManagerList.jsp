@@ -61,10 +61,11 @@
 					<th class="hundthirty">사원 급여</th>
 					<th class="hundthirty">비고</th>
 				</tr>
+				<c:forEach items="${rlist }" var="li">
 				<tr>
-					<td>38485094</td>
+					<td>${li.rmno }</td>
 					<td><img src="img/logo.png" width="125px" height="150px"></td>
-					<td>장현호</td>
+					<td>${li.rmname }</td>
 					<td>
 						사장<br>
 						<select name="position">
@@ -91,6 +92,7 @@
 					<td>5,430,000 ￦</td>
 					<td>무</td>
 				</tr>
+				</c:forEach>
 				<tr>
 					<!-- 페이징 -->
 					<td colspan="8">1 2 3 4 5 6 7 8</td>
