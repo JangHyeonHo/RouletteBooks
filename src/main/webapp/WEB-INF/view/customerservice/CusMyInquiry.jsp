@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="java.util.*, dto.*" %>
+<%@ page import="java.util.*, dto.*"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,8 @@
 <title>내 문의내역</title>
 
 <!-- 기본 설정  => 여기서부터 -->
-<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 minimum-scale = 1.0">
 <!-- font 설정 -->
 <link href="https://fonts.googleapis.com/css?family=Do+Hyeon"
 	rel="stylesheet">
@@ -39,75 +40,76 @@
 <link href="../css/footer.css" rel="stylesheet" type="text/css">
 
 <!-- js 설정(기본값) -->
-<script src = "../js/header.js"></script>
+<script src="../js/header.js"></script>
 
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
-<link href="../css/CusMyInquiry_content.css" rel="stylesheet" type="text/css">
+<link href="../css/CusMyInquiry_content.css" rel="stylesheet"
+	type="text/css">
 <link href="../css/customerSide.css" rel="stylesheet" type="text/css">
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
 <c:if test="${empty loginInfo }">
-<script>
+	<script>
 alert("로그인이 필요합니다.")
 location.href="../member/login"
 </script>
 </c:if>
 </head>
 <body>
-<!-- Header 시작 -->
-<jsp:include page="../Header.jsp" />
-<!-- Header 끝 -->
-<!-- Content 시작(내용 첨가) -->
-    <!-- Contents -->
-    <div id="contents">
-     		<!-- 고객센터 사이드 시작 -->
-     <jsp:include page="../customerSide.jsp" />
-			<!-- 고객센터 사이드 끝 -->
+	<!-- Header 시작 -->
+	<jsp:include page="../Header.jsp" />
+	<!-- Header 끝 -->
+	<!-- Content 시작(내용 첨가) -->
+	<!-- Contents -->
+	<div id="contents">
+		<!-- 고객센터 사이드 시작 -->
+		<jsp:include page="../customerSide.jsp" />
+		<!-- 고객센터 사이드 끝 -->
 
 
-        <!-- 메인 상단 -->
+		<!-- 메인 상단 -->
 
-        <div id="mainTitle">
-            내 문의내역
-        </div>
-        <c:if test="${!empty List }">
-        <table id="inquiryTable">
-            <colgroup>
-                <col width="12%">
-                <col width="18%">
-                <col width="45%">
-                <col width="20%">
-                <col width="5%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col">접수번호</th>
-                    <th scope="col">분류</th>
-                    <th scope="col">제목</th>
-                    <th scope="col">날짜</th>
-                    <th scope="col"><span id="del"></span></th>
-                </tr>
-            </thead>
-            <tbody>
-        	<c:forEach items="${List }" var="list">
-        	       	
-                <tr>
-                    <td>${list.csNo }</td>
-                    <td>${list.csKind }</td>
-                    <td class="Subj">
-                    <a href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a>
-                    <span class = "answer">[${list.csSituation }]</span></td>
-                    <td>${list.csRegDate }</td>
-                    <td><button class = "deleteBtn" value = "${list.csNo }"><img src="../img/문의삭제로고.PNG"></button></td>
-                </tr>
-            </c:forEach>
+		<div id="mainTitle">내 문의내역</div>
+		<c:if test="${!empty List }">
+			<table id="inquiryTable">
+				<colgroup>
+					<col width="12%">
+					<col width="18%">
+					<col width="45%">
+					<col width="20%">
+					<col width="5%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">접수번호</th>
+						<th scope="col">분류</th>
+						<th scope="col">제목</th>
+						<th scope="col">날짜</th>
+						<th scope="col"><span id="del"></span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${List }" var="list">
 
-            </tbody>
-        </table>
-<script> 
+						<tr>
+							<td>${list.csNo }</td>
+							<td>${list.csKind }</td>
+							<td class="Subj"><a
+								href="<c:url value="/customerservice/detail=${list.csNo }"/>">${list.csSubject }</a>
+								<span class="answer">[${list.csSituation }]</span></td>
+							<td>${list.csRegDate }</td>
+							<td><button class="deleteBtn" value="${list.csNo }">
+									<img src="../img/문의삭제로고.PNG">
+								</button></td>
+						</tr>
+					</c:forEach>
+
+				</tbody>
+			</table>
+			<script> 
 $(function(){
 	$('.deleteBtn').click(function(){
 		if(confirm("삭제 후 복구할 수 없습니다.정말로 삭제하시겠습니까?")){
@@ -118,16 +120,23 @@ $(function(){
         
 
 </script>
-        <div id = "pasingNum">
-		<c:forEach begin="${ap.startPage }" end="${ap.endPage }" step="1" var="i">
-         <div class="Paging"><a href="?page=${i }">${i }</a></div>
-               </c:forEach>
-        </div> 
-        </c:if>
-    </div>
-<!-- Content 끝 -->
-<!-- Footer 시작 -->
-<jsp:include page="../Footer.jsp" />
-<!-- Footer 끝 -->
+			<div id="pagingNum">
+				<c:if test="${ap.prev}">
+					<a href="?page=${ap.startPage-1 }">이전</a>
+				</c:if>
+				<c:forEach begin="${ap.startPage }" end="${ap.endPage }" step="1"
+					var="i">
+					<a href="?page=${i }">${i }</a>
+				</c:forEach>
+				<c:if test="${ap.next}">
+					<a href="?page=${ap.endPage+1 }">다음</a>
+				</c:if>
+			</div>
+		</c:if>
+	</div>
+	<!-- Content 끝 -->
+	<!-- Footer 시작 -->
+	<jsp:include page="../Footer.jsp" />
+	<!-- Footer 끝 -->
 </body>
 </html>

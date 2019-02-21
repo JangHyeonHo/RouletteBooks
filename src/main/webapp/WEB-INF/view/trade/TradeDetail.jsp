@@ -50,6 +50,27 @@ console.log("${detail.tNickName}");
 <!-- contents js설정(직접 만든 js를 여기에 올려주세요)  주석 치우고 js/이름만 바꾸면 됨.js  -->
 <!-- <script src = "js/sample.js"></script> -->
 
+<script>
+	$(function(){
+		$("#buy").on("click",function(){
+			if(confirm("구매를 하시겠습니까?")){
+				alert("거래 페이지로 넘어갑니다.")
+				location.href='trader?tnum=${detail.tNum }';
+			} else{
+				event.preventDefault();
+			}
+		})
+		$("#sell").on("click",function(){
+			if(confirm("구매자가 요청한 책을 가지고 있고 그 책을 정말로 파시겠습니까?")){
+				alert("거래 페이지로 넘어갑니다.")
+				location.href='trader?tnum=${detail.tNum }';
+			} else{
+				event.preventDefault();
+			}
+		})
+	})
+</script>
+
 </head>
 <body>
 	<!-- Header 시작 -->
@@ -148,13 +169,18 @@ console.log("${detail.tNickName}");
 			<div class="detailwrite">${detail.tContent }</div>
 		</div>
 		<div class="last_box">
-			<button><a href=trading?tnum=${detail.tNum }>구매하기</a></button>
+			<c:if test="${detail.tKind eq '삽니다' }">
+			<button type = "button" id = "sell">판매하기</button>
+			</c:if>
+			<c:if test="${detail.tKind eq '팝니다' }">
+			<button type = "button" id = "buy">구매하기</button>
+			</c:if>
 			<c:set var="dnick" value="${detail.tNickName}"/>
 			<c:if test="${dnick eq loginInfo.mNickname}">
-			<button><a href=modify?tnum=${detail.tNum }>글수정</a></button>
-			<button><a href=delete?tnum=${detail.tNum }>글삭제</a></button>
+			<button type = "button" onclick="location.href='modify?tnum=${detail.tNum }'">글수정</button>
+			<button type = "button" onclick="location.href='delete?tnum=${detail.tNum }'" >글삭제</button>
 			</c:if>
-			<button><a href=../tradelist>목록으로</a></button>
+			<button type = "button" onclick="location.href='../tradelist'">목록으로</button>
 		</div>
 
 	</div>
