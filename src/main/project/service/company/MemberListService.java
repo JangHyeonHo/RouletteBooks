@@ -22,4 +22,9 @@ public class MemberListService {
 		
 		return list;
 	}
+
+	public int listSize(MemberListPageCommand command) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

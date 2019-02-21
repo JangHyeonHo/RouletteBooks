@@ -36,7 +36,7 @@ public class CompanyHRMemListOpenController implements FrontControllerInterface 
 		command.CommandTest();
 		AutoPaging page = new AutoPaging(command.getPage(),20,10);
 		List<RMember> list = service.action(command, page);
-		page.setListCount(list.size());
+		page.setListCount(service.listSize(command));
 		page.PagingTest();
 		model.addAttribute("page",page);
 		model.addAttribute("memberList",list);
