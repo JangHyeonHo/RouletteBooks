@@ -15,6 +15,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 
+import command.IdSearchCommand;
 import command.LoginCommand;
 import command.LoginSessionInfomationCommand;
 import command.MemberListPageCommand;
@@ -197,5 +198,25 @@ public class RMemberDao {
 		
 		
 	}
+
+	public String Idsearch(final IdSearchCommand command) {
+		sql = "select mEmail from rmember where mphone=?";
+		String search = jdbcTemplate.query(sql, new ResultSetExtractor<String>(){
+		
+			@Override
+			public String extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				//있다 없다
+			if(rs.next()) {
+				return rs.getString("mEmail");
+			}
+			System.out.println("다르냐?");
+			return null; //다르면
+		}
+			
+		},command.getPhonenumber1()+command.getPhonenumber2()+command.getPhonenumber3());
+		return search;
+		
 	
+	}
 }

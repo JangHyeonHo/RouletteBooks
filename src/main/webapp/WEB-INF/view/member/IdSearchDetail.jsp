@@ -3,7 +3,7 @@
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
 <%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +59,7 @@
 				<h3>회원님의 본인인증 정보로<br> 검색 된 아이디는 <span>총 1개</span> 입니다.</h3>
 			</div>
 			<div id="info_box">
-				<div class="id_box">?</div>
+				<div class="id_box"></div>
 				<div class="date_box">가입일 ?</div>
 			</div>
 			<div class="final_box">
