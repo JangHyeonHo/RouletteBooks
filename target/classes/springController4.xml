@@ -39,6 +39,7 @@
  <bean class ="command.FreeBoardListPageCommand" name="FreeBoardListPageCommand" id="FreeBoardListPageCommand"/>
  <bean class ="command.FreeBoardUpdateCommand" name="FreeBoardUpdateCommand" id="FreeBoardUpdateCommand"/>
  <bean class ="command.FreeBoardDeleteCommand" name="FreeBoardDeleteCommand" id="FreeBoardDeleteCommand"/>
+<bean class ="command.IdSearchCommand" name="IdSearchCommand" id="IdSearchCommand" />
 
 <!-- DAO공간 -->
 <bean class = "dao.FreeBoardDao" name="FreeBoardDao" id="FreeBoardDao"/>
@@ -48,8 +49,8 @@
 <bean class = "service.freeboard.FreeBoardListService" name="FreeBoardListService" id="FreeBoardListService"/>
 <bean class = "service.freeboard.FreeBoardDetailService" name="FreeBoardDetailService" id="FreeBoardDetailService"/>
 <bean class = "service.freeboard.FreeBoardUpdateService" name="FreeBoardUpdateService" id="FreeBoardUpdateService"/>
- <bean class ="service.freeboard.FreeBoardDeleteService" name="FreeBoardDeleteService" id="FreeBoardDeleteService"/>
-
+<bean class = "service.freeboard.FreeBoardDeleteService" name="FreeBoardDeleteService" id="FreeBoardDeleteService"/>
+<bean class = "service.member.IdSearchService" name="IdSearchService" id="IdSearchService" />
 
 
 </beans>

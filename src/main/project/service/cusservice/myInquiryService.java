@@ -26,6 +26,10 @@ public class myInquiryService {
 		
 		return list;
 	}
+	public Integer listCount() {
+		
+		return cusServiceDao.listCount();
+	}
 	
 
 	

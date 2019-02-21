@@ -8,7 +8,9 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 import command.CusServiceCommand;
@@ -54,8 +56,9 @@ public class CusServiceDao {
 	//고객센터 메인
 	public List<CusServiceDTO> inquiryList(String mno) {
 		// TODO Auto-generated method stub
-		sql = "select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE, cscontent, csscore, CSANSWERCON, CSANSWER_DATE " 
-				+ " from CUSSERVICE where mno = ? order by CSREG_DATE desc";
+		sql = "select * from (select rownum as rnum, c.* from "
+				+ "(select CSNO, mno, CSKIND, CSSUBJECT, CSSITUATION, CSREG_DATE, cscontent, csscore, CSANSWERCON, CSANSWER_DATE "
+				+ "from CUSSERVICE where mno = ? order by CSREG_DATE desc) c where rownum <= 4) where rnum >= 1";
 		list = jdbcTemplate.query(sql, new inquiryRowMapper(), mno);
 		
 		return list;
@@ -82,8 +85,24 @@ public class CusServiceDao {
 		
 	}
 
+	public Integer listCount() {
+		// TODO Auto-generated method stub
+		Integer i = null;
+		sql ="select count(*) as cnt from cusservice";
+		
+		i = jdbcTemplate.query(sql,new ResultSetExtractor<Integer>() {
 
-
+			@Override
+			public Integer extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				rs.next();
+				
+				return rs.getInt("cnt");
+			}
+			
+		});
+		return i ;
+	}
 
 
 	
