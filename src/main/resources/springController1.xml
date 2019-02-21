@@ -33,6 +33,9 @@
 <bean class = "controller.member.RbLogoutController" />
 <!-- /member/logout -->
 
+<bean class = "controller.trade.TradeTraderController" />
+<!-- /trade/buyer -->
+
 
 <!-- DTO공간 -->
 <bean class = "dto.RMember" name="RMember" id="RMember"/>
@@ -70,5 +73,6 @@
 <bean class = "service.company.PublisherRegisterService" name="PublisherRegisterService" id="PublisherRegisterService"/>
 <bean class = "service.company.PublisherListService" name="PublisherListService" id="PublisherListService"/>
 <bean class = "service.company.PublisherContractDetailService" name="PublisherContractDetailService" id="PublisherContractDetailService"/>
+<bean class = "service.tboard.TradingOpenProcessService" name="TradingOpenProcessService" id="TradingOpenProcessService"/>
 
 </beans>

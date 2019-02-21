@@ -185,6 +185,13 @@ public class TBoardDao {
 			}
  }
 
+
+public Integer updateRequester(String getmNo) {
+	// TODO Auto-generated method stub
+	sql = "update into tboard set trequester = ?";
+	return jdbcTemplate.update(sql,getmNo);
+}
+
 }
 
 
