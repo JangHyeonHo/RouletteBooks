@@ -37,4 +37,8 @@
 <bean class = "service.tboard.TBoardDetailService" name="TBoardDetailService" id="TBoardDetailService"/>
 <bean class = "service.tboard.TBoardModifyService" name="TBoardModifyService" id="TBoardModifyService"/>
 <bean class = "service.tboard.TBoardDeleteService" name="TBoardDeleteService" id="TBoardDeleteService"/>
+<bean class = "service.company.BookListService" name="BookListService" id="BookListService"/>
+
+
+
 </beans>

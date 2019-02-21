@@ -25,6 +25,8 @@ public class BookList implements DTOTestInterface {
 			"자연과학/IT","예술/인물","여행/잡지/취미","사회/정치/경제/경영","만화/라이트노벨","기타"};
 	
 	private String bnum;
+	private String bname;
+	private String pname;
 	private int bprice;
 	private Date bPublicationDate;
 	private int bPageNum;
@@ -40,6 +42,24 @@ public class BookList implements DTOTestInterface {
 	private String bPublisherNum;
 	private int bHit;
 	
+	
+	
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+
+	public String getBname() {
+		return bname;
+	}
+
+	public void setBname(String bname) {
+		this.bname = bname;
+	}
+
 	public String getBnum() {
 		return bnum;
 	}
@@ -179,6 +199,7 @@ public class BookList implements DTOTestInterface {
 	public void DTOTEST() {
 		// TODO Auto-generated method stub
 		AutoLinePrint.println("도서 리스트 테이블 DTO","도서 번호 : " + bnum,
+				"도서 이름 : " + bname,
 				"도서 정가 : " + bprice,
 				"도서 발간일 : " + bPublicationDate,
 				"도서 페이지수 : " + bPageNum,
