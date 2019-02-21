@@ -11,6 +11,8 @@ public class AutoPaging {
 	private int maxPage; //최종 페이지
 	private int pageCount; //현재 페이지에서 보이는 처음 숫자와 마지막 숫자 사이의 숫자 개수 (1 2 3 4 5 6 7) => 7개
 	private int listCount; //총 게시글의 갯수7
+	private boolean prev; //이전 페이지의 유무를 확인하는 값
+	private boolean next; //다음 페이지의 유무를 확인하는 값
 	
 	/**생성자 생성시 현재 페이지와 페이지의 개수, 페이지 사이의 개수를 받아오게 함.<br>
 	예시 1~10까지 3페이지에서 불러오게 하고 싶고 개수는 한 페이지당 게시글 20개만 불러오고 싶을 때<br>
@@ -26,6 +28,24 @@ public class AutoPaging {
 		setAutoStartPage();
 	}
 	
+	public boolean isPrev() {
+		return prev;
+	}
+
+	public AutoPaging setPrev(boolean prev) {
+		this.prev = prev;
+		return this;
+	}
+
+	public boolean isNext() {
+		return next;
+	}
+
+	public AutoPaging setNext(boolean next) {
+		this.next = next;
+		return this;
+	}
+
 	public int getPage() {
 		return page;
 	}
@@ -79,7 +99,7 @@ public class AutoPaging {
 	
 	//오토 페이징(StartPage후 자동으로 EndPage까지 해줌)
 	public AutoPaging setAutoStartPage() {
-		startPage = (int)(((double)page/pageCount)-0.05)+1;
+		startPage = (int)(((double)page/pageCount)-0.05)*pageCount+1;
 		return setAutoEndPage();
 	}
 	public AutoPaging setAutoEndPage() {
@@ -98,6 +118,21 @@ public class AutoPaging {
 		if(maxPage < endPage) {
 			endPage = maxPage;
 		}
+		return isNextPrev();
+	}
+	//다음페이지와 이전페이지가 필요한지 유무를 만들어줌
+	private AutoPaging isNextPrev() {
+		if(startPage != 1) {
+			prev = true;
+		} else {
+			prev = false;
+		}
+		if(endPage < maxPage) {
+			next = true;
+		} else {
+			next = false;
+		}
+		
 		return this;
 	}
 
@@ -108,7 +143,9 @@ public class AutoPaging {
 				"현재 페이지에서 표시되는 가장 마지막 페이지 번호 : " + endPage,
 				"최종 페이지 번호 : " + maxPage,
 				"현재 페이지에 사용되고 있는 첫번호에서 마지막 번호까지의 번호 갯수 : " + pageCount,
-				"검색한 모든 게시글의 갯수 : " + listCount);
+				"검색한 모든 게시글의 갯수 : " + listCount,
+				"이전페이지 유무 : " + prev,
+				"다음페이지 유무 : " + next);
 	}
 	
 }
