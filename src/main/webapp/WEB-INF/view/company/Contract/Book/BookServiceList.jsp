@@ -69,14 +69,14 @@
 				<c:forEach items="${list }" var="book" >
 				<tr>
 					<td>${book.bnum }</td>
-				<td><a href="#" title="이곳을 누르면 도서 상세 정보 페이지로 이동합니다.">${book.bname }</a></td>	
+				<td><a href="detail?bnum=${book.bnum }" title="이곳을 누르면 도서 상세정보(수정)페이지로 이동합니다.">${book.bname }</a></td>	
 					<td><img src="img/book1.jpg" width="100px" height="125px"></td>
-					<td>[만화/라이트노벨]</td>
-					<td>978-89-88131-24-4</td>
+					<td>${book.bGenre }</td>
+					<td>${book.bIsbn }</td>
 					<td>${book.pname }</td>
-					<td>2019-02-05</td>
-					<td>423</td>
-					<td>1,000 ￦</td>
+					<td>${book.bPublicationDate }</td>
+					<td>${book.bHit }</td>
+					<td>${book.bRentalPrice }￦</td>
 					<td><a href="#" title="이곳을 누르면 수정 페이지로 이동합니다.">등록[계약 중]</a></td>
 				</tr>
 				</c:forEach>
@@ -87,8 +87,8 @@
 				</tr>
 			</table>
 			<div class="alertBox" style="float: left;">※각 도서 제목을 클릭하시면 해당
-				도서 상세페이지로 이동합니다.</div>
-			<div class="alertBox">※각 도서별 등록상태를 클릭하시면 도서 수정페이지로 이동합니다.</div>
+				도서 상세페이지(수정)로 이동합니다.</div>
+			<div class="alertBox">※각 도서별 등록상태를 클릭하시면 가등록상태에서 등록상태가 됩니다(메인 페이지 대여리스트에 노출).</div>
 			<div id="searchBox">
 				<select name="searchSet" id="search">
 					<option value="email">도서번호로 찾기</option>
