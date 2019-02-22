@@ -29,9 +29,20 @@ public class TradeListController implements  FrontControllerInterface {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String OpenProcessGet(Model model, HttpServletRequest request) {
-		AutoPaging page = new AutoPaging(1, 10, 10 );
+		int num = 1;
+		
+		if(request.getParameter("page")!=null) {
+			System.out.println("널아니니?");
+			num = Integer.parseInt(request.getParameter("page"));
+		}
+		
+
+		AutoPaging page = new AutoPaging(num, 10, 10 );
 		System.out.println("구매/판매 게시판 오픈");
 		List<TBoardListCommand> tboardlist =  tboardlistservice.tboardList(page);
+		page.setListCount(tboardlistservice.listcount());
+		page.PagingTest();
+		model.addAttribute("page",page );
 		model.addAttribute("directory", ContextPathRoute.route(request, "trade/uploadImage/") );
 		model.addAttribute("tboardlist",tboardlist);
 		
@@ -39,9 +50,7 @@ public class TradeListController implements  FrontControllerInterface {
 						+"글내용"+tboardlist.get(0).gettContent()
 						+"가격"+tboardlist.get(0).gettPrice()	);*/
 		return "trade/TradeList";
-	
 	}
-	
 	
 	@Override
 	public String OpenProcessGet() {

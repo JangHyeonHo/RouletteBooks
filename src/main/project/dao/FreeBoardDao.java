@@ -13,8 +13,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
+import command.FreeBoardListPageCommand;
 import dto.FreeBoard;
 import other.AutoLinePrint;
+import other.AutoPaging;
 
 public class FreeBoardDao {
    private JdbcTemplate jdbcTemplate;
@@ -54,9 +56,19 @@ public class FreeBoardDao {
   }
   
    //자유게시판 리스트
-   public List<FreeBoard> fblist() {
-      sql = "select fno,fmno,fsubject,fcontent,fhit,fdate,r.MNICKNAME AS NICK from freeboard t JOIN RMEMBER r ON(t.fmno = r.MNO) order by fno desc";
-      list = jdbcTemplate.query(sql,new FreeBoardRowMapper());
+   public List<FreeBoard> fblist(AutoPaging pagin,FreeBoardListPageCommand command) {
+	   int minNum = ((pagin.getPage()-1)*pagin.getLimit())+1;
+	   int maxNum = minNum+pagin.getLimit()-1;
+      
+      String column=null;
+      if(command.getSearch() != null) {
+    	  column = command.getSearch();
+      }
+      
+	   sql = "select * from (select rownum as rnum, f.* from (select fno,fmno,fsubject,fcontent,fhit,fdate,r.MNICKNAME AS NICK"
+	   		+ " from freeboard t JOIN RMEMBER r ON(t.fmno = r.MNO) "+((column == null)?"":"where "+column+" like '%"+command.getQuery() +"%' ")
+			   +"order by fno desc) f where rownum<=?) where rnum >= ?";
+      list = jdbcTemplate.query(sql,new FreeBoardRowMapper(),maxNum,minNum);
 
       return list;
    }
@@ -71,6 +83,32 @@ public class FreeBoardDao {
    public Integer Delete(FreeBoard freeboard) {
 	   sql = "delete from FreeBoard where fno = ?";
 	   return  jdbcTemplate.update(sql,freeboard.getfNo());
+   }
+   
+   //게시글 총 개수 search는 컬럼 query는 입력값
+   public int totallist(FreeBoardListPageCommand command) {
+	   
+	   String column=null;
+	      if(command.getSearch() != null) {
+	    	  column = command.getSearch();
+	      }
+	      
+	   sql = "select count(*) as cnt from freeboard "
+	   +((column == null)?"":"where "+column+" like '%"+command.getQuery() +"%' ");
+	   Integer total = jdbcTemplate.query(sql, new ResultSetExtractor<Integer>() {
+
+		@Override
+		public Integer extractData(ResultSet rs) throws SQLException, DataAccessException {
+			// TODO Auto-generated method stub
+			rs.next();
+			return rs.getInt("cnt");
+		}
+		   
+	   });
+	   if(total==null) {
+		   return 0;
+	   }
+	   return total;
    }
 
 

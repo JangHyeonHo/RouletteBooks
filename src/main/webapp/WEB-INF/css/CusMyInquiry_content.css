@@ -79,8 +79,8 @@ tbody {
 	color: skyblue;
 }
 
-#pasingNum {
-	width: 840px;
-	float: left;
+#pagingNum {
+	width: 1000px;
 	text-align: center;
+	letter-spacing: 4px;
 }

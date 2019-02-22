@@ -51,12 +51,36 @@ public class TBoardDao {
 	
 	
 	public List<TBoardListCommand> tboardlist(AutoPaging page) {
+		int minNum = ((page.getPage()-1)*page.getLimit())+1;
+		int maxNum = minNum+page.getLimit()-1;
 		
 		
-		sql ="select TNUM,TKIND,TBOOK_STATUS,TSUBJECT,TCONTENT,TPRICE,TBOOK_STATUS,TREG_DATE,TBOOK_STORE_IMG_NAME,TSITUATION,r.MNICKNAME from tboard t, rmember r WHERE t.TUPLOADER = r.MNO order by TNUM DESC";
-		 list = jdbcTemplate.query(sql,new TboardRowMapper());
+//		sql ="select TNUM,TKIND,TBOOK_STATUS,TSUBJECT,TCONTENT,TPRICE,TREG_DATE,TBOOK_STORE_IMG_NAME,TSITUATION,r.MNICKNAME from tboard t, rmember r WHERE t.TUPLOADER = r.MNO order by TNUM DESC";
+		sql = "SELECT * FROM"
+	+	" (SELECT rownum AS rnum, a.* FROM"
+	+	" (select TNUM,TKIND,TBOOK_STATUS,TSUBJECT,TCONTENT,TPRICE,TREG_DATE,TBOOK_STORE_IMG_NAME,TSITUATION,r.MNICKNAME from tboard t join rmember r on( t.TUPLOADER = r.MNO ) order by TNUM DESC) a WHERE rownum<=?) WHERE rnum>=?" ;
 		
+		list = jdbcTemplate.query(sql,new TboardRowMapper(),maxNum,minNum);
+	
 		return list;
+	}
+	
+	public Integer tboardlistcount() {
+		Integer i = null;
+		
+		sql ="select count(*) as cnt from tboard";
+		
+	  i = jdbcTemplate.query(sql, new ResultSetExtractor<Integer>() {
+
+		@Override
+		public Integer extractData(ResultSet rs) throws SQLException, DataAccessException {
+			rs.next();
+			
+
+			return rs.getInt("cnt");
+		}
+	} );
+		return i;
 	}
 	
 	
@@ -160,6 +184,13 @@ public class TBoardDao {
 				return listcommand;
 			}
  }
+
+
+public Integer updateRequester(String getmNo) {
+	// TODO Auto-generated method stub
+	sql = "update into tboard set trequester = ?";
+	return jdbcTemplate.update(sql,getmNo);
+}
 
 }
 

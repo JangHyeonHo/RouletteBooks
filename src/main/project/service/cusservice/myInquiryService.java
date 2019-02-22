@@ -8,6 +8,7 @@ import command.LoginSessionInfomationCommand;
 import command.ManagerSessionInfomationCommand;
 import dao.CusServiceDao;
 import dto.CusServiceDTO;
+import other.AutoPaging;
 
 public class myInquiryService {
 
@@ -20,10 +21,14 @@ public class myInquiryService {
 		this.cusServiceDao = cusServiceDao;
 	}
 
-	public List<CusServiceDTO> inquiryList(String mno) {
-		list = cusServiceDao.inquiryList(mno);
+	public List<CusServiceDTO> inquiryList(String mno, AutoPaging ap) {
+		list = cusServiceDao.inquiryList(mno, ap);
 		
 		return list;
+	}
+	public Integer listCount() {
+		
+		return cusServiceDao.listCount();
 	}
 	
 

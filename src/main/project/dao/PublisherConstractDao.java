@@ -55,9 +55,9 @@ public class PublisherConstractDao {
 
 	public Integer updateContract(PublisherContractCommand command, String mno, String status) {
 		// TODO Auto-generated method stub
-		sql = "update into CONTRACT_PUBLISHER set cb_contract_date = ?, cb_expired_date = ?, cb_royalty = ? cb_rmno = ? cb_status = ?, cb_money = ? where cbnum = ?";
+		sql = "update CONTRACT_PUBLISHER set cb_contract_date = ?, cb_expired_date = ?, cb_royalty = ?, cb_rmno = ?, cb_status = ?, cb_money = ? where cbnum = ?";
 		
-		return jdbcTemplate.update(sql, command.fullContractDate(), command.fullExpiredDate(), command.getRoyalty(), mno, status, command.getTotalContractMoney(), command.getConNum());
+		return jdbcTemplate.update(sql, command.fullContractDate(), command.fullExpiredDate(), command.getRoyalty(), mno, status, command.getTotalContractMoney(), command.getConsNum());
 		
 	}
 

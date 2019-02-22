@@ -114,8 +114,10 @@
 				
 			</div>
 					<div class="listwrite"><button onclick="location='trade/boardwrite'">글 작성</button></div>
-					<div class="Paging"><img src="img/Paging.jpg"></div>
-		</div>
+					
+					<div class="Paging"><c:forEach begin="${page.startPage }" end="${page.endPage }" step="1" var="i"><a href="?page=${i }">${i }</a>　</c:forEach></div>
+					
+					</div>
 </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->

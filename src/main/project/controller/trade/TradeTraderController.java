@@ -1,24 +1,22 @@
 package controller.trade;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import command.LoginSessionInfomationCommand;
 import controller.FrontControllerInterface;
+import other.AutoAlertProcess;
 import service.tboard.TradingOpenProcessService;
 
-
-/**
- * <b>트레이드 프론트 컨트롤러</b>
- * @see FrontControllerInterface
- * @author 장현호, 유승재
- * @version 1.0
- * */
 @Controller
-@RequestMapping("/trade/trading")
-public class TreadeTradingController implements FrontControllerInterface {
+@RequestMapping("/trade/trader")
+public class TradeTraderController implements FrontControllerInterface {
 	
 	@Autowired
 	TradingOpenProcessService service;
@@ -27,10 +25,16 @@ public class TreadeTradingController implements FrontControllerInterface {
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String OpenProcessGet(Model model) {
-		System.out.println("중고거래 구매하기 오픈");
-		service.Trading();
-		return "payment/TransactionDetail";
+	public String OpenProcessGet(@ModelAttribute String tnum, HttpSession session, Model model) {
+		// TODO Auto-generated method stub
+		if(session.getAttribute("loginInfo") == null) {
+			return AutoAlertProcess.alertAfterRedirect(model, "로그인", "로그인이 필요한 구간입니다!", "../member/login");
+		}
+		LoginSessionInfomationCommand loginInfo = (LoginSessionInfomationCommand) session.getAttribute("loginInfo");
+		service.buyer(loginInfo.getmNo());
+		
+		
+		return "redirect:/trading?tnum=21";
 	}
 
 	@Override
