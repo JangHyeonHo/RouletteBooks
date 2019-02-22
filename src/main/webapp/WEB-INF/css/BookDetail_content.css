@@ -1,0 +1,75 @@
+#contents {
+			width: 1080px;
+			min-height: 1000px;
+			margin: 0 auto;
+			
+		}
+
+		#book_register_header {
+			width: 1080px;
+			height: 150px;
+			background-color: aqua;
+		}
+
+		#book_register_content {
+			width: 1080px;
+			min-height: 500px;
+			background-color: bisque;
+		}
+
+		#book_register_content_main {
+			width: 500px;
+			height: 400px;
+			margin: 0 auto;
+			border: 3px solid black;
+		}
+
+		.book_regi_input {
+			margin: 5px;
+			border-radius: 10px;
+			height: 50px;
+
+		}
+
+		input::placeholder {
+			text-align: center;
+		}
+
+		.book_class {
+			float: right;
+
+		}
+		#genre_id{
+			height: 50px;
+			border-radius: 10px;
+			font-size: 15px;
+			margin: 0 10px 0 0;
+		}
+		#book_register_title{
+			float: left;
+			
+			font-size: 30px;
+			white-space: pre-line;
+		}
+		#book_name{
+			float: right;
+
+		}
+		#book_isbn{
+			clear: both;
+			float: right;
+		}
+		#book_price{
+			clear: both;
+			float:right;
+		}
+		#book_genre{
+			clear: both;
+			float:right;
+		}
+		#title{
+			text-align: center;
+		}
+		#formWriting{
+			text-align: center;
+		}

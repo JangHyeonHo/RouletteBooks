@@ -80,7 +80,19 @@
 				</div>
 				<div class="leftBox upline">
 					<div class="textBox">도서 장르</div>
-					<div class="valueBox">문학/뭐시기</div>
+					<div class="valueBox">	
+					<select  name="genre">
+						<option value="도서장르선택">도서장르선택</option>
+						<option value="문화/역사">문화/역사</option>
+						<option value="유아/어린이/청소년">유아/어린이/청소년</option>
+						<option value="참고서/자격증">참고서/자격증</option>
+						<option value="자연과학/IT">자연과학/IT</option>
+						<option value="예술/인물">예술/인물</option>
+						<option value="여행/잡지/취미">여행/잡지/취미</option>
+						<option value="사회/정치/경제/경영">사회/정치/경제/경영</option>
+						<option value="만화/라이트노벨">만화/라이트노벨</option>
+						<option value="기타">기타</option>
+					</select></div>
 				</div>
 				<div class="rightBox upline">
 					<div class="textBox">도서 정가</div>

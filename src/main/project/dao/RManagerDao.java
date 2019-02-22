@@ -16,6 +16,7 @@ import org.springframework.validation.Errors;
 import command.LoginSessionInfomationCommand;
 import command.ManagerLoginCommand;
 import command.ManagerSessionInfomationCommand;
+import command.MemberListPageCommand;
 import dto.RManager;
 import other.AutoLinePrint;
 import other.PasswordAutoMD5;
@@ -104,6 +105,31 @@ public class RManagerDao {
 		
 		
 		return (sessionInfo==null) ? null : sessionInfo;
+	}
+
+	public List<RManager> ListCall(MemberListPageCommand command) {
+		// TODO Auto-generated method stub
+		sql = "select rmno, rmname, rmphone,rmbirth_date,rm_img_store_file,rmgrade,rmsalary,rmcommission,"
+				+ "rmcre_date,rmdepartment from rmanager";
+
+		return jdbcTemplate.query(sql, new RowMapper<RManager>() {
+
+			@Override
+			public RManager mapRow(ResultSet rs, int arg1) throws SQLException {
+				// TODO Auto-generated method stub
+				return new RManager().setRmno(rs.getString("rmno"))
+						.setRmname(rs.getString("rmname"))
+						.setRmphone(rs.getString("rmphone"))
+						.setRmbirthDate(rs.getDate("rmbirth_date"))
+						.setRmImgStoreFile(rs.getString("rm_img_store_file"))
+						.setRmgrade(rs.getString("rmgrade"))
+						.setRmsalary(rs.getInt("rmsalary"))
+						.setRmcommission(rs.getInt("rmcommission"))
+						.setRmcreDate(rs.getDate("rmcre_date"))
+						.setRmdepartment(rs.getString("rmdepartment"));
+			}
+			
+		});
 	}
 	
 	
