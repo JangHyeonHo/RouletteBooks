@@ -33,10 +33,10 @@ public class BookListDao {
 
 	public void insertReserved(List<BookContractMoneyCommand> reservedList, PublisherContractCommand command) {
 		// TODO Auto-generated method stub
-		sql = "insert into bookList(bnum, bcontract_num, bpublisher_num, bname, bpublisher_price, bprice) "
-				+ "values(bk_num.nextval, ?, ? ,?, ?, ?)";
+		sql = "insert into bookList(bnum, bcontract_num, bpublisher_num, bname, bpublisher_price, bprice, register_situation) "
+				+ "values(bk_num.nextval, ?, ? ,?, ?, ? ,?)";
 		for(BookContractMoneyCommand book : reservedList) {
-			jdbcTemplate.update(sql, command.getConsNum(), command.getConsName(),book.getBookName(), book.getBookContractMoney(), book.getBookMoney());
+			jdbcTemplate.update(sql, command.getConsNum(), command.getConsName(),book.getBookName(), book.getBookContractMoney(), book.getBookMoney(),"가등록");
 		}
 		
 	}
@@ -100,16 +100,16 @@ public class BookListDao {
 	public Integer Modify(int number, BookModifyCommand command) {
 	int hit = 1;
 		Integer i = null;
-		sql="update booklist set BNAME=?,BPRICE=?,BPUBLICATION_DATE=sysdate,BPAGE_NUM=?,BINTRODUCE=?,BTOC=?,BRENTAL_PRICE=?,BIMG_ORIGIN_NAME=?,BIMG_STORE_NAME=?,BGENRE=?,BISBN=?,BHIT=? where BNUM=?";
+		sql="update booklist set BNAME=?,BPRICE=?,BPUBLICATION_DATE=sysdate,BPAGE_NUM=?,BINTRODUCE=?,BTOC=?,BRENTAL_PRICE=?,BIMG_ORIGIN_NAME=?,BIMG_STORE_NAME=?,BGENRE=?,BISBN=?,BHIT=?,BWRITE_DATE=? where BNUM=?";
 		
-		i = jdbcTemplate.update(sql,command.getBname(),command.getPrice(),command.getPage(),command.getIntro(),command.getBooktoc(),command.getRentalprice(),command.getBookOriImgName(),command.getBookStoreImgName(),command.getGenre(),command.getIsbn(),hit,number);
+		i = jdbcTemplate.update(sql,command.getBname(),command.getPrice(),command.getPage(),command.getIntro(),command.getBooktoc(),command.getRentalprice(),command.getBookOriImgName(),command.getBookStoreImgName(),command.getGenre(),command.getIsbn(),hit,command.getWritedata(),number);
 		
 		
 		return i;
 	}
 	
 	public BookModifyCommand detail(int number) {
-		sql = "select BNUM,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BISBN from BOOKLIST ";
+		sql = "select BNUM,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN from BOOKLIST ";
 		BookModifyCommand modify = jdbcTemplate.query(sql,new ResultSetExtractor<BookModifyCommand>() {
 
 			@Override
@@ -127,23 +127,24 @@ public class BookListDao {
 				modify.setIntro(rs.getString("BINTRODUCE"));
 				modify.setBooktoc(rs.getString("BTOC"));
 				modify.setRentalprice(rs.getString("BRENTAL_PRICE"));
-				modify.setGenre(rs.getString("GENRE"));
+				modify.setGenre(rs.getString("BGENRE"));
 				modify.setIsbn(rs.getString("BISBN"));
-				
+				modify.setWritedata(rs.getDate("BWRITE_DATE"));
 				
 				}
-				
-				
+
 				return modify;
 			}
 		});
 		
 		
-		
-		
-		
-		
 		return modify;
+	}
+	
+	public void register(int number) {
+		sql="update booklist set REGISTER_SITUATION=? WHERE BNUM=?";
+		jdbcTemplate.update(sql,"등록",number);
+				
 	}
 	
 	

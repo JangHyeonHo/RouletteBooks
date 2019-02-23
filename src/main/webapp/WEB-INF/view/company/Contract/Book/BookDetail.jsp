@@ -75,7 +75,7 @@
 				<div id="photoBox">
 					
 					<input type="file" name="image">
-					 <img src="<c:url value = "../../book/uploadImage/${modify.BookStoreImgName }" />">
+			<%-- 	<img src="<c:url value = "../../../book/uploadImage/${modify.BookStoreImgName}" />"> --%>
 				</div>
 				<div class="textBox">도서명</div>
 				<div class="valueBox">
@@ -122,7 +122,7 @@
 					<div class="valueBox"></div>
 				</div>
 				<div class="textBox upline">도서 발간일</div>
-				<div class="valueBox"><input type="text" name="writedata">${modify.writedata }</div>
+				<div class="valueBox"><input type="date" name="writedata" value="${modify.writedata }"></div>
 
 				<div class="textBox">도서 대여 금액</div>
 				<div class="valueBox"><input type="text" name="rentalprice">￦</div>
