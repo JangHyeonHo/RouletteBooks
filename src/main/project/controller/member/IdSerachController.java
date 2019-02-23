@@ -39,7 +39,8 @@ public class IdSerachController implements FrontControllerInterface {
 		if(email==null) {
 			return AutoAlertProcess.alertAfterRedirect(model, "아이디가 존재안함", "아이디가 존재하지 않습니다", "searchid");
 		}
-		model.addAttribute("email", email);
+		model.addAttribute("id", email);
+
 		
 		return "member/IdSearchDetail";
 	}

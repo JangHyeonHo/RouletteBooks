@@ -16,6 +16,7 @@ public class ShoppingBasketController implements FrontControllerInterface {
 	public String OpenProcessGet() {
 		// TODO Auto-generated method stub
 		System.out.println("장바구니 오픈");
+		
 		return "mypage/ShoppingBasket";
 	}
 

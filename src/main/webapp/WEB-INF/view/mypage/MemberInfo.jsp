@@ -68,19 +68,19 @@
                 기본정보보기
             </div>
         <div id = "baseInfoCon">
-        <div class = "inputBox"><span class = "sub">아이디(이메일) :</span> ssa2@aa.aa </div>
-        <div class = "inputBox"><span class = "sub">닉네임 :</span> 먹찾하 </div>
-        <div class = "inputBox"><span class = "sub">이름 :</span> 하예나</div>
-        <div class = "inputBox"><span class = "sub">생년월일 :</span> 1993.12.10 </div>
-        <div class = "inputBox"><span class = "sub">성별 :</span> 여자 </div>
-        <div class = "inputBox"><span class = "sub">주소 :</span> 사랑시 고백구 행복동 지하 하호호</div>
-        <div class = "inputBox"><span class = "sub">핸드폰번호 :</span> 010-1234-1234</div>
-        <div class = "inputBox"><span class = "sub">계좌은행 :</span> 우리은행</div>
-        <div class = "inputBox"><span class = "sub">계좌번호 :</span> 10021002100 </div>
-        <div class = "inputBox"><span class = "sub">보유캐쉬 :</span> 2000000원 </div>
-        <div class = "inputBox"><span class = "sub">보유쿠폰 :</span> 12장 </div>
-        <div class = "inputBox"><span class = "sub">총 결재액 :</span> 2018080원 </div>
-        <div class = "inputBox"><span class = "sub">가입일 :</span> 2018.08.08 </div>
+        <div class = "inputBox"><span class = "sub">아이디(이메일) :</span>${dto.mEmail }</div>
+        <div class = "inputBox"><span class = "sub">닉네임 :</span>${mNickname }</div>
+        <div class = "inputBox"><span class = "sub">이름 :</span>${mName }</div>
+        <div class = "inputBox"><span class = "sub">생년월일 :</span>${mBirthDate }</div>
+        <div class = "inputBox"><span class = "sub">성별 :</span>${mGender } </div>
+        <div class = "inputBox"><span class = "sub">주소 :</span>${mAddress }</div>
+        <div class = "inputBox"><span class = "sub">핸드폰번호 :</span>${mPhone }</div>
+        <div class = "inputBox"><span class = "sub">계좌은행 :</span>${mAccBank }</div>
+        <div class = "inputBox"><span class = "sub">계좌번호 :</span>${mAccNum }</div>
+        <div class = "inputBox"><span class = "sub">보유캐쉬 :</span>${mCash }</div>
+        <div class = "inputBox"><span class = "sub">보유쿠폰 :</span>아직못함</div>
+        <div class = "inputBox"><span class = "sub">총 결재액 :</span>이거 없는듯?</div>
+        <div class = "inputBox"><span class = "sub">가입일 :</span>${mCreDate }</div>
 
         <input type="button" class="btn" onclick="location.href='modify'" value="수정">
         <input type="button" class="btn" onclick="location.href='main'" value="메인으로">

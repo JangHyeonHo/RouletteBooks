@@ -26,7 +26,7 @@
  <bean class = "command.TBoardWriteCommand" name="TBoardWriteCommand" id="TBoardWriteCommand"/>
 <bean class = "command.TBoardListCommand" name="TBoardListCommand" id="TBoardListCommand"/>
 <bean class = "command.TBoardDetailCommand" name="TBoardDetailCommand" id="TBoardDetailCommand"/>
-
+<bean class = "command.BookModifyCommand" name="BookModifyCommand" id="BookModifyCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.TBoardDao" name="TBoardDao" id="TBoardDao"/>
@@ -37,4 +37,8 @@
 <bean class = "service.tboard.TBoardDetailService" name="TBoardDetailService" id="TBoardDetailService"/>
 <bean class = "service.tboard.TBoardModifyService" name="TBoardModifyService" id="TBoardModifyService"/>
 <bean class = "service.tboard.TBoardDeleteService" name="TBoardDeleteService" id="TBoardDeleteService"/>
+<bean class = "service.company.BookListService" name="BookListService" id="BookListService"/>
+<bean class = "service.company.BookModifyService" name="BookModifyService" id="BookModifyService"/>
+
+
 </beans>

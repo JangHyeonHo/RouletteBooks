@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +62,7 @@
      <jsp:include page="../mypageHeader.jsp" />
 			<!-- 마이페이지 헤더 끝 -->
      
-        <form action="#" method="POST">
+        <form:form>
             <div id="memberBaseInfo">
                 <div id="baseInfoTitle">
                     기본정보보기
@@ -72,7 +72,7 @@
                 </div>
 
             </div>
-        </form>
+        </form:form>
     </div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->
