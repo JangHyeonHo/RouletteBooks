@@ -51,7 +51,7 @@ public class MemberInfoConfirmController implements FrontControllerInterface {
 				return AutoAlertProcess.alertAfterRedirect(model, "비밀번호오류","비밀번호가 올바르지 않습니다." , "myinfoconfirm");
 		}
 		System.out.println("info로 넘겨줌");
-		return "redirect:/mypage/myinfo";
+		return "redirect:/mypage/myinfo?mno="+((LoginSessionInfomationCommand)session.getAttribute("loginInfo")).getmNo();
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
@@ -63,20 +63,20 @@
      <jsp:include page="../mypageHeader.jsp" />
 			<!-- 마이페이지 헤더 끝 -->
 
-        <form action="#" method="POST">
+        <form:form>
         <div id="memberBaseInfo">
             <div id="baseInfoTitle">
                 기본정보수정
             </div>
         <div id = "baseInfoCon">
-        <div class = "inputBox"><span>아이디(이메일) :</span> ssa2@aa.aa </div>
-        <div class = "inputBox"><span>닉네임 :</span> <input type="text" name="nick" value="먹찾하"> <input type="button" id="emailFirm" value="중복확인"> </div>
-        <div class = "inputBox"><span>이름 :</span> 하예나</div>
-        <div class = "inputBox"><span>생년월일 :</span> 1993.12.10 </div>
-        <div class = "inputBox"><span>성별 :</span> 여자 </div>
+        <div class = "inputBox"><span>아이디(이메일) :</span> ${dto.mEmail }</div>
+        <div class = "inputBox"><span>닉네임 :</span> <input type="text" name="nick" value="${dto.mNickname }"> <input type="button" id="emailFirm" value="중복확인"> </div>
+        <div class = "inputBox"><span>이름 :</span> ${dto.mName }</div>
+        <div class = "inputBox"><span>생년월일 :</span> ${dto.mBirthDate }</div>
+        <div class = "inputBox"><span>성별 :</span> ${dto.mGender }</div>
         <div class = "inputBox"><span>주소 :</span> <input type="button" value="주소찾기"></div>
-        <input type="text" class ="tex" id="address" name="address" value = "사랑시 고백구 행복동">
-        <input type="text" class ="tex" id="address1" name="address1" value="지하 하호호">
+        <input type="text" class ="tex" id="address" name="address" value = "${dto.mAddress }">
+        <input type="text" class ="tex" id="address1" name="address1" value="상세주소">
         <div class="inputBox"><span>핸드폰번호 :</span></div>
 				<div id="phoneBox">
 					<select name="phoneFirst" id="phoneFirst">
@@ -94,14 +94,14 @@
                 <option>우리은행</option>
             </select></div>
         <div class = "inputBox"><span>계좌번호 :</span>
-            <input type="text" id="accountNum" name="accountNum" value = "100210021002" placeholder="-빼고 작성하세요."></div>
-        <div class = "inputBox"><span>가입일 :</span> 2018.08.08 </div>
+            <input type="text" id="accountNum" name="accountNum" value = "${dto.mAccNum }" placeholder="-빼고 작성하세요."></div>
+        <div class = "inputBox"><span>가입일 :</span> ${dto.mCreDate }</div>
 
-        <input type="submit" class ="btn" onclick="" value="수정하기">
-        <input type="reset" class ="btn" onclick="" value="다시쓰기">
+        <input type="submit" class ="btn" value="수정하기">
+        <input type="reset" class ="btn" value="다시쓰기">
         </div>
         </div>
-        </form>
+        </form:form>
         
         </div>
 <!-- Content 끝 -->
