@@ -28,12 +28,12 @@ public class MemberInfoController implements FrontControllerInterface {
 	
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String OpenProcessGet(String getmNo, Model model) {
+	public String OpenProcessGet(String mno, Model model) {
 		// TODO Auto-generated method stub
 		System.out.println("open:MyInfo");
 		
 		
-		RMember dto = service.information(getmNo);
+		RMember dto = service.information(mno);
 		model.addAttribute("dto",dto);
 		
 		return "mypage/MemberInfo";
