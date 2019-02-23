@@ -2,6 +2,7 @@ package command;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 public class BookModifyCommand {
@@ -13,7 +14,8 @@ public class BookModifyCommand {
 	private int page;
 	private String isbn;
 	private String bpublicationdate;
-	private String writedata;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date writedata;
 	private String rentalprice;
 	private String booktoc;
 	private String intro;
@@ -55,13 +57,14 @@ public class BookModifyCommand {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public String getWritedata() {
+
+
+	public Date getWritedata() {
 		return writedata;
 	}
-	public void setWritedata(String writedata) {
+	public void setWritedata(Date writedata) {
 		this.writedata = writedata;
 	}
-
 	public String getRentalprice() {
 		return rentalprice;
 	}

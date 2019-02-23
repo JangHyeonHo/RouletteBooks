@@ -16,6 +16,7 @@
 	<bean class = "controller.trade.TradeModifyController" />
 	<bean class = "controller.trade.TredaDeleteController" />
 	<bean class = "controller.trade.TreadeTradingController" />
+	<bean class = "controller.company.ConpanyBookRegisterController" />
 	
 	
 
@@ -39,6 +40,6 @@
 <bean class = "service.tboard.TBoardDeleteService" name="TBoardDeleteService" id="TBoardDeleteService"/>
 <bean class = "service.company.BookListService" name="BookListService" id="BookListService"/>
 <bean class = "service.company.BookModifyService" name="BookModifyService" id="BookModifyService"/>
-
+<bean class = "service.company.BookRegisterService" name="BookRegisterService" id="BookRegisterService"/>
 
 </beans>

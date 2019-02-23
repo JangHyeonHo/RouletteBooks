@@ -15,6 +15,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
+import command.DoubleTradeCommand;
 import command.TBoardDetailCommand;
 import command.TBoardListCommand;
 import command.TBoardWriteCommand;
@@ -186,10 +187,16 @@ public class TBoardDao {
  }
 
 
-public Integer updateRequester(String getmNo) {
+public Integer updateRequester(String getmNo, String tnum) {
 	// TODO Auto-generated method stub
-	sql = "update into tboard set trequester = ?";
-	return jdbcTemplate.update(sql,getmNo);
+	sql = "update tboard set trequester = ? where tnum = ?";
+	return jdbcTemplate.update(sql,getmNo,tnum);
+}
+
+public DoubleTradeCommand tradingList() {
+	// TODO Auto-generated method stub
+	sql = "select * from tboard where tnum = ?";
+	return null;
 }
 
 }

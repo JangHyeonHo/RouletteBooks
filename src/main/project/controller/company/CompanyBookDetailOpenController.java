@@ -37,12 +37,12 @@ public class CompanyBookDetailOpenController implements FrontControllerInterface
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String OpenProcessPost(@ModelAttribute("bnum") int number,BookModifyCommand command,HttpServletRequest request, Model model) {
+	public String OpenProcessPost(@ModelAttribute("bnum") int number, BookModifyCommand command,HttpServletRequest request, Model model) {
 		System.out.println("도서 수정 포스트 작동");
 		command.setNum(number);
 		 service.action(number,command, request);
 		model.addAttribute("command",command);
-		return "company/Contract/Book/BookDetail";
+		return "redirect:list";
 	}
 
 	@Override
