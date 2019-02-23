@@ -55,17 +55,11 @@
 			margin: 0px 30px;
 		}
 		.id_box{
-			width: 179px;
+			width: 358px;
 			float: left;
 			margin: 20px 30px;
 		}
-		.date_box{
-			width: 179px;
-			float: left;
-			margin: 20px 30px;
-			text-align: right;
-			color: rgb(168, 165, 165);
-		}
+		
 		.final_box{
 			width: 540px;
 			float: left;

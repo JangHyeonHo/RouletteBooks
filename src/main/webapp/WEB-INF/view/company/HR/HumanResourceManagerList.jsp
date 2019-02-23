@@ -88,8 +88,8 @@
 						<br>
 						<a href="#">[이동]</a>
 					</td>
-					<td>010-4141-8421</td>
-					<td>5,430,000 ￦</td>
+					<td>${li.rmphone }</td>
+					<td>${li.rmsalary }</td>
 					<td>무</td>
 				</tr>
 				</c:forEach>

@@ -111,6 +111,7 @@ public class RManagerDao {
 		// TODO Auto-generated method stub
 		sql = "select rmno, rmname, rmphone,rmbirth_date,rm_img_store_file,rmgrade,rmsalary,rmcommission,"
 				+ "rmcre_date,rmdepartment from rmanager";
+
 		return jdbcTemplate.query(sql, new RowMapper<RManager>() {
 
 			@Override

@@ -93,7 +93,7 @@
                     <button id="wish_list_btn">위시 리스트에 넣기</button>
                 </div>
                 <div class="btnList">
-                    <button id="basket_btn">장바구니 담기</button>
+                    <button id="basket_btn" onclick="location.href='../shoppingbasket'" >장바구니 담기</button>
                 </div>
                 <div class="btnList">
                     <button id="sell_btn">바로 구매</button>

@@ -35,7 +35,7 @@ public class FreeBoardListController implements FrontControllerInterface {
 		  command.setPage(1);
 	  }
       System.out.println("자유게시판 오픈");
-      AutoPaging pagin = new AutoPaging(command.getPage(),10,10);
+      AutoPaging pagin = new AutoPaging(command.getPage(),10,1);
       List<FreeBoard> Freeboardlist = freeboardlistservice.freeboardlist(pagin,command);
       pagin.setListCount(freeboardlistservice.total(command));
       pagin.PagingTest();
