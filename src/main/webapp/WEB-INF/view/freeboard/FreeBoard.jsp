@@ -117,14 +117,15 @@
 			</div>
 			<div class="pagingtotal">
 				<ul>
-					<li><a href="#">◀이전</a></li>
+					<c:if test="${pagin.prev}">
+						<li><a href="?page=${pagin.startPage-1}">◀이전</a></li>
+					</c:if>
 					<c:forEach begin="${pagin.startPage}" end="${pagin.endPage }"  step="1" var="i">	
-					<li><a href="?page=${i}">${i}</a></li>
-					
-				
-					
+						<li><a href="?page=${i}">${i}</a></li>
 					</c:forEach>
-					<li><a href="#">다음▶</a></li>
+					<c:if test="${pagin.next}">
+						<li><a href="?page=${pagin.endPage+1}">다음▶</a></li>
+					</c:if>
 				</ul>
 			</div>
 
