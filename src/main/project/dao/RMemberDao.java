@@ -19,6 +19,7 @@ import command.IdSearchCommand;
 import command.LoginCommand;
 import command.LoginSessionInfomationCommand;
 import command.MemberListPageCommand;
+import command.PwSearchCommand;
 import dto.CusServiceDTO;
 import dto.RMember;
 import other.AutoLinePrint;
@@ -221,6 +222,27 @@ public class RMemberDao {
 		return search;
 		
 	
+	}
+	
+	public String Pwsearch(final PwSearchCommand command) {
+		sql = "select mpassword from rmember where mphone=?";
+		String phone=command.getPhonenumber1()+command.getPhonenumber2()+command.getPhonenumber3();
+		System.out.println(phone);
+		String search = jdbcTemplate.query(sql, new ResultSetExtractor<String>() {
+			
+			@Override
+			public String extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				if(rs.next()) {
+					return rs.getString("mpassword");
+				}else {
+					return null;
+				}
+				
+			}
+			
+		},phone);
+		return search;
 	}
 	//쿠폰없음.총결제액 없음
 	public RMember information(String getmNo) {
