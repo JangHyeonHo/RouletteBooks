@@ -124,23 +124,20 @@
 			<!--도서 목록 사이즈 200x270 -->
 		 
 			<div id="rental_list">
-				<c:forEach items="list" var="rental">
+				<c:forEach items="${list }" var="ren">
 				<ul id="listul">
 					<li>
 
 						<div class="rental_list_li">
-							<a href="rental/detail"> <img src="img/xxlarge.jpg"><br>
+							<a href="rental/detail"><img src="<c:url value = "book/uploadImage/${ren.image}" />"><br>
 							</a>
-							<p id="rental_list_info">${rental.bname }저 /  moon출판</p>
+							<p id="rental_list_info">${ren.bname } 저 /  ${ren.pname }출판</p>
 							<span id="rental_list_grade"> ★★★★★ </span>
 							<p>
-								<strong>20,000원</strong>
+								<strong>${ren.bpublisherprice }원</strong>
 							</p>
 							</div>
-						
-
-					</li>
-				
+					</li>				
 				</ul>
 				</c:forEach> 
 				</div>

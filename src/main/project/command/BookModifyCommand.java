@@ -14,7 +14,9 @@ public class BookModifyCommand {
 	private String price;
 	private int page;
 	private String isbn;
-	private String bpublicationdate;
+	private String pname;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date bpublicationdate;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date writedata;
 	private String rentalprice;
@@ -22,22 +24,36 @@ public class BookModifyCommand {
 	private String intro;
 	private String BookOriImgName;
 	private String BookStoreImgName;
+	private Date cdate;
 
 	
 	
 	
 
 
+	public Date getCdate() {
+		return cdate;
+	}
+	public void setCdate(Date cdate) {
+		this.cdate = cdate;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
 	public String getBookwriter() {
 		return bookwriter;
 	}
 	public void setBookwriter(String bookwriter) {
 		this.bookwriter = bookwriter;
 	}
-	public String getBpublicationdate() {
+
+	public Date getBpublicationdate() {
 		return bpublicationdate;
 	}
-	public void setBpublicationdate(String bpublicationdate) {
+	public void setBpublicationdate(Date bpublicationdate) {
 		this.bpublicationdate = bpublicationdate;
 	}
 	public String getBookOriImgName() {

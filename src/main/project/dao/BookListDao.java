@@ -100,7 +100,7 @@ public class BookListDao {
 	public Integer Modify(int number, BookModifyCommand command) {
 	int hit = 1;
 		Integer i = null;
-		sql="update booklist set BNAME=?,BPRICE=?,BPUBLICATION_DATE=sysdate,BPAGE_NUM=?,BINTRODUCE=?,BTOC=?,BRENTAL_PRICE=?,BIMG_ORIGIN_NAME=?,BIMG_STORE_NAME=?,BGENRE=?,BISBN=?,BHIT=?,BWRITE_DATE=?,BOOK_WRITER=? where BNUM=?";
+		sql="update booklist set BNAME=?,BPRICE=?,BPAGE_NUM=?,BINTRODUCE=?,BTOC=?,BRENTAL_PRICE=?,BIMG_ORIGIN_NAME=?,BIMG_STORE_NAME=?,BGENRE=?,BISBN=?,BHIT=?,BWRITE_DATE=?,BOOK_WRITER=? where BNUM=?";
 		
 		i = jdbcTemplate.update(sql,command.getBname(),command.getPrice(),command.getPage(),command.getIntro(),command.getBooktoc(),command.getRentalprice(),command.getBookOriImgName(),command.getBookStoreImgName(),command.getGenre(),command.getIsbn(),hit,command.getWritedata(),command.getBookwriter(),number);
 		
@@ -109,7 +109,7 @@ public class BookListDao {
 	}
 	
 	public BookModifyCommand detail(int number) {
-		sql = "select BNUM,BOOK_WRITER,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN from BOOKLIST ";
+		sql = "select BNUM,BOOK_WRITER,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN,p.PUBNAME as pname, c.CB_EXPIRED_DATE AS cdate from BOOKLIST b join PUBLISHER p  on(b.BPUBLISHER_NUM = p.PUBNO) JOIN CONTRACT_PUBLISHER c on(b.BPUBLISHER_NUM = c.CB_PUBLISHER_NO) ";
 		BookModifyCommand modify = jdbcTemplate.query(sql,new ResultSetExtractor<BookModifyCommand>() {
 
 			@Override
@@ -122,7 +122,7 @@ public class BookListDao {
 				modify.setBname(rs.getString("BNAME"));
 				modify.setBookwriter(rs.getString("BOOK_WRITER"));
 				modify.setPrice(rs.getString("BPRICE"));
-				modify.setBpublicationdate(rs.getString("BPUBLICATION_DATE"));
+				modify.setBpublicationdate(rs.getDate("BPUBLICATION_DATE"));
 				modify.setBookStoreImgName(rs.getString("BIMG_STORE_NAME"));
 				modify.setPage(rs.getInt("BPAGE_NUM"));
 				modify.setIntro(rs.getString("BINTRODUCE"));
@@ -131,9 +131,12 @@ public class BookListDao {
 				modify.setGenre(rs.getString("BGENRE"));
 				modify.setIsbn(rs.getString("BISBN"));
 				modify.setWritedata(rs.getDate("BWRITE_DATE"));
+				modify.setPname(rs.getString("pname"));
+				modify.setCdate(rs.getDate("cdate"));
 				
+				System.out.println(modify.getBpublicationdate());
 				}
-
+				
 				return modify;
 			}
 		});
@@ -143,7 +146,7 @@ public class BookListDao {
 	}
 	
 	public void register(int number) {
-		sql="update booklist set REGISTER_SITUATION=? WHERE BNUM=?";
+		sql="update booklist set REGISTER_SITUATION=? , BPUBLICATION_DATE=sysdate WHERE BNUM=?";
 		jdbcTemplate.update(sql,"등록",number);
 				
 	}

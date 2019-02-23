@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+ <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,7 +139,7 @@
             <div id="rental_detail_main_info">
                 <div id="rental_detaiol_main_list">
                     <!--책소개-->
-                    <div class="book_data_title"><img src="img/bd_t05.gif"></div>
+                    <div class="book_data_title"><img src="../img/bd_t05.gif"></div>
                     <div id="book_contents">
                         동시대 가장 주목받는 SF 환상문학 작가 켄 리우의 대표 단편 선집. 권위의 휴고 상, 네뷸러 상, 세계환상문학상을 40년만에 첫 동시 수상한 대표작 「종이 동물원」을
                         비롯하여 SF에서부터 환상문학, 하드보일드, 대체 역사, 전기(傳奇)소설에 이르기까지 켄 리우의 작품 세계를 한눈에 볼 수 있는 작품집이다.
@@ -154,7 +154,7 @@
                         처음으로 휴고 상을 수상한 류츠신의 &lt;삼체&gt;를 영어로 번역하기도 하는 등 동양과 서양의 SF 교류 역할을 하고 있다.
                     </div>
                     <!--책 목차-->
-                    <div class="book_data_title"><img src="img/bd_t06.gif"></div>
+                    <div class="book_data_title"><img src="../img/bd_t06.gif"></div>
                     <div id="book_table_contents">
                         머리말 7
                         종이 동물원 11
@@ -175,7 +175,7 @@
                     </div>
                     <!--저자 ,역자 소개 -->
                     <div id="book_writer_info">
-                        <div class="book_data_title"><img src="img/writer.gif"></div>
+                        <div class="book_data_title"><img src="../img/writer.gif"></div>
                         <div id="book_writer_name">
                             저자 소개 : 유승재
                         </div>
