@@ -122,25 +122,30 @@
 			</div>
 			<!--대여 리스트-->
 			<!--도서 목록 사이즈 200x270 -->
+		 
 			<div id="rental_list">
-			<c:forEach items="list" var="rental"> 
+				<c:forEach items="list" var="rental">
 				<ul id="listul">
 					<li>
 
 						<div class="rental_list_li">
 							<a href="rental/detail"> <img src="img/xxlarge.jpg"><br>
 							</a>
-							<p id="rental_list_info">${rental.bname } 저 /  moon출판</p>
+							<p id="rental_list_info">${rental.bname }저 /  moon출판</p>
 							<span id="rental_list_grade"> ★★★★★ </span>
 							<p>
 								<strong>20,000원</strong>
 							</p>
-						</div>
+							</div>
+						
 
 					</li>
 				
 				</ul>
 				</c:forEach> 
+				</div>
+				
+				
 				<div id="page">
 					<div id="page_count">
 						<img src="img/page.jpg">
