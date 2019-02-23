@@ -9,6 +9,7 @@ public class BookModifyCommand {
 	private int num;
 	private MultipartFile[] image;
 	private String bname;
+	private String bookwriter;
 	private String genre;
 	private String price;
 	private int page;
@@ -27,6 +28,12 @@ public class BookModifyCommand {
 	
 
 
+	public String getBookwriter() {
+		return bookwriter;
+	}
+	public void setBookwriter(String bookwriter) {
+		this.bookwriter = bookwriter;
+	}
 	public String getBpublicationdate() {
 		return bpublicationdate;
 	}

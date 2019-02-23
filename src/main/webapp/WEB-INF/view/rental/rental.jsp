@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,13 +123,14 @@
 			<!--대여 리스트-->
 			<!--도서 목록 사이즈 200x270 -->
 			<div id="rental_list">
+			<c:forEach items="list" var="rental"> 
 				<ul id="listul">
 					<li>
 
 						<div class="rental_list_li">
 							<a href="rental/detail"> <img src="img/xxlarge.jpg"><br>
 							</a>
-							<p id="rental_list_info">유승재 저 / 유승재 옮김 moon출판</p>
+							<p id="rental_list_info">${rental.bname } 저 /  moon출판</p>
 							<span id="rental_list_grade"> ★★★★★ </span>
 							<p>
 								<strong>20,000원</strong>
@@ -139,6 +140,7 @@
 					</li>
 				
 				</ul>
+				</c:forEach> 
 				<div id="page">
 					<div id="page_count">
 						<img src="img/page.jpg">

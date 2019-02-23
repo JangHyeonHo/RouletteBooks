@@ -22,16 +22,18 @@
 
 <!-- DTO공간 -->
 <bean class = "dto.TBoard" name="TBoard" id="TBoard"/>
+<bean class = "dto.rental" name="rental" id="rental"/>
 
 <!-- Command객체 공간 -->
  <bean class = "command.TBoardWriteCommand" name="TBoardWriteCommand" id="TBoardWriteCommand"/>
 <bean class = "command.TBoardListCommand" name="TBoardListCommand" id="TBoardListCommand"/>
 <bean class = "command.TBoardDetailCommand" name="TBoardDetailCommand" id="TBoardDetailCommand"/>
 <bean class = "command.BookModifyCommand" name="BookModifyCommand" id="BookModifyCommand"/>
+<bean class = "command.RentalCommand" name="RentalCommand" id="RentalCommand"/>
 
 <!-- DAO공간 -->
 <bean class = "dao.TBoardDao" name="TBoardDao" id="TBoardDao"/>
-
+<bean class = "dao.RentalDao" name="RentalDao" id="RentalDao"/>
 <!-- ActionController 공간 -->
 <bean class = "service.tboard.TBoardWriteService" name="TBoardWriteService" id="TBoardWriteService"/>
 <bean class = "service.tboard.TBoardListService" name="TBoardListService" id="TBoardListService"/>
@@ -41,5 +43,5 @@
 <bean class = "service.company.BookListService" name="BookListService" id="BookListService"/>
 <bean class = "service.company.BookModifyService" name="BookModifyService" id="BookModifyService"/>
 <bean class = "service.company.BookRegisterService" name="BookRegisterService" id="BookRegisterService"/>
-
+<bean class = "service.rental.RentalListService" name="RentalListService" id="RentalListService"/>
 </beans>

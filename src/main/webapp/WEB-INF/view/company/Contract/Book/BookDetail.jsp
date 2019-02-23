@@ -98,6 +98,10 @@
 					</select></div>
 				</div>
 				<div class="rightBox upline">
+					<div class="textBox">도서 저자</div>
+					<div class="valueBox"><input type="text" name="bookwriter" value="${modify.bookwriter }"></div>
+				</div>
+				<div class="rightBox upline">
 					<div class="textBox">도서 정가</div>
 					<div class="valueBox"><input type="text" name="price" value="${modify.price }">￦</div>
 				</div>

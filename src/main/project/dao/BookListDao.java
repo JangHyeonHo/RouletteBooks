@@ -100,16 +100,16 @@ public class BookListDao {
 	public Integer Modify(int number, BookModifyCommand command) {
 	int hit = 1;
 		Integer i = null;
-		sql="update booklist set BNAME=?,BPRICE=?,BPUBLICATION_DATE=sysdate,BPAGE_NUM=?,BINTRODUCE=?,BTOC=?,BRENTAL_PRICE=?,BIMG_ORIGIN_NAME=?,BIMG_STORE_NAME=?,BGENRE=?,BISBN=?,BHIT=?,BWRITE_DATE=? where BNUM=?";
+		sql="update booklist set BNAME=?,BPRICE=?,BPUBLICATION_DATE=sysdate,BPAGE_NUM=?,BINTRODUCE=?,BTOC=?,BRENTAL_PRICE=?,BIMG_ORIGIN_NAME=?,BIMG_STORE_NAME=?,BGENRE=?,BISBN=?,BHIT=?,BWRITE_DATE=?,BOOK_WRITER=? where BNUM=?";
 		
-		i = jdbcTemplate.update(sql,command.getBname(),command.getPrice(),command.getPage(),command.getIntro(),command.getBooktoc(),command.getRentalprice(),command.getBookOriImgName(),command.getBookStoreImgName(),command.getGenre(),command.getIsbn(),hit,command.getWritedata(),number);
+		i = jdbcTemplate.update(sql,command.getBname(),command.getPrice(),command.getPage(),command.getIntro(),command.getBooktoc(),command.getRentalprice(),command.getBookOriImgName(),command.getBookStoreImgName(),command.getGenre(),command.getIsbn(),hit,command.getWritedata(),command.getBookwriter(),number);
 		
 		
 		return i;
 	}
 	
 	public BookModifyCommand detail(int number) {
-		sql = "select BNUM,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN from BOOKLIST ";
+		sql = "select BNUM,BOOK_WRITER,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN from BOOKLIST ";
 		BookModifyCommand modify = jdbcTemplate.query(sql,new ResultSetExtractor<BookModifyCommand>() {
 
 			@Override
@@ -120,6 +120,7 @@ public class BookListDao {
 				
 				modify.setNum(rs.getInt("BNUM"));
 				modify.setBname(rs.getString("BNAME"));
+				modify.setBookwriter(rs.getString("BOOK_WRITER"));
 				modify.setPrice(rs.getString("BPRICE"));
 				modify.setBpublicationdate(rs.getString("BPUBLICATION_DATE"));
 				modify.setBookStoreImgName(rs.getString("BIMG_STORE_NAME"));
