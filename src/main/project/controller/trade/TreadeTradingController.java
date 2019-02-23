@@ -1,12 +1,16 @@
 package controller.trade;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import controller.FrontControllerInterface;
+import other.AutoAlertProcess;
 import service.tboard.TradingOpenProcessService;
 
 
@@ -27,8 +31,14 @@ public class TreadeTradingController implements FrontControllerInterface {
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String OpenProcessGet(Model model) {
+	public String OpenProcessGet(Model model, @ModelAttribute String tnum,HttpSession session) {
 		System.out.println("중고거래 구매하기 오픈");
+		if(tnum==null) {
+			return AutoAlertProcess.alertAfterRedirect(model, "에러", "잘못된 접근입니다!", "../main");
+		}
+		if(session.getAttribute("loginInfo")==null) {
+			return AutoAlertProcess.alertAfterRedirect(model, "로그인", "로그인이 필요합니다!", "../member/login");
+		}
 		service.Trading();
 		return "payment/TransactionDetail";
 	}

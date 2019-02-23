@@ -2,6 +2,7 @@ package service.tboard;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import command.DoubleTradeCommand;
 import dao.TBoardDao;
 
 public class TradingOpenProcessService {
@@ -12,14 +13,14 @@ public class TradingOpenProcessService {
 		this.boardDao = boardDao;
 	}
 
-	public void Trading() {
+	public DoubleTradeCommand Trading() {
 		// TODO Auto-generated method stub
-		
+		return boardDao.tradingList();
 	}
 
-	public Integer buyer(String getmNo) {
+	public Integer buyer(String getmNo, String tnum) {
 		// TODO Auto-generated method stub
-		return boardDao.updateRequester(getmNo);
+		return boardDao.updateRequester(getmNo, tnum);
 	}
 
 }

@@ -56,7 +56,7 @@
 		<div id="big_box">
 			<div class="id_search"><h3>비밀번호 찾기</h3></div>
 			<div class="id_count"><img src="../img/member_status_img3.jpg">
-				<h3>회원님의 정보로<br> 가입한 aaa@naver.com 메일로 발송 하였습니다.</h3>
+			<h3>비밀번호:<br>${pw }</h3>
 			</div>
 			
 			<div class="final_box">

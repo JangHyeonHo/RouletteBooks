@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
@@ -62,18 +62,18 @@
 						<h2>비밀번호를 찾기위한</h2>
 					<h3><span>본인 확인 방법</span>을 선택해 주세요.</h3>
 					</div>
-					
+			<form:form>
 				<div class="box2">
 					<input type="radio" id="select" /><b>휴대폰 인증</b> <br>
-					<select name="phoneFirst" id="phoneFirst">
+					<select name="phonenumber1" id="phoneFirst">
 						<option value="010">010</option>
 						<option value="011">011</option>
 						<option value="016">016</option>
 						<option value="018">018</option>
 						<option value="019">019</option>
 					</select>
-					<input type="text" class = "phoneNum" name="phone2" maxlength="4" placeholder="1234" style="padding: 5px 0px">
-					<input type="text" class = "phoneNum" name="phone3" maxlength="4" placeholder="5678" style="padding: 5px 0px">
+					<input type="text" class = "phoneNum" name="phonenumber2" maxlength="4" placeholder="1234" style="padding: 5px 0px">
+					<input type="text" class = "phoneNum" name="phonenumber3" maxlength="4" placeholder="5678" style="padding: 5px 0px">
 					<br><h4>가입된 휴대폰으로 본인 확인을 진행 합니다.</h4>
 				</div>
 				
@@ -81,8 +81,8 @@
 					<span>· 아이디를 찾으시나요?</span>
 					<button onclick="location.href='searchid'">아이디 찾기</button>
 				</div>
-				<div class="box2_2"><button  type="button" id="ok" onclick="location.href='searchpwdetail'">확인하기</button></div>
-				
+				<div class="box2_2"><button  id="ok" onclick="location.href='searchpw'">확인하기</button></div>
+			</form:form>
 				</div>
 
 		</div>
