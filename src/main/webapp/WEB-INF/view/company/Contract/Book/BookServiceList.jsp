@@ -77,7 +77,7 @@
 					<td>${book.bPublicationDate }</td>
 					<td>${book.bHit }</td>
 					<td>${book.bRentalPrice }￦</td>
-					<td><a href="register?bnum=${book.bnum }">등록</a></td>
+					<td><a href="register?bnum=${book.bnum }">${book.booksitu }</a></td>
 				</tr>
 				</c:forEach>
 

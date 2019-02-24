@@ -41,9 +41,22 @@ public class BookList implements DTOTestInterface {
 	private int bContractNum;
 	private String bPublisherNum;
 	private int bHit;
+	private String booksitu;
 	
 	
 	
+	public String getBooksitu() {
+		return booksitu;
+	}
+
+	public void setBooksitu(String booksitu) {
+		this.booksitu = booksitu;
+	}
+
+	public static String[] getGenres() {
+		return GENRES;
+	}
+
 	public String getPname() {
 		return pname;
 	}

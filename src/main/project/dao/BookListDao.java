@@ -58,7 +58,7 @@ public class BookListDao {
 	
 	public List<BookList> BookRegiList(){
 		sql="select BNUM,BNAME,BPRICE,BPUBLICATION_DATE,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE"
-			+" ,BIMG_ORIGIN_NAME,BIMG_STORE_NAME,BGENRE,BISBN,BPUBLISHER_PRICE,BCONTRACT_NUM,BPUBLISHER_NUM,BHIT,r.PUBNAME as pname from BOOKLIST t join PUBLISHER r on( t.BPUBLISHER_NUM = r.PUBNO) ";
+			+" ,BIMG_ORIGIN_NAME,BIMG_STORE_NAME,BGENRE,BISBN,BPUBLISHER_PRICE,BCONTRACT_NUM,BPUBLISHER_NUM,BHIT,r.PUBNAME as pname,REGISTER_SITUATION from BOOKLIST t join PUBLISHER r on( t.BPUBLISHER_NUM = r.PUBNO) order by bnum desc ";
 		list = jdbcTemplate.query(sql, new RowMapper<BookList>() {
 			
 			
@@ -85,7 +85,7 @@ public class BookListDao {
 				booklist.setbPublisherNum(rs.getString("BPUBLISHER_NUM"));
 				booklist.setbHit(rs.getInt("BHIT"));
 				booklist.setPname(rs.getString("pname"));
-					
+				booklist.setBooksitu(rs.getString("REGISTER_SITUATION"));
 				
 				
 				return booklist;
@@ -109,7 +109,7 @@ public class BookListDao {
 	}
 	
 	public BookModifyCommand detail(int number) {
-		sql = "select BNUM,BOOK_WRITER,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN,p.PUBNAME as pname, c.CB_EXPIRED_DATE AS cdate from BOOKLIST b join PUBLISHER p  on(b.BPUBLISHER_NUM = p.PUBNO) JOIN CONTRACT_PUBLISHER c on(b.BPUBLISHER_NUM = c.CB_PUBLISHER_NO) ";
+		sql = "select BNUM,BOOK_WRITER,BNAME,BPRICE,BPUBLICATION_DATE,BIMG_STORE_NAME,BPAGE_NUM,BINTRODUCE,BTOC,BRENTAL_PRICE,BGENRE,BWRITE_DATE,BISBN,p.PUBNAME as pname, c.CB_EXPIRED_DATE AS cdate from BOOKLIST b join PUBLISHER p  on(b.BPUBLISHER_NUM = p.PUBNO) JOIN CONTRACT_PUBLISHER c on(b.BPUBLISHER_NUM = c.CB_PUBLISHER_NO) where bnum=?";
 		BookModifyCommand modify = jdbcTemplate.query(sql,new ResultSetExtractor<BookModifyCommand>() {
 
 			@Override
@@ -139,7 +139,7 @@ public class BookListDao {
 				
 				return modify;
 			}
-		});
+		},number);
 		
 		
 		return modify;

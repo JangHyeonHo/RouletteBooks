@@ -26,7 +26,8 @@ public class RentalDao {
 	
 	
 	public List<RentalCommand> rentalist(){
-		sql="select BNAME,BPUBLISHER_PRICE,BIMG_STORE_NAME,BOOK_WRITER,p.PUBNAME as pname from booklist b join publisher p on( b.BPUBLISHER_NUM = p.PUBNO) where REGISTER_SITUATION='등록'";
+		sql="select BNAME,BPUBLISHER_PRICE,BIMG_STORE_NAME,BOOK_WRITER,p.PUBNAME as pname "
+				+ "from booklist b join publisher p on( b.BPUBLISHER_NUM = p.PUBNO) where REGISTER_SITUATION='등록'";
 		list = jdbcTemplate.query(sql, new RowMapper<RentalCommand>() {
 
 			@Override

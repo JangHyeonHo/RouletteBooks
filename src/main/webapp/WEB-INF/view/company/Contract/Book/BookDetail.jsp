@@ -118,7 +118,7 @@
 					<div class="valueBox">${modify.pname }</div>
 				</div>
 				<div class="leftBox">
-					<div class="textBox">도서 등록일(수정된날짜 기준으로 작성됩니다.)</div>
+					<div class="textBox">도서 등록일</div>
 					<div class="valueBox">${modify.bpublicationdate }</div>
 				</div>
 				<div class="rightBox">
