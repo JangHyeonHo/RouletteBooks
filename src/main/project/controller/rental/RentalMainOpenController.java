@@ -29,7 +29,7 @@ public class RentalMainOpenController implements FrontControllerInterface {
 		
 		List<RentalCommand> list = service.action();
 		model.addAttribute("list", list);
-		System.out.println(list.get(0).getBname());
+		
 		
 		return "rental/rental";
 	}

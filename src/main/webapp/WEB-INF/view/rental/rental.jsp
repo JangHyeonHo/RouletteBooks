@@ -124,6 +124,7 @@
 			<!--도서 목록 사이즈 200x270 -->
 		 
 			<div id="rental_list">
+				
 				<c:forEach items="${list }" var="ren">
 				<ul id="listul">
 					<li>
@@ -140,6 +141,7 @@
 					</li>				
 				</ul>
 				</c:forEach> 
+				
 				</div>
 				
 				

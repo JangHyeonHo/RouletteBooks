@@ -38,6 +38,21 @@
 <!-- js 설정(기본값) -->
 <script src = "../js/header.js"></script>
 
+	<script>
+		$(function() {
+			$("#myPageBtn").on("mouseover",function(){
+				$("#myPageForm").css("display","inline-block");
+			})
+			$("#myPageForm").on("mouseover",function(){
+				$("#myPageForm").css("display","inline-block");
+			});
+			$("#myPageForm").on("mouseout",function(){
+				$("#myPageForm").css("display","none");
+			});
+		})
+
+	</script>
+
 <!-- 여기까지 노터치(변경하거나 추가하지 마시오) -->
 
 <!-- contents css설정(직접 만든 css를 여기에 올려주세요) 주석 치우고 css/이름만 바꾸면 됨.css -->
@@ -46,9 +61,45 @@
 <!-- <script src = "js/sample.js"></script> -->
 <style>
 	#contents{
+	width : 1080px;
 		height : 900px;
+		margin : 0 auto;
 	}
-
+#sideManu{
+	width : 180px;
+	height : 1000px;
+	background-color : hotpink;
+	float: left;
+}
+#categoryBox{
+	width : 180px;
+	height : 600px;
+	background-color : green;
+}
+#mainContents{
+	width : 900px;
+	height : 1000px;
+	background-color : purple;
+	float: left;
+}
+.MainList{
+	width : 900px;
+	height : 199px;
+	border-bottom : 1px solid gray;
+	background-color : saddlebrown;
+}
+#rankingList{
+	width : 300px;
+	height : 200px;
+	background-color: chartreuse;
+	float: left;
+}
+#eventList{
+	width : 600px;
+	height : 200px;
+	background-color : red;
+	float: left;
+}
 </style>
 
 </head>
@@ -56,10 +107,21 @@
 <!-- Header 시작 -->
 <jsp:include page="Header.jsp" />
 <!-- Header 끝 -->
-<!-- Content 시작(내용 첨가) -->
-<div id = "contents">
-	테스트용 메인입니다.
-</div>
+<!-- Contents -->
+	<div id="contents">
+		<!-- SideManu -->
+		<div id="sideManu">
+			<div id="categoryBox"></div>
+		</div>
+		<!-- Main -->
+		<div id="mainContents">
+			<div id="newRentalList" class="MainList"></div>
+			<div id="newBuyList" class="MainList"></div>
+			<div id="newSellList" class="MainList"></div>
+			<div id="rankingList"></div>
+			<div id="eventList"></div>
+		</div>
+	</div>
 <!-- Content 끝 -->
 <!-- Footer 시작 -->
 <jsp:include page="Footer.jsp" />
