@@ -31,10 +31,10 @@ public class TradeTraderController implements FrontControllerInterface {
 			return AutoAlertProcess.alertAfterRedirect(model, "로그인", "로그인이 필요한 구간입니다!", "../member/login");
 		}
 		LoginSessionInfomationCommand loginInfo = (LoginSessionInfomationCommand) session.getAttribute("loginInfo");
-		service.buyer(loginInfo.getmNo());
+		service.buyer(loginInfo.getmNo(),tnum);
 		
 		
-		return "redirect:/trading?tnum=21";
+		return "redirect:/trading?tnum="+tnum;
 	}
 
 	@Override

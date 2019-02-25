@@ -19,6 +19,8 @@ import command.IdSearchCommand;
 import command.LoginCommand;
 import command.LoginSessionInfomationCommand;
 import command.MemberListPageCommand;
+import command.PwSearchCommand;
+import dto.CusServiceDTO;
 import dto.RMember;
 import other.AutoLinePrint;
 import other.AutoPaging;
@@ -172,6 +174,7 @@ public class RMemberDao {
 		return memberList;
 	}
 	
+	//이원학
 	public boolean InfoConfirm(final String passwordChange, String getmNo) {
 		// TODO Auto-generated method stub
 		boolean dto;
@@ -181,6 +184,7 @@ public class RMemberDao {
 			@Override
 			public Boolean extractData(ResultSet rs) throws SQLException, DataAccessException {
 				// TODO Auto-generated method stub
+				System.out.println("myInfoConfirm에서 다오로 넘어옴");
 				if(rs.next()) {
 					if(passwordChange.equals(rs.getString("mpassword"))) {
 						return true;
@@ -219,4 +223,58 @@ public class RMemberDao {
 		
 	
 	}
+	
+	public String Pwsearch(final PwSearchCommand command) {
+		sql = "select mpassword from rmember where mphone=?";
+		String phone=command.getPhonenumber1()+command.getPhonenumber2()+command.getPhonenumber3();
+		System.out.println(phone);
+		String search = jdbcTemplate.query(sql, new ResultSetExtractor<String>() {
+			
+			@Override
+			public String extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				if(rs.next()) {
+					return rs.getString("mpassword");
+				}else {
+					return null;
+				}
+				
+			}
+			
+		},phone);
+		return search;
+	}
+	//쿠폰없음.총결제액 없음
+	public RMember information(String getmNo) {
+		// TODO Auto-generated method stub
+		RMember dto = null;
+		sql = "select mno, memail, mnickname, mname, MBIRTH_DATE, mgender, MADDRESS, mphone, macc_bank, macc_num, mcash, MCRE_DATE "
+				+ " from rmember where mno = ?";
+		dto = jdbcTemplate.query(sql, new ResultSetExtractor<RMember>() {
+
+			@Override
+			public RMember extractData(ResultSet rs) throws SQLException, DataAccessException {
+				// TODO Auto-generated method stub
+				RMember rm = new RMember();
+				while(rs.next()) {
+					rm.setmNo(rs.getString("mno"));
+					rm.setmEmail(rs.getString("memail"));
+					rm.setmNickname(rs.getString("mnickname"));
+					rm.setmName(rs.getString("mname"));
+					rm.setmBirthDate(rs.getDate("MBIRTH_DATE"));
+					rm.setmGender(rs.getString("MGENDER"));
+					rm.setmAddress(rs.getString("MADDRESS"));
+					rm.setmPhone(rs.getString("MPHONE"));
+					rm.setmAccBank(rs.getString("macc_bank"));
+					rm.setmAccNum(rs.getString("macc_num"));
+					rm.setmCash(rs.getInt("mcash"));
+					rm.setmCreDate(rs.getDate("MCRE_DATE"));
+				}
+				return rm;
+			}
+			
+		},getmNo);
+			return dto ;
+	}			
+	
 }

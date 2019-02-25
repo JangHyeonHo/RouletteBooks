@@ -79,7 +79,7 @@
 			<div id="SalesDepartMent" class="DptBox">
 				<div class="DptName">영업팀</div>
 				<div class="DptUrl"><a href="sales/publisher/list">계약 출판사 등록 관리</a></div>
-				<div class="DptUrl"><a href="#">출판사 도서 등록 관리</a></div>
+				<div class="DptUrl"><a href="sales/book/list">출판사 도서 등록 관리</a></div>
 				<div class="DptNotice">영업팀 공지사항 <span style="display:none;"><a href="#">[수정]</a></span></div>
 				<div class="DptNoticeContent">공지내용</div>
 				<div class="NoticeHidden" style="display:none;">

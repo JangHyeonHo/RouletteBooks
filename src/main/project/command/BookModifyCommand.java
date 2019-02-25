@@ -2,33 +2,58 @@ package command;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 public class BookModifyCommand {
 	private int num;
 	private MultipartFile[] image;
 	private String bname;
+	private String bookwriter;
 	private String genre;
 	private String price;
 	private int page;
 	private String isbn;
-	private String bpublicationdate;
-	private String writedata;
+	private String pname;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date bpublicationdate;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date writedata;
 	private String rentalprice;
 	private String booktoc;
 	private String intro;
 	private String BookOriImgName;
 	private String BookStoreImgName;
+	private Date cdate;
 
 	
 	
 	
 
 
-	public String getBpublicationdate() {
+	public Date getCdate() {
+		return cdate;
+	}
+	public void setCdate(Date cdate) {
+		this.cdate = cdate;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getBookwriter() {
+		return bookwriter;
+	}
+	public void setBookwriter(String bookwriter) {
+		this.bookwriter = bookwriter;
+	}
+
+	public Date getBpublicationdate() {
 		return bpublicationdate;
 	}
-	public void setBpublicationdate(String bpublicationdate) {
+	public void setBpublicationdate(Date bpublicationdate) {
 		this.bpublicationdate = bpublicationdate;
 	}
 	public String getBookOriImgName() {
@@ -55,13 +80,14 @@ public class BookModifyCommand {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public String getWritedata() {
+
+
+	public Date getWritedata() {
 		return writedata;
 	}
-	public void setWritedata(String writedata) {
+	public void setWritedata(Date writedata) {
 		this.writedata = writedata;
 	}
-
 	public String getRentalprice() {
 		return rentalprice;
 	}

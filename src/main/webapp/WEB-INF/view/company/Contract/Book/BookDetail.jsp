@@ -75,7 +75,7 @@
 				<div id="photoBox">
 					
 					<input type="file" name="image">
-					 <img src="<c:url value = "../../book/uploadImage/${modify.BookStoreImgName }" />">
+			<%-- 	<img src="<c:url value = "../../../book/uploadImage/${modify.BookStoreImgName}" />"> --%>
 				</div>
 				<div class="textBox">도서명</div>
 				<div class="valueBox">
@@ -98,31 +98,35 @@
 					</select></div>
 				</div>
 				<div class="rightBox upline">
+					<div class="textBox">도서 저자</div>
+					<div class="valueBox"><input type="text" name="bookwriter" value="${modify.bookwriter }"></div>
+				</div>
+				<div class="rightBox upline">
 					<div class="textBox">도서 정가</div>
 					<div class="valueBox"><input type="text" name="price" value="${modify.price }">￦</div>
 				</div>
 				<div class="rightBox upline">
 					<div class="textBox">페이지수</div>
-					<div class="valueBox"><input type="text" name="page"></div>
+					<div class="valueBox"><input type="text" name="page" value="${modify.page }"></div>
 				</div>
 				<div class="leftBox">
 					<div class="textBox">국제 표준 책번호</div>
-					<div class="valueBox"><input type="text" name="isbn"></div>
+					<div class="valueBox"><input type="text" name="isbn" value="${modify.isbn }"></div>
 				</div>
 				<div class="rightBox">
 					<div class="textBox">출판사명</div>
-					<div class="valueBox">한경출판사</div>
+					<div class="valueBox">${modify.pname }</div>
 				</div>
 				<div class="leftBox">
-					<div class="textBox">도서 등록일(수정된날짜 기준으로 작성됩니다.)</div>
+					<div class="textBox">도서 등록일</div>
 					<div class="valueBox">${modify.bpublicationdate }</div>
 				</div>
 				<div class="rightBox">
 					<div class="textBox">도서 계약 만료 예정일</div>
-					<div class="valueBox"></div>
+					<div class="valueBox">${modify.cdate }</div>
 				</div>
 				<div class="textBox upline">도서 발간일</div>
-				<div class="valueBox"><input type="text" name="writedata">${modify.writedata }</div>
+				<div class="valueBox"><input type="date" name="writedata" value="${modify.writedata }"></div>
 
 				<div class="textBox">도서 대여 금액</div>
 				<div class="valueBox"><input type="text" name="rentalprice">￦</div>

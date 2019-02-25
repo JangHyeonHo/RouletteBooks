@@ -70,14 +70,14 @@
 				<tr>
 					<td>${book.bnum }</td>
 				<td><a href="detail?bnum=${book.bnum }" title="이곳을 누르면 도서 상세정보(수정)페이지로 이동합니다.">${book.bname }</a></td>	
-					<td><img src="img/book1.jpg" width="100px" height="125px"></td>
+					<td><img src="<c:url value = "../../../book/uploadImage/${book.bImgStoreName}" /> " width="100px" height="125px"></td>
 					<td>${book.bGenre }</td>
 					<td>${book.bIsbn }</td>
 					<td>${book.pname }</td>
 					<td>${book.bPublicationDate }</td>
 					<td>${book.bHit }</td>
 					<td>${book.bRentalPrice }￦</td>
-					<td><a href="#" title="이곳을 누르면 수정 페이지로 이동합니다.">등록[계약 중]</a></td>
+					<td><a href="register?bnum=${book.bnum }">${book.booksitu }</a></td>
 				</tr>
 				</c:forEach>
 

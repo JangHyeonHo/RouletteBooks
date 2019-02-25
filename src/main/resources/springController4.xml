@@ -52,6 +52,7 @@
 <bean class = "service.freeboard.FreeBoardDeleteService" name="FreeBoardDeleteService" id="FreeBoardDeleteService"/>
 <bean class = "service.member.IdSearchService" name="IdSearchService" id="IdSearchService" />
 <bean class = "service.company.ManagerListService" name="ManagerListService" id="ManagerListService" />
+<bean class = "service.member.PwSearchService" name="PwSearchService" id="PwSearchService" />
 
 
 

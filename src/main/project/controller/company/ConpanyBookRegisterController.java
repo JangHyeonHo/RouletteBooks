@@ -1,49 +1,38 @@
-package controller.mypage;
-
-import javax.servlet.http.HttpSession;
+package controller.company;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import command.LoginSessionInfomationCommand;
 import controller.FrontControllerInterface;
-import dto.RMember;
-import service.mypage.InfoService;
-
+import other.AutoAlertProcess;
+import service.company.BookRegisterService;
 @Controller
-@RequestMapping("/mypage/myinfo")
-public class MemberInfoController implements FrontControllerInterface {
-//이원학
+@RequestMapping("/company/sales/book/register")
+public class ConpanyBookRegisterController implements FrontControllerInterface {
+
 	
-	private InfoService service;
+	BookRegisterService service;
 	
 	@Autowired
-	public MemberInfoController(InfoService service) {
+	public ConpanyBookRegisterController(BookRegisterService service) {
 		this.service = service;
 	}
-	
 
+	
 	@RequestMapping(method = RequestMethod.GET)
-	public String OpenProcessGet(String mno, Model model) {
+	public String OpenProcessGet(@ModelAttribute("bnum") int number,Model model) {
+		System.out.println("등록 작동");
+		service.action(number);
 		// TODO Auto-generated method stub
-		System.out.println("open:MyInfo");
-		
-		
-		RMember dto = service.information(mno);
-		model.addAttribute("dto",dto);
-		
-		return "mypage/MemberInfo";
-		
-		
-		
-		
-		
-		
+		return AutoAlertProcess.alertAfterRedirect(model, "확인", "등록되었습니다.", "list");
 	}
+
+
+
 
 	@Override
 	public String OpenProcessPost() {

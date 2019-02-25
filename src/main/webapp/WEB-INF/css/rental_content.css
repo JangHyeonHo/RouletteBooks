@@ -122,8 +122,8 @@ height: 300px;
 .rental_list_li {
     width: auto; height: auto;
     max-width: 200px;
-        max-height: 270px;
-
+    max-height: 270px;
+	margin:35px 8px 0 0;
     text-align: center;
 
 }

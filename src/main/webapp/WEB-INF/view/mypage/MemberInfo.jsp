@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- 자기가 쓸거 알아서 주석풀고 사용하기 [순서대로 form설정, spring기능 사용, c태그 사용] -->
-<%-- <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> --%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%-- <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %> --%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
@@ -62,31 +62,32 @@
      <jsp:include page="../mypageHeader.jsp" />
 			<!-- 마이페이지 헤더 끝 -->
 
-        <form action="#" method="POST">
+    <form:form>
         <div id="memberBaseInfo">
             <div id="baseInfoTitle">
                 기본정보보기
             </div>
         <div id = "baseInfoCon">
-        <div class = "inputBox"><span class = "sub">아이디(이메일) :</span> ssa2@aa.aa </div>
-        <div class = "inputBox"><span class = "sub">닉네임 :</span> 먹찾하 </div>
-        <div class = "inputBox"><span class = "sub">이름 :</span> 하예나</div>
-        <div class = "inputBox"><span class = "sub">생년월일 :</span> 1993.12.10 </div>
-        <div class = "inputBox"><span class = "sub">성별 :</span> 여자 </div>
-        <div class = "inputBox"><span class = "sub">주소 :</span> 사랑시 고백구 행복동 지하 하호호</div>
-        <div class = "inputBox"><span class = "sub">핸드폰번호 :</span> 010-1234-1234</div>
-        <div class = "inputBox"><span class = "sub">계좌은행 :</span> 우리은행</div>
-        <div class = "inputBox"><span class = "sub">계좌번호 :</span> 10021002100 </div>
-        <div class = "inputBox"><span class = "sub">보유캐쉬 :</span> 2000000원 </div>
-        <div class = "inputBox"><span class = "sub">보유쿠폰 :</span> 12장 </div>
-        <div class = "inputBox"><span class = "sub">총 결재액 :</span> 2018080원 </div>
-        <div class = "inputBox"><span class = "sub">가입일 :</span> 2018.08.08 </div>
+   
+        <div class = "inputBox"><span class = "sub">아이디(이메일) :</span>${dto.mEmail }</div>
+        <div class = "inputBox"><span class = "sub">닉네임 :</span>${dto.mNickname }</div>
+        <div class = "inputBox"><span class = "sub">이름 :</span>${dto.mName }</div>
+        <div class = "inputBox"><span class = "sub">생년월일 :</span>${dto.mBirthDate }</div>
+        <div class = "inputBox"><span class = "sub">성별 :</span>${dto.mGender } </div>
+        <div class = "inputBox"><span class = "sub">주소 :</span>${dto.mAddress }</div>
+        <div class = "inputBox"><span class = "sub">핸드폰번호 :</span>${dto.mPhone }</div>
+        <div class = "inputBox"><span class = "sub">계좌은행 :</span>${dto.mAccBank }</div>
+        <div class = "inputBox"><span class = "sub">계좌번호 :</span>${dto.mAccNum }</div>
+        <div class = "inputBox"><span class = "sub">보유캐쉬 :</span>${dto.mCash } 원</div>
+        <div class = "inputBox"><span class = "sub">보유쿠폰 :</span>아직못함</div>
+        <div class = "inputBox"><span class = "sub">총 결재액 :</span>이거 없는듯?</div>
+        <div class = "inputBox"><span class = "sub">가입일 :</span>${dto.mCreDate }</div>
 
-        <input type="button" class="btn" onclick="location.href='modify'" value="수정">
+        <input type="button" class="btn" onclick="location.href='modify?mno=${loginInfo.mNo }'" value="수정">
         <input type="button" class="btn" onclick="location.href='main'" value="메인으로">
         </div>
         </div>
-        </form>
+    </form:form>
         
         </div>
 <!-- Content 끝 -->
